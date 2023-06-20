@@ -1,0 +1,37 @@
+Version controllable specification for theory development and adjudication.
+
+* Discuss collaboration
+* Discuss platforms
+* Discuss adjudication
+
+1. Find suitable examples
+	+ Augmented Causal Loop Diagrams https://pubmed.ncbi.nlm.nih.gov/35549316/
+	+ Theory maps https://static1.squarespace.com/static/586fd7e2ff7c5060b1f0f079/t/5872c87b1b10e33462c9bc16/1483917435347/Lindquist--Emotion.pdf
+	+ Predator/prey model? Ising model? Something mathematic
+2. Find suitable language
+3. One-page introduction
+
+* Project: endless
+	+ Maintaining software
+* Has to be different from statistical model
+	+ But still formal
+	+ DAG? Function?
+* Theorymaps.org website
+* Add version control on top of Theorymaps.org
+* Applied example, translated into our language
+
+* Relations between elements of a theory
+	+ But also relations between theories
+
+* Hashmap / blockchain
+
+Absolute simplest approach
+
+1. Version control existing theoretical models
+2. Use applied examples from real research areas
+3. 
+
+"Version controllable specification for theory development and adjudication."
+* Adjudication = testing empirical support
+"Version controlled theories enable cumulative knowledge acquisition"
+
