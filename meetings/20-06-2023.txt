@@ -7,6 +7,7 @@ Version controllable specification for theory development and adjudication.
 1. Find suitable examples
 	+ Augmented Causal Loop Diagrams https://pubmed.ncbi.nlm.nih.gov/35549316/
 	+ Theory maps https://static1.squarespace.com/static/586fd7e2ff7c5060b1f0f079/t/5872c87b1b10e33462c9bc16/1483917435347/Lindquist--Emotion.pdf
+	+ Maybe also this one, considering Gray is a co-author so it's probably well aligned with their vision for these maps: https://static1.squarespace.com/static/586fd7e2ff7c5060b1f0f079/t/58715ca9725e2549f7a7544e/1483824297358/Waytz+%26+Gray--Mind+Perception.pdf
 	+ Predator/prey model? Ising model? Something mathematic
 2. Find suitable language
 3. One-page introduction
