@@ -1,0 +1,66 @@
+# Versioned Theories next Steps
+
+1. Should we aim for "Theory Specification and Theory Building in Psychology" for the Zeitschrift für Psychologie.
+    *  deadline for abstracts is April 2024, full paper by November 2014
+2. Do we all agree on the scope?
+    * https://github.com/cjvanlissa/theory_specification/blob/main/outline.md
+    * Most contentios issue for AP is: should we propose a specific format, or just the properties of such format/methodology?
+3. Define roles: Who is doing what?
+4. Should we plan a hackathon (i.e. couple of hours of coworking) to draft an outline of the paper?
+5. DGPS Symposium
+6. How is Felix's seminar going?
+
+
+# Caspar
+
+Lecture at Borsbooms group and at Social Data Science Unit both showed real insterest.
+
+## Andreas
+
+* Git: Theories can branch, but branches can even merge again
+* Allows us to track the evolution of theories
+* Two prototypes:
+    * One main branch that constantly evolves
+    * Many branches / thousand flowers (is there an analogy example in software development?)
+* Dis/advantages of both prototypes
+* Discuss pro's and con's of decisions that we have different perspectives on
+* "Import" elements of existing theories to your own theory.
+* Turtles all the way down: "Hey bro, I heard you like theories, so we put a theory inside your theory"
+
+
+## Political vs technical dimension
+
+Political / Social Aspects:
+- Who is the maintainer of a theory? Who is allowed to make changes/ forks
+- How to handle authorship/contributorship?
+    - Have a bold vision of how to rethink contributorship
+- New contributor roles?
+- Link to licensing/user agreements - Who is the "owner" of an idea?
+- Reuse/citing
+- Where does peer review come into play?
+- How does (semantic) versioning work when multiple forks exist?
+
+Tech:
+- Tutorial style; examples of implementations
+
+Caspar sees the value of the political side but really wants to focus on the technical side.
+
+## Felix
+
+* Upcoming President of German Psychological Society anounced that theory formation will be an important topic
+* Symposium at conference in Germany
+* Rearrange / rethink contributorship
+* Seminar: 7 students
+    + Visual Argument Structuring Tool (similar to SEM)
+    + ABM Netlogo
+    + Imaginary Intergroup Contact hypothesis (social psych)
+* Versioning theories: 
+    + Where do you put the version number?
+    + When do you increment
+    + Compatible with multiple parallel versions?
+    + semver as  vehicle to communicate the intention of the authors ("this is a minor change, this is a breaking change")
+* Describe current way of theory development in terms of our proposed workflow
+
+## Next steps
+
+Journals: AMPPS, Meta-Psychology, PoPS
