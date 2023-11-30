@@ -5,5 +5,5 @@ Central to FAIR theories is representing theories as digital objects, expressed 
 However, digital representation is not enough; in our framework, the theory's history is tracked using version control, changes in empirical content with semantic versioning, and the relation between theories with universally unique identifiers. 
 Combining these identifiers with rich metadata makes a FAIR theory Findable; version control systems tracking it and the metadata make it Accessible; the formal languages make it Interoperable; and well-defined procedures for changing and amending theories make it Reusable. 
 FAIR theories facilitate metascientific insights into the evolution of theories and their empirical underpinnings.
-As a next step, we envision theories with "integration tests against reality", i.e., akin to continuous integration in software development, where the empirical foundations of theories are continuously evaluated, paralleling living meta-analyses.
+Moving forward, we envision theories undergoing "integration tests against reality", paralleling continuous integration in software development by continuously evaluating the empirical foundations of theories, akin to living meta-analyses.
 This presentation addresses the guiding principles of FAIR theory and provides specific implementation examples.
