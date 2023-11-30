@@ -1,10 +1,9 @@
-We introduce the concept of FAIR theories to reimagine theories as more dynamic, evolving entities that can be collaboratively developed and refined, leading to a more robust and interconnected body of scientific knowledge.
-To that end, we propose a framework for the collaborative creation, maintenance, and evolution of FAIR theories that enables truly cumulative science.
-We conceptualize theories as the primary vehicle for knowledge acquisition in the empirical cycle of deduction and induction.
-As such, cumulative science requires clarity about how theories evolve in relation to their own history, empirical data, and other theories.
-Such clarity is crucial for understanding the distinct paths theories may take in the empirical cycle, whether they are predictive, explanatory, or descriptive in nature.
-Tracking this evolution requires representing theories as digital objects formulated in more or less formal languages (i.e., formulas, mathematical/statistical models, computer programs, nomological networks, or operational definitions).
-In our framework, the history of the theory is tracked using version control, its relation to empirical data with semantic versioning, and the relation between theories with universally unique identifiers.
-Combining these identifiers with rich metadata makes a FAIR theory findable; version control systems tracking the metadata make it accessible; the formal languages make it interoperable; and well-defined procedures for changing and amending theories make it reusable.
-These FAIR theory guiding principles precede implementation and are tailored to accommodate the varied ways in which different theories contribute to the empirical cycle.
-Still, we provide examples to demonstrate the utility of FAIR theories.
+We introduce the concept of FAIR theories, reimagining theories as dynamic, evolving entities collaboratively developed and refined, thus contributing to a more robust and interconnected body of scientific knowledge. 
+Theories help to structure and condense the existing scientific knowledge, yet their development often lacks structure. 
+To lay open what theorizing and empirical data are needed for a research area to progress, we provide FAIR theories as a framework to make transparent how theories evolve in relation to their history, empirical data, and other theories. 
+Central to FAIR theories is representing theories as digital objects, expressed in various formal languages, including formulas, mathematical/statistical models, computer programs, nomological networks, or operational definitions. 
+However, digital representation is not enough; in our framework, the theory's history is tracked using version control, changes in empirical content with semantic versioning, and the relation between theories with universally unique identifiers. 
+Combining these identifiers with rich metadata makes a FAIR theory Findable; version control systems tracking it and the metadata make it Accessible; the formal languages make it Interoperable; and well-defined procedures for changing and amending theories make it Reusable. 
+FAIR theories facilitate metascientific insights into the evolution of theories and their empirical underpinnings.
+As a next step, we envision theories with "integration tests against reality", i.e., akin to continuous integration in software development, where the empirical foundations of theories are continuously evaluated, paralleling living meta-analyses.
+This presentation addresses the guiding principles of FAIR theory and provides specific implementation examples.
