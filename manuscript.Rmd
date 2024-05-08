@@ -1,0 +1,253 @@
+---
+title             : "FAIR Theory: Applying Open Science Principles to the Construction and Iterative Improvement of Scientific Theories"
+shorttitle        : "FAIR THEORY"
+
+author:
+  - name: "Caspar J. Van Lissa"
+    affiliation: "1"
+    corresponding: yes
+    address: "Professor Cobbenhagenlaan 125, 5037 DB Tilburg, The Netherlands"
+    email: "c.j.vanlissa@tilburguniversity.edu"
+    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+      - Conceptualization
+      - Formal Analysis
+      - Funding acquisition
+      - Methodology
+      - Project administration
+      - Software
+      - Supervision
+      - Writing – original draft
+      - Writing – review & editing
+  - name: "Aaron Peikert"
+    affiliation: "2"
+    role:
+      - Formal Analysis
+      - Writing – original draft
+      - Writing – review & editing
+  - name: "Andreas Brandmaier"
+    affiliation: "2"
+    role:
+      - Formal Analysis
+      - Writing – original draft
+      - Writing – review & editing
+  - name: "Felix Schönbrodt"
+    affiliation: "2"
+    role:
+      - Conceptualization
+      - Writing – review & editing
+affiliation:
+  - id            : "1"
+    institution   : "Tilburg University, dept. Methodology & Statistics"
+  - id            : "2"
+    institution   : "Other affiliations"
+
+authornote: |
+  This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`.
+
+abstract: |
+  Test test.
+keywords          : "keywords"
+wordcount         : "X"
+bibliography      : "theory-specification.bib"
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+
+<!-- QUOTES -->
+Kurt Lewin: Nothing is as practical as a good theory
+Paul Meehl: [Psychological theories are neither] refuted nor corroborated, but instead merely fade away as people lose interest [@meehlTheoreticalRisksTabular1978].
+[Theories are] like toothbrushes — no self-respecting person wants to use anyone else’s [@mischelToothbrushProblem2008]
+"Call Leon": When finding unexpected results in cognitive dissonance research, students were told to call Leon Festinger. He could explain why the study did not work, e.g. because you used the wrong font for the questionnaire.
+
+<!-- END QUOTES -->
+
+The "replication crisis" has prompted extensive reforms in social science [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
+Concern that undisclosed flexibility in analyses was to blame for the abundance of false-positive findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
+But have these reforms met their goal?
+Recent reviews show that most preregistered hypothesis tests are not supported [@scheelExcessPositiveResults2021],
+which suggests that the replication crisis may have been symptomatic of an underlying, and more fundamental, "theory crisis".
+If psychological theories are insufficiently precise to derive testable hypotheses - then preregistration and replication will only serve to highlight those shortcomings.
+
+Scholars have raised concerns about the state of theory in social science for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
+There is increasing consensus that one contributing cause is a lack of theory formalization: social scientific theories often lack the precision and clarity of theories in the physical sciences [@szollosiArrestedTheoryDevelopment2021].
+A second issue, which received less attention, is the a lack of transparent and democratic scholarly communication about psychological theory.
+The present paper seeks to address this issue by applying open science principles, for the first time, to psychological theory, and introducing the concept of *FAIR Theory*.
+
+FAIR Theory incorporates theory into open science workflows,
+facilitates scholarly communication about theories,
+making it easier to share theories with less opportunity for ambiguity and misunderstanding.
+FAIR Theories are easier to find, and facilitate sharing, reusing, and updating open theories.
+More efficient and transparent communication about theory democratizes and accelerates cumulative knowledge acquisition,
+removes barriers for knowledge exchange with the global scholarly community,
+opens theory development to diverse perspectives, and enables (distributed and adversarial) collaboration.
+
+## Theory and Scientific Progress
+
+Theories reflect scientists' understanding of phenomena.
+Ideally, they are iteratively updated based on deductive testing and inductive theory construction.
+This process is described in the *empirical cycle* [@degrootMethodologieGrondslagenVan1961],
+a model that describes cumulative knowledge acquisition as a cyclical process with two phases (Figure \@ref(fig:figec)).
+In the deductive phase, hypotheses derived from theory are tested on data. In the inductive phase, patterns observed in data are generalized to theoretical principles.
+
+```{r}
+library(tidySEM)
+library(ggplot2)
+y_spacing <- .5
+lo <- get_layout("", "A", "",
+                 "D", "", "B",
+                 "", "C", "", rows = 3)
+
+edg <- data.frame(from = c("A", "B", "C", "D"),
+                  to = c("B", "C", "D", "A")
+)
+
+p <- prepare_graph(layout = lo, edges = edg)
+p$edges[] <- lapply(p$edges, unlist)
+p$edges$connect_from <- list("right", "bottom", "left", "top")
+p$edges$connect_to <- list("top", "right", "bottom", "left")
+p$edges$curvature <- c(rep(60, 4))
+p$edges$label <- c("deduction", "testing", "induction", "generalization")
+p$edges$label_colour <- "gray50"
+p$edges$colour <- "gray50"
+
+p$nodes$label <- c("Theory", "Hypothesis", "Data", "Observed\npatterns")
+
+p_old <- p
+g <- plot(p)
+
+topofplot <- max(p$nodes$node_ymax)
+
+headers <- data.frame(
+  x = c(3, 5),
+  y = topofplot + 2*y_spacing,
+  lab = c("Inductive phase", "Deductive phase")
+)
+
+letters <- p$nodes[, c("name", "x", "y")]
+letters$y <- letters$y+.26
+letters$x <- letters$x+.5
+g <- g + geom_hline(yintercept = topofplot+y_spacing) +
+  geom_vline(xintercept = median(p$nodes$x), linetype = 5) +
+  geom_text(data = headers, aes(x = x, y = y, label = lab), vjust = 1) +
+  #geom_label(data = letters, aes(x = x, y = y, label = name), fill = "lightblue") +
+  scale_x_continuous(expand = c(0,0))+
+  scale_y_continuous(expand = c(0,0))
+g$layers <- g$layers[c(9, 1:8, 10:length(g$layers))]
+ggsave("empirical_cycle.pdf", g, device = "pdf", width = 200, height = 200, units = "mm")
+```
+
+```{r figec, fig.cap="A take on the empirical cycle by De Groot"}
+knitr::include_graphics("empirical_cycle.pdf")
+```
+
+In a progressive research program [@lakatosHistoryScienceIts1971],
+the cycle is regularly completed to iteratively advance our understanding of the studied phenomena.
+
+When comparing common practice in contemporary psychological research to this idealized model, at first glance,
+it appears that deductive research is overrepresented in the literature. 
+An overwhelming 89.6% of published studies ostensibly tests hypotheses [@kuhbergerPublicationBiasPsychology2014].
+Closer examination reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
+Only 15% of deductive studies even reference specific theories [@mcphetresDecadeTheoryReflected2021].
+Together, these statistics suggest the paradoxical role of theory in contemporary psychology.
+Papers set out to test hypotheses, but these are rarely derived from theory, and test results rarely contribute to the improvement of existing theories.
+Existing theories either persist unchanged, or are forgotten [REF Meehl].
+
+Scientific reform initiated by the open science movement has predominanty focused on improving deductive methods, overlooking the shortcomings of theory.
+The present paper applies, for the first time, open science principles to theory.
+
+## Publication is not Enough
+
+Merely publishing a theory does not make it open;
+open theory should adhere to established open science standards.
+The FAIR principles, initially introduced as a standard for open research data, have since been applied to other forms of digital scholarly output [e.g., software @lamprechtFAIRPrinciplesResearch2019].
+We propose to apply the FAIR principles to digital representations of theory as well,
+introducing a FAIR metadata format to represent (formal) theories.
+The resulting theories are made *Findable* via a DOI,
+are Accessible in a machine- and human-readable filetype,
+Interoperable within the data analysis environment,
+and Reusable in the practical and legal sense, using semantic versioning and permissive licensing.
+
+## Adapting the FAIR Principles
+
+The FAIR Principles were devised to make scholarly data more findable, accessible, interoperable, and reusable. From their inception, these principles were developed with "other research resources" in mind. Since then, scholars have translated the FAIR principles to, e.g., research software [REF Lamprecht]. The present paper further extends the FAIR principles' definition to theory. Doing so requires first representing theory as a digital research artefact, and then making it compliant with the FAIR principles.
+
+## Is Current Psychological Theory FAIR?
+
+Is it findable? There is no unified search engine for theory, and not even an agreed-upon search term (model, framework, etc are used interchangeably with theory). Some have sought to address findability through post-hoc curation of theories (e.g., theory mapping website, Borsboom's dictionary of psychological phenomena).
+
+Is it accessible? Paywalls, partly implicit (Great Man Theorizing / Call Leon), certainly not accessible in the sense of theory being "top of mind", as researchers appear to prefer ad-hoc hypothesizing rather than deriving hypotheses from specific theories.
+
+Is it interoperable? Theories rarely change, 
+
+Is it reusable? Scholars would rather invent something new than reuse somebody else's toothbrush (which is antithetical to the empirical cycle).
+
+In the spirit of DORA, extending the FAIR principles to theory helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a theoretical paper, which can be challenging.
+From a meta-science perspective, FAIR theory facilitates studying the state of theory in a particular subfield, and comparing theories' substantive and structural properties. Version control and cross-referencing additionally enable tracing and studying the ancestry and development of theories.
+
+FAIR theory provides a clear deliverable, and a clear goal, for scholars and institutions seeking to promote contributions to theory.
+
+There are key distinctions between theory and other FAIR digital research artefacts. With this in mind, following the example of Lamprecht and colleagues, we reflect on how the criteria underlying the FAIR Principles apply to theory.
+
+## The Role of Theory Formalization
+
+Concerns about the state of theory are a recurring theme in the psychological literature,
+but previous writing has focused on theory formalization as a solution for ambiguity in psychological theory.
+Greater formality increases theories' *empirical content*,
+making them easier to falsify,
+which necessitates revising them,
+thus advancing our principled understanding of the phenomena they describe.
+Conceptually, theory formalization is orthogonal to FAIR theory.
+FAIR Theory does not require theories to be formal, and formal theory can be represented in a way that is not FAIR.
+It is - in principle - possible to represent a collection of verbal statements as a FAIR Theory.
+While FAIR Theory is fully consistent with formal theory, it does not require theories to be formal.
+
+
+# Examples
+
+## Using FAIR Theory to Perform Causal Inference
+
+Based on this example: https://www.r-bloggers.com/2019/08/causal-inference-with-dags-in-r/
+
+
+
+<!-- NOTES -->
+
+* Theory is the vehicle of cumulative knowledge acquisition
+* According to the empirical cycle, ideally, hypotheses are derived from theory, then tested in data, and theory is amended based on the resulting insights. When this cycle is regularly completed, theories become ever more veracious representations of social scientific phenomena.
+* At present, there is concern over a theory crisis in the social sciences, which highlights that this system is not functioning as intended, and highlights the need for better theory.
+* One source of potential improvements of theory methodology that has not been previously considered is computer science.
+* The process of "iteratively improving" digital objects - in this case, computer code - is well understood.
+* Recent work like the FAIR software principles has demonstrated that ideals of open science apply to computer science as well.
+* This paper argues that, conversely, principles of computer science - particularly version control, algorithmic hypothesis generation (find better word; this is about using the digital theory object to derive implied hypotheses), and integrated testing, can also be used to improve theory methods in the social science.
+* We introduce "FAIR theory", a digital research artifact to represent formal social scientific theories
+* FAIR theory can be version controlled; any time new insights require modifications of the theory, these modifications can be documented in a traceable and reversable manner. Version control also enables diffuse collaboration in theory development, as other researchers can submit "pull requests" to suggest modifications of a theory, or can "fork" existing theories to create a spin-off from an existing theory.
+* FAIR theory allows for algorithmic derivation of hypotheses implied by the theory.
+* FAIR theory enables integration testing: researchers can build a "test suite" of evidence that must be explainable by the theory, and any modifications of the theory must also pass the test suite.
+* To illustrate FAIR theory's potential to accelerate cumulative knowledge acquisition, we present several tutorial examples, developed in collaboration with applied researchers across fields of social science.
+
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::

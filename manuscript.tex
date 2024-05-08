@@ -1,0 +1,412 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  man]{apa6}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{english}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+% Manuscript styling
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+% Table formatting
+\usepackage{longtable}
+\usepackage{lscape}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\centering\begin{threeparttable}}
+%   {\end{threeparttable}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\centering\begin{ThreePartTable}}{\end{ThreePartTable}\end{landscape}}
+
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+% Overwrite redefinition of paragraph and subparagraph by the default LaTeX template
+% See https://github.com/crsh/papaja/issues/292
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries\itshape\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{1em}%
+  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+  {-\z@\relax}%
+  {\normalfont\normalsize\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+\makeatletter
+\usepackage{etoolbox}
+\patchcmd{\maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\patchcmd{\maketitle}
+  {\section{\protect\normalfont{\@title}}}
+  {\section*{\protect\normalfont{\@title}}}
+  {}{\typeout{Failed to patch title.}}
+\makeatother
+
+\usepackage{xpatch}
+\makeatletter
+\xapptocmd\appendix
+  {\xapptocmd\section
+    {\addcontentsline{toc}{section}{\appendixname\ifoneappendix\else~\theappendix\fi\\: #1}}
+    {}{\InnerPatchFailed}%
+  }
+{}{\PatchFailed}
+\keywords{keywords\newline\indent Word count: X}
+\DeclareDelayedFloatFlavor{ThreePartTable}{table}
+\DeclareDelayedFloatFlavor{lltable}{table}
+\DeclareDelayedFloatFlavor*{longtable}{table}
+\makeatletter
+\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
+\makeatother
+\usepackage{lineno}
+
+\linenumbers
+\usepackage{csquotes}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={FAIR Theory: Applying Open Science Principles to the Construction and Iterative Improvement of Scientific Theories},
+  pdfauthor={Caspar J. Van Lissa1, Aaron Peikert2, Andreas Brandmaier2, \& Felix Schönbrodt2},
+  pdflang={en-EN},
+  pdfkeywords={keywords},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{FAIR Theory: Applying Open Science Principles to the Construction and Iterative Improvement of Scientific Theories}
+\author{Caspar J. Van Lissa\textsuperscript{1}, Aaron Peikert\textsuperscript{2}, Andreas Brandmaier\textsuperscript{2}, \& Felix Schönbrodt\textsuperscript{2}}
+\date{}
+
+
+\shorttitle{FAIR THEORY}
+
+\authornote{
+
+This is a preprint paper, generated from Git Commit \# fab0d274.
+
+The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Andreas Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Felix Schönbrodt: Conceptualization, Writing -- review \& editing.
+
+Correspondence concerning this article should be addressed to Caspar J. Van Lissa, Professor Cobbenhagenlaan 125, 5037 DB Tilburg, The Netherlands. E-mail: \href{mailto:c.j.vanlissa@tilburguniversity.edu}{\nolinkurl{c.j.vanlissa@tilburguniversity.edu}}
+
+}
+
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Tilburg University, dept. Methodology \& Statistics\\\textsuperscript{2} Other affiliations}
+
+\abstract{%
+Test test.
+}
+
+
+
+\begin{document}
+\maketitle
+
+Kurt Lewin: Nothing is as practical as a good theory
+Paul Meehl: {[}Psychological theories are neither{]} refuted nor corroborated, but instead merely fade away as people lose interest (Meehl, 1978).
+{[}Theories are{]} like toothbrushes --- no self-respecting person wants to use anyone else's (Mischel, 2008)
+``Call Leon'': When finding unexpected results in cognitive dissonance research, students were told to call Leon Festinger. He could explain why the study did not work, e.g.~because you used the wrong font for the questionnaire.
+
+The ``replication crisis'' has prompted extensive reforms in social science (Lavelle, 2021; Scheel, 2022).
+Concern that undisclosed flexibility in analyses was to blame for the abundance of false-positive findings led to widespread adoption of open science practices like preregistration and replication (Nosek et al., 2015).
+But have these reforms met their goal?
+Recent reviews show that most preregistered hypothesis tests are not supported (Scheel, Schijen, \& Lakens, 2021),
+which suggests that the replication crisis may have been symptomatic of an underlying, and more fundamental, ``theory crisis''.
+If psychological theories are insufficiently precise to derive testable hypotheses - then preregistration and replication will only serve to highlight those shortcomings.
+
+Scholars have raised concerns about the state of theory in social science for nearly 50 years (Meehl, 1978; Robinaugh, Haslbeck, Ryan, Fried, \& Waldorp, 2021).
+There is increasing consensus that one contributing cause is a lack of theory formalization: social scientific theories often lack the precision and clarity of theories in the physical sciences (Szollosi \& Donkin, 2021).
+A second issue, which received less attention, is the a lack of transparent and democratic scholarly communication about psychological theory.
+The present paper seeks to address this issue by applying open science principles, for the first time, to psychological theory, and introducing the concept of \emph{FAIR Theory}.
+
+FAIR Theory incorporates theory into open science workflows,
+facilitates scholarly communication about theories,
+making it easier to share theories with less opportunity for ambiguity and misunderstanding.
+FAIR Theories are easier to find, and facilitate sharing, reusing, and updating open theories.
+More efficient and transparent communication about theory democratizes and accelerates cumulative knowledge acquisition,
+removes barriers for knowledge exchange with the global scholarly community,
+opens theory development to diverse perspectives, and enables (distributed and adversarial) collaboration.
+
+\subsection{Theory and Scientific Progress}\label{theory-and-scientific-progress}
+
+Theories reflect scientists' understanding of phenomena.
+Ideally, they are iteratively updated based on deductive testing and inductive theory construction.
+This process is described in the \emph{empirical cycle} (de Groot, 1961),
+a model that describes cumulative knowledge acquisition as a cyclical process with two phases (Figure \ref{fig:figec}).
+In the deductive phase, hypotheses derived from theory are tested on data. In the inductive phase, patterns observed in data are generalized to theoretical principles.
+
+\begin{figure}
+\centering
+\includegraphics{empirical_cycle.pdf}
+\caption{\label{fig:figec}A take on the empirical cycle by De Groot}
+\end{figure}
+
+In a progressive research program (Lakatos, 1971),
+the cycle is regularly completed to iteratively advance our understanding of the studied phenomena.
+
+When comparing common practice in contemporary psychological research to this idealized model, at first glance,
+it appears that deductive research is overrepresented in the literature.
+An overwhelming 89.6\% of published studies ostensibly tests hypotheses (Kühberger, Fritz, \& Scherndl, 2014).
+Closer examination reveals, however, that the link between theory and hypothesis is often tenuous (Oberauer \& Lewandowsky, 2019; Scheel, Tiokhin, Isager, \& Lakens, 2021).
+Only 15\% of deductive studies even reference specific theories (McPhetres et al., 2021).
+Together, these statistics suggest the paradoxical role of theory in contemporary psychology.
+Papers set out to test hypotheses, but these are rarely derived from theory, and test results rarely contribute to the improvement of existing theories.
+Existing theories either persist unchanged, or are forgotten {[}REF Meehl{]}.
+
+Scientific reform initiated by the open science movement has predominanty focused on improving deductive methods, overlooking the shortcomings of theory.
+The present paper applies, for the first time, open science principles to theory.
+
+\subsection{Publication is not Enough}\label{publication-is-not-enough}
+
+Merely publishing a theory does not make it open;
+open theory should adhere to established open science standards.
+The FAIR principles, initially introduced as a standard for open research data, have since been applied to other forms of digital scholarly output (e.g., software Lamprecht et al., 2019).
+We propose to apply the FAIR principles to digital representations of theory as well,
+introducing a FAIR metadata format to represent (formal) theories.
+The resulting theories are made \emph{Findable} via a DOI,
+are Accessible in a machine- and human-readable filetype,
+Interoperable within the data analysis environment,
+and Reusable in the practical and legal sense, using semantic versioning and permissive licensing.
+
+\subsection{Adapting the FAIR Principles}\label{adapting-the-fair-principles}
+
+The FAIR Principles were devised to make scholarly data more findable, accessible, interoperable, and reusable. From their inception, these principles were developed with ``other research resources'' in mind. Since then, scholars have translated the FAIR principles to, e.g., research software {[}REF Lamprecht{]}. The present paper further extends the FAIR principles' definition to theory. Doing so requires first representing theory as a digital research artefact, and then making it compliant with the FAIR principles.
+
+\subsection{Is Current Psychological Theory FAIR?}\label{is-current-psychological-theory-fair}
+
+Is it findable? There is no unified search engine for theory, and not even an agreed-upon search term (model, framework, etc are used interchangeably with theory). Some have sought to address findability through post-hoc curation of theories (e.g., theory mapping website, Borsboom's dictionary of psychological phenomena).
+
+Is it accessible? Paywalls, partly implicit (Great Man Theorizing / Call Leon), certainly not accessible in the sense of theory being ``top of mind'', as researchers appear to prefer ad-hoc hypothesizing rather than deriving hypotheses from specific theories.
+
+Is it interoperable? Theories rarely change,
+
+Is it reusable? Scholars would rather invent something new than reuse somebody else's toothbrush (which is antithetical to the empirical cycle).
+
+In the spirit of DORA, extending the FAIR principles to theory helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a theoretical paper, which can be challenging.
+From a meta-science perspective, FAIR theory facilitates studying the state of theory in a particular subfield, and comparing theories' substantive and structural properties. Version control and cross-referencing additionally enable tracing and studying the ancestry and development of theories.
+
+FAIR theory provides a clear deliverable, and a clear goal, for scholars and institutions seeking to promote contributions to theory.
+
+There are key distinctions between theory and other FAIR digital research artefacts. With this in mind, following the example of Lamprecht and colleagues, we reflect on how the criteria underlying the FAIR Principles apply to theory.
+
+\subsection{The Role of Theory Formalization}\label{the-role-of-theory-formalization}
+
+Concerns about the state of theory are a recurring theme in the psychological literature,
+but previous writing has focused on theory formalization as a solution for ambiguity in psychological theory.
+Greater formality increases theories' \emph{empirical content},
+making them easier to falsify,
+which necessitates revising them,
+thus advancing our principled understanding of the phenomena they describe.
+Conceptually, theory formalization is orthogonal to FAIR theory.
+FAIR Theory does not require theories to be formal, and formal theory can be represented in a way that is not FAIR.
+It is - in principle - possible to represent a collection of verbal statements as a FAIR Theory.
+While FAIR Theory is fully consistent with formal theory, it does not require theories to be formal.
+
+\section{Examples}\label{examples}
+
+\subsection{Using FAIR Theory to Perform Causal Inference}\label{using-fair-theory-to-perform-causal-inference}
+
+Based on this example: \url{https://www.r-bloggers.com/2019/08/causal-inference-with-dags-in-r/}
+
+\begin{itemize}
+\tightlist
+\item
+  Theory is the vehicle of cumulative knowledge acquisition
+\item
+  According to the empirical cycle, ideally, hypotheses are derived from theory, then tested in data, and theory is amended based on the resulting insights. When this cycle is regularly completed, theories become ever more veracious representations of social scientific phenomena.
+\item
+  At present, there is concern over a theory crisis in the social sciences, which highlights that this system is not functioning as intended, and highlights the need for better theory.
+\item
+  One source of potential improvements of theory methodology that has not been previously considered is computer science.
+\item
+  The process of ``iteratively improving'' digital objects - in this case, computer code - is well understood.
+\item
+  Recent work like the FAIR software principles has demonstrated that ideals of open science apply to computer science as well.
+\item
+  This paper argues that, conversely, principles of computer science - particularly version control, algorithmic hypothesis generation (find better word; this is about using the digital theory object to derive implied hypotheses), and integrated testing, can also be used to improve theory methods in the social science.
+\item
+  We introduce ``FAIR theory'', a digital research artifact to represent formal social scientific theories
+\item
+  FAIR theory can be version controlled; any time new insights require modifications of the theory, these modifications can be documented in a traceable and reversable manner. Version control also enables diffuse collaboration in theory development, as other researchers can submit ``pull requests'' to suggest modifications of a theory, or can ``fork'' existing theories to create a spin-off from an existing theory.
+\item
+  FAIR theory allows for algorithmic derivation of hypotheses implied by the theory.
+\item
+  FAIR theory enables integration testing: researchers can build a ``test suite'' of evidence that must be explainable by the theory, and any modifications of the theory must also pass the test suite.
+\item
+  To illustrate FAIR theory's potential to accelerate cumulative knowledge acquisition, we present several tutorial examples, developed in collaboration with applied researchers across fields of social science.
+\end{itemize}
+
+\newpage
+
+\section{References}\label{references}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-degrootMethodologieGrondslagenVan1961}
+de Groot, A. D. (1961). \emph{Methodologie: Grondslagen van onderzoek en denken in de gedragswetenschappen}. 's Gravenhage: Uitgeverij Mouton. Retrieved from \url{https://books.google.com?id=6hiBDwAAQBAJ}
+
+\bibitem[\citeproctext]{ref-kuhbergerPublicationBiasPsychology2014}
+Kühberger, A., Fritz, A., \& Scherndl, T. (2014). Publication {Bias} in {Psychology}: {A Diagnosis Based} on the {Correlation} between {Effect Size} and {Sample Size}. \emph{PLoS ONE}, \emph{9}(9), e105825. \url{https://doi.org/10.1371/journal.pone.0105825}
+
+\bibitem[\citeproctext]{ref-lakatosHistoryScienceIts1971}
+Lakatos, I. (1971). History of {Science} and its {Rational Reconstructions}. In R. C. Buck \& R. S. Cohen (Eds.), \emph{{PSA} 1970: {In Memory} of {Rudolf Carnap Proceedings} of the 1970 {Biennial Meeting Philosophy} of {Science Association}} (pp. 91--136). Dordrecht: Springer Netherlands. \url{https://doi.org/10.1007/978-94-010-3142-4_7}
+
+\bibitem[\citeproctext]{ref-lamprechtFAIRPrinciplesResearch2019}
+Lamprecht, A.-L., Garcia, L., Kuzak, M., Martinez, C., Arcila, R., Martin Del Pico, E., \ldots{} Capella-Gutierrez, S. (2019). Towards {FAIR} principles for research software. \emph{Data Science}, 1--23. \url{https://doi.org/10.3233/DS-190026}
+
+\bibitem[\citeproctext]{ref-lavelleWhenCrisisBecomes2021}
+Lavelle, J. S. (2021). When a {Crisis Becomes} an {Opportunity}: {The Role} of {Replications} in {Making Better Theories}. \emph{The British Journal for the Philosophy of Science}, 714812. \url{https://doi.org/10.1086/714812}
+
+\bibitem[\citeproctext]{ref-mcphetresDecadeTheoryReflected2021}
+McPhetres, J., Albayrak-Aydemir, N., Mendes, A. B., Chow, E. C., Gonzalez-Marquez, P., Loukras, E., \ldots{} Volodko, K. (2021). A decade of theory as reflected in {Psychological Science} (2009--2019). \emph{PLOS ONE}, \emph{16}(3), e0247986. \url{https://doi.org/10.1371/journal.pone.0247986}
+
+\bibitem[\citeproctext]{ref-meehlTheoreticalRisksTabular1978}
+Meehl, P. E. (1978). Theoretical {Risks} and {Tabular Asterisks}: {Sir Karl}, {Sir Ronald}, and the {Slow Progress} of {Soft Psychology}. \emph{Journal of Consulting \& Clinical Psychology}, \emph{46}(4), 806--834.
+
+\bibitem[\citeproctext]{ref-mischelToothbrushProblem2008}
+Mischel, W. (2008). The {Toothbrush Problem}. \emph{APS Observer}, \emph{21}. Retrieved from \url{https://www.psychologicalscience.org/observer/the-toothbrush-problem}
+
+\bibitem[\citeproctext]{ref-nosekPromotingOpenResearch2015a}
+Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., \ldots{} Yarkoni, T. (2015). Promoting an open research culture. \emph{Science}, \emph{348}(6242), 1422--1425. \url{https://doi.org/10.1126/science.aab2374}
+
+\bibitem[\citeproctext]{ref-oberauerAddressingTheoryCrisis2019}
+Oberauer, K., \& Lewandowsky, S. (2019). Addressing the theory crisis in psychology. \emph{Psychonomic Bulletin \& Review}, \emph{26}(5), 1596--1618. \url{https://doi.org/10.3758/s13423-019-01645-2}
+
+\bibitem[\citeproctext]{ref-robinaughInvisibleHandsFine2021}
+Robinaugh, D. J., Haslbeck, J. M. B., Ryan, O., Fried, E. I., \& Waldorp, L. J. (2021). Invisible {Hands} and {Fine Calipers}: {A Call} to {Use Formal Theory} as a {Toolkit} for {Theory Construction}. \emph{Perspectives on Psychological Science}, \emph{16}(4), 725--743. \url{https://doi.org/10.1177/1745691620974697}
+
+\bibitem[\citeproctext]{ref-scheelWhyMostPsychological2022}
+Scheel, A. M. (2022). Why most psychological research findings are not even wrong. \emph{Infant and Child Development}, \emph{31}(1), e2295. \url{https://doi.org/10.1002/icd.2295}
+
+\bibitem[\citeproctext]{ref-scheelExcessPositiveResults2021}
+Scheel, A. M., Schijen, M. R. M. J., \& Lakens, D. (2021). An {Excess} of {Positive Results}: {Comparing} the {Standard Psychology Literature With Registered Reports}. \emph{Advances in Methods and Practices in Psychological Science}, \emph{4}(2), 25152459211007467. \url{https://doi.org/10.1177/25152459211007467}
+
+\bibitem[\citeproctext]{ref-scheelWhyHypothesisTesters2021}
+Scheel, A. M., Tiokhin, L., Isager, P. M., \& Lakens, D. (2021). Why {Hypothesis Testers Should Spend Less Time Testing Hypotheses}. \emph{Perspectives on Psychological Science}, \emph{16}(4), 744--755. \url{https://doi.org/10.1177/1745691620966795}
+
+\bibitem[\citeproctext]{ref-szollosiArrestedTheoryDevelopment2021}
+Szollosi, A., \& Donkin, C. (2021). Arrested theory development: {The} misguided distinction between exploratory and confirmatory research. \emph{Perspectives on Psychological Science}, \emph{16}(4), 717--724. \url{https://doi.org/10.1177/1745691620966796}
+
+\end{CSLReferences}
+
+
+\end{document}
