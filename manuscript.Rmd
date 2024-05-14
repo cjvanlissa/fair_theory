@@ -19,19 +19,19 @@ author:
       - Writing – original draft
       - Writing – review & editing
   - name: "Aaron Peikert"
-    affiliation: "2"
+    affiliation: "2,3"
     role:
       - Formal Analysis
       - Writing – original draft
       - Writing – review & editing
-  - name: "Andreas Brandmaier"
-    affiliation: "2"
+  - name: "Andreas M. Brandmaier"
+    affiliation: "2,3,4"
     role:
       - Formal Analysis
       - Writing – original draft
       - Writing – review & editing
   - name: "Felix Schönbrodt"
-    affiliation: "2"
+    affiliation: "5"
     role:
       - Conceptualization
       - Writing – review & editing
@@ -39,15 +39,20 @@ affiliation:
   - id            : "1"
     institution   : "Tilburg University, dept. Methodology & Statistics"
   - id            : "2"
+    institution   : "Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany"
+  - id            : "3"
+    institution   : "Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany"
+  - id            : "4"
+    institution   : "Department of Psychology, MSB Medical School Berlin, Berlin, Germany"
+  - id            : "5"
     institution   : "Other affiliations"
-
 authornote: |
   This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`.
 
 abstract: |
   Test test.
-keywords          : "keywords"
-wordcount         : "X"
+keywords          : "meta theory, theory formation, cumulative science, formal models"
+wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
 bibliography      : "theory-specification.bib"
 floatsintext      : no
 linenumbers       : yes
