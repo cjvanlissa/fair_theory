@@ -225,8 +225,15 @@ While FAIR Theory is fully consistent with formal theory, it does not require th
 
 ## Using FAIR Theory to Perform Causal Inference
 
-Based on this example: https://www.r-bloggers.com/2019/08/causal-inference-with-dags-in-r/
+This protocol shows how to use DAGs for causal inference, including the detection of a violation of the initial model and subsequent adaptation of the DAG. We could use that to illustrate updating FAIR theory:
 
+https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/cpz1.45
+
+We can find more examples of causal inference with DAGs in these tutorials:
+
+https://www.r-bloggers.com/2019/08/causal-inference-with-dags-in-r/
+
+https://www.r-bloggers.com/2018/08/applications-of-dags-in-causal-inference/
 
 
 <!-- NOTES -->
