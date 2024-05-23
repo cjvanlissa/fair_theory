@@ -179,6 +179,10 @@ Existing theories either persist unchanged, or are forgotten [REF Meehl].
 Scientific reform initiated by the open science movement has predominanty focused on improving deductive methods, overlooking the shortcomings of theory.
 The present paper applies, for the first time, open science principles to theory.
 
+In our experience, there is no clear delineation between paradigms, frameworks and theories. 
+We think it is helpful to view these terms as discrete labels on a continuum from broad to narrow, from general to specific, when organizing knowledge.
+Paradigms at the broadest level encompass the larger narrative, frameworks gather and organize concepts and terms, but only theories have a degree of specificity that allows us to derive specific testable and falsifiable hypotheses or models with exact mathematical relations between concepts (cf. Partelow, 2023, Table 1, https://link.springer.com/article/10.1007/s13412-023-00833-w#).
+
 ## Publication is not Enough
 
 Merely publishing a theory does not make it open;
