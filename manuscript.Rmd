@@ -77,6 +77,11 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
 
+The FAIR Guiding Principles (hereafter: FAIR principles) were initially established to make research data more Findable, Accessible, Interoperable and Reusable [REF].
+Since they were first introduced, scholars have demonstrated the relevance of these criteria for making other digital research artefacts more open.
+This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory as well.
+We introduce "FAIR theory", a digital representation of theory that can complies with the FAIR principles.
+
 <!-- QUOTES -->
 Kurt Lewin: Nothing is as practical as a good theory
 Paul Meehl: [Psychological theories are neither] refuted nor corroborated, but instead merely fade away as people lose interest [@meehlTheoreticalRisksTabular1978].
@@ -86,6 +91,8 @@ Paul Meehl: [Psychological theories are neither] refuted nor corroborated, but i
 <!-- END QUOTES -->
 
 The "replication crisis" has prompted extensive reforms in social science [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
+
+
 Concern that undisclosed flexibility in analyses was to blame for the abundance of false-positive findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 But have these reforms met their goal?
 Recent reviews show that most preregistered hypothesis tests are not supported [@scheelExcessPositiveResults2021],
@@ -167,14 +174,14 @@ knitr::include_graphics("empirical_cycle.pdf")
 In a progressive research program [@lakatosHistoryScienceIts1971],
 the cycle is regularly completed to iteratively advance our understanding of the studied phenomena.
 
-When comparing common practice in contemporary psychological research to this idealized model, at first glance,
-it appears that deductive research is overrepresented in the literature. 
-An overwhelming 89.6% of published studies ostensibly tests hypotheses [@kuhbergerPublicationBiasPsychology2014].
+Contemporary psychological research falls short of this idealized model in several ways.
+Firstly, because deductive research is overrepresented in the literature. 
+According to one estimate, 89.6% of published studies tests hypotheses, which suggests that the literature is predominantly comprised of deductive research  [@kuhbergerPublicationBiasPsychology2014].
 Closer examination reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
 Only 15% of deductive studies even reference specific theories [@mcphetresDecadeTheoryReflected2021].
 Together, these statistics suggest the paradoxical role of theory in contemporary psychology.
 Papers set out to test hypotheses, but these are rarely derived from theory, and test results rarely contribute to the improvement of existing theories.
-Existing theories either persist unchanged, or are forgotten [REF Meehl].
+Existing theories either persist unchanged for decades, or are forgotten [REF Meehl].
 
 Scientific reform initiated by the open science movement has predominanty focused on improving deductive methods, overlooking the shortcomings of theory.
 The present paper applies, for the first time, open science principles to theory.
