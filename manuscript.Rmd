@@ -86,8 +86,7 @@ a digital representation of theory compliant with the FAIR principles.
 <!-- QUOTES 
 
 Kurt Lewin: Nothing is as practical as a good theory
-Paul Meehl: [Psychological theories are neither] refuted nor corroborated, but instead merely fade away as people lose interest [@meehlTheoreticalRisksTabular1978].
-[Theories are] like toothbrushes — no self-respecting person wants to use anyone else’s [@mischelToothbrushProblem2008]
+
 "Call Leon": When finding unexpected results in cognitive dissonance research, students were told to call Leon Festinger. He could explain why the study did not work, e.g. because you used the wrong font for the questionnaire.
 
 END QUOTES -->
@@ -251,11 +250,21 @@ it is not possible to entirely formalize an idea to enable unambiguous interpret
 Nonetheless, taking care to formalize a theory to the maximum extent possible advances Accessibility.
 
  <!-- (Great Man Theorizing / Call Leon), certainly not accessible in the sense of theory being "top of mind", as researchers appear to prefer ad-hoc hypothesizing rather than deriving hypotheses from specific theories. -->
+ 
+<!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
 
-The primary indication that psychological theory has limited interoperability ? Theories rarely change, 
+There are clear indications that psychological theory has limited interoperability. 
+For one, theories are rarely *"refuted nor corroborated, but instead merely fade away as people lose interest"* [@meehlTheoreticalRisksTabular1978].
+There even appears to be a norm *against* theory interoperability, as evident from the quip that 
+*"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008]
+To be interoperable, psychological theory would need to play a concrete part in scientists' day-to-day work.
+For example, it should be possible to integrate theory directly into analysis workflows:
+to derive hypotheses, select control variables, and guide model specification.
+A lack of formalization [REF Robinaugh] and ambiguity [REF Frankenhuis] prevent interoperability in such a practical sense. 
+Additionally, theories should be interoperable with each other:
+for instance, it should be possible to embed a specific theory about the process of emotion regulation [REF Gross] within a theory of emotion regulation development [REF Morris].
 
-
-
+<!-- The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings. -->
 Is it reusable? Scholars would rather invent something new than reuse somebody else's toothbrush (which is antithetical to the empirical cycle).
 
 In the spirit of DORA, extending the FAIR principles to theory helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a theoretical paper, which can be challenging.
