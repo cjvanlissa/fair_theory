@@ -1,0 +1,35 @@
+\begin{lltable}
+
+\begin{longtable}{m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}}\noalign{\getlongtablewidth\global\LTcapwidth=\longtablewidth}
+\caption{\label{tab:tabfair}}\\
+\toprule
+Criterion & \multicolumn{1}{c}{Original} & \multicolumn{1}{c}{Theory} & \multicolumn{1}{c}{Action}\\
+\midrule
+\endfirsthead
+\caption*{\normalfont{Table \ref{tab:tabfair} continued}}\\
+\toprule
+Criterion & \multicolumn{1}{c}{Original} & \multicolumn{1}{c}{Theory} & \multicolumn{1}{c}{Action}\\
+\midrule
+\endhead
+F1 & (Meta)data are assigned a globally unique and persistent identifier & Theory and its associated metadata has a global, unique and persistent identifier for each version (using semantic versioning) & Rephrased\\
+F2 & Data are described with rich metadata & Theory is described with rich metadata & \textasciitilde{}same\\
+F3 & Metadata clearly and explicitly include the identifier of the data it describes & Metadata clearly and explicitly include identifiers for all the versions of the theory it describes & \textasciitilde{}same\\
+F4 & (Meta)data are registered or indexed in a searchable resource & Theory and its associated metadata are included in a searchable repository & NEEDS WORK! GitHub is indexed by Google I believe, but ideally, we'd like our theories to show up in Google Scholar, or even dedicated academic search enginges. Where could we put them to realize this?\\
+A1 & (Meta)data are retrievable by their identifier using a standardized communications protocol & Theory and its associated metadata are accessible by their identifier using a standardized communications protocol & \textasciitilde{}same\\
+A1.1 & The protocol is open, free, and universally implementable & The protocol is open, free, and universally implementable & Same\\
+A1.2 & The protocol allows for an authentication and authorization procedure, where necessary & The protocol allows for an authentication and authorization procedure, where necessary & Do\ \ we need this?\\
+A2 & Metadata are accessible, even when the data are no longer available & Theory metadata are accessible, even when the theory is no longer available & Do\ \ we need this?\\
+I1 & (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation & Theory and its associated metadata use a formal, accessible, shared and broadly applicable language to facilitate machine readability and reuse & Rephrased\\
+I2 & (Meta)data use vocabularies that follow FAIR principles & (Meta)data use vocabularies that follow FAIR principles & NEEDS WORK! I think this is where we explain the value of e.g. universal graph languages like Aaron and Max'\\
+I2S.1 & - &  & \\
+I2S.2 & - &  & \\
+I3 & (Meta)data include qualified references to other (meta)data & (Meta)data includes qualified references to other (meta)data, including previous versions of the theory & Rephrased. I envision a LinkList-like structure where each theory version references its ancestor\\
+I4S & - &  & Discard\\
+R1 & (Meta)data are richly described with a plurality of accurate and relevant attributes & Theory and its associated metadata are richly described with a plurality of accurate and relevant attributes & Needs work. How do we envision this? Keywords? ISBN-like codes for variable type?\\
+R1.1 & (Meta)data are released with a clear and accessible data usage license & (Meta)data are released with a clear and accessible license & Needs work: which license is good for theory?\\
+R1.2 & (Meta)data are associated with detailed provenance & (Meta)data are associated with detailed provenance & Relates to I3; I think this point relates more to the theory's ancestry, and I3 relates to e.g. incorporating other theories within a theory (e.g., theory of measurement inside of structural theory)\\
+R1.3 & (Meta)data meet domain-relevant community standards & Theory metadata and documentation meet domain-relevant community standards & These standards do not yet exist; we can take a first step towards developing them and recommend that this be an active area of development\\
+\bottomrule
+\end{longtable}
+
+\end{lltable}
