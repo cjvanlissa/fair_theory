@@ -168,7 +168,7 @@
     {}{\InnerPatchFailed}%
   }
 {}{\PatchFailed}
-\keywords{meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 1808}
+\keywords{meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 2657}
 \DeclareDelayedFloatFlavor{ThreePartTable}{table}
 \DeclareDelayedFloatFlavor{lltable}{table}
 \DeclareDelayedFloatFlavor*{longtable}{table}
@@ -202,7 +202,7 @@
 
 \authornote{
 
-This is a preprint paper, generated from Git Commit \# 50b18562.
+This is a preprint paper, generated from Git Commit \# d1a82fc7.
 
 The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Felix Schönbrodt: Conceptualization, Writing -- review \& editing.
 
@@ -222,10 +222,11 @@ Test test.
 \maketitle
 
 The FAIR Guiding Principles (hereafter: FAIR principles) were established to make research data more Findable, Accessible, Interoperable and Reusable {[}REF{]}.
-Since they were first introduced, scholars have demonstrated their relevance for making other digital research artefacts more open.
+Since their inception, scholars have demonstrated their relevance for making other digital research artefacts more open.
 This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory as well.
-To this end, we introduce the concept of ``FAIR theory'',
+To this end, we introduce ``FAIR theory'':
 a digital representation of theory compliant with the FAIR principles.
+FAIR Theory has the potential to substantially advance the efficiency of scholarly communication and accelerate cumulative knowledge acquisition.
 
 The ``replication crisis'' has prompted extensive reforms in social science (Lavelle, 2021; Scheel, 2022).
 Concern that undisclosed flexibility in analyses was to blame for the abundance of false-positive findings led to widespread adoption of open science practices like preregistration and replication (Nosek et al., 2015).
@@ -345,31 +346,52 @@ R1.3 & (Meta)data meet domain-relevant community standards & Theory metadata and
 
 While a comprehensive analysis of the present state of FAIR Theory in psychology is beyond the scope of the present paper,
 we provide a narrative review of examples and counterexamples for each criterion.
+
 One factor that contributes to poor findability of psychological theory is that the primary unit of dissemination and search in psychology is the academic paper.
 A paper may contain multiple resources - including materials, data, code, and theory - but there is no unified search engine for theory,
 or even an agreed-upon keyword (model, framework, etc are often used interchangeably with theory).
-The modular publishing movement may ameliorate the Findability of psychological theory.
+Modular publishing could ameliorate the Findability of psychological theory.
 In this approach, distinct resources are individually published as citable academic output.
 Such output can still be linked; for example, a FAIR theory could have an accompanying paper.
-Some have sought to address limitations of theories'findability through post-hoc curation.
+Another effort to improve theories' findability is post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
 and post many examples on their website.
 Similarly, Borsboom and colleagues seek to establish a dictionary of psychological ``phenomena'' (which are not strictly theories, but are patterns reliably evidenced by data that theory should seek to explain).
 
 With regard to Accessibility, publishing behind paywalls certainly has a negative impact.
-Open Access publishing is a practice that increases the accessibility of all academic output, including theory.
+Open Access publishing increases the accessibility of all academic output, including theory.
 Another factor curtailing the accessibility of theory is ambiguity;
-a lack of formalization introduces a dependency on the original author for clarification.
+a lack of theory formalization introduces a dependency on the original author for clarification.
 The discourse on ``Great Man Theorizing'' touches upon the problems this introduces {[}REF Guest et al moral theory{]}.
-Dependency on interpretation by the author creates a potential for gatekeeping - the author could insist that work requires their involvement, which violates checks and balances of scientific research.
+For example, dependency on interpretation by the author creates a potential for gatekeeping - the author could insist that work requires their involvement, which violates checks and balances of scientific research.
 Moreover, if a theory is refuted, its author could claim that the author of the refuting paper did not interpret the theory correctly.
-This also relates to the problem of translation {[}REF Duhem{]}:
+To some extent, this relates to the problem of translation {[}REF Duhem{]}:
 it is not possible to entirely formalize an idea to enable unambiguous interpretation.
 Nonetheless, taking care to formalize a theory to the maximum extent possible advances Accessibility.
 
-Is it interoperable? Theories rarely change,
+There are clear indications that psychological theory has limited interoperability.
+For one, theories are rarely \emph{``refuted nor corroborated, but instead merely fade away as people lose interest''} (Meehl, 1978).
+To be interoperable, psychological theory would need to play a concrete part in scientists' day-to-day work.
+For example, it should be possible to integrate theory directly into analysis workflows:
+to derive hypotheses, select control variables, and guide model specification.
+The aforementioned lack of formalization {[}REF Robinaugh{]} and ambiguity {[}REF Frankenhuis{]} prevent interoperability in such a practical sense.
+Additionally, theories should be interoperable with each other:
+for instance, it should be possible to embed a specific theory about the process of emotion regulation {[}REF Gross{]} within a theory of emotion regulation development {[}REF Morris{]}.
 
-Is it reusable? Scholars would rather invent something new than reuse somebody else's toothbrush (which is antithetical to the empirical cycle).
+There appears to be a norm \emph{against} the reuse of theory,
+as evident from the quip that
+\emph{``{[}Theories are{]} like toothbrushes --- no self-respecting person wants to use anyone else's''} (Mischel, 2008).
+Moreover, a legal basis for theory reuse is often absent.
+Questions that often come up in our workshops on FAIR Theory are ``who owns theory'',
+and ``who determines how a theory may be changed''?
+Such questions require a clear answer, even if that answer may vary across theories.
+Licensing theories for reuse provides clarity about how a theory can be reused.
+A crucial legal consideration is that,
+while specific (FAIR) representations of theory might be protected by copyright,
+the underlying ideas are not.
+This is another argument in favor of publishing specific instantiations of theory along with licenses detailing how they may be reused.
+
+\subsection{FAIR Theory and Recognition \& Rewards}\label{fair-theory-and-recognition-rewards}
 
 In the spirit of DORA, extending the FAIR principles to theory helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a theoretical paper, which can be challenging.
 From a meta-science perspective, FAIR theory facilitates studying the state of theory in a particular subfield, and comparing theories' substantive and structural properties. Version control and cross-referencing additionally enable tracing and studying the ancestry and development of theories.
@@ -391,11 +413,120 @@ FAIR Theory does not require theories to be formal, and formal theory can be rep
 It is - in principle - possible to represent a collection of verbal statements as a FAIR Theory.
 While FAIR Theory is fully consistent with formal theory, it does not require theories to be formal.
 
+\subsection{Version Control}\label{version-control}
+
+\begin{itemize}
+\tightlist
+\item
+  One source of potential improvements of theory methodology that has not been previously considered is computer science.
+\item
+  The process of ``iteratively improving'' digital objects - in this case, computer code - is well understood.
+\item
+  Recent work like the FAIR software principles has demonstrated that ideals of open science apply to computer science as well.
+\item
+  This paper argues that, conversely, principles of computer science - particularly version control, algorithmic hypothesis generation (find better word; this is about using the digital theory object to derive implied hypotheses), and integrated testing, can also be used to improve theory methods in the social science.
+\item
+  We introduce ``FAIR theory'', a digital research artifact to represent formal social scientific theories
+\item
+  FAIR theory can be version controlled; any time new insights require modifications of the theory, these modifications can be documented in a traceable and reversable manner. Version control also enables diffuse collaboration in theory development, as other researchers can submit ``pull requests'' to suggest modifications of a theory, or can ``fork'' existing theories to create a spin-off from an existing theory.
+\end{itemize}
+
 \section{Examples}\label{examples}
+
+\subsection{Formalizing the Empirical Cycle}\label{formalizing-the-empirical-cycle}
+
+In this example, we represent the empirical cycle - a theory of cumulative knowledge production through scientific research - as FAIR theory.
+As several authors have taken inspiration from the work by De Groot,
+we compare our interpretation of the original theory to the interpretation of others.
+Originally, the theory has the following structure:
+
+\begin{verbatim}
+
+digraph {
+
+  observation;
+  induction;
+  deduction;
+  test;
+  evaluation;
+  
+  observation -> induction;
+  induction -> deduction;
+  deduction -> test;
+  test -> evaluation;
+  evaluation -> observation;
+  
+}
+\end{verbatim}
+
+Subsequently, Wagenmakers and colleagues modified the theory by \emph{``{[}adding the{]} Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification''}:
+
+\begin{verbatim}
+digraph {
+
+  subgraph cluster_discovery {
+    label="Discovery";
+    hypothesis [label="New hypothesis"];
+    prediction [label="New prediction"];
+  }
+  data  [label="Old knowledge and old data"];      
+  subgraph cluster_justification {
+    label="Justification";
+    test [label="Test on new data"];
+    evaluation;
+  }
+
+  data -> hypothesis [label="Speculate & explore"];
+  hypothesis -> prediction  [label="Deduce"];
+  prediction -> test  [label="Design new experiment"];
+  test -> evaluation  [label="Statistical analysis"];
+  evaluation -> data  [label="Knowledge accumulation"];
+
+}
+\end{verbatim}
+
+Note, however, that there appear to be further changes:
+the phases of the cycle have been renamed,
+and the annotations suggest a move towards experimental empirical psychology that was absent in the original formulation.
+Moreover, the label ``knowledge accumulation'' invites the question of exactly \emph{how} knowledge accumulates upon evaluation of a prior experiment.
+As this lack of cumulative knowledge acquisition appears to be precisely where contemporary research practice falls short, this ambiguity invites further improvement of the theory.
+
+Our work, too is inspired by De Groot, but our take on the empirical cycle is different again:
+
+\begin{verbatim}
+digraph {
+
+  theory;
+  prediction;
+  test [label="inferential procedure"];
+  observation;
+  
+  theory -> prediction [label="deduction"];
+  prediction -> test;
+  test -> observation;
+  observation -> theory [label="generalization"];
+
+}
+\end{verbatim}
+
+In our representation,
+induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory.
+For example, the refutation of a hypothesized effect,
+or the serendipitous observation of some pattern in data,
+might be a reason to revise or construct theory.
+Induction, incidentally, also occurs within the link from prediction to testing:
+in the form of the inductive bias of methods used to perform the test,
+and auxiliary assumptions that must be made to address remaining theoretical ambiguities.
 
 \subsection{Using FAIR Theory to Perform Causal Inference}\label{using-fair-theory-to-perform-causal-inference}
 
-This protocol shows how to use DAGs for causal inference, including the detection of a violation of the initial model and subsequent adaptation of the DAG. We could use that to illustrate updating FAIR theory:
+Some have argued that \emph{causal explanations} are a property of good theory {[}REF Meehl, etc?{]}.
+According to Pearl and colleagues,
+explicit assumptions about the direction of causality allow one to perform causal inference even on cross-sectional data.
+Any formal theory that is explicit about direction of causality could thus be used to guide causal inference,
+and could even be integrated into the analysis environment.
+
+In this example, we illustrate how to use DAGs for causal inference, including the detection of a violation of the initial model and subsequent adaptation of the DAG. We could use that to illustrate updating FAIR theory:
 
 \url{https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/cpz1.45}
 
@@ -459,6 +590,9 @@ McPhetres, J., Albayrak-Aydemir, N., Mendes, A. B., Chow, E. C., Gonzalez-Marque
 
 \bibitem[\citeproctext]{ref-meehlTheoreticalRisksTabular1978}
 Meehl, P. E. (1978). Theoretical {Risks} and {Tabular Asterisks}: {Sir Karl}, {Sir Ronald}, and the {Slow Progress} of {Soft Psychology}. \emph{Journal of Consulting \& Clinical Psychology}, \emph{46}(4), 806--834.
+
+\bibitem[\citeproctext]{ref-mischelToothbrushProblem2008}
+Mischel, W. (2008). The {Toothbrush Problem}. \emph{APS Observer}, \emph{21}. Retrieved from \url{https://www.psychologicalscience.org/observer/the-toothbrush-problem}
 
 \bibitem[\citeproctext]{ref-nosekPromotingOpenResearch2015a}
 Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., \ldots{} Yarkoni, T. (2015). Promoting an open research culture. \emph{Science}, \emph{348}(6242), 1422--1425. \url{https://doi.org/10.1126/science.aab2374}

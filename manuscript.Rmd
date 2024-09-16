@@ -78,10 +78,11 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 
 The FAIR Guiding Principles (hereafter: FAIR principles) were established to make research data more Findable, Accessible, Interoperable and Reusable [REF].
-Since they were first introduced, scholars have demonstrated their relevance for making other digital research artefacts more open.
+Since their inception, scholars have demonstrated their relevance for making other digital research artefacts more open.
 This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory as well.
-To this end, we introduce the concept of "FAIR theory",
+To this end, we introduce "FAIR theory":
 a digital representation of theory compliant with the FAIR principles.
+FAIR Theory has the potential to substantially advance the efficiency of scholarly communication and accelerate cumulative knowledge acquisition.
 
 <!-- QUOTES 
 
@@ -255,17 +256,43 @@ Nonetheless, taking care to formalize a theory to the maximum extent possible ad
 
 There are clear indications that psychological theory has limited interoperability. 
 For one, theories are rarely *"refuted nor corroborated, but instead merely fade away as people lose interest"* [@meehlTheoreticalRisksTabular1978].
-There even appears to be a norm *against* theory interoperability, as evident from the quip that 
-*"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008]
 To be interoperable, psychological theory would need to play a concrete part in scientists' day-to-day work.
 For example, it should be possible to integrate theory directly into analysis workflows:
 to derive hypotheses, select control variables, and guide model specification.
-A lack of formalization [REF Robinaugh] and ambiguity [REF Frankenhuis] prevent interoperability in such a practical sense. 
+The aforementioned lack of formalization [REF Robinaugh] and ambiguity [REF Frankenhuis] prevent interoperability in such a practical sense.
 Additionally, theories should be interoperable with each other:
 for instance, it should be possible to embed a specific theory about the process of emotion regulation [REF Gross] within a theory of emotion regulation development [REF Morris].
 
-<!-- The ultimate goal of FAIR is to optimise the reuse of data. To achieve this, metadata and data should be well-described so that they can be replicated and/or combined in different settings. -->
-Is it reusable? Scholars would rather invent something new than reuse somebody else's toothbrush (which is antithetical to the empirical cycle).
+The ultimate goal of the FAIR principles is to facilitate the reuse digital research artefacts.
+While theory is ostensibly held in high regard in the social sciences,
+there also appears to be a norm *against* theory reuse.
+This is evident from the quip that 
+*"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008].
+In our workshops on FAIR Theory, we often hear questions such as "who owns theory",
+and "who determines how a theory may be reused or changed"?
+Licensing theories for reuse provides an unambiguous answer to such questions.
+
+One important consideration is that there may be legal limits to the rights authors can claim over theory.
+An important concept in copyright law is the *idea-expression dichotomy* [REF].
+
+o. Ideas, facts, and concepts are not protected by  Although they are not protectable by copyright, the expression of those ideas, facts, and concepts are protectable, such as in a description, explanation, or illustration or as a database of facts. Separating an idea from the expression or manifestation of that idea is known in copyright law as the 
+Copyright explicitly does not
+*"extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery"*,
+but it may extend to creative works expressing that idea (e.g., writing, visual illustrations).
+Copyright pertaining to recipes offer an interesting perspective:
+Whereas the recipes themselves are not protected, *"substantial literary expression in the form of an explanation or directions"* can be protected by copyright.
+Extrapolating to FAIR Theory, it would seem that vague, ambiguous verbal explanations of theories are more likely to qualify for copyright protection than formal theories.
+If copyright does not cover (formal) theory,
+then it would be pointless to adopt a license that assumes copyright protection.
+Furtermore, even if copyright would apply, research is covered under "fair use" excemptions to copyright law, so copyright would impose few restrictions to theory reuse in scholarly communication.
+In sum, the CC0 (no rights reserved) license seems most appropriate for FAIR Theory;
+it explicitly waives all rights and encourages reuse.
+Simultaneously, to comply with the interoperability principle, the principle of comprehensive citation [REF TOP guidelines],
+and the spirit of good scholarship,
+it is essential that scholars do comprehensively cite theory,
+including prior work that new theories are based on.
+
+## FAIR Theory and Recognition & Rewards
 
 In the spirit of DORA, extending the FAIR principles to theory helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a theoretical paper, which can be challenging.
 From a meta-science perspective, FAIR theory facilitates studying the state of theory in a particular subfield, and comparing theories' substantive and structural properties. Version control and cross-referencing additionally enable tracing and studying the ancestry and development of theories.
@@ -287,12 +314,116 @@ FAIR Theory does not require theories to be formal, and formal theory can be rep
 It is - in principle - possible to represent a collection of verbal statements as a FAIR Theory.
 While FAIR Theory is fully consistent with formal theory, it does not require theories to be formal.
 
+## Version Control
+
+
+* One source of potential improvements of theory methodology that has not been previously considered is computer science.
+* The process of "iteratively improving" digital objects - in this case, computer code - is well understood.
+* Recent work like the FAIR software principles has demonstrated that ideals of open science apply to computer science as well.
+* This paper argues that, conversely, principles of computer science - particularly version control, algorithmic hypothesis generation (find better word; this is about using the digital theory object to derive implied hypotheses), and integrated testing, can also be used to improve theory methods in the social science.
+* We introduce "FAIR theory", a digital research artifact to represent formal social scientific theories
+* FAIR theory can be version controlled; any time new insights require modifications of the theory, these modifications can be documented in a traceable and reversable manner. Version control also enables diffuse collaboration in theory development, as other researchers can submit "pull requests" to suggest modifications of a theory, or can "fork" existing theories to create a spin-off from an existing theory.
 
 # Examples
 
+## Formalizing the Empirical Cycle
+
+In this example, we represent the empirical cycle - a theory of cumulative knowledge production through scientific research - as FAIR theory.
+As several authors have taken inspiration from the work by De Groot,
+we compare our interpretation of the original theory to the interpretation of others.
+Originally, the theory has the following structure:
+
+```
+
+digraph {
+
+  observation;
+  induction;
+  deduction;
+  test;
+  evaluation;
+  
+  observation -> induction;
+  induction -> deduction;
+  deduction -> test;
+  test -> evaluation;
+  evaluation -> observation;
+  
+}
+```
+
+Subsequently, Wagenmakers and colleagues modified the theory by *"[adding the] Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification"*:
+
+```
+digraph {
+
+  subgraph cluster_discovery {
+    label="Discovery";
+    hypothesis [label="New hypothesis"];
+    prediction [label="New prediction"];
+  }
+  data  [label="Old knowledge and old data"];      
+  subgraph cluster_justification {
+    label="Justification";
+    test [label="Test on new data"];
+    evaluation;
+  }
+
+  data -> hypothesis [label="Speculate & explore"];
+  hypothesis -> prediction  [label="Deduce"];
+  prediction -> test  [label="Design new experiment"];
+  test -> evaluation  [label="Statistical analysis"];
+  evaluation -> data  [label="Knowledge accumulation"];
+
+}
+```
+
+Note, however, that there appear to be further changes:
+the phases of the cycle have been renamed,
+and the annotations suggest a move towards experimental empirical psychology that was absent in the original formulation.
+Moreover, the label "knowledge accumulation" invites the question of exactly *how* knowledge accumulates upon evaluation of a prior experiment.
+As this lack of cumulative knowledge acquisition appears to be precisely where contemporary research practice falls short, this ambiguity invites further improvement of the theory.
+
+Our work, too is inspired by De Groot, but our take on the empirical cycle is different again:
+
+```
+digraph {
+
+  theory;
+  prediction;
+  test [label="inferential procedure"];
+  observation;
+  
+  theory -> prediction [label="deduction"];
+  prediction -> test;
+  test -> observation;
+  observation -> theory [label="generalization"];
+
+}
+```
+
+In our representation,
+induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory.
+For example, the refutation of a hypothesized effect,
+or the serendipitous observation of some pattern in data,
+might be a reason to revise or construct theory.
+Induction, incidentally, also occurs within the link from prediction to testing:
+in the form of the inductive bias of methods used to perform the test,
+and auxiliary assumptions that must be made to address remaining theoretical ambiguities.
+
+<!-- # And then for example: I understand Aaron's work about inductive bias to be about the link "prediction -> test;", because the test is not identified without making auxiliary assumptions; if the auxiliary assumption is made based on the data, inductive bias is introduced. -->
+<!-- ``` -->
+
+
 ## Using FAIR Theory to Perform Causal Inference
 
-This protocol shows how to use DAGs for causal inference, including the detection of a violation of the initial model and subsequent adaptation of the DAG. We could use that to illustrate updating FAIR theory:
+Some have argued that *causal explanations* are a property of good theory [REF Meehl, etc?].
+According to Pearl and colleagues,
+explicit assumptions about the direction of causality allow one to perform causal inference even on cross-sectional data.
+Any formal theory that is explicit about direction of causality could thus be used to guide causal inference,
+and could even be integrated into the analysis environment.
+
+In this example, we illustrate how to use DAGs for causal inference, including the detection of a violation of the initial model and subsequent adaptation of the DAG. We could use that to illustrate updating FAIR theory:
 
 https://currentprotocols.onlinelibrary.wiley.com/doi/full/10.1002/cpz1.45
 
