@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+fit_model.rdata
+mctracker.R
+model.stan
