@@ -172,19 +172,18 @@ knitr::include_graphics("empirical_cycle.pdf")
 In a progressive research program [@lakatosHistoryScienceIts1971],
 the cycle is regularly completed to iteratively advance our understanding of the studied phenomena.
 There are indications that contemporary psychology falls short of this idealized model, however.
-Firstly, because deductive research is over-represented in the literature. 
-According to one estimate, 89.6% of published studies tests hypotheses,
-which suggests that the literature is predominantly comprised of deductive research  [@kuhbergerPublicationBiasPsychology2014].
-Closer examination reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
-Only 15% of deductive studies reference theory at all [@mcphetresDecadeTheoryReflected2021].
-This invites the question where the other hypotheses come from,
-and to what extent testing an ad-hoc hypothesis not grounded in theory can advance our principled understanding of the studied phenomena.
+Firstly, because deductive research is over-represented in the literature: 
+According to one estimate, 89.6% of paper published in psychology tests hypotheses [@kuhbergerPublicationBiasPsychology2014].
+Closer examination of deductive research reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
+Only 15% of deductive studies referenced any theory, and theory was often not references in connection to the hypothesis [@mcphetresDecadeTheoryReflected2021].
+This invites the question where hypotheses come from in the remaining 85% of deductive studies,
+and to what extent testing ad-hoc hypotheses not grounded in theory can advance our principled understanding of psychological phenomena.
 These statistics suggest that theory has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
 but these are rarely derived from theory,
 and test results rarely contribute to the improvement of existing theories.
-Consequently, theories either persist unchanged, immune to refutation,
-or are forgotten [REF Meehl].
+The paradoxical role of theory in psychology may help explain the observation that "theories either persist unchanged, immune to refutation,
+or are forgotten" [check quote REF Meehl].
 
 <!-- Scientific reform initiated by the open science movement has predominanty focused on improving deductive methods, overlooking the shortcomings of theory. -->
 <!-- The present paper applies, for the first time, open science principles to theory. -->
@@ -198,41 +197,54 @@ Applying the FAIR principles to scientific theories facilitates transparent scho
 One major obstacle to cumulative knowledge acquisition is the difficulty in finding relevant theories.
 The primary unit of dissemination and search in psychology is often the academic paper.
 A paper may contain multiple resources - including materials, data, code, and theory - but there is no unified search engine for theory,
-or standardized metadata to signal the presence of theory within a work,
-nor even a standardized keyword (model, framework, etc are often used interchangeably with theory).
+nor standardized metadata or even a keyword to signal the presence of theory within a paper.
 Making theories more findable would allow them to be systematically indexed, tagged, and made searchable.
 This would allow researchers to easily identify relevant theories to inform their hypotheses,
 grounding their work in established theoretical foundations.
 Making theories findable also increases the impact and reuse potential of theories across scientific contexts.
-For example, it becomes possible to study theories (the same way libraries and search engines have enabled scholars to study the literature via systematic reviews);
-theories might have transdisciplinary impact;
-and the structure of theories from one discipline might inspire analogical modeling in other fields, the way - for example, predator-prey models have inspired theories of XXX and the Eysenck model of atomic magnetism has inspired a network theory of depression.
+For example, it becomes possible to conduct meta-research on theories, 
+in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
+Moreover, theories might have transdisciplinary impact, either through direct application or through analogical modeling.
+In analog modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
+For example, predator-prey models have inspired theories of XXX, and the Eysenck model of atomic magnetism has inspired a network theory of depression.
 
 One effort that improves theories' findability is post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
 and post many examples on their website [REF GRAY].
-Similarly, Borsboom and colleagues seek to establish a dictionary of psychological "phenomena" (which are not strictly theories, but are patterns reliably evidenced by data that theory should seek to explain) [REF BORSBOOM].
-Another method that could ameliorate theory Findability is modular publishing.
-In this approach, distinct assets are individually published as citable academic output.
-Such output can be linked; for example, a FAIR theory could have an associated paper.
+Similarly, Borsboom and colleagues seek to establish a database of psychological theories [REF BORSBOOM].
+Post-hoc curation does not address the root cause of the lack of Findability, however.
+This would be achieved by modular publishing of theories as individually citable academic assets, with adequate metadata that is indexed in standardized repositories,
+similar to the current practice of publishing empirical data in standardized repositories (e.g., DataVerse).
+As with empirical data, these theories could still be connected to a specific paper which might serve as documentation and the canonical reference for the resource.
 
+### Accessibility
 
-
-
-With regard to Accessibility, publishing behind paywalls certainly has a negative impact.
+Transparent scholarly communication about theory requires that theories are accessible to all researchers and other stakeholders.
+Publishing theories behind paywalls impedes this process.
 Open Access publishing increases the accessibility of all academic output, including theory.
-Another factor curtailing the accessibility of theory is ambiguity;
-a lack of theory formalization introduces a dependency on the original author for clarification.
-The discourse on "Great Man Theorizing" touches upon the problems this introduces [REF Guest et al moral theory].
-For example, dependency on interpretation by the author creates a potential for gatekeeping - the author could insist that work requires their involvement, which violates checks and balances of scientific research.
+If theories were more accessible, researchers could reuse and refine them, thus accelerating cumulative knowledge acquisition.
+Making theories accessible also allows other stakeholders (e.g., practitioners, policy makers, advocates) to inform themselves of the current scientific understanding of specific phenomena:
+More so than single studies, theories offer a top-down, big picture representation of the phenomena studied in a field.
+
+Beyond open access publishing, making theories accessible also requires communicating them clearly and explicitly.
+This relates to a property of good theories that has been dubbed "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024].
+But contemporary psychological theory is often difficult to understand due to its ambiguity [REF Frankenhuis].
+Ambiguity reduces the portability of theory by introducing a dependency on the original author for interpretation and clarification.
+This dependency can be an obstacle, for example, when a theory is insufficiently clear to derive hypotheses from it without first asking the original author what they meant - but it can also render theories immune to refutation.
+When confronted with falsifying evidence, the original author can always claim that the theory was misconstrued or misrepresented, thus making it a moving target.
+Dependency on the author relates to the discourse on "Great Man Theorizing" [REF Guest et al moral theory].
+For example, because dependency on the author creates a potential for gatekeeping - the author could insist that work requires their involvement, which violates checks and balances of scientific research.
 Moreover, if a theory is refuted, its author could claim that the author of the refuting paper did not interpret the theory correctly.
-To some extent, this relates to the problem of translation [REF Duhem]:
-it is not possible to entirely formalize an idea to enable unambiguous interpretation.
-Nonetheless, taking care to formalize a theory to the maximum extent possible advances Accessibility.
+Dependency on the author also relates to the problem of translation [REF Duhem]:
+it is not possible to entirely formalize an idea to the point that it becomes unambiguously interpretable.
+Despite this theoretical upper bound on formalization,
+efforts to formalize a theory will advance its Accessibility.
 
  <!-- (Great Man Theorizing / Call Leon), certainly not accessible in the sense of theory being "top of mind", as researchers appear to prefer ad-hoc hypothesizing rather than deriving hypotheses from specific theories. -->
  
 <!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
+
+### Interoperability
 
 There are clear indications that psychological theory has limited interoperability. 
 For one, theories are rarely *"refuted nor corroborated, but instead merely fade away as people lose interest"* [@meehlTheoreticalRisksTabular1978].
@@ -273,10 +285,7 @@ it is essential that scholars do comprehensively cite theory,
 including prior work that new theories are based on.
 
 
-2. Accessibility: Promoting Open and Transparent Theoretical Development
-Accessibility involves ensuring that theories are openly available to all researchers, not locked behind paywalls or isolated in specific journals. By making theories FAIR, they would be accessible under clear, standardized, and open conditions, using platforms that allow both humans and machines to retrieve them effortlessly.
 
-How it helps: Openly accessible theories would allow for greater scrutiny and replication by the research community, fostering transparent scholarly communication. This ensures that researchers worldwide can contribute to, refine, and build upon existing theories, thus accelerating the pace of scientific discovery and enhancing the collective understanding of a given phenomenon.
 3. Interoperability: Facilitating Integration Across Fields
 In many scientific disciplines, researchers often operate in isolated silos, using different terminologies, methodologies, and conceptual frameworks. The interoperability aspect of FAIR focuses on the ability of data (or in this case, theories) to be integrated with other systems using common standards, formats, and vocabularies.
 
