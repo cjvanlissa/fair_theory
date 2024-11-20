@@ -246,14 +246,24 @@ efforts to formalize a theory will advance its Accessibility.
 
 ### Interoperability
 
+Interoperability pertains to the property of digital research artefacts to "integrate or work together [...] with minimal effort" [@wilkinsonFAIRGuidingPrinciples2016a].
+As the original definition of interoperability was narrow and somewhat abstract,
+the concept has recently been further refined in terms of facilitating "successful communication between machines and between humans and machines", where "A and B are considered X-interoperable if a common operation X exists that can be applied to both" [@vogtFAIR20Extending2024].
+
 There are clear indications that psychological theory has limited interoperability. 
 For one, theories are rarely *"refuted nor corroborated, but instead merely fade away as people lose interest"* [@meehlTheoreticalRisksTabular1978].
+
 To be interoperable, psychological theory would need to play a concrete part in scientists' day-to-day work.
+
+
+
 For example, it should be possible to integrate theory directly into analysis workflows:
 to derive hypotheses, select control variables, and guide model specification.
 The aforementioned lack of formalization [REF Robinaugh] and ambiguity [REF Frankenhuis] prevent interoperability in such a practical sense.
 Additionally, theories should be interoperable with each other:
 for instance, it should be possible to embed a specific theory about the process of emotion regulation [REF Gross] within a theory of emotion regulation development [REF Morris].
+
+### Reusability
 
 The ultimate goal of the FAIR principles is to facilitate the reuse digital research artefacts.
 While theory is ostensibly held in high regard in the social sciences,
