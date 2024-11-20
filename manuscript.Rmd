@@ -247,53 +247,81 @@ efforts to formalize a theory will advance its Accessibility.
 ### Interoperability
 
 Interoperability pertains to the property of digital research artefacts to "integrate or work together [...] with minimal effort" [@wilkinsonFAIRGuidingPrinciples2016a].
-As the original definition of interoperability was narrow and somewhat abstract,
+As the original definition of interoperability was somewhat narrow and abstract,
 the concept has recently been further refined in terms of facilitating "successful communication between machines and between humans and machines", where "A and B are considered X-interoperable if a common operation X exists that can be applied to both" [@vogtFAIR20Extending2024].
+This definition raises an interesting question, namely *interoperable for what?*
+Suitable answers for FAIR theory may be: this theory is X-interoperable for deriving testable null-hypotheses, or for the purpose of selecting relevant control variables,
+or for the purpose of indicating the conditions necessary for observing a particular phenomenon.
 
-There are clear indications that psychological theory has limited interoperability. 
-For one, theories are rarely *"refuted nor corroborated, but instead merely fade away as people lose interest"* [@meehlTheoreticalRisksTabular1978].
+These definitions suggest that FAIR theory should, ad minimum,
+be instantiated in a human- and machine-readable file format, as previously recommended [@vanlissaWORCSWorkflowOpen2021].
+Furthermore, it is important to acknowledge that interoperability is subject to the *indeterminacy of translation* [@quineReasonsIndeterminacyTranslation1970],
+which holds that every communicative utterance has multiple alternative translations, with no objective means of choosing the correct or best one.
 
-To be interoperable, psychological theory would need to play a concrete part in scientists' day-to-day work.
+Successful communication requires shared background knowledge between sender and receiver [@vogtFAIR20Extending2024].
+The Kuhnian notion of "normal science" conducted within the context of a shared paradigm may provide sufficient shared background knowledge for mutual understanding [@kuhnStructureScientificRevolutions2009].
+From a pragmatic perspective, these considerations indicate that,
+when striving to make theory interoperable,
+it is important to be as explicit as possible (e.g., about assumptions  and ontological definitions),
+while acknowledging that interoperability exists on a spectrum,
+and that it is impossible to eliminate all ambiguity.
+Rather, it may benefit scientific discourse to anticipate misunderstanding,
+and use it to drive further explication of theory.
 
+<!-- Do we want to say something about this?
+Interoperability of psychological theory may be limited when theories are instantiated in natural language without consideration of ontological complexities. -->
+<!-- or as visualizations without a straightforward interpretation -->
+<!-- What can go wrong? A well-formed sentence may be logically inconsistent (e.g., the theory that conceptualized father involvement simultaneously as mediator and moderator); a picture may seem sensible but there's no straightforward way to translate it to hypotheses, etc. -->
+<!-- which are not machine-readable and l -->
 
-
-For example, it should be possible to integrate theory directly into analysis workflows:
-to derive hypotheses, select control variables, and guide model specification.
-The aforementioned lack of formalization [REF Robinaugh] and ambiguity [REF Frankenhuis] prevent interoperability in such a practical sense.
+According to Kurt Lewin, "there's nothing as practical as a good theory" [@lewinPsychologyProcessGroup1943] - but as we argued bfore,
+there are clear signs that theory rarely plays a practical role in the work of contemporary psychologists.
+Interoperability makes it possible to integrate theory into scientists' day-to-day work in a practical way.
+If a theory is X-interoperable with software used for data analysis,
+it becomes possible to integrate theory directly into analysis workflows.
+For example, interoperable theory could be used to derive machine-readable hypotheses [@lakensImprovingTransparencyFalsifiability2021],
+to select control variables for causal inference [@cinelliCrashCourseGood2022],
+and to preregister the inferential procedure that would lead to specific modifications of a theory after analyzing empirical data [@peikertReproducibleResearchTutorial2021]
 Additionally, theories should be interoperable with each other:
-for instance, it should be possible to embed a specific theory about the process of emotion regulation [REF Gross] within a theory of emotion regulation development [REF Morris].
+for instance, it should be possible to embed a specific theory about the process of emotion regulation [e.g., @grossEmotionRegulationCurrent2015] within a theory of emotion regulation development [@morrisRoleFamilyContext2007].
 
 ### Reusability
 
 The ultimate goal of the FAIR principles is to facilitate the reuse digital research artefacts.
 While theory is ostensibly held in high regard in the social sciences,
-there also appears to be a norm *against* theory reuse.
-This is evident from the quip that 
+some have described a norm *against* theory reuse:
 *"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008].
+Given that theory is the vehicle of cumulative knowledge acquisition [@degrootMethodologieGrondslagenVan1961],
+such a norm impedes scientific progress.
+Even if scholars wish to diverge substantially from prior theory,
+explicitly refering back to it enables clear comparison of the differences [@ramGitCanFacilitate2013].
+Reusing and adapting existing theories makes it possible to study the provenance of a theory and investigate how well different iterations of the theory explain emprical evidence [@vanlissaUsingEndpointsCheck2023]
+
 In our workshops on FAIR Theory, we often hear questions such as "who owns theory",
 and "who determines how a theory may be reused or changed"?
 Licensing theories for reuse provides an unambiguous answer to such questions.
+These questions suggest that there is a norm against modifying theory without consent from the author.
+However, scholars might not be aware of the legal limits to the rights authors can claim over theory.
+An important concept in copyright law is the *idea-expression dichotomy* [@bently2010copyright].
 
-One important consideration is that there may be legal limits to the rights authors can claim over theory.
-An important concept in copyright law is the *idea-expression dichotomy* [REF].
-
-o. Ideas, facts, and concepts are not protected by  Although they are not protectable by copyright, the expression of those ideas, facts, and concepts are protectable, such as in a description, explanation, or illustration or as a database of facts. Separating an idea from the expression or manifestation of that idea is known in copyright law as the 
+<!-- o. Ideas, facts, and concepts are not protected by  Although they are not protectable by copyright, the expression of those ideas, facts, and concepts are protectable, such as in a description, explanation, or illustration or as a database of facts. Separating an idea from the expression or manifestation of that idea is known in copyright law as the  -->
 Copyright explicitly does not
 *"extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery"*,
 but it may extend to creative works expressing that idea (e.g., writing, visual illustrations).
 Copyright pertaining to recipes offer an interesting perspective:
 Whereas the recipes themselves are not protected, *"substantial literary expression in the form of an explanation or directions"* can be protected by copyright.
-Extrapolating to FAIR Theory, it would seem that vague, ambiguous verbal explanations of theories are more likely to qualify for copyright protection than formal theories.
+Applying these principles to FAIR theory, it seems that vague, ambiguous verbal explanations of theories are more likely to qualify for copyright protection than formal theories.
 If copyright does not cover (formal) theory,
 then it would be pointless to adopt a license that assumes copyright protection.
-Furtermore, even if copyright would apply, research is covered under "fair use" excemptions to copyright law, so copyright would impose few restrictions to theory reuse in scholarly communication.
-In sum, the CC0 (no rights reserved) license seems most appropriate for FAIR Theory;
+Furtermore, even if copyright would apply, academic research is covered under "fair use" exemptions to copyright law,
+so copyright would impose few restrictions to theory reuse in scholarly communication.
+Given these considerations, the CC0 (no rights reserved) license seems most appropriate for FAIR Theory;
 it explicitly waives all rights and encourages reuse.
-Simultaneously, to comply with the interoperability principle, the principle of comprehensive citation [REF TOP guidelines],
+Simultaneously, to comply with the interoperability principle, the principle of comprehensive citation [@aalbersbergMakingScienceTransparent2018],
 and the spirit of good scholarship,
 it is essential that scholars do comprehensively cite theory,
-including prior work that new theories are based on.
-
+including prior work that new theories are based on,
+even in absence of legal obligations to do so.
 
 
 3. Interoperability: Facilitating Integration Across Fields
