@@ -220,27 +220,52 @@ As with empirical data, these theories could still be connected to a specific pa
 ### Accessibility
 
 Transparent scholarly communication about theory requires that theories are accessible to all researchers and other stakeholders.
-Publishing theories behind paywalls impedes this process.
+If theories are accessible, researchers can reuse and refine them,
+thus accelerating cumulative knowledge acquisition.
+Making theories accessible also allows stakeholders (e.g., practitioners, policy makers, advocates) to inform themselves of the current scientific understanding of specific phenomena.
+While isolated empirical findings can appear fragmented and contradictory [@dumas-malletPoorReplicationValidity2017],
+theories offer a top-down, big picture representation of the phenomena studied in a field.
+
+At present, there are several impediments to theories' accessibility.
+The first are paywalls erected by commercial publishers.
 Open Access publishing increases the accessibility of all academic output, including theory.
-If theories were more accessible, researchers could reuse and refine them, thus accelerating cumulative knowledge acquisition.
-Making theories accessible also allows other stakeholders (e.g., practitioners, policy makers, advocates) to inform themselves of the current scientific understanding of specific phenomena:
-More so than single studies, theories offer a top-down, big picture representation of the phenomena studied in a field.
 
-Beyond open access publishing, making theories accessible also requires communicating them clearly and explicitly.
-This relates to a property of good theories that has been dubbed "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024].
-But contemporary psychological theory is often difficult to understand due to its ambiguity [REF Frankenhuis].
-Ambiguity reduces the portability of theory by introducing a dependency on the original author for interpretation and clarification.
-This dependency can be an obstacle, for example, when a theory is insufficiently clear to derive hypotheses from it without first asking the original author what they meant - but it can also render theories immune to refutation.
-When confronted with falsifying evidence, the original author can always claim that the theory was misconstrued or misrepresented, thus making it a moving target.
-Dependency on the author relates to the discourse on "Great Man Theorizing" [REF Guest et al moral theory].
-For example, because dependency on the author creates a potential for gatekeeping - the author could insist that work requires their involvement, which violates checks and balances of scientific research.
-Moreover, if a theory is refuted, its author could claim that the author of the refuting paper did not interpret the theory correctly.
-Dependency on the author also relates to the problem of translation [REF Duhem]:
-it is not possible to entirely formalize an idea to the point that it becomes unambiguously interpretable.
-Despite this theoretical upper bound on formalization,
-efforts to formalize a theory will advance its Accessibility.
+A second impediment is therefore the prevalence of (strategic) ambiguity,
+which renders theory difficult to understand [REF Frankenhuis].
+While open access publishing increases the availability of theories,
+accessibility further requires clear and explicit communication.
+This property of good theories has been dubbed "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024].
+It is important to acknowledge the *indeterminacy of translation* [@quineReasonsIndeterminacyTranslation1970]:
+which holds that every communicative utterance has multiple alternative translations, with no objective means of choosing the correct or best one.
+Thus, it is not possible to entirely formalize an idea to the point that it becomes unambiguously interpretable.
+This places a theoretical upper bound on theories' ability to be understood.
 
- <!-- (Great Man Theorizing / Call Leon), certainly not accessible in the sense of theory being "top of mind", as researchers appear to prefer ad-hoc hypothesizing rather than deriving hypotheses from specific theories. -->
+Successful communication requires shared background knowledge between sender and receiver [@vogtFAIR20Extending2024].
+The Kuhnian notion of "normal science", conducted within the context of a shared paradigm, provides shared background knowledge to facilitate mutual understanding [@kuhnStructureScientificRevolutions2009].
+From a pragmatic perspective, these considerations indicate that,
+when striving to make theory accessible,
+it is important to be as explicit as possible (e.g., about assumptions  and ontological definitions),
+while acknowledging that accessibility exists on a spectrum,
+and that it is impossible to eliminate all ambiguity.
+Rather, it may benefit scientific discourse to anticipate misunderstanding,
+and use it to drive further explication of theory.
+In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, embedding within shared contexts, and explication of assumptions, will advance its Accessibility.
+
+A third, and related, impediment is a phenomenon we will call "dependency on the author" (DOA).
+DOA occurs whenever a theory cannot be understood by independent scholars,
+thus requiring the original author for interpretation and clarification.
+We have heard DOA referred to apocryphally as the "ask Leon" phenomenon,
+as graduate students were supposedly told to ask Leon Festinger to explain to them how their misconstrual of cognitive dissonance theory had caused their experiments to yield null results.
+DOA is an obstacle when theory is insufficiently clear to derive hypotheses from it without first asking the author what they meant.
+It also renders theories immune to refutation,
+because the author can claim that the theory was misconstrued when confronted with falsifying evidence, thus making it a moving target.
+DOA relates to the discourse on "Great Man Theorizing" [@guestWhatMakesGood2024] because dependency on the author creates a potential for gatekeeping - the author could insist that work requires their involvement or denounce work conducted outside their purview as illegitimate, which violates checks and balances of scientific research.
+
+DOA is also a problem because authors may not understand their own theories well.
+illustrated by instances where third parties identify logical inconsistencies within a theory [e.g., @kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008].
+
+
+
  
 <!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
 
@@ -255,18 +280,7 @@ or for the purpose of indicating the conditions necessary for observing a partic
 
 These definitions suggest that FAIR theory should, ad minimum,
 be instantiated in a human- and machine-readable file format, as previously recommended [@vanlissaWORCSWorkflowOpen2021].
-Furthermore, it is important to acknowledge that interoperability is subject to the *indeterminacy of translation* [@quineReasonsIndeterminacyTranslation1970],
-which holds that every communicative utterance has multiple alternative translations, with no objective means of choosing the correct or best one.
 
-Successful communication requires shared background knowledge between sender and receiver [@vogtFAIR20Extending2024].
-The Kuhnian notion of "normal science" conducted within the context of a shared paradigm may provide sufficient shared background knowledge for mutual understanding [@kuhnStructureScientificRevolutions2009].
-From a pragmatic perspective, these considerations indicate that,
-when striving to make theory interoperable,
-it is important to be as explicit as possible (e.g., about assumptions  and ontological definitions),
-while acknowledging that interoperability exists on a spectrum,
-and that it is impossible to eliminate all ambiguity.
-Rather, it may benefit scientific discourse to anticipate misunderstanding,
-and use it to drive further explication of theory.
 
 <!-- Do we want to say something about this?
 Interoperability of psychological theory may be limited when theories are instantiated in natural language without consideration of ontological complexities. -->
@@ -353,6 +367,8 @@ The FAIR Principles were devised to make scholarly data more findable, accessibl
 From their inception, these principles were developed with "other research resources" in mind.
 Scholars have translated the FAIR principles to, e.g., research software [REF Lamprecht].
 The present paper further extends the FAIR principles' definition to theory, see Table \@ref(tab:tabfair).
+We establish guiding principles for instantiating theory as a FAIR digital research artifact,
+and provide applied examples to encourage their adoption.
 
 ```{r tabfair}
 tab_fair <- read.csv("fair_principles.csv", stringsAsFactors = FALSE)[, c("Criterion", "Original", "Theory", "Our.action")]
