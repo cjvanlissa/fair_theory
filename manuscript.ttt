@@ -1,3 +1,29 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:unnamed-chunk-2}}
+
+\begin{tabular}{ll}
+\toprule
+Property & \multicolumn{1}{c}{X.interoperability}\\
+\midrule
+1) Ontology & Variable selection\\
+2) Causal connections & Model specification, covariate selection, causal inference\\
+3-8) Functional Form & Deriving specific hypotheses\\
+9) Numerical Value & Simulating data\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\efloatseparator
+ 
 \begin{lltable}
 
 \begin{longtable}{m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}}\noalign{\getlongtablewidth\global\LTcapwidth=\longtablewidth}
