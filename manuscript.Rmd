@@ -183,35 +183,93 @@ According to one estimate, 89.6% of paper published in psychology tests hypothes
 Closer examination of deductive research reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
 Only 15% of deductive studies referenced any theory, and theory was often not cited in connection to the hypothesis [@mcphetresDecadeTheoryReflected2021].
 The remaining 85% of deductive studies lacked an explicit derivation chain from theory to hypothesis.
-Perhaps such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is important to make these explicit [REF Rasoul].
-Or, perhaps the hypotheses are of no substantive interest [REF Hoijtink], and researchers are simply testing them as part of a cultural ritual [REF Gigerenzer].
-No matter what the explanation - testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
+Perhaps such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
+Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected [@vanlissaTeacherCornerEvaluating2020], and researchers are simply testing them as part of a cultural ritual [@gigerenzerNullRitualWhat2004].
+Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
 
-According to the aforementioned statistics, theory has an uncomfortable and paradoxical role in contemporary psychology:
+Theory thus has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
 but these are rarely derived from theory,
 and test results do not routinely contribute to the improvement of existing theories.
 The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology "lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest" [@meehlTheoreticalRisksTabular1978].
 
-To date, scientific reform initiated by the open science movement has predominanty focused on improving deductive methods, overlooking the shortcomings of theory.
-The present paper applies, for the first time, open science principles to theory.
-Applying the FAIR principles to scientific theories facilitates transparent scholarly communication and accelerates cumulative knowledge acquisition.
+The present paper advances transparent scholarly communication by applying the FAIR principles to scientific theories.
+<!-- First, we reflect on the differences between theory and data. <!-- CJ: Should we? --> -->
+<!-- Second, we adapt the FAIR principles for theory, respecting these differences. -->
+<!-- Third, we discuss the current state and future directions of psychological theory with respect to each criterion. -->
+<!-- Fourth, we present worked examples of theory made FAIR. -->
+<!-- We conclude with a summary and future directions for FAIR theory. -->
 
-### Findability
+## Making Theory FAIR
 
-One major obstacle to cumulative knowledge acquisition is the difficulty in finding relevant theories.
-One contributing cause of theories' lack of Findability is the lack of standardized metadata or even a keyword to signal the presence of theory within a paper, and - consequently - the absence of a unified search engine for theory.
-Making theories more findable through rich metadata would allow them to be systematically indexed, tagged, and made searchable.
-This would allow researchers to easily identify relevant theories to inform their hypotheses,
+There are different definitions of theory,
+and many of those definitions are consistent with the FAIR theory principles.
+This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data [bogen/woodward].
+<!-- Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried]. -->
+<!-- This invites the question: if a FAIR theory is a specific instantiation of theory, how does FAIR theory differ from a model?
+There is no principled difference, but a FAIR theory is the most general instance of a theory, whereas a model is highly specific - e.g., by assuming functional form and error families.
+We can make a distinction between statistical models - which make just enough assumptions to allow estimation of the remaining unknown parameters from data - and generative/computational models, which are completely parametrized to the point that a specific interpreter can use them to generate new data.
+To some extent, -->
+Meehl [-@meehlAppraisingAmendingTheories1990] provides guidance as to what kinds of "statements" such a theory might contain:
+statements about the types of entities postulated (i.e., ontology),
+statements about causal connections between those entities,
+statements about the functional form of those connections,
+and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023, @guestWhatMakesGood2024].
+In order to make theory FAIR, it must be instantiated as a type of data,
+in a format that is both human- and machine-readable with as few interpretative steps as possible.
+Verbal statements in plain text fit this description,
+as do mathematical formulae and statements expressed in some axiomatic system.
+Examples include pseudo-code,
+interpretable computer code,
+graphs described in the DOT language,
+and Gray's theory maps [@grayHowMapTheory2017].
+The common practice of instantiating theory as a bitmap image reproduced in a journal article falls short of this ideal;
+but the same image represented as a DOT graph (which can in turn be *reproduced* in the print version) does meet this ideal.
+Assuming that the theory is instantiated as human- and machine readable data, we can apply the principles of FAIR data to it.
+
+## Findability
+
+Making theories Findable would allow researchers to easily identify relevant theories to inform their hypotheses,
 grounding their work in established theoretical foundations.
-Making theories findable also increases the impact and reuse potential of theories across scientific contexts.
-For example, it becomes possible to conduct meta-research on theories, 
-in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
-Moreover, theories might have transdisciplinary impact, either through direct application or through analogical modeling.
+Making theories Findable also increases the impact and reuse potential of theories across disciplines,
+either through direct application (where one discipline stumbles upon a problem that is already well-understood in another discipline),
+or through analogical modeling.
 In analog modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
 For example, predator-prey models have inspired theories of XXX, and the Eysenck model of atomic magnetism has inspired a network theory of depression.
+Findability also enables meta-research on theories, 
+in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
+In a similar way, it would become possible to compare all theories of a specific phenomenon,
+or to study structural properties of theories.
 
-Another contributing cause to the lack of Findability is that the primary unit of dissemination and search in psychology is still the academic paper.
+The four Findability criteria are applicable to theory with only minor adjustments, see Table \@ref(tab:tabfair).
+First, this requires assigning a globally unique and persistent identifier, or DOI, to each theory (F1).
+Of the many services that provide DOIs for scientific information artefacts,
+Zenodo and the Open Science Framework are commonly used in psychology.
+Second, Findable theory is described with rich metadata	(F2).
+This includes citation metadata (e.g., referencing a scientific paper that documents the theory, or a psychometric paper that operationalizes specific constructs).
+It might further include domain-specific metadata, such as a reference to a taxonomy of psychological constructs [@boscoMetaBUSVehicleFacilitating2017],
+ontology [@guyonMeasurementOntologyEpistemology2018],
+or catalog of psychological phenomena [REF Noah Denny].
+Metadata should also include identifiers for all the versions of the theory it describes	(F3);
+Zenodo handles this by default by providing an overarching DOI for an information artifact which subsumes the DOIs of that artifact's versions.
+Finally, these metadata should be registered or indexed in a searchable registry (F4).
+This final criterion is less straightforward.
+Ideally, FAIR theories should be indexed in search engines used by academics, like Google Scholar.
+At present, however, these search engines are designed to index traditional print publications.
+The *data paper* solves this problem for research data;
+the idea is that scholars publish a paper (or even preprint) as documentation for the data resource [REF McGIllivray on data papers].
+The data paper is indexed by search engines, and in turn points to the relevant information artifact.
+The same solution could be applied to theories - but it seems superfluous to generate papers whose only purpose is to redirect to a specific resource.
+Another solution is to manually index FAIR theories,
+for example by adding them to one's Google Scholar profile,
+or entering them in PURE.
+<!-- CJ: Can we guarantee automatically indexing FAIR theory somehow? -->
+
+At present, theories have poor findability, which impedes cumulative knowledge acquisition.
+One factor contributing to theories' lack of Findability is the lack of standardized metadata, or even a standardized keyword to signal the presence of theory within a paper - terms like "theory", "model", and "framework" are used interchangeably.
+To curb this trend, we suggest using the keyword `"FAIR theory"` for all resources that constitute or reference a FAIR theory.
+This would allow theoretical resources to be systematically indexed, tagged, and made searchable.
+Another factor contributing to the present lack of Findability is that the primary unit of dissemination and search in psychology is still the academic paper.
 A paper may contain multiple resources - such as materials, data, code, and theory - but if these are not merely described in text, and not instantiated as separate informational artefacts, their findability is limited.
 This would be achieved by modular publishing of theories as individually citable academic assets, with adequate metadata that is indexed in standardized repositories,
 similar to the current practice of publishing empirical data in standardized repositories (e.g., DataVerse).
@@ -219,13 +277,12 @@ As with empirical data, these theories could still be connected to a specific pa
 
 There have been notable efforts to improve theories' findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
-and post many examples on their website [REF GRAY].
+and post many examples on their website [@grayHowMapTheory2017].
 Similarly, Borsboom and colleagues seek to establish a database of psychological theories [REF BORSBOOM].
 Post-hoc curation does not address the root cause of the lack of Findability, however.
 Ideally, Findability would be addressed ante-hoc, through modular publishing and documentation with rich metadata.
 
-
-### Accessibility
+## Accessibility
 
 Transparent scholarly communication about theory requires that theories are accessible to all researchers and other stakeholders.
 If theories are accessible, researchers can reuse and refine them,
@@ -233,19 +290,30 @@ thus accelerating cumulative knowledge acquisition.
 Making theories accessible also allows stakeholders (e.g., practitioners, policy makers, advocates) to inform themselves of the current scientific understanding of specific phenomena.
 While isolated empirical findings can appear fragmented and contradictory [@dumas-malletPoorReplicationValidity2017],
 theories offer a top-down, big picture representation of the phenomena studied in a field.
+In other words, theories are an important instrument in science communication.
+
+The Accessibility criteria serve to *regulate* access, not to maximize it.
+These principles apply to theory with minor changes, with the caveat that there might be less of a need to restrict access to theory than there is for (human subjects) data.
+Firstly, theory and its associated metadata should be accessible by their identifier using a standardized communications protocol (A1).
+This can be achieved, for example, by hosting theory in a Git remote repository, and archiving that repository on Zenodo for long-term storage.
+The resulting resource will then have an identifier (DOI) which allows the theory to be accessed using a standardized communications protocol (download via `https` or `git`).
+Secondly (A2), theory metadata should be accessible, even when the theory is no longer available,
+which is also achieved via long-term storage (e.g., on Zenodo).
+Git remote repositories allow for access control,
+and Zenodo allows for access control of individual files/resources.
 
 At present, there are several impediments to theories' accessibility.
-The first are paywalls erected by commercial publishers.
-Open Access publishing increases the accessibility of all academic output, including theory.
-
-A second impediment is therefore the prevalence of (strategic) ambiguity,
-which renders theory difficult to understand [REF Frankenhuis].
-While open access publishing increases the availability of theories,
-accessibility further requires clear and explicit communication.
+To the extent that theories are still contained within papers,
+paywalls erected by commercial publishers constitute a barrier.
+Open Access publishing thus increases the accessibility of all academic output, including theory.
+A second impediment is more indirect:
+While open access publishing increases practical access to theories,
+accessibility also requires clear and explicit communication.
 This property of good theories has been dubbed "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024].
+The current prevalence of strategic ambiguity renders psychological theory difficult to understand [@frankenhuisStrategicAmbiguitySocial2023].
 It is important to acknowledge the *indeterminacy of translation* [@quineReasonsIndeterminacyTranslation1970]:
-which holds that every communicative utterance has multiple alternative translations, with no objective means of choosing the correct or best one.
-Thus, it is not possible to entirely formalize an idea to the point that it becomes unambiguously interpretable.
+which holds that every communicative utterance has multiple alternative translations, with no *objective* means of choosing the correct one.
+It follows that an idea cannot be formalized to the point that it becomes unambiguously interpretable.
 This places a theoretical upper bound on theories' ability to be understood.
 
 Successful communication requires shared background knowledge between sender and receiver [@vogtFAIR20Extending2024].
@@ -268,9 +336,9 @@ DOA relates to the discourse on "Great Man Theorizing" [@guestWhatMakesGood2024]
 which violates checks and balances of scientific research.
 DOA also renders theories immune to refutation,
 because the author can claim that the theory was misconstrued when confronted with falsifying evidence, thus making it a moving target  [@szollosiArrestedTheoryDevelopment2021].
-DOA is inherently problematic because authors may not understand their own theories well.
-This is illustrated by cases where third parties identify logical inconsistencies within a theory [e.g., @kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008].
-In short, DOA unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible; both in terms of availability and in terms of interpretability.
+The fact that DOA is inherently problematic is illustrated by cases where third parties identify logical inconsistencies within a theory [e.g., @kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008].
+This demonstrates that original authors are not the ultimate authority on their theories.
+DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible; both in terms of availability and in terms of interpretability.
 
 <!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
 
