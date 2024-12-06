@@ -215,17 +215,7 @@ statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
 and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023, @guestWhatMakesGood2024].
-In order to make theory FAIR, it must be instantiated as a type of data,
-in a format that is both human- and machine-readable with as few interpretative steps as possible.
-Verbal statements in plain text fit this description,
-as do mathematical formulae and statements expressed in some axiomatic system.
-Examples include pseudo-code,
-interpretable computer code,
-graphs described in the DOT language,
-and Gray's theory maps [@grayHowMapTheory2017].
-The common practice of instantiating theory as a bitmap image reproduced in a journal article falls short of this ideal;
-but the same image represented as a DOT graph (which can in turn be *reproduced* in the print version) does meet this ideal.
-Assuming that the theory is instantiated as human- and machine readable data, we can apply the principles of FAIR data to it.
+
 
 ## Findability
 
@@ -342,20 +332,46 @@ DOA thus unduly impedes scientific progress, and authors should make good-faith 
 
 <!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
 
-### Interoperability
+## Interoperability
 
 Interoperability pertains to the property of information artefacts to "integrate or work together [...] with minimal effort" [@wilkinsonFAIRGuidingPrinciples2016a].
-As the original definition of interoperability was somewhat narrow and abstract,
+The original interoperability principles can be rephrased somewhat to apply to theory.
+Firstly, theory and its associated metadata should use a formal, accessible, shared and broadly applicable language to facilitate (human- and) machine readability and reuse (I1).
+The common practice of instantiating theory as lengthy prose or multi-interpretable bitmap image falls short of this ideal.
+Instead, FAIR theory should, ad minimum,
+be instantiated as 
+as a type of data that is human- and machine-readable with as few interpretative steps as possible,
+as previously recommended [@vanlissaWORCSWorkflowOpen2021].
+Depending on the level of formalization of the theory,
+different formats may be appropriate,
+such as verbal statements in plain text,
+mathematical formulae,
+and statements expressed in some axiomatic system.
+Examples of the latter include pseudo-code,
+interpretable computer code,
+and Gray's theory maps [@grayHowMapTheory2017].
+While a theory represented as a bitmap image is not very interoperable,
+the same image represented in the DOT language for representing graphs does meet this ideal.
+
+Secondly, theory (meta)data should use vocabularies that follow FAIR principles (I2).
+This is essentially a call to establish standardized ontologies,
+which are themselves a type of theory [@meehlAppraisingAmendingTheories1990]. 
+Thirdly, theory (meta)data should include qualified references to other (meta)data, including previous versions of the theory (I3).
+The first part of this principle allows for nested theories;
+for example, a theory that specifies causal relationships between constructs could refer back to an ontological theory from which those constructs are derived.
+This can be achieved by linking the DOI of those nested theories [@ContributingCitationsReferences].
+The second part of this principle allows for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
+This can be achieved by using Git for version control and Zenodo for archiving.
+
+As the original definition of interoperability was somewhat narrow [@wilkinsonFAIRGuidingPrinciples2016a],
 the concept has recently been further refined in terms of facilitating "successful communication between machines and between humans and machines", where "A and B are considered X-interoperable if a common operation X exists that can be applied to both" [@vogtFAIR20Extending2024].
-This definition invites the question: *interoperable for what purpose?*
+This definition invites the question: *interoperable for what?*
 Suitable answers for FAIR theory may be:
-this theory is X-interoperable for deriving testable null-hypotheses,
+this theory is X-interoperable for deriving testable hypotheses,
 or for the purpose of selecting relevant control variables,
 or for the purpose of indicating the conditions necessary for observing a particular phenomenon.
-These definitions suggest that FAIR theory should, ad minimum,
-be instantiated in a human- and machine-readable file format, as previously recommended [@vanlissaWORCSWorkflowOpen2021].
-Furthermore, theories may have specific properties that incur affordances in terms of X-interoperability;
-for example, Table \@ref(tab:tabmeehl) illustrates the affordances of Meehl's nine properties of strong theories.
+This revised definition implies that theories have specific properties that incur affordances in terms of X-interoperability;
+for example, Table \@ref(tab:tabmeehl) illustrates the affordances of Meehl's nine properties of strong theories (properties 3-8 are grouped because they all refer to functional form).
 
 ```{r}
 data.frame(
@@ -372,8 +388,9 @@ Interoperability of psychological theory may be limited when theories are instan
 <!-- What can go wrong? A well-formed sentence may be logically inconsistent (e.g., the theory that conceptualized father involvement simultaneously as mediator and moderator); a picture may seem sensible but there's no straightforward way to translate it to hypotheses, etc. -->
 <!-- which are not machine-readable and l -->
 
-Kurt Lewin's adage "there's nothing as practical as a good theory" [@lewinPsychologyProcessGroup1943] seems to imply that theory plays a practical role in the day-to-day work of psychological researchers.
-But, as we argued before, there are clear signs that this is not the case.
+With regard to the state of interoperability in contemporary psychology, 
+Kurt Lewin's adage "there's nothing as practical as a good theory" [@lewinPsychologyProcessGroup1943] implies that ought to be highly X-interoperable in psychological researchers' day-to-day work.
+But, as we argued, this is not the case.
 The examples of X-interoperability offered in Table \@ref(tab:tabmeehl) illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-interoperable within software used for analysis.
 For example, interoperable theory could be used
 to select control variables for causal inference [@cinelliCrashCourseGood2022],
@@ -382,29 +399,35 @@ or to derive machine-readable hypotheses [@lakensImprovingTransparencyFalsifiabi
 Furthermore, theories can be X-interoperable with each other to enable nesting, or using one theory to clarify elements of another theory.
 For example, it should be possible to embed a theory about emotion regulation [e.g., @grossEmotionRegulationCurrent2015] within a theory of emotion regulation development [@morrisRoleFamilyContext2007].
 
-### Reusability
+## Reusability
 
-Some have argued that there is a norm *against* theory reuse:
+If take cumulative knowledge acquisition to be a goal of scientific research, then Reusability is the ultimate purpose of making theory FAIR.
+Applied to FAIR theory, reusability requires that  theory and its associated metadata are richly described with a plurality of accurate and relevant attributes (R1) with a clear and accessible license for reuse (R1.1), detailed provenance (R1.2), and (meta)data which meets domain-relevant community standards (R1.3).
+As we will argue below, the most appropriate license for theory reuse is likely to be CC0 (no rights reserved),
+although this should be combined with a culture of comprehensive (theory) citation to meet other open science requirements [REF TOP guidelines].
+Criterion R1.2 is met by version control with Git and archival on Zenodo.
+Domain-relevant community standards, to a large extent, remain to be established - and this paper is the first step towards further work in that area.
+
+If we consider the current state of Reusability in psychological theory, there appears to be a norm *against* theory reuse:
 *"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008].
-Such a norm impedes scientific progress.
+This norm impedes scientific progress.
 Cumulative knowledge acquisition requires reusable theories that are continuously updated based on insights from new data [@degrootMethodologieGrondslagenVan1961].
-Theories are made reusable by thorough documentation,
-appropriate licensing, 
-and detailed provenance (e.g., through version control, cross-referencing, and semantic versioning).
-
-In our workshops on FAIR Theory, we often hear questions such as "who owns theory",
+<!-- Theories are made reusable by thorough documentation, -->
+<!-- appropriate licensing,  -->
+<!-- and detailed provenance (e.g., through version control, cross-referencing, and semantic versioning). -->
+In our workshops on FAIR Theory, we similarly notice reluctance to the notion of reusing and adapting theories,
+reflected in questions such as "who owns theory",
 and "who determines how a theory may be reused or changed"?
-Licensing theories for reuse provides an unambiguous answer to such questions.
 These questions imply a norm against modifying theory without consent from the author reminiscent of the aforementioned problem of dependency on the author.
-However, copyright law limits the rights authors can claim over theory based on the *idea-expression dichotomy* [@bently2010copyright],
-<!-- o. Ideas, facts, and concepts are not protected by  Although they are not protectable by copyright, the expression of those ideas, facts, and concepts are protectable, such as in a description, explanation, or illustration or as a database of facts. Separating an idea from the expression or manifestation of that idea is known in copyright law as the  -->
+
+Licensing theories for reuse provides an unambiguous answer to such questions.
+In determining what license is appropriate for theory,
+it is important to consider that copyright law limits authors' rights based on the *idea-expression dichotomy* [@bently2010copyright],
 which holds that copyright explicitly does not
 *"extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery"*.
-It may, however, extend to creative works expressing that idea (e.g., writing, visual illustrations).
-<!-- Copyright pertaining to recipes offer an interesting perspective: -->
-<!-- Whereas the recipes themselves are not protected, *"substantial literary expression in the form of an explanation or directions"* can be protected by copyright. -->
-Applying these principles to FAIR theory, it seems that vague, ambiguous verbal explanations of theories - in other words, those that fall short in terms of the Accessibility criterion - are more likely to qualify for copyright protection than formal theories.
-If copyright limits Reusability and does not cover ideas in their purest form (like formal theory),
+Copyright may, however, extend to creative works expressing that idea (e.g., writing, visual illustrations).
+It thus seems that vague, ambiguous verbal explanations of theories - in other words, those that fall short of the Accessibility criterion - are more likely to qualify for copyright protection than formal theories.
+If copyright limits Reusability and does not cover ideas in their purest form (like formal theories),
 then it might be counterproductive and possibly misleading to adopt a license that assumes copyright protection.
 Furthermore, even if copyright would apply, academic research is covered under "fair use" exemptions,
 so copyright would pose few restrictions to Reusability in scholarly communication.
@@ -415,6 +438,8 @@ Nevertheless, is essential that scholars do comprehensively cite theory,
 including prior work that new theories are based on,
 even in absence of legal obligations to do so,
 to meet the definition of Reusability (R1.2, Table \@ref(tab:tabfair) and to comply with other definitions of open scholarship [@aalbersbergMakingScienceTransparent2018].
+
+## Some other stuff
 
 We can take inspiration from the field of computer science for well-established processes for iteratively improving information artefacts,  like computer code.
 Using version control systems, like Git, would enhance the reusability of FAIR theory by thoroughly documenting every modification in a traceable and reversible manner.
