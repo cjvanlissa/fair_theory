@@ -485,15 +485,10 @@ names(tab_fair) <- c("Criterion", "Original", "Theory", "Action")
 papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\linewidth}m{.35\\linewidth}m{.15\\linewidth}")
 ```
 
-## FAIR Theory and Recognition & Rewards
+<!-- ## FAIR Theory and Recognition & Rewards -->
 
-FAIR theory provides a clear deliverable, and a clear goal, for scholars and institutions seeking to promote contributions to theory.
-In the spirit of DORA, this helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a purely theoretical paper, which can be challenging.
-
-
-
-
-
+<!-- FAIR theory provides a clear deliverable, and a clear goal, for scholars and institutions seeking to promote contributions to theory. -->
+<!-- In the spirit of DORA, this helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a purely theoretical paper, which can be challenging. -->
 
 ## The Role of Theory Formalization
 
