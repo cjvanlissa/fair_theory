@@ -193,7 +193,7 @@ but these are rarely derived from theory,
 and test results do not routinely contribute to the improvement of existing theories.
 The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology "lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest" [@meehlTheoreticalRisksTabular1978].
 
-The present paper advances transparent scholarly communication by applying the FAIR principles to scientific theories.
+
 <!-- First, we reflect on the differences between theory and data. <!-- CJ: Should we? --> -->
 <!-- Second, we adapt the FAIR principles for theory, respecting these differences. -->
 <!-- Third, we discuss the current state and future directions of psychological theory with respect to each criterion. -->
@@ -201,6 +201,30 @@ The present paper advances transparent scholarly communication by applying the F
 <!-- We conclude with a summary and future directions for FAIR theory. -->
 
 ## Making Theory FAIR
+
+The present paper addresses the lack of open science methods for theory development and improvement by applying the FAIR principles to scientific theories.
+Merely publishing theory does not make it open;
+to be open, theory should adhere to established open science standards.
+The FAIR principles, initially introduced for open research data,
+have since been applied to other information artifacts [@lamprechtFAIRPrinciplesResearch2019].
+We apply the FAIR principles to digital representations of theory,
+introducing a FAIR metadata format to make theories *Findable* via a DOI,
+*Accessible* in a machine- and human-readable filetype,
+*Interoperable* within the data analysis environment,
+and *Reusable* in the practical and legal sense, so that they may be improved over time.
+Following Lamprecht and colleagues,
+we adapt the FAIR principles for theory, see Table \@ref(tab:tabfair).
+We reflect on the necessary changes (which are minor),
+as well as on the current state and future of FAIR theory in the social sciences.
+The resulting principles provide guidance for instantiating theory as a FAIR information artifact,
+and we provide worked examples to encourage their adoption.
+
+```{r tabfair}
+tab_fair <- read.csv("fair_principles.csv", stringsAsFactors = FALSE)[, c("Criterion", "Original", "Theory", "Our.action")]
+names(tab_fair) <- c("Criterion", "Original", "Theory", "Action")
+papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\linewidth}m{.35\\linewidth}m{.15\\linewidth}")
+```
+
 
 There are different definitions of theory,
 and many of those definitions are consistent with the FAIR theory principles.
@@ -216,6 +240,22 @@ statements about causal connections between those entities,
 statements about the functional form of those connections,
 and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023, @guestWhatMakesGood2024].
 
+### The Role of Theory Formalization
+
+Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use.
+Greater formalization increases theories' *empirical content* [REF],
+making them easier to falsify,
+which necessitates revising them,
+thus advancing our principled understanding of the phenomena they describe.
+FAIR Theory does not require theories to be formal,
+and formal theory can be represented in a way that is not FAIR.
+For example, it is possible to represent a collection of verbal propositions (perhaps derived through qualitative research) as a FAIR theory.
+Conversely, a directed acyclic graph (DAG) is a type of formal theory,
+but if it is embedded within a journal article as a bitmap image without any key words to help search engines index that article as a theory paper,
+then this formal theory is not FAIR.
+FAIR Theory is thus consistent with, but does not require, formal theory.
+There is more to say about this in light of the *Accessibility* principle,
+where we discuss theories' "ability to be understood" [@guestWhatMakesGood2024] and the *problem of translation* [@quineReasonsIndeterminacyTranslation1970].
 
 ## Findability
 
@@ -457,51 +497,13 @@ From a meta-science perspective, FAIR theory facilitates studying the state of t
 Making Theories FAIR Accelerates Scientific Progress
 Adopting the FAIR principles for theories can address key challenges in the current research landscape, where theories often remain isolated and underutilized. By making theories findable, accessible, interoperable, and reusable, researchers can ensure that their work is grounded in a shared, transparent, and cumulative body of knowledge. This approach enhances scholarly communication, allowing for greater scrutiny, replication, and collaboration across disciplines, ultimately leading to faster, more reliable, and more impactful scientific progress.
 
-## Publication is not Enough
 
-Merely publishing a theory does not make it open;
-to be open, theory should adhere to established open science standards.
-The FAIR principles, initially introduced as a standard for open research data, have since been applied to other forms of digital scholarly output [e.g., software @lamprechtFAIRPrinciplesResearch2019].
-We propose to apply the FAIR principles to digital representations of theory as well,
-introducing a FAIR metadata format to represent (formal) theories.
-The resulting theories are made *Findable* via a DOI,
-Accessible in a machine- and human-readable filetype,
-Interoperable within the data analysis environment,
-and Reusable in the practical and legal sense, so that they may be improved over time.
-
-## Adapting the FAIR Principles
-
-The FAIR Principles were devised to make scholarly data more findable, accessible, interoperable, and reusable.
-From their inception, these principles were developed with "other research resources" in mind.
-Scholars have adapted the FAIR principles to, e.g., research software [REF Lamprecht].
-Yet there are key distinctions between theory and other FAIR information artefacts.
-With this in mind, the present paper further extends the FAIR principles' definition to theory, see Table \@ref(tab:tabfair).
-We establish guiding principles for instantiating theory as a FAIR digital research artifact,
-and provide applied examples to encourage their adoption.
-
-```{r tabfair}
-tab_fair <- read.csv("fair_principles.csv", stringsAsFactors = FALSE)[, c("Criterion", "Original", "Theory", "Our.action")]
-names(tab_fair) <- c("Criterion", "Original", "Theory", "Action")
-papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\linewidth}m{.35\\linewidth}m{.15\\linewidth}")
-```
 
 <!-- ## FAIR Theory and Recognition & Rewards -->
 
 <!-- FAIR theory provides a clear deliverable, and a clear goal, for scholars and institutions seeking to promote contributions to theory. -->
 <!-- In the spirit of DORA, this helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a purely theoretical paper, which can be challenging. -->
 
-## The Role of Theory Formalization
-
-Concerns about the state of theory are a recurring theme in the psychological literature,
-but previous writing has focused on theory formalization as a solution for ambiguity in psychological theory.
-Greater formality increases theories' *empirical content*,
-making them easier to falsify,
-which necessitates revising them,
-thus advancing our principled understanding of the phenomena they describe.
-Conceptually, theory formalization is orthogonal to FAIR theory.
-FAIR Theory does not require theories to be formal, and formal theory can be represented in a way that is not FAIR.
-It is - in principle - possible to represent a collection of verbal statements as a FAIR Theory.
-While FAIR Theory is fully consistent with formal theory, it does not require theories to be formal.
 
 
 # Examples
