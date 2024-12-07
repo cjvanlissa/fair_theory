@@ -253,9 +253,7 @@ For example, it is possible to represent a collection of verbal propositions (pe
 Conversely, a directed acyclic graph (DAG) is a type of formal theory,
 but if it is embedded within a journal article as a bitmap image without any key words to help search engines index that article as a theory paper,
 then this formal theory is not FAIR.
-FAIR Theory is thus consistent with, but does not require, formal theory.
-There is more to say about this in light of the *Accessibility* principle,
-where we discuss theories' "ability to be understood" [@guestWhatMakesGood2024] and the *problem of translation* [@quineReasonsIndeterminacyTranslation1970].
+FAIR Theory is thus consistent with, but does not require, formal theory (also see *Accessibility*).
 
 ## Findability
 
@@ -413,7 +411,7 @@ or for the purpose of indicating the conditions necessary for observing a partic
 This revised definition implies that theories have specific properties that incur affordances in terms of X-interoperability;
 for example, Table \@ref(tab:tabmeehl) illustrates the affordances of Meehl's nine properties of strong theories (properties 3-8 are grouped because they all refer to functional form).
 
-```{r}
+```{r tabmeehl}
 data.frame(
   "Property" = c("1) Ontology", "2) Causal connections", "3-8) Functional Form", "9) Numerical Value"),
   "X-interoperability" = c("Variable selection", "Model specification, covariate selection, causal inference", "Deriving specific hypotheses", "Simulating data"), check.names = FALSE

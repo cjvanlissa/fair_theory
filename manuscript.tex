@@ -168,7 +168,7 @@
     {}{\InnerPatchFailed}%
   }
 {}{\PatchFailed}
-\keywords{meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 3877}
+\keywords{meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 4906}
 \usepackage{lineno}
 
 \linenumbers
@@ -196,7 +196,7 @@
 
 \authornote{
 
-This is a preprint paper, generated from Git Commit \# 4a12ff5b.
+This is a preprint paper, generated from Git Commit \# aec0b761.
 
 The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Felix Schönbrodt: Conceptualization, Writing -- review \& editing.
 
@@ -232,12 +232,18 @@ Increased rigor in testing has revealed that the root cause of the replication c
 psychological theories rarely produce hypotheses that are found to be true,
 and are often sufficiently vague to explain contradictory findings.
 
-Scholars have raised concerns about the state of theory in social science for nearly 50 years (Meehl, 1978; Robinaugh, Haslbeck, Ryan, Fried, \& Waldorp, 2021).
-One concern is that social scientific theories often lack the precision and clarity of theories in the physical sciences, otherwise known as \emph{formalization} (Szollosi \& Donkin, 2021).
-A second concern, which received less attention, is the lack of transparent and democratic scholarly communication about psychological theory.
-The present paper focuses on the second concern,
-advancing transparent communication about theory by applying open science principles to psychological theory for the first time
-and introducing the concept of \emph{FAIR Theory}.
+Scholars have raised concerns about the state of theory in social science for nearly 50 years (Paul E. Meehl, 1978; Robinaugh, Haslbeck, Ryan, Fried, \& Waldorp, 2021).
+Two main concerns are that, first, social scientific theories lack precision and clarity compared to theories in the physical sciences (Szollosi \& Donkin, 2021).
+In other words, social scientific theories lack \emph{formalization} .
+A second concern is the lack of transparent and democratic scholarly communication about psychological theory.
+
+Given these concerns, it is unfortunate that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
+The equally critical inductive processes of theory construction and -improvement have been largely overlooked.
+The present paper restores balance by applying, for the first time,
+open science principles to psychological theory.
+We apply the FAIR principles to scientific theories,
+introducing the concept of \emph{FAIR Theory} to
+facilitate transparent scholarly communication and accelerate cumulative knowledge acquisition.
 
 \subsection{Theory and Scientific Progress}\label{theory-and-scientific-progress}
 
@@ -261,33 +267,140 @@ Firstly, because deductive research is over-represented in the literature:
 According to one estimate, 89.6\% of paper published in psychology tests hypotheses (Kühberger, Fritz, \& Scherndl, 2014).
 Closer examination of deductive research reveals, however, that the link between theory and hypothesis is often tenuous (Oberauer \& Lewandowsky, 2019; Scheel, Tiokhin, Isager, \& Lakens, 2021).
 Only 15\% of deductive studies referenced any theory, and theory was often not cited in connection to the hypothesis (McPhetres et al., 2021).
-This invites the question where hypotheses come from in the remaining 85\% of deductive studies,
-and to what extent testing ad-hoc hypotheses not grounded in theory can advance our principled understanding of psychological phenomena.
-These statistics suggest that theory has an uncomfortable and paradoxical role in contemporary psychology:
+The remaining 85\% of deductive studies lacked an explicit derivation chain from theory to hypothesis.
+Perhaps such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is important to make these explicit Norouzi, Kleinberg, Vermunt, \& Van Lissa (2024).
+Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected (Van Lissa et al., 2020), and researchers are simply testing them as part of a cultural ritual (Gigerenzer, Krauss, \& Vitouch, 2004).
+Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
+
+Theory thus has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
 but these are rarely derived from theory,
-and test results rarely contribute to the improvement of existing theories.
-The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology ``lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest'' (Meehl, 1978).
+and test results do not routinely contribute to the improvement of existing theories.
+The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology ``lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest'' (Paul E. Meehl, 1978).
 
-To date, scientific reform initiated by the open science movement has predominanty focused on improving deductive methods, overlooking the shortcomings of theory.
-The present paper applies, for the first time, open science principles to theory.
-Applying the FAIR principles to scientific theories facilitates transparent scholarly communication and accelerates cumulative knowledge acquisition.
+--\textgreater{}
 
-\subsubsection{Findability}\label{findability}
+\subsection{Making Theory FAIR}\label{making-theory-fair}
 
-One major obstacle to cumulative knowledge acquisition is the difficulty in finding relevant theories.
-One contributing cause of theories' lack of Findability is the lack of standardized metadata or even a keyword to signal the presence of theory within a paper, and - consequently - the absence of a unified search engine for theory.
-Making theories more findable through rich metadata would allow them to be systematically indexed, tagged, and made searchable.
-This would allow researchers to easily identify relevant theories to inform their hypotheses,
+The present paper addresses the lack of open science methods for theory development and improvement by applying the FAIR principles to scientific theories.
+Merely publishing theory does not make it open;
+to be open, theory should adhere to established open science standards.
+The FAIR principles, initially introduced for open research data,
+have since been applied to other information artifacts (Lamprecht et al., 2019).
+We apply the FAIR principles to digital representations of theory,
+introducing a FAIR metadata format to make theories \emph{Findable} via a DOI,
+\emph{Accessible} in a machine- and human-readable filetype,
+\emph{Interoperable} within the data analysis environment,
+and \emph{Reusable} in the practical and legal sense, so that they may be improved over time.
+Following Lamprecht and colleagues,
+we adapt the FAIR principles for theory, see Table \ref{tab:tabfair}.
+We reflect on the necessary changes (which are minor),
+as well as on the current state and future of FAIR theory in the social sciences.
+The resulting principles provide guidance for instantiating theory as a FAIR information artifact,
+and we provide worked examples to encourage their adoption.
+
+\begin{lltable}
+
+\begin{longtable}{m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}}\noalign{\getlongtablewidth\global\LTcapwidth=\longtablewidth}
+\caption{\label{tab:tabfair}}\\
+\toprule
+Criterion & \multicolumn{1}{c}{Original} & \multicolumn{1}{c}{Theory} & \multicolumn{1}{c}{Action}\\
+\midrule
+\endfirsthead
+\caption*{\normalfont{Table \ref{tab:tabfair} continued}}\\
+\toprule
+Criterion & \multicolumn{1}{c}{Original} & \multicolumn{1}{c}{Theory} & \multicolumn{1}{c}{Action}\\
+\midrule
+\endhead
+F1 & (Meta)data are assigned a globally unique and persistent identifier & Theory (meta)data has a global, unique and persistent identifier & Rephrased\\
+F2 & Data are described with rich metadata & Theory is described with rich metadata & Rephrased\\
+F3 & Metadata clearly and explicitly include the identifier of the data it describes & Metadata clearly and explicitly include identifiers for all the versions of the theory it describes & Rephrased and extended\\
+F4 & (Meta)data are registered or indexed in a searchable resource & Theory and its associated metadata are included in a searchable repository & Rephrased, needs work\\
+A1 & (Meta)data are retrievable by their identifier using a standardized communications protocol & Theory and its associated metadata are accessible by their identifier using a standardized communications protocol & Rephrased\\
+A1.1 & The protocol is open, free, and universally implementable & The protocol is open, free, and universally implementable & Remain the same\\
+A1.2 & The protocol allows for an authentication and authorization procedure, where necessary & The protocol allows for an authentication and authorization procedure, where necessary & Remain the same, but less relevant\\
+A2 & Metadata are accessible, even when the data are no longer available & Theory metadata are accessible, even when the theory is no longer available & Rephrased, but less relevant\\
+I1 & (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation & Theory and its associated metadata use a formal, accessible, shared and broadly applicable language to facilitate machine readability and reuse & Rephrased and extended\\
+I2 & (Meta)data use vocabularies that follow FAIR principles & (Meta)data use vocabularies that follow FAIR principles & Rephrased\\
+I2S.1 & - &  & \\
+I2S.2 & - &  & \\
+I3 & (Meta)data include qualified references to other (meta)data & (Meta)data includes qualified references to other (meta)data, including previous versions of the theory & Extended\\
+I4S & - &  & \\
+R1 & (Meta)data are richly described with a plurality of accurate and relevant attributes & Theory and its associated metadata are richly described with a plurality of accurate and relevant attributes & Rephrased\\
+R1.1 & (Meta)data are released with a clear and accessible data usage license & Theory (meta)data are released with a clear and accessible license & Rephrased\\
+R1.2 & (Meta)data are associated with detailed provenance & Theory (meta)data are associated with detailed provenance & Rephrased\\
+R1.3 & (Meta)data meet domain-relevant community standards & Theory (meta)data and documentation meet domain-relevant community standards & Rephrased\\
+\bottomrule
+\end{longtable}
+
+\end{lltable}
+
+There are different definitions of theory,
+and many of those definitions are consistent with the FAIR theory principles.
+This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data {[}bogen/woodward{]}.
+Meehl (1990) provides guidance as to what kinds of ``statements'' such a theory might contain:
+statements about the types of entities postulated (i.e., ontology),
+statements about causal connections between those entities,
+statements about the functional form of those connections,
+and statements about their specific numerical values Guest (2024).
+
+\subsubsection{The Role of Theory Formalization}\label{the-role-of-theory-formalization}
+
+Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use.
+Greater formalization increases theories' \emph{empirical content} {[}REF{]},
+making them easier to falsify,
+which necessitates revising them,
+thus advancing our principled understanding of the phenomena they describe.
+FAIR Theory does not require theories to be formal,
+and formal theory can be represented in a way that is not FAIR.
+For example, it is possible to represent a collection of verbal propositions (perhaps derived through qualitative research) as a FAIR theory.
+Conversely, a directed acyclic graph (DAG) is a type of formal theory,
+but if it is embedded within a journal article as a bitmap image without any key words to help search engines index that article as a theory paper,
+then this formal theory is not FAIR.
+FAIR Theory is thus consistent with, but does not require, formal theory (also see \emph{Accessibility}).
+
+\subsection{Findability}\label{findability}
+
+Making theories Findable would allow researchers to easily identify relevant theories to inform their hypotheses,
 grounding their work in established theoretical foundations.
-Making theories findable also increases the impact and reuse potential of theories across scientific contexts.
-For example, it becomes possible to conduct meta-research on theories,
-in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
-Moreover, theories might have transdisciplinary impact, either through direct application or through analogical modeling.
+Making theories Findable also increases the impact and reuse potential of theories across disciplines,
+either through direct application (where one discipline stumbles upon a problem that is already well-understood in another discipline),
+or through analogical modeling.
 In analog modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
 For example, predator-prey models have inspired theories of XXX, and the Eysenck model of atomic magnetism has inspired a network theory of depression.
+Findability also enables meta-research on theories,
+in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
+In a similar way, it would become possible to compare all theories of a specific phenomenon,
+or to study structural properties of theories.
 
-Another contributing cause to the lack of Findability is that the primary unit of dissemination and search in psychology is still the academic paper.
+The four Findability criteria are applicable to theory with only minor adjustments, see Table \ref{tab:tabfair}.
+First, this requires assigning a globally unique and persistent identifier, or DOI, to each theory (F1).
+Of the many services that provide DOIs for scientific information artefacts,
+Zenodo and the Open Science Framework are commonly used in psychology.
+Second, Findable theory is described with rich metadata (F2).
+This includes citation metadata (e.g., referencing a scientific paper that documents the theory, or a psychometric paper that operationalizes specific constructs).
+It might further include domain-specific metadata, such as a reference to a taxonomy of psychological constructs (Bosco, Uggerslev, \& Steel, 2017),
+ontology (Guyon, Kop, Juhel, \& Falissard, 2018),
+or catalog of psychological phenomena {[}REF Noah Denny{]}.
+Metadata should also include identifiers for all the versions of the theory it describes (F3);
+Zenodo handles this by default by providing an overarching DOI for an information artifact which subsumes the DOIs of that artifact's versions.
+Finally, these metadata should be registered or indexed in a searchable registry (F4).
+This final criterion is less straightforward.
+Ideally, FAIR theories should be indexed in search engines used by academics, like Google Scholar.
+At present, however, these search engines are designed to index traditional print publications.
+The \emph{data paper} solves this problem for research data;
+the idea is that scholars publish a paper (or even preprint) as documentation for the data resource {[}REF McGIllivray on data papers{]}.
+The data paper is indexed by search engines, and in turn points to the relevant information artifact.
+The same solution could be applied to theories - but it seems superfluous to generate papers whose only purpose is to redirect to a specific resource.
+Another solution is to manually index FAIR theories,
+for example by adding them to one's Google Scholar profile,
+or entering them in PURE.
+
+At present, theories have poor findability, which impedes cumulative knowledge acquisition.
+One factor contributing to theories' lack of Findability is the lack of standardized metadata, or even a standardized keyword to signal the presence of theory within a paper - terms like ``theory'', ``model'', and ``framework'' are used interchangeably.
+To curb this trend, we suggest using the keyword \texttt{"FAIR\ theory"} for all resources that constitute or reference a FAIR theory.
+This would allow theoretical resources to be systematically indexed, tagged, and made searchable.
+Another factor contributing to the present lack of Findability is that the primary unit of dissemination and search in psychology is still the academic paper.
 A paper may contain multiple resources - such as materials, data, code, and theory - but if these are not merely described in text, and not instantiated as separate informational artefacts, their findability is limited.
 This would be achieved by modular publishing of theories as individually citable academic assets, with adequate metadata that is indexed in standardized repositories,
 similar to the current practice of publishing empirical data in standardized repositories (e.g., DataVerse).
@@ -295,12 +408,12 @@ As with empirical data, these theories could still be connected to a specific pa
 
 There have been notable efforts to improve theories' findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
-and post many examples on their website {[}REF GRAY{]}.
+and post many examples on their website (Gray, 2017).
 Similarly, Borsboom and colleagues seek to establish a database of psychological theories {[}REF BORSBOOM{]}.
 Post-hoc curation does not address the root cause of the lack of Findability, however.
 Ideally, Findability would be addressed ante-hoc, through modular publishing and documentation with rich metadata.
 
-\subsubsection{Accessibility}\label{accessibility}
+\subsection{Accessibility}\label{accessibility}
 
 Transparent scholarly communication about theory requires that theories are accessible to all researchers and other stakeholders.
 If theories are accessible, researchers can reuse and refine them,
@@ -308,19 +421,30 @@ thus accelerating cumulative knowledge acquisition.
 Making theories accessible also allows stakeholders (e.g., practitioners, policy makers, advocates) to inform themselves of the current scientific understanding of specific phenomena.
 While isolated empirical findings can appear fragmented and contradictory (Dumas-Mallet, Smith, Boraud, \& Gonon, 2017),
 theories offer a top-down, big picture representation of the phenomena studied in a field.
+In other words, theories are an important instrument in science communication.
+
+The Accessibility criteria serve to \emph{regulate} access, not to maximize it.
+These principles apply to theory with minor changes, with the caveat that there might be less of a need to restrict access to theory than there is for (human subjects) data.
+Firstly, theory and its associated metadata should be accessible by their identifier using a standardized communications protocol (A1).
+This can be achieved, for example, by hosting theory in a Git remote repository, and archiving that repository on Zenodo for long-term storage.
+The resulting resource will then have an identifier (DOI) which allows the theory to be accessed using a standardized communications protocol (download via \texttt{https} or \texttt{git}).
+Secondly (A2), theory metadata should be accessible, even when the theory is no longer available,
+which is also achieved via long-term storage (e.g., on Zenodo).
+Git remote repositories allow for access control,
+and Zenodo allows for access control of individual files/resources.
 
 At present, there are several impediments to theories' accessibility.
-The first are paywalls erected by commercial publishers.
-Open Access publishing increases the accessibility of all academic output, including theory.
-
-A second impediment is therefore the prevalence of (strategic) ambiguity,
-which renders theory difficult to understand {[}REF Frankenhuis{]}.
-While open access publishing increases the availability of theories,
-accessibility further requires clear and explicit communication.
+To the extent that theories are still contained within papers,
+paywalls erected by commercial publishers constitute a barrier.
+Open Access publishing thus increases the accessibility of all academic output, including theory.
+A second impediment is more indirect:
+While open access publishing increases practical access to theories,
+accessibility also requires clear and explicit communication.
 This property of good theories has been dubbed ``discursive survival {[}\ldots{]}, the ability to be understood'' (Guest, 2024).
+The current prevalence of strategic ambiguity renders psychological theory difficult to understand (Frankenhuis et al., 2023).
 It is important to acknowledge the \emph{indeterminacy of translation} (Quine, 1970):
-which holds that every communicative utterance has multiple alternative translations, with no objective means of choosing the correct or best one.
-Thus, it is not possible to entirely formalize an idea to the point that it becomes unambiguously interpretable.
+which holds that every communicative utterance has multiple alternative translations, with no \emph{objective} means of choosing the correct one.
+It follows that an idea cannot be formalized to the point that it becomes unambiguously interpretable.
 This places a theoretical upper bound on theories' ability to be understood.
 
 Successful communication requires shared background knowledge between sender and receiver (Vogt et al., 2024).
@@ -343,31 +467,57 @@ DOA relates to the discourse on ``Great Man Theorizing'' (Guest, 2024) because i
 which violates checks and balances of scientific research.
 DOA also renders theories immune to refutation,
 because the author can claim that the theory was misconstrued when confronted with falsifying evidence, thus making it a moving target (Szollosi \& Donkin, 2021).
-DOA is inherently problematic because authors may not understand their own theories well.
-This is illustrated by cases where third parties identify logical inconsistencies within a theory (e.g., Kissner, 2008).
-In short, DOA unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible; both in terms of availability and in terms of interpretability.
+The fact that DOA is inherently problematic is illustrated by cases where third parties identify logical inconsistencies within a theory (e.g., Kissner, 2008).
+This demonstrates that original authors are not the ultimate authority on their theories.
+DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible; both in terms of availability and in terms of interpretability.
 
-\subsubsection{Interoperability}\label{interoperability}
+\subsection{Interoperability}\label{interoperability}
 
 Interoperability pertains to the property of information artefacts to ``integrate or work together {[}\ldots{]} with minimal effort'' (Wilkinson et al., 2016).
-As the original definition of interoperability was somewhat narrow and abstract,
+The original interoperability principles can be rephrased somewhat to apply to theory.
+Firstly, theory and its associated metadata should use a formal, accessible, shared and broadly applicable language to facilitate (human- and) machine readability and reuse (I1).
+The common practice of instantiating theory as lengthy prose or multi-interpretable bitmap image falls short of this ideal.
+Instead, FAIR theory should, ad minimum,
+be instantiated as
+as a type of data that is human- and machine-readable with as few interpretative steps as possible,
+as previously recommended (Van Lissa et al., 2021).
+Depending on the level of formalization of the theory,
+different formats may be appropriate,
+such as verbal statements in plain text,
+mathematical formulae,
+and statements expressed in some axiomatic system.
+Examples of the latter include pseudo-code,
+interpretable computer code,
+and Gray's theory maps (Gray, 2017).
+While a theory represented as a bitmap image is not very interoperable,
+the same image represented in the DOT language for representing graphs does meet this ideal.
+
+Secondly, theory (meta)data should use vocabularies that follow FAIR principles (I2).
+This is essentially a call to establish standardized ontologies,
+which are themselves a type of theory (Paul E. Meehl, 1990).
+Thirdly, theory (meta)data should include qualified references to other (meta)data, including previous versions of the theory (I3).
+The first part of this principle allows for nested theories;
+for example, a theory that specifies causal relationships between constructs could refer back to an ontological theory from which those constructs are derived.
+This can be achieved by linking the DOI of those nested theories ({``Contributing {Citations} and {References},''} n.d.).
+The second part of this principle allows for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
+This can be achieved by using Git for version control and Zenodo for archiving.
+
+As the original definition of interoperability was somewhat narrow (Wilkinson et al., 2016),
 the concept has recently been further refined in terms of facilitating ``successful communication between machines and between humans and machines'', where ``A and B are considered X-interoperable if a common operation X exists that can be applied to both'' (Vogt et al., 2024).
-This definition invites the question: \emph{interoperable for what purpose?}
+This definition invites the question: \emph{interoperable for what?}
 Suitable answers for FAIR theory may be:
-this theory is X-interoperable for deriving testable null-hypotheses,
+this theory is X-interoperable for deriving testable hypotheses,
 or for the purpose of selecting relevant control variables,
 or for the purpose of indicating the conditions necessary for observing a particular phenomenon.
-These definitions suggest that FAIR theory should, ad minimum,
-be instantiated in a human- and machine-readable file format, as previously recommended (Van Lissa et al., 2021).
-Furthermore, theories may have specific properties that incur affordances in terms of X-interoperability;
-for example, Table \ref{tab:tabmeehl} illustrates the affordances of Meehl's nine properties of strong theories.
+This revised definition implies that theories have specific properties that incur affordances in terms of X-interoperability;
+for example, Table \ref{tab:tabmeehl} illustrates the affordances of Meehl's nine properties of strong theories (properties 3-8 are grouped because they all refer to functional form).
 
 \begin{table}[tbp]
 
 \begin{center}
 \begin{threeparttable}
 
-\caption{\label{tab:unnamed-chunk-2}}
+\caption{\label{tab:tabmeehl}}
 
 \begin{tabular}{ll}
 \toprule
@@ -385,8 +535,9 @@ Property & \multicolumn{1}{c}{X-interoperability}\\
 
 \end{table}
 
-Kurt Lewin's adage ``there's nothing as practical as a good theory'' (Lewin, 1943) seems to imply that theory plays a practical role in the day-to-day work of psychological researchers.
-But, as we argued before, there are clear signs that this is not the case.
+With regard to the state of interoperability in contemporary psychology,
+Kurt Lewin's adage ``there's nothing as practical as a good theory'' (Lewin, 1943) implies that ought to be highly X-interoperable in psychological researchers' day-to-day work.
+But, as we argued, this is not the case.
 The examples of X-interoperability offered in Table \ref{tab:tabmeehl} illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-interoperable within software used for analysis.
 For example, interoperable theory could be used
 to select control variables for causal inference (Cinelli, Forney, \& Pearl, 2022),
@@ -395,26 +546,32 @@ or to derive machine-readable hypotheses (Lakens \& DeBruine, 2021) which could 
 Furthermore, theories can be X-interoperable with each other to enable nesting, or using one theory to clarify elements of another theory.
 For example, it should be possible to embed a theory about emotion regulation (e.g., Gross, 2015) within a theory of emotion regulation development (Morris, Silk, Steinberg, Myers, \& Robinson, 2007).
 
-\subsubsection{Reusability}\label{reusability}
+\subsection{Reusability}\label{reusability}
 
-Some have argued that there is a norm \emph{against} theory reuse:
+If take cumulative knowledge acquisition to be a goal of scientific research, then Reusability is the ultimate purpose of making theory FAIR.
+Applied to FAIR theory, reusability requires that theory and its associated metadata are richly described with a plurality of accurate and relevant attributes (R1) with a clear and accessible license for reuse (R1.1), detailed provenance (R1.2), and (meta)data which meets domain-relevant community standards (R1.3).
+As we will argue below, the most appropriate license for theory reuse is likely to be CC0 (no rights reserved),
+although this should be combined with a culture of comprehensive (theory) citation to meet other open science requirements {[}REF TOP guidelines{]}.
+Criterion R1.2 is met by version control with Git and archival on Zenodo.
+Domain-relevant community standards, to a large extent, remain to be established - and this paper is the first step towards further work in that area.
+
+If we consider the current state of Reusability in psychological theory, there appears to be a norm \emph{against} theory reuse:
 \emph{``{[}Theories are{]} like toothbrushes --- no self-respecting person wants to use anyone else's''} (Mischel, 2008).
-Such a norm impedes scientific progress.
+This norm impedes scientific progress.
 Cumulative knowledge acquisition requires reusable theories that are continuously updated based on insights from new data (de Groot, 1961).
-Theories are made reusable by thorough documentation,
-appropriate licensing,
-and detailed provenance (e.g., through version control, cross-referencing, and semantic versioning).
-
-In our workshops on FAIR Theory, we often hear questions such as ``who owns theory'',
+In our workshops on FAIR Theory, we similarly notice reluctance to the notion of reusing and adapting theories,
+reflected in questions such as ``who owns theory'',
 and ``who determines how a theory may be reused or changed''?
-Licensing theories for reuse provides an unambiguous answer to such questions.
 These questions imply a norm against modifying theory without consent from the author reminiscent of the aforementioned problem of dependency on the author.
-However, copyright law limits the rights authors can claim over theory based on the \emph{idea-expression dichotomy} (Bently, Davis, \& Ginsburg, 2010),
+
+Licensing theories for reuse provides an unambiguous answer to such questions.
+In determining what license is appropriate for theory,
+it is important to consider that copyright law limits authors' rights based on the \emph{idea-expression dichotomy} (Bently, Davis, \& Ginsburg, 2010),
 which holds that copyright explicitly does not
 \emph{``extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery''}.
-It may, however, extend to creative works expressing that idea (e.g., writing, visual illustrations).
-Applying these principles to FAIR theory, it seems that vague, ambiguous verbal explanations of theories - in other words, those that fall short in terms of the Accessibility criterion - are more likely to qualify for copyright protection than formal theories.
-If copyright limits Reusability and does not cover ideas in their purest form (like formal theory),
+Copyright may, however, extend to creative works expressing that idea (e.g., writing, visual illustrations).
+It thus seems that vague, ambiguous verbal explanations of theories - in other words, those that fall short of the Accessibility criterion - are more likely to qualify for copyright protection than formal theories.
+If copyright limits Reusability and does not cover ideas in their purest form (like formal theories),
 then it might be counterproductive and possibly misleading to adopt a license that assumes copyright protection.
 Furthermore, even if copyright would apply, academic research is covered under ``fair use'' exemptions,
 so copyright would pose few restrictions to Reusability in scholarly communication.
@@ -425,6 +582,8 @@ Nevertheless, is essential that scholars do comprehensively cite theory,
 including prior work that new theories are based on,
 even in absence of legal obligations to do so,
 to meet the definition of Reusability (R1.2, Table \ref{tab:tabfair} and to comply with other definitions of open scholarship (Aalbersberg et al., 2018).
+
+\subsection{Some other stuff}\label{some-other-stuff}
 
 We can take inspiration from the field of computer science for well-established processes for iteratively improving information artefacts, like computer code.
 Using version control systems, like Git, would enhance the reusability of FAIR theory by thoroughly documenting every modification in a traceable and reversible manner.
@@ -440,82 +599,6 @@ From a meta-science perspective, FAIR theory facilitates studying the state of t
 
 Making Theories FAIR Accelerates Scientific Progress
 Adopting the FAIR principles for theories can address key challenges in the current research landscape, where theories often remain isolated and underutilized. By making theories findable, accessible, interoperable, and reusable, researchers can ensure that their work is grounded in a shared, transparent, and cumulative body of knowledge. This approach enhances scholarly communication, allowing for greater scrutiny, replication, and collaboration across disciplines, ultimately leading to faster, more reliable, and more impactful scientific progress.
-
-\subsection{Publication is not Enough}\label{publication-is-not-enough}
-
-Merely publishing a theory does not make it open;
-to be open, theory should adhere to established open science standards.
-The FAIR principles, initially introduced as a standard for open research data, have since been applied to other forms of digital scholarly output (e.g., software Lamprecht et al., 2019).
-We propose to apply the FAIR principles to digital representations of theory as well,
-introducing a FAIR metadata format to represent (formal) theories.
-The resulting theories are made \emph{Findable} via a DOI,
-Accessible in a machine- and human-readable filetype,
-Interoperable within the data analysis environment,
-and Reusable in the practical and legal sense, so that they may be improved over time.
-
-\subsection{Adapting the FAIR Principles}\label{adapting-the-fair-principles}
-
-The FAIR Principles were devised to make scholarly data more findable, accessible, interoperable, and reusable.
-From their inception, these principles were developed with ``other research resources'' in mind.
-Scholars have adapted the FAIR principles to, e.g., research software {[}REF Lamprecht{]}.
-Yet there are key distinctions between theory and other FAIR information artefacts.
-With this in mind, the present paper further extends the FAIR principles' definition to theory, see Table \ref{tab:tabfair}.
-We establish guiding principles for instantiating theory as a FAIR digital research artifact,
-and provide applied examples to encourage their adoption.
-
-\begin{lltable}
-
-\begin{longtable}{m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}m{.1\linewidth}m{.35\linewidth}m{.35\linewidth}m{.15\linewidth}}\noalign{\getlongtablewidth\global\LTcapwidth=\longtablewidth}
-\caption{\label{tab:tabfair}}\\
-\toprule
-Criterion & \multicolumn{1}{c}{Original} & \multicolumn{1}{c}{Theory} & \multicolumn{1}{c}{Action}\\
-\midrule
-\endfirsthead
-\caption*{\normalfont{Table \ref{tab:tabfair} continued}}\\
-\toprule
-Criterion & \multicolumn{1}{c}{Original} & \multicolumn{1}{c}{Theory} & \multicolumn{1}{c}{Action}\\
-\midrule
-\endhead
-F1 & (Meta)data are assigned a globally unique and persistent identifier & Theory and its associated metadata has a global, unique and persistent identifier for each version (using semantic versioning) & Rephrased\\
-F2 & Data are described with rich metadata & Theory is described with rich metadata & \textasciitilde{}same\\
-F3 & Metadata clearly and explicitly include the identifier of the data it describes & Metadata clearly and explicitly include identifiers for all the versions of the theory it describes & \textasciitilde{}same\\
-F4 & (Meta)data are registered or indexed in a searchable resource & Theory and its associated metadata are included in a searchable repository & NEEDS WORK! GitHub is indexed by Google I believe, but ideally, we'd like our theories to show up in Google Scholar, or even dedicated academic search enginges. Where could we put them to realize this?\\
-A1 & (Meta)data are retrievable by their identifier using a standardized communications protocol & Theory and its associated metadata are accessible by their identifier using a standardized communications protocol & \textasciitilde{}same\\
-A1.1 & The protocol is open, free, and universally implementable & The protocol is open, free, and universally implementable & Same\\
-A1.2 & The protocol allows for an authentication and authorization procedure, where necessary & The protocol allows for an authentication and authorization procedure, where necessary & Do\ \ we need this?\\
-A2 & Metadata are accessible, even when the data are no longer available & Theory metadata are accessible, even when the theory is no longer available & Do\ \ we need this?\\
-I1 & (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation & Theory and its associated metadata use a formal, accessible, shared and broadly applicable language to facilitate machine readability and reuse & Rephrased\\
-I2 & (Meta)data use vocabularies that follow FAIR principles & (Meta)data use vocabularies that follow FAIR principles & NEEDS WORK! I think this is where we explain the value of e.g. universal graph languages like Aaron and Max'\\
-I2S.1 & - &  & \\
-I2S.2 & - &  & \\
-I3 & (Meta)data include qualified references to other (meta)data & (Meta)data includes qualified references to other (meta)data, including previous versions of the theory & Rephrased. I envision a LinkList-like structure where each theory version references its ancestor\\
-I4S & - &  & Discard\\
-R1 & (Meta)data are richly described with a plurality of accurate and relevant attributes & Theory and its associated metadata are richly described with a plurality of accurate and relevant attributes & Needs work. How do we envision this? Keywords? ISBN-like codes for variable type?\\
-R1.1 & (Meta)data are released with a clear and accessible data usage license & (Meta)data are released with a clear and accessible license & Needs work: which license is good for theory?\\
-R1.2 & (Meta)data are associated with detailed provenance & (Meta)data are associated with detailed provenance & Relates to I3; I think this point relates more to the theory's ancestry, and I3 relates to e.g. incorporating other theories within a theory (e.g., theory of measurement inside of structural theory)\\
-R1.3 & (Meta)data meet domain-relevant community standards & Theory metadata and documentation meet domain-relevant community standards & These standards do not yet exist; we can take a first step towards developing them and recommend that this be an active area of development\\
-\bottomrule
-\end{longtable}
-
-\end{lltable}
-
-\subsection{FAIR Theory and Recognition \& Rewards}\label{fair-theory-and-recognition-rewards}
-
-FAIR theory provides a clear deliverable, and a clear goal, for scholars and institutions seeking to promote contributions to theory.
-In the spirit of DORA, this helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a purely theoretical paper, which can be challenging.
-
-\subsection{The Role of Theory Formalization}\label{the-role-of-theory-formalization}
-
-Concerns about the state of theory are a recurring theme in the psychological literature,
-but previous writing has focused on theory formalization as a solution for ambiguity in psychological theory.
-Greater formality increases theories' \emph{empirical content},
-making them easier to falsify,
-which necessitates revising them,
-thus advancing our principled understanding of the phenomena they describe.
-Conceptually, theory formalization is orthogonal to FAIR theory.
-FAIR Theory does not require theories to be formal, and formal theory can be represented in a way that is not FAIR.
-It is - in principle - possible to represent a collection of verbal statements as a FAIR Theory.
-While FAIR Theory is fully consistent with formal theory, it does not require theories to be formal.
 
 \section{Examples}\label{examples}
 
@@ -682,8 +765,14 @@ Aalbersberg, Ij. J., Appleyard, T., Brookhart, S., Carpenter, T., Clarke, M., Cu
 \bibitem[\citeproctext]{ref-bently2010copyright}
 Bently, L., Davis, J., \& Ginsburg, J. C. (2010). \emph{Copyright and {Piracy}: {An} interdisciplinary critique} (Vol. 13). Cambridge University Press.
 
+\bibitem[\citeproctext]{ref-boscoMetaBUSVehicleFacilitating2017}
+Bosco, F. A., Uggerslev, K. L., \& Steel, P. (2017). {MetaBUS} as a vehicle for facilitating meta-analysis. \emph{Human Resource Management Review}, \emph{27}(1), 237--254. \url{https://doi.org/10.1016/j.hrmr.2016.09.013}
+
 \bibitem[\citeproctext]{ref-cinelliCrashCourseGood2022}
 Cinelli, C., Forney, A., \& Pearl, J. (2022). A {Crash Course} in {Good} and {Bad Controls}. \emph{Sociological Methods \& Research}, 00491241221099552. \url{https://doi.org/10.1177/00491241221099552}
+
+\bibitem[\citeproctext]{ref-ContributingCitationsReferences}
+Contributing {Citations} and {References}. (n.d.). Retrieved December 5, 2024, from \url{https://support.datacite.org/docs/data-citation}
 
 \bibitem[\citeproctext]{ref-degrootMethodologieGrondslagenVan1961}
 de Groot, A. D. (1961). \emph{Methodologie: Grondslagen van onderzoek en denken in de gedragswetenschappen}. 's Gravenhage: Uitgeverij Mouton. Retrieved from \url{https://books.google.com?id=6hiBDwAAQBAJ}
@@ -691,11 +780,26 @@ de Groot, A. D. (1961). \emph{Methodologie: Grondslagen van onderzoek en denken 
 \bibitem[\citeproctext]{ref-dumas-malletPoorReplicationValidity2017}
 Dumas-Mallet, E., Smith, A., Boraud, T., \& Gonon, F. (2017). Poor replication validity of biomedical association studies reported by newspapers. \emph{PLOS ONE}, \emph{12}(2), e0172650. \url{https://doi.org/10.1371/journal.pone.0172650}
 
+\bibitem[\citeproctext]{ref-frankenhuisStrategicAmbiguitySocial2023}
+Frankenhuis, W. E., Panchanathan, K., \& Smaldino, P. E. (2023). Strategic {Ambiguity} in the {Social Sciences}. \emph{Social Psychological Bulletin}, \emph{18}, 1--25. \url{https://doi.org/10.32872/spb.9923}
+
+\bibitem[\citeproctext]{ref-friedTheoriesModelsWhat2020}
+Fried, E. I. (2020). Theories and {Models}: {What They Are}, {What They Are} for, and {What They Are About}. \emph{Psychological Inquiry}, \emph{31}(4), 336--344. \url{https://doi.org/10.1080/1047840X.2020.1854011}
+
+\bibitem[\citeproctext]{ref-gigerenzerNullRitualWhat2004}
+Gigerenzer, G., Krauss, S., \& Vitouch, O. (2004). The null ritual : {What} you always wanted to know about significance testing but were afraid to ask. In D. Kaplan (Ed.), \emph{The {Sage} handbook of quantitative methodology for the social sciences} (pp. 391--408). Thousand Oaks: Sage.
+
+\bibitem[\citeproctext]{ref-grayHowMapTheory2017}
+Gray, K. (2017). How to {Map Theory}: {Reliable Methods Are Fruitless Without Rigorous Theory}. \emph{Perspectives on Psychological Science}, \emph{12}(5), 731--741. \url{https://doi.org/10.1177/1745691617691949}
+
 \bibitem[\citeproctext]{ref-grossEmotionRegulationCurrent2015}
 Gross, J. J. (2015). Emotion regulation: {Current} status and future prospects. \emph{Psychological Inquiry}, \emph{26}(1), 1--26. \url{https://doi.org/10.1080/1047840X.2014.940781}
 
 \bibitem[\citeproctext]{ref-guestWhatMakesGood2024}
 Guest, O. (2024). What {Makes} a {Good Theory}, and {How Do We Make} a {Theory Good}? \emph{Computational Brain \& Behavior}. \url{https://doi.org/10.1007/s42113-023-00193-2}
+
+\bibitem[\citeproctext]{ref-guyonMeasurementOntologyEpistemology2018}
+Guyon, H., Kop, J.-L., Juhel, J., \& Falissard, B. (2018). Measurement, ontology, and epistemology: {Psychology} needs pragmatism-realism. \emph{Theory \& Psychology}, \emph{28}(2), 149--171. \url{https://doi.org/10.1177/0959354318761606}
 
 \bibitem[\citeproctext]{ref-kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008}
 Kissner, J. (2008). {ON THE IDENTIFICATION OF A LOGICAL INCONSISTENCY IN THE GENERAL THEORY OF CRIME}. \emph{Journal of Crime and Justice}. Retrieved from \url{https://www.tandfonline.com/doi/abs/10.1080/0735648X.2008.9721251}
@@ -725,13 +829,19 @@ Lewin, K. (1943). Psychology and the {Process} of {Group Living}. \emph{The Jour
 McPhetres, J., Albayrak-Aydemir, N., Mendes, A. B., Chow, E. C., Gonzalez-Marquez, P., Loukras, E., \ldots{} Volodko, K. (2021). A decade of theory as reflected in {Psychological Science} (2009--2019). \emph{PLOS ONE}, \emph{16}(3), e0247986. \url{https://doi.org/10.1371/journal.pone.0247986}
 
 \bibitem[\citeproctext]{ref-meehlTheoreticalRisksTabular1978}
-Meehl, P. E. (1978). Theoretical {Risks} and {Tabular Asterisks}: {Sir Karl}, {Sir Ronald}, and the {Slow Progress} of {Soft Psychology}. \emph{Journal of Consulting \& Clinical Psychology}, \emph{46}(4), 806--834.
+Meehl, Paul E. (1978). Theoretical {Risks} and {Tabular Asterisks}: {Sir Karl}, {Sir Ronald}, and the {Slow Progress} of {Soft Psychology}. \emph{Journal of Consulting \& Clinical Psychology}, \emph{46}(4), 806--834.
+
+\bibitem[\citeproctext]{ref-meehlAppraisingAmendingTheories1990}
+Meehl, Paul E. (1990). Appraising and {Amending Theories}: {The Strategy} of {Lakatosian Defense} and {Two Principles} that {Warrant It}. \emph{Psychological Inquiry}, \emph{1}(2), 108--141. \url{https://doi.org/10.1207/s15327965pli0102_1}
 
 \bibitem[\citeproctext]{ref-mischelToothbrushProblem2008}
 Mischel, W. (2008). The {Toothbrush Problem}. \emph{APS Observer}, \emph{21}. Retrieved from \url{https://www.psychologicalscience.org/observer/the-toothbrush-problem}
 
 \bibitem[\citeproctext]{ref-morrisRoleFamilyContext2007}
 Morris, A. S., Silk, J. S., Steinberg, L., Myers, S. S., \& Robinson, L. R. (2007). The role of the family context in the development of emotion regulation. \emph{Social Development}, \emph{16}(2), 361--388. \url{https://doi.org/10.1111/j.1467-9507.2007.00389.x}
+
+\bibitem[\citeproctext]{ref-norouziCapturingCausalClaims2024}
+Norouzi, R., Kleinberg, B., Vermunt, J., \& Van Lissa, C. J. (2024). \emph{Capturing {Causal Claims}: {A Fine Tuned Text Mining Model} for {Extracting Causal Sentences} from {Social Science Papers}}. Retrieved from \url{https://osf.io/kwtpm/download}
 
 \bibitem[\citeproctext]{ref-nosekPromotingOpenResearch2015a}
 Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., \ldots{} Yarkoni, T. (2015). Promoting an open research culture. \emph{Science}, \emph{348}(6242), 1422--1425. \url{https://doi.org/10.1126/science.aab2374}
@@ -768,6 +878,9 @@ Van Lissa, C. J. (2023). Using {Endpoints} to {Check Reproducibility} {[}Package
 
 \bibitem[\citeproctext]{ref-vanlissaWORCSWorkflowOpen2021}
 Van Lissa, C. J., Brandmaier, A. M., Brinkman, L., Lamprecht, A.-L., Peikert, A., Struiksma, M. E., \& Vreede, B. M. I. (2021). {WORCS}: {A} workflow for open reproducible code in science. \emph{Data Science}, \emph{4}(1), 29--49. \url{https://doi.org/10.3233/DS-210031}
+
+\bibitem[\citeproctext]{ref-vanlissaTeacherCornerEvaluating2020}
+Van Lissa, C. J., Gu, X., Mulder, J., Rosseel, Y., Zundert, C. V., \& Hoijtink, H. (2020). Teacher's {Corner}: {Evaluating Informative Hypotheses Using} the {Bayes Factor} in {Structural Equation Models}. \emph{Structural Equation Modeling: A Multidisciplinary Journal}, \emph{0}(0), 1--10. \url{https://doi.org/10.1080/10705511.2020.1745644}
 
 \bibitem[\citeproctext]{ref-vogtFAIR20Extending2024}
 Vogt, L., Strömert, P., Matentzoglu, N., Karam, N., Konrad, M., Prinz, M., \& Baum, R. (2024, May 6). {FAIR} 2.0: {Extending} the {FAIR Guiding Principles} to {Address Semantic Interoperability}. Retrieved November 20, 2024, from \url{http://arxiv.org/abs/2405.03345}
