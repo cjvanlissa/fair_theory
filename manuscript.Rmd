@@ -204,17 +204,17 @@ The paradoxical role of theory in psychology is perhaps best described by Meehl'
 
 ## Making Theory FAIR
 
-The present paper addresses the lack of open science methods for theory development and improvement by applying the FAIR principles to scientific theories.
-Merely publishing theory does not make it open;
+The present paper addresses the lack of open science methods for theory development and suggests an improvement of the state of affairs by applying the FAIR principles to scientific theories.
+Merely publishing theory -- as in a classic research article -- does not make it open;
 to be open, theory should adhere to established open science standards.
-The FAIR principles, initially introduced for open research data,
-have since been applied to other information artifacts [@lamprechtFAIRPrinciplesResearch2019].
+<!--AB  I deleted this sentence because it was already in the introduction -->
 We apply the FAIR principles to digital representations of theory,
 introducing a FAIR metadata format to make theories *Findable* via a DOI,
 *Accessible* in a machine- and human-readable filetype,
 *Interoperable* within the data analysis environment,
-and *Reusable* in the practical and legal sense, so that they may be improved over time.
-Following Lamprecht and colleagues,
+and *Reusable* in the practical and legal sense, so that they may be improved over time -- at best, in a participative process.
+Digital representations of theory intentionally is a broad term, particularly including textual representations of a given theory, as well as formal representations, such as mathematical notation, algorithmic pseudo code, or a set of logical clauses. <!-- AB I think some initial word on what is covered is needed here; otherwise readers may wonder what we mean to cover--> 
+Following the original proposal of Lamprecht and colleagues,
 we adapt the FAIR principles for theory, see Table \@ref(tab:tabfair).
 We reflect on the necessary changes (which are minor),
 as well as on the current state and future of FAIR theory in the social sciences.
