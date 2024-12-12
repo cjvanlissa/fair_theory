@@ -230,7 +230,7 @@ papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\li
 
 There are different definitions of theory,
 and many of those definitions are consistent with the FAIR theory principles.
-This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data [bogen/woodward].
+This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data [bogen/woodward]. <!-- what is this ref exactly?! -->
 <!-- Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried]. -->
 <!-- This invites the question: if a FAIR theory is a specific instantiation of theory, how does FAIR theory differ from a model?
 There is no principled difference, but a FAIR theory is the most general instance of a theory, whereas a model is highly specific - e.g., by assuming functional form and error families.
@@ -241,6 +241,12 @@ statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
 and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023, @guestWhatMakesGood2024].
+Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
+From this definition, it becomes clear that FAIR models are a special case of FAIR theory.
+Yet, theory intentionally has a broader scope and may contain one or more models as specific instances.
+For example, a comprehensive theory of disease spread and pandemics may cover various psychological factors such as adherence to pandemic mitigation methods (e.g., ), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety).
+This may encompass a particular transmission _model_ for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
+
 
 ### The Role of Theory Formalization
 
