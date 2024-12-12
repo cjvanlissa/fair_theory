@@ -187,7 +187,7 @@ The remaining 85% of deductive studies lacked an explicit derivation chain from 
 In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
 Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected [@vanlissaTeacherCornerEvaluating2020], and researchers are simply testing them as part of a cultural ritual [@gigerenzerNullRitualWhat2004].
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
-Or to adapt an analogy of Roji, just collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings.
+Or to adapt an analogy of @van2021theory, just collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings.
 
 Theory thus has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
