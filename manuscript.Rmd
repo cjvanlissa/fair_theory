@@ -251,8 +251,9 @@ The theory may encompass a particular transmission _model_ for disease spread in
 ### The Role of Theory Formalization
 
 Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use.
-Greater formalization increases theories' *empirical content* [REF],
-making them easier to falsify,
+Greater formalization increases theories' *empirical content* [REF] as it forces researchers to use precise statements, for example by specifying exact functional forms for relations or forces them to specify processes  that would otherwise get away with their vague formulation in verbal theories.
+For example, the phonological loop in Baddeley's verbal description of his working memory model allows at least 144 different implementations, for example, depending on how decay rate, recall success, or rehearsal sequence are precisely implemented [@lewandowsky2010computational].
+More precise theories makes them easier to falsify,
 which necessitates revising them,
 thus advancing our principled understanding of the phenomena they describe.
 FAIR Theory does not require theories to be formal,
