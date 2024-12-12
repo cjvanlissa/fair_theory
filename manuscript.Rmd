@@ -180,13 +180,14 @@ this cycle is regularly completed to iteratively advance our understanding of th
 In psychology, this is typically achieved by either generalizing to a larger set of people, contexts, situations, or environments. <!--AB would you agree?-->
 There are, however, indications that contemporary psychology falls short of this ideal.
 Firstly, because deductive research is over-represented in the literature: 
-According to one estimate, 89.6% of paper published in psychology tests hypotheses [@kuhbergerPublicationBiasPsychology2014].
-Closer examination of deductive research reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
-Only 15% of deductive studies referenced any theory, and theory was often not cited in connection to the hypothesis [@mcphetresDecadeTheoryReflected2021].
+According to @kuhbergerPublicationBiasPsychology2014, 89.6% of papers published in psychology report confirmatory hypothesis tests.
+Closer examination of reported deductive research reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
+Only 15% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis [@mcphetresDecadeTheoryReflected2021].
 The remaining 85% of deductive studies lacked an explicit derivation chain from theory to hypothesis.
-Perhaps such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
+In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
 Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected [@vanlissaTeacherCornerEvaluating2020], and researchers are simply testing them as part of a cultural ritual [@gigerenzerNullRitualWhat2004].
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
+Or to adapt an analogy of Roji, just collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings.
 
 Theory thus has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
