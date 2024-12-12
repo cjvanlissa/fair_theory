@@ -304,7 +304,7 @@ or entering them in PURE.
 
 At present, theories have poor findability, which impedes cumulative knowledge acquisition.
 One factor contributing to theories' lack of Findability is the lack of standardized metadata, or even a standardized keyword to signal the presence of theory within a paper - terms like "theory", "model", and "framework" are used interchangeably.
-To curb this trend, we suggest using the keyword `"FAIR theory"` for all resources that constitute or reference a FAIR theory.
+To curb this trend, we suggest using the keyword `"FAIR theory"` for all resources that constitute or reference a FAIR theory. <!-- this is problematic because many search engine will tear apart this term and interpret it as two keywords - I think we need a single word without space FAIRtheory maybe -->
 This would allow theoretical resources to be systematically indexed, tagged, and made searchable.
 Another factor contributing to the present lack of Findability is that the primary unit of dissemination and search in psychology is still the academic paper.
 A paper may contain multiple resources - such as materials, data, code, and theory - but if these are not merely described in text, and not instantiated as separate informational artefacts, their findability is limited.
