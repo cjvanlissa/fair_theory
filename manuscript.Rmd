@@ -77,12 +77,12 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
 
-The FAIR Guiding Principles (hereafter: FAIR principles) were established to make research data more Findable, Accessible, Interoperable and Reusable [REF].
-Since their inception, scholars have demonstrated their relevance for making other information artefacts more open.
+The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more findable, accessible, interoperable and reusable [REF] for both humans and computers.
+Since their inception in 2014, scholars have demonstrated their relevance for making other information artefacts more open, such as research software [@lamprecht2020towards; @barker2022introducing], computational workflows [@wilkinson2024applying] or simulation studies [@amaro2024need].
 This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
-a digital representation of theory, compliant with the FAIR principles.
-By improving the efficiency of scholarly communication, FAIR Theory has the potential to accelerate cumulative knowledge acquisition and advance social scientific research.
+a digital representation of a scientific theory, compliant with the FAIR principles.
+By improving the efficiency of scholarly communication, FAIR Theory has the potential to foster and accelerate cumulative knowledge acquisition and ultimately advance social scientific research.
 
 <!-- QUOTES 
 
