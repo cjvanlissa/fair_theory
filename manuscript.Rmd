@@ -258,6 +258,8 @@ which necessitates revising them,
 thus advancing our principled understanding of the phenomena they describe.
 FAIR Theory does not require theories to be formal,
 and formal theory can be represented in a way that is not FAIR.
+It is therefore important for us to emphasize that FAIR Theory imposes no restrictions on researchers regarding the manner in which theories are derived and written down. 
+The guidelines introduced by FAIR Theory primarily pertain to how theories are documented and shared in digital environments, with the aim of enhancing their reusability and extensibility.
 For example, it is possible to represent a collection of verbal propositions (perhaps derived through qualitative research) as a FAIR theory.
 Conversely, a directed acyclic graph (DAG) is a type of formal theory,
 but if it is embedded within a journal article as a bitmap image without any key words to help search engines index that article as a theory paper,
