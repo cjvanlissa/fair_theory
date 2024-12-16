@@ -77,12 +77,12 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
 
-The FAIR Guiding Principles (hereafter: FAIR principles) were established to make research data more Findable, Accessible, Interoperable and Reusable [REF].
-Since their inception, scholars have demonstrated their relevance for making other information artefacts more open.
+The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more findable, accessible, interoperable and reusable [REF] for both humans and computers.
+Since their inception in 2014, scholars have demonstrated their relevance for making other information artefacts more open, such as research software [@lamprecht2020towards; @barker2022introducing], computational workflows [@wilkinson2024applying] or simulation studies [@amaro2024need].
 This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
-a digital representation of theory, compliant with the FAIR principles.
-By improving the efficiency of scholarly communication, FAIR Theory has the potential to accelerate cumulative knowledge acquisition and advance social scientific research.
+a digital representation of a scientific theory, compliant with the FAIR principles.
+By improving the efficiency of scholarly communication, FAIR Theory has the potential to foster and accelerate cumulative knowledge acquisition and ultimately advance social scientific research.
 
 <!-- QUOTES 
 
@@ -97,18 +97,18 @@ END QUOTES -->
 The so-called "replication crisis" has prompted extensive reforms in social science [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that undisclosed flexibility in analyses was to blame for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 These various practices ensure transparent and repeated testing of hypotheses.
-However, recent reviews show that most preregistered hypothesis tests are not supported [@scheelExcessPositiveResults2021].
+However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 Increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
 psychological theories rarely produce hypotheses that are found to be true,
-and are often sufficiently vague to explain contradictory findings.
+and are often sufficiently vague, such that contradictory findings do not falsify the central claims. <!--AB: Your original wording is contradicting itself; if findings contradict a theory <=> the theory does not explain the findings; I am not sure what the best wording is; should we differentiate between a core of a theory and auxiliary parts?-->
 
-Scholars have raised concerns about the state of theory in social science for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
-Two main concerns are that, first, social scientific theories lack precision and clarity compared to theories in the physical sciences [@szollosiArrestedTheoryDevelopment2021].
+Scholars have been raising concerns about the state of theory in social science for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
+Two main concerns are that, first, social scientific theories lack precision and clarity compared to theories in the physical sciences [@szollosiArrestedTheoryDevelopment2021]. <!-- AB is it really a lack of clarity, ie. that everyone understands it? I think the core problem is a lack of precision, ie. accuracy in their predictions. Maybe a lot of theories are actually too clear but not precise; making them more precise also often makes them less clear, doesn't it?-->
 In other words, social scientific theories lack *formalization* .
-A second concern is the lack of transparent and democratic scholarly communication about psychological theory.
+A second concern is the lack of transparent and participative scholarly communication about psychological theory and their development over time.
 
 Given these concerns, it is unfortunate that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
-The equally critical inductive processes of theory construction and -improvement have been largely overlooked.
+The equally critical inductive processes of theory construction and theory improvement have been largely overlooked.
 The present paper restores balance by applying, for the first time,
 open science principles to psychological theory.
 We apply the FAIR principles to scientific theories,
@@ -176,16 +176,18 @@ knitr::include_graphics("empirical_cycle.pdf")
 ```
 
 In a progressive research program [@lakatosHistoryScienceIts1971],
-this cycle is regularly completed to iteratively advance our understanding of the studied phenomena.
+this cycle is regularly completed to iteratively advance our understanding of the studied phenomena by successively increasing the empirical content of a theory.
+In psychology, this is typically achieved by either generalizing to a larger set of people, contexts, situations, or environments. <!--AB would you agree?-->
 There are, however, indications that contemporary psychology falls short of this ideal.
 Firstly, because deductive research is over-represented in the literature: 
-According to one estimate, 89.6% of paper published in psychology tests hypotheses [@kuhbergerPublicationBiasPsychology2014].
-Closer examination of deductive research reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
-Only 15% of deductive studies referenced any theory, and theory was often not cited in connection to the hypothesis [@mcphetresDecadeTheoryReflected2021].
+According to @kuhbergerPublicationBiasPsychology2014, 89.6% of papers published in psychology report confirmatory hypothesis tests.
+Closer examination of reported deductive research reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
+Only 15% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis [@mcphetresDecadeTheoryReflected2021].
 The remaining 85% of deductive studies lacked an explicit derivation chain from theory to hypothesis.
-Perhaps such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
+In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
 Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected [@vanlissaTeacherCornerEvaluating2020], and researchers are simply testing them as part of a cultural ritual [@gigerenzerNullRitualWhat2004].
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
+Or to adapt an analogy of @van2021theory, just collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings.
 
 Theory thus has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
@@ -202,17 +204,17 @@ The paradoxical role of theory in psychology is perhaps best described by Meehl'
 
 ## Making Theory FAIR
 
-The present paper addresses the lack of open science methods for theory development and improvement by applying the FAIR principles to scientific theories.
-Merely publishing theory does not make it open;
+The present paper addresses the lack of open science methods for theory development and suggests an improvement of the state of affairs by applying the FAIR principles to scientific theories.
+Merely publishing theory -- as in a classic research article -- does not make it open;
 to be open, theory should adhere to established open science standards.
-The FAIR principles, initially introduced for open research data,
-have since been applied to other information artifacts [@lamprechtFAIRPrinciplesResearch2019].
+<!--AB  I deleted this sentence because it was already in the introduction -->
 We apply the FAIR principles to digital representations of theory,
 introducing a FAIR metadata format to make theories *Findable* via a DOI,
 *Accessible* in a machine- and human-readable filetype,
 *Interoperable* within the data analysis environment,
-and *Reusable* in the practical and legal sense, so that they may be improved over time.
-Following Lamprecht and colleagues,
+and *Reusable* in the practical and legal sense, so that they may be improved over time -- at best, in a participative process.
+Digital representations of theory intentionally is a broad term, particularly including textual representations of a given theory, as well as formal representations, such as mathematical notation, algorithmic pseudo code, or a set of logical clauses. <!-- AB I think some initial word on what is covered is needed here; otherwise readers may wonder what we mean to cover--> 
+Following the original proposal of Lamprecht and colleagues,
 we adapt the FAIR principles for theory, see Table \@ref(tab:tabfair).
 We reflect on the necessary changes (which are minor),
 as well as on the current state and future of FAIR theory in the social sciences.
@@ -228,7 +230,7 @@ papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\li
 
 There are different definitions of theory,
 and many of those definitions are consistent with the FAIR theory principles.
-This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data [bogen/woodward].
+This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data [bogen/woodward]. <!-- what is this ref exactly?! -->
 <!-- Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried]. -->
 <!-- This invites the question: if a FAIR theory is a specific instantiation of theory, how does FAIR theory differ from a model?
 There is no principled difference, but a FAIR theory is the most general instance of a theory, whereas a model is highly specific - e.g., by assuming functional form and error families.
@@ -239,16 +241,25 @@ statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
 and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023, @guestWhatMakesGood2024].
+Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
+From this definition, it becomes clear that FAIR models are a special case of FAIR theory.
+Yet, theory intentionally has a broader scope and may contain one or more models as specific instances.
+For example, a comprehensive theory of disease spread and pandemics may cover various psychological factors such as adherence to pandemic mitigation methods (e.g., ), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety) [@taylor2022psychology].
+The theory may encompass a particular transmission _model_ for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
+
 
 ### The Role of Theory Formalization
 
 Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use.
-Greater formalization increases theories' *empirical content* [REF],
-making them easier to falsify,
+Greater formalization increases theories' *empirical content* [REF] as it forces researchers to use precise statements, for example by specifying exact functional forms for relations or forces them to specify processes  that would otherwise get away with their vague formulation in verbal theories.
+For example, the phonological loop in Baddeley's verbal description of his working memory model allows at least 144 different implementations, for example, depending on how decay rate, recall success, or rehearsal sequence are precisely implemented [@lewandowsky2010computational].
+More precise theories makes them easier to falsify,
 which necessitates revising them,
 thus advancing our principled understanding of the phenomena they describe.
 FAIR Theory does not require theories to be formal,
 and formal theory can be represented in a way that is not FAIR.
+It is therefore important for us to emphasize that FAIR Theory imposes no restrictions on researchers regarding the manner in which theories are derived and written down. 
+The guidelines introduced by FAIR Theory primarily pertain to how theories are documented and shared in digital environments, with the aim of enhancing their reusability and extensibility.
 For example, it is possible to represent a collection of verbal propositions (perhaps derived through qualitative research) as a FAIR theory.
 Conversely, a directed acyclic graph (DAG) is a type of formal theory,
 but if it is embedded within a journal article as a bitmap image without any key words to help search engines index that article as a theory paper,
@@ -295,7 +306,7 @@ or entering them in PURE.
 
 At present, theories have poor findability, which impedes cumulative knowledge acquisition.
 One factor contributing to theories' lack of Findability is the lack of standardized metadata, or even a standardized keyword to signal the presence of theory within a paper - terms like "theory", "model", and "framework" are used interchangeably.
-To curb this trend, we suggest using the keyword `"FAIR theory"` for all resources that constitute or reference a FAIR theory.
+To curb this trend, we suggest using the keyword `"FAIR theory"` for all resources that constitute or reference a FAIR theory. <!-- this is problematic because many search engine will tear apart this term and interpret it as two keywords - I think we need a single word without space FAIRtheory maybe -->
 This would allow theoretical resources to be systematically indexed, tagged, and made searchable.
 Another factor contributing to the present lack of Findability is that the primary unit of dissemination and search in psychology is still the academic paper.
 A paper may contain multiple resources - such as materials, data, code, and theory - but if these are not merely described in text, and not instantiated as separate informational artefacts, their findability is limited.
