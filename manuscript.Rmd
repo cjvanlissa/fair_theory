@@ -490,10 +490,10 @@ including prior work that new theories are based on,
 even in absence of legal obligations to do so,
 to meet the definition of Reusability (R1.2, Table \@ref(tab:tabfair) and to comply with other definitions of open scholarship [@aalbersbergMakingScienceTransparent2018].
 
-## Some other stuff
+## Additional considerations
 
-We can take inspiration from the field of computer science for well-established processes for iteratively improving information artefacts,  like computer code.
-Using version control systems, like Git, would enhance the reusability of FAIR theory by thoroughly documenting every modification in a traceable and reversible manner.
+We can take inspiration from the field of computer science for well-established processes for iteratively improving information artefacts,  like computer code (which we also have successfully applied in the domain of reproducible research findings, see XXX). <!--AB cite WORCS and Aarons tutorial on how to do the same thing again..-->
+Using version control systems, like git, would enhance the reusability of FAIR theory by thoroughly documenting every modification in a traceable and reversible manner.
 Git also facilitates diffuse and adversarial collaboration,
 as independent researchers can create independent versions of existing theories through "forking", or suggest modifications to existing theories via "pull requests".
 In sum, version control using Git enables systematic, collaborative, and transparent theory development,
@@ -505,7 +505,7 @@ explicitly referring back to it enables clear comparison of the differences [@ra
 
 From a meta-science perspective, FAIR theory facilitates studying the state of theory in a particular subfield, and comparing theories' substantive and structural properties. 
 
-Making Theories FAIR Accelerates Scientific Progress
+### Making Theories FAIR Accelerates Scientific Progress
 Adopting the FAIR principles for theories can address key challenges in the current research landscape, where theories often remain isolated and underutilized. By making theories findable, accessible, interoperable, and reusable, researchers can ensure that their work is grounded in a shared, transparent, and cumulative body of knowledge. This approach enhances scholarly communication, allowing for greater scrutiny, replication, and collaboration across disciplines, ultimately leading to faster, more reliable, and more impactful scientific progress.
 
 
@@ -522,7 +522,7 @@ Adopting the FAIR principles for theories can address key challenges in the curr
 ## Formalizing the Empirical Cycle
 
 In this example, we represent the empirical cycle - a theory of cumulative knowledge production through scientific research - as FAIR theory.
-As several authors have taken inspiration from the work by De Groot,
+As several authors have taken inspiration from the work by De Groot  [@degrootMethodologieGrondslagenVan1961],  
 we compare our interpretation of the original theory to the interpretation of others.
 Originally, the theory has the following structure:
 
@@ -570,6 +570,8 @@ digraph {
 
 }
 ```
+
+<!--AB TODO: Also add images of the graph syntax - not everyone will be able to read this in syntax and see the graph in their minds-->
 
 Note, however, that there appear to be further changes:
 the phases of the cycle have been renamed,
@@ -647,7 +649,7 @@ https://www.r-bloggers.com/2018/08/applications-of-dags-in-causal-inference/
 ## Future Directions
 
 One remaining issue that intersects with FAIR Theory is the measurement and operationalization of psychological constructs.
-Aside from the aforementioned "theory crisis", there has been talk of a "measurement crisis":
+Aside from the aforementioned "theory crisis", there has been talk of a "measurement crisis":  <!--AB very important point that I was already missing in the introduction; seems we also need FAIR measurements :) -->
 it is not always clear how theoretical constructs are operationalized, and many existing instruments have poor psychometric properties [REF].
 Additionally, the "jingle-jangle" fallacy is prevalent in the social sciences:
 the same term is often used for distinct constructs, and conversely, different terms are used to refer to the same construct.
