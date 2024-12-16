@@ -318,8 +318,8 @@ There have been notable efforts to improve theories' findability through post-ho
 For example, Gray and colleagues introduced a format for representing theories,
 and post many examples on their website [@grayHowMapTheory2017].
 Similarly, Borsboom and colleagues seek to establish a database of psychological theories [REF BORSBOOM].
-Post-hoc curation does not address the root cause of the lack of Findability, however.
-Ideally, Findability would be addressed ante-hoc, through modular publishing and documentation with rich metadata.
+Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability, however.
+Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
 
 ## Accessibility
 
@@ -334,12 +334,14 @@ In other words, theories are an important instrument in science communication.
 The Accessibility criteria serve to *regulate* access, not to maximize it.
 These principles apply to theory with minor changes, with the caveat that there might be less of a need to restrict access to theory than there is for (human subjects) data.
 Firstly, theory and its associated metadata should be accessible by their identifier using a standardized communications protocol (A1).
-This can be achieved, for example, by hosting theory in a Git remote repository, and archiving that repository on Zenodo for long-term storage.
+This can be achieved, for example, by hosting theory in a version-controlled remote repository (such as git), and archiving that repository on Zenodo for long-term storage.
 The resulting resource will then have an identifier (DOI) which allows the theory to be accessed using a standardized communications protocol (download via `https` or `git`).
 Secondly (A2), theory metadata should be accessible, even when the theory is no longer available,
 which is also achieved via long-term storage (e.g., on Zenodo).
 Git remote repositories allow for access control,
 and Zenodo allows for access control of individual files/resources.
+An unavailable theory typically refers to a theory that was abandoned in favor of a better or more general theory (such as the phlogiston theory, which was superseded by thermodynamics).
+In general, it makes sense to keep outdated theories, in order to be able to track the genesis of theories over time, yet, we require the availability of meta data as a minimum requirement.
 
 At present, there are several impediments to theories' accessibility.
 To the extent that theories are still contained within papers,
@@ -366,7 +368,7 @@ Rather, it may benefit scientific discourse to anticipate misunderstanding,
 and use it to drive further explication of theory.
 In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, embedding within shared contexts, and explication of assumptions, will advance its Accessibility.
 
-A third impediment arises when theories have a "dependency on the author" (DOA).
+A third impediment arises when theories have a "dependency on the author" (DOA). <!-- AB citation needed?! Who came up with this term? -->
 DOA occurs when a theory cannot be understood by independent scholars,
 thus requiring the original author for interpretation and clarification.
 We have heard DOA referred to apocryphally as the "ask Leon" phenomenon,
@@ -394,13 +396,13 @@ as previously recommended [@vanlissaWORCSWorkflowOpen2021].
 Depending on the level of formalization of the theory,
 different formats may be appropriate,
 such as verbal statements in plain text,
-mathematical formulae,
+mathematical formulae, <!-- AB: US readers may expect formulas here ? not sure-->
 and statements expressed in some axiomatic system.
 Examples of the latter include pseudo-code,
 interpretable computer code,
 and Gray's theory maps [@grayHowMapTheory2017].
 While a theory represented as a bitmap image is not very interoperable,
-the same image represented in the DOT language for representing graphs does meet this ideal.
+the same image represented in the DOT language <!--AB citation needed; also Aaron has his own Julia package for graph language specs - not sure whether Aaron wants to refer to this?--> for representing graphs does meet this ideal.
 
 Secondly, theory (meta)data should use vocabularies that follow FAIR principles (I2).
 This is essentially a call to establish standardized ontologies,
@@ -452,7 +454,7 @@ For example, it should be possible to embed a theory about emotion regulation [e
 
 If take cumulative knowledge acquisition to be a goal of scientific research, then Reusability is the ultimate purpose of making theory FAIR.
 Applied to FAIR theory, reusability requires that  theory and its associated metadata are richly described with a plurality of accurate and relevant attributes (R1) with a clear and accessible license for reuse (R1.1), detailed provenance (R1.2), and (meta)data which meets domain-relevant community standards (R1.3).
-As we will argue below, the most appropriate license for theory reuse is likely to be CC0 (no rights reserved),
+As we will argue below, the most appropriate license for theory reuse is likely to be CC0 (no rights reserved), <!-- AB : maybe add a caveat that there may be country-specific legislation, company property rights, etc. and that this is of course no legal advice-->
 although this should be combined with a culture of comprehensive (theory) citation to meet other open science requirements [REF TOP guidelines].
 Criterion R1.2 is met by version control with Git and archival on Zenodo.
 Domain-relevant community standards, to a large extent, remain to be established - and this paper is the first step towards further work in that area.
