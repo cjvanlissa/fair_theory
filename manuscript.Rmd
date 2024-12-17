@@ -98,13 +98,19 @@ The so-called "replication crisis" has prompted extensive reforms in social scie
 Concern that undisclosed flexibility in analyses was to blame for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 These various practices ensure transparent and repeated testing of hypotheses.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
-Increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
-psychological theories rarely produce hypotheses that are found to be true,
-and are often sufficiently vague, such that contradictory findings do not falsify the central claims. <!--AB: Your original wording is contradicting itself; if findings contradict a theory <=> the theory does not explain the findings; I am not sure what the best wording is; should we differentiate between a core of a theory and auxiliary parts?-->
+Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
+Psychological theories rarely produce hypotheses that are corroborated by evidence.
+Furthermore, theories are often so vague that they can accommodate findings that are mutually inconsistent,
+as the theory's central claims evade falsification.<!--CJ: Resolved AB's comment? AB: Your original wording is contradicting itself; if findings contradict a theory <=> the theory does not explain the findings; I am not sure what the best wording is; should we differentiate between a core of a theory and auxiliary parts?-->
+<!-- CJ: Maybe we should give an example here. Does anyone know one? -->
 
 Scholars have been raising concerns about the state of theory in social science for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
-Two main concerns are that, first, social scientific theories lack precision and clarity compared to theories in the physical sciences [@szollosiArrestedTheoryDevelopment2021]. <!-- AB is it really a lack of clarity, ie. that everyone understands it? I think the core problem is a lack of precision, ie. accuracy in their predictions. Maybe a lot of theories are actually too clear but not precise; making them more precise also often makes them less clear, doesn't it?-->
-In other words, social scientific theories lack *formalization* .
+Two main concerns are that, first, social scientific theories lack precision compared to theories in the physical sciences [@szollosiArrestedTheoryDevelopment2021].
+ and clarity
+In other words, social scientific theories lack *formalization*,
+which means that they do not make very accurate predictions,
+and are thus hard to falsify and difficult to understand on their own,
+without either substantial interpretation or additional background knowledge.
 A second concern is the lack of transparent and participative scholarly communication about psychological theory and their development over time.
 
 Given these concerns, it is unfortunate that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
@@ -176,8 +182,12 @@ knitr::include_graphics("empirical_cycle.pdf")
 ```
 
 In a progressive research program [@lakatosHistoryScienceIts1971],
-this cycle is regularly completed to iteratively advance our understanding of the studied phenomena by successively increasing the empirical content of a theory.
-In psychology, this is typically achieved by either generalizing to a larger set of people, contexts, situations, or environments. <!--AB would you agree?-->
+this cycle is regularly completed to iteratively advance our understanding of the studied phenomena
+<!-- by successively increasing the empirical content of a theory. -->
+<!-- In psychology, this is typically achieved by either generalizing to a larger set of people, contexts, situations, or environments. <!--AB would you agree?-->
+<!-- CJ: I am not sure if I agree; I think increasing the empirical content rather implies more and more precision, which loses generality but gains specificity. Not sure how to resolve.
+This needs more work! -->
+.
 There are, however, indications that contemporary psychology falls short of this ideal.
 Firstly, because deductive research is over-represented in the literature: 
 According to @kuhbergerPublicationBiasPsychology2014, 89.6% of papers published in psychology report confirmatory hypothesis tests.
@@ -306,7 +316,7 @@ or entering them in PURE.
 
 At present, theories have poor findability, which impedes cumulative knowledge acquisition.
 One factor contributing to theories' lack of Findability is the lack of standardized metadata, or even a standardized keyword to signal the presence of theory within a paper - terms like "theory", "model", and "framework" are used interchangeably.
-To curb this trend, we suggest using the keyword `"FAIR theory"` for all resources that constitute or reference a FAIR theory. <!-- this is problematic because many search engine will tear apart this term and interpret it as two keywords - I think we need a single word without space FAIRtheory maybe -->
+To curb this trend, we suggest using the keyword `"FAIRtheory"` for all resources that constitute or reference a FAIR theory (separating the words `FAIR` and `theory` by a space or hyphen would lead them to be interpreted as separate tokens in many search engines.
 This would allow theoretical resources to be systematically indexed, tagged, and made searchable.
 Another factor contributing to the present lack of Findability is that the primary unit of dissemination and search in psychology is still the academic paper.
 A paper may contain multiple resources - such as materials, data, code, and theory - but if these are not merely described in text, and not instantiated as separate informational artefacts, their findability is limited.
