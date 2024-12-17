@@ -201,13 +201,10 @@ The FAIR Principles were devised to make scholarly data more findable, accessibl
 
 ## Is Current Psychological Theory FAIR?
 
-Is it findable? There is no unified search engine for theory, and not even an agreed-upon search term (model, framework, etc are used interchangeably with theory). Some have sought to address findability through post-hoc curation of theories (e.g., theory mapping website, Borsboom's dictionary of psychological phenomena).
-
-Is it accessible? Paywalls, partly implicit (Great Man Theorizing / Call Leon), certainly not accessible in the sense of theory being "top of mind", as researchers appear to prefer ad-hoc hypothesizing rather than deriving hypotheses from specific theories.
-
-Is it interoperable? Theories rarely change, 
-
-Is it reusable? Scholars would rather invent something new than reuse somebody else's toothbrush (which is antithetical to the empirical cycle).
+* Is it findable? There is no unified search engine for theory, and not even an agreed-upon search term (model, framework, etc are used interchangeably with theory). Some have sought to address findability through post-hoc curation of theories (e.g., theory mapping website, Borsboom's dictionary of psychological phenomena).
+* Is it accessible? Paywalls, partly implicit (Great Man Theorizing / Call Leon), certainly not accessible in the sense of theory being "top of mind", as researchers appear to prefer ad-hoc hypothesizing rather than deriving hypotheses from specific theories.
+* Is it interoperable? Theories rarely change, 
+* Is it reusable? Scholars would rather invent something new than reuse somebody else's toothbrush (which is antithetical to the empirical cycle).
 
 In the spirit of DORA, extending the FAIR principles to theory helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a theoretical paper, which can be challenging.
 From a meta-science perspective, FAIR theory facilitates studying the state of theory in a particular subfield, and comparing theories' substantive and structural properties. Version control and cross-referencing additionally enable tracing and studying the ancestry and development of theories.
