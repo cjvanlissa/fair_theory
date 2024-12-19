@@ -240,23 +240,28 @@ papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\li
 
 There are different definitions of theory,
 and many of those definitions are consistent with the FAIR theory principles.
-This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data [bogen/woodward]. <!-- what is this ref exactly?! -->
-<!-- Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried]. -->
-<!-- This invites the question: if a FAIR theory is a specific instantiation of theory, how does FAIR theory differ from a model?
-There is no principled difference, but a FAIR theory is the most general instance of a theory, whereas a model is highly specific - e.g., by assuming functional form and error families.
-We can make a distinction between statistical models - which make just enough assumptions to allow estimation of the remaining unknown parameters from data - and generative/computational models, which are completely parametrized to the point that a specific interpreter can use them to generate new data.
-To some extent, -->
+This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data [bogen/woodward].
 Meehl [-@meehlAppraisingAmendingTheories1990] provides guidance as to what kinds of "statements" such a theory might contain:
 statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
 and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023, @guestWhatMakesGood2024].
-Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
-From this definition, it becomes clear that FAIR models are a special case of FAIR theory.
-Yet, theory intentionally has a broader scope and may contain one or more models as specific instances.
-For example, a comprehensive theory of disease spread and pandemics may cover various psychological factors such as adherence to pandemic mitigation methods (e.g., ), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety) [@taylor2022psychology].
-The theory may encompass a particular transmission _model_ for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
 
+Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
+This invites the question: if a FAIR theory is a specific instantiation of theory, how does FAIR theory differ from a model?
+There is no principled difference;
+theories and models derived from it exist along a continuum of specificity, where
+a theory has a relatively broader scope and may contain one or more models as specific instances.
+For example, following Meehl, we could envision a theory that merely specifies how specific constructs are causally connected.
+From this theory, we could derive a more specific *statistical model* by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
+This statistical model makes just enough assumptions to allow estimation of the remaining unknown parameters (e.g., regression slopes) from data.
+Or, we could derive an even more specific *generative/computational model*, which is completely parametrized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
+Note that broadness and narrowness are relative terms,
+and one person's theory may be another person's model.
+This definition also implies that FAIR models are a special case of FAIR theory.
+
+As an applied example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors such as adherence to pandemic mitigation methods (e.g., ), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety) [@taylor2022psychology].
+The theory may encompass a particular transmission _model_ for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
 
 ### The Role of Theory Formalization
 
