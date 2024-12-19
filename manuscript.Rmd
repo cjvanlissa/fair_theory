@@ -30,7 +30,7 @@ author:
       - Formal Analysis
       - Writing – original draft
       - Writing – review & editing
-  - name: "Felix Schönbrodt"
+  - name: "Felix D. Schönbrodt"
     affiliation: "5"
     role:
       - Conceptualization
