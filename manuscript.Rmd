@@ -1,5 +1,5 @@
 ---
-title             : "FAIR Theory: Applying Open Science Principles to the Construction and Iterative Improvement of Scientific Theories"
+title             : "FAIR theory: Applying Open Science Principles to the Construction and Iterative Improvement of Scientific Theories"
 shorttitle        : "FAIR THEORY"
 
 author:
@@ -82,7 +82,7 @@ Since their inception in 2014, scholars have demonstrated their relevance for ma
 This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
 a digital representation of a scientific theory, compliant with the FAIR principles.
-By improving the efficiency of scholarly communication, FAIR Theory has the potential to foster and accelerate cumulative knowledge acquisition and ultimately advance social scientific research.
+By improving the efficiency of scholarly communication, FAIR theory has the potential to foster and accelerate cumulative knowledge acquisition and ultimately advance social scientific research.
 
 <!-- QUOTES 
 
@@ -92,7 +92,7 @@ Kurt Lewin: Nothing is as practical as a good theory
 
 END QUOTES -->
 
-## The Need for FAIR Theory
+## The Need for FAIR theory
 
 The so-called "replication crisis" has prompted extensive reforms in social science [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that undisclosed flexibility in analyses was to blame for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
@@ -118,7 +118,7 @@ The equally critical inductive processes of theory construction and theory impro
 The present paper restores balance by applying, for the first time,
 open science principles to psychological theory.
 We apply the FAIR principles to scientific theories,
-introducing the concept of *FAIR Theory* to 
+introducing the concept of *FAIR theory* to 
 facilitate transparent scholarly communication and accelerate cumulative knowledge acquisition.
 
 ## Theory and Scientific Progress
@@ -189,7 +189,7 @@ this cycle is regularly completed to iteratively advance our understanding of th
 This needs more work! -->
 .
 There are, however, indications that contemporary psychology falls short of this ideal.
-Firstly, because deductive research is over-represented in the literature: 
+Firstly, because hypothesis-testing research is over-represented in the literature: 
 According to @kuhbergerPublicationBiasPsychology2014, 89.6% of papers published in psychology report confirmatory hypothesis tests.
 Closer examination of reported deductive research reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
 Only 15% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis [@mcphetresDecadeTheoryReflected2021].
@@ -266,15 +266,15 @@ For example, the phonological loop in Baddeley's verbal description of his worki
 More precise theories makes them easier to falsify,
 which necessitates revising them,
 thus advancing our principled understanding of the phenomena they describe.
-FAIR Theory does not require theories to be formal,
+FAIR theory does not require theories to be formal,
 and formal theory can be represented in a way that is not FAIR.
-It is therefore important for us to emphasize that FAIR Theory imposes no restrictions on researchers regarding the manner in which theories are derived and written down. 
-The guidelines introduced by FAIR Theory primarily pertain to how theories are documented and shared in digital environments, with the aim of enhancing their reusability and extensibility.
+It is therefore important for us to emphasize that FAIR theory imposes no restrictions on researchers regarding the manner in which theories are derived and written down. 
+The guidelines introduced by FAIR theory primarily pertain to how theories are documented and shared in digital environments, with the aim of enhancing their reusability and extensibility.
 For example, it is possible to represent a collection of verbal propositions (perhaps derived through qualitative research) as a FAIR theory.
 Conversely, a directed acyclic graph (DAG) is a type of formal theory,
 but if it is embedded within a journal article as a bitmap image without any key words to help search engines index that article as a theory paper,
 then this formal theory is not FAIR.
-FAIR Theory is thus consistent with, but does not require, formal theory (also see *Accessibility*).
+FAIR theory is thus consistent with, but does not require, formal theory (also see *Accessibility*).
 
 ## Findability
 
@@ -476,7 +476,7 @@ Cumulative knowledge acquisition requires reusable theories that are continuousl
 <!-- Theories are made reusable by thorough documentation, -->
 <!-- appropriate licensing,  -->
 <!-- and detailed provenance (e.g., through version control, cross-referencing, and semantic versioning). -->
-In our workshops on FAIR Theory, we similarly notice reluctance to the notion of reusing and adapting theories,
+In our workshops on FAIR theory, we similarly notice reluctance to the notion of reusing and adapting theories,
 reflected in questions such as "who owns theory",
 and "who determines how a theory may be reused or changed"?
 These questions imply a norm against modifying theory without consent from the author reminiscent of the aforementioned problem of dependency on the author.
@@ -492,7 +492,7 @@ If copyright limits Reusability and does not cover ideas in their purest form (l
 then it might be counterproductive and possibly misleading to adopt a license that assumes copyright protection.
 Furthermore, even if copyright would apply, academic research is covered under "fair use" exemptions,
 so copyright would pose few restrictions to Reusability in scholarly communication.
-Given these considerations, the CC0 (no rights reserved) license seems most appropriate for FAIR Theory;
+Given these considerations, the CC0 (no rights reserved) license seems most appropriate for FAIR theory;
 it explicitly waives all rights and encourages reuse.
 In principle, CC0 does not require attribution.
 Nevertheless, is essential that scholars do comprehensively cite theory,
@@ -520,7 +520,7 @@ Adopting the FAIR principles for theories can address key challenges in the curr
 
 
 
-<!-- ## FAIR Theory and Recognition & Rewards -->
+<!-- ## FAIR theory and Recognition & Rewards -->
 
 <!-- FAIR theory provides a clear deliverable, and a clear goal, for scholars and institutions seeking to promote contributions to theory. -->
 <!-- In the spirit of DORA, this helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a purely theoretical paper, which can be challenging. -->
@@ -620,7 +620,7 @@ and auxiliary assumptions that must be made to address remaining theoretical amb
 <!-- ``` -->
 
 
-## Using FAIR Theory to Perform Causal Inference
+## Using FAIR theory to Perform Causal Inference
 
 Some have argued that *causal explanations* are a property of good theory [REF Meehl, etc?].
 According to Pearl and colleagues,
@@ -658,15 +658,15 @@ https://www.r-bloggers.com/2018/08/applications-of-dags-in-causal-inference/
 
 ## Future Directions
 
-One remaining issue that intersects with FAIR Theory is the measurement and operationalization of psychological constructs.
+One remaining issue that intersects with FAIR theory is the measurement and operationalization of psychological constructs.
 Aside from the aforementioned "theory crisis", there has been talk of a "measurement crisis":  <!--AB very important point that I was already missing in the introduction; seems we also need FAIR measurements :) -->
 it is not always clear how theoretical constructs are operationalized, and many existing instruments have poor psychometric properties [REF].
 Additionally, the "jingle-jangle" fallacy is prevalent in the social sciences:
 the same term is often used for distinct constructs, and conversely, different terms are used to refer to the same construct.
-FAIR Theory can help address the measurement crisis:
+FAIR theory can help address the measurement crisis:
 since theories can reference other theories and resources, it is possible to extend a structural theory with a theory of 
 
-FAIR Theory incorporates theory into open science workflows,
+FAIR theory incorporates theory into open science workflows,
 facilitates scholarly communication about theories,
 making it easier to share theories with less opportunity for ambiguity and misunderstanding.
 FAIR Theories are easier to find, and facilitate sharing, reusing, and updating open theories.
