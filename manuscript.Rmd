@@ -478,9 +478,6 @@ If we consider the current state of Reusability in psychological theory, there a
 *"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008].
 This norm impedes scientific progress.
 Cumulative knowledge acquisition requires reusable theories that are continuously updated based on insights from new data [@degrootMethodologieGrondslagenVan1961].
-<!-- Theories are made reusable by thorough documentation, -->
-<!-- appropriate licensing,  -->
-<!-- and detailed provenance (e.g., through version control, cross-referencing, and semantic versioning). -->
 In our workshops on FAIR theory, we similarly notice reluctance to the notion of reusing and adapting theories,
 reflected in questions such as "who owns theory",
 and "who determines how a theory may be reused or changed"?
