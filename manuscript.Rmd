@@ -113,7 +113,7 @@ and are thus hard to falsify and difficult to understand on their own,
 without either substantial interpretation or additional background knowledge.
 A second concern is the lack of transparent and participative scholarly communication about psychological theory and their development over time.
 
-Given these concerns, it is unfortunate that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
+Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
 The equally critical inductive processes of theory construction and theory improvement have been largely overlooked.
 The present paper restores balance by applying, for the first time,
 open science principles to psychological theory.
