@@ -30,7 +30,7 @@ author:
       - Formal Analysis
       - Writing – original draft
       - Writing – review & editing
-  - name: "Felix Schönbrodt"
+  - name: "Felix D. Schönbrodt"
     affiliation: "5"
     role:
       - Conceptualization
@@ -45,7 +45,7 @@ affiliation:
   - id            : "4"
     institution   : "Department of Psychology, MSB Medical School Berlin, Berlin, Germany"
   - id            : "5"
-    institution   : "Other affiliations"
+    institution   : "Ludwig-Maximilians-Universität München, Germany"
 authornote: |
   This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`.
 
@@ -95,7 +95,7 @@ END QUOTES -->
 ## The Need for FAIR theory
 
 The so-called "replication crisis" has prompted extensive reforms in social science [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
-Concern that undisclosed flexibility in analyses was to blame for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
+Concern that undisclosed flexibility in analyses was a major factor for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 These various practices ensure transparent and repeated testing of hypotheses.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
@@ -113,7 +113,7 @@ and are thus hard to falsify and difficult to understand on their own,
 without either substantial interpretation or additional background knowledge.
 A second concern is the lack of transparent and participative scholarly communication about psychological theory and their development over time.
 
-Given these concerns, it is unfortunate that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
+Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
 The equally critical inductive processes of theory construction and theory improvement have been largely overlooked.
 The present paper restores balance by applying, for the first time,
 open science principles to psychological theory.
