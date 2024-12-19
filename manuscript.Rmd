@@ -95,7 +95,7 @@ END QUOTES -->
 ## The Need for FAIR Theory
 
 The so-called "replication crisis" has prompted extensive reforms in social science [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
-Concern that undisclosed flexibility in analyses was to blame for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
+Concern that undisclosed flexibility in analyses was a major factor for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 These various practices ensure transparent and repeated testing of hypotheses.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
