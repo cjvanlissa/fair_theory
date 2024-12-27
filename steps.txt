@@ -1,0 +1,26 @@
+# Tutorial: Making Theory FAIR
+
+Open science infrastructure is an area of active development, and as such,
+the approach proposed here should not be considered definitive,
+but rather, as a proposal for a FAIR-compliant implementation of theory using infrastructure available at the time of writing.
+The `worcs` R-package documentation contains a digital version of this tutorial,
+to allow for future updates.
+
+1. Create project folder
+1. Add theory file
+1. Add LICENSE file
+1. Add readme.md
+    * Include project Title, Description, Usage of the theory file, How to Contribute, How to Cite the FAIR theory, Related Works (e.g., the paper that documents the theory)
+1. Add .zenodo.json file to provide metadata that will allow Zenodo to index the repository as a FAIR theory
+1. Initialize a Git repository in the project folder
+1. Create Git remote repository (e.g., on GitHub)
+1. Connect local to remote Git repository
+1. Add the repository to Zenodo
+    * Sync Zenodo to import recent GitHub repositories (may take some time before it shows)
+    * Flip Switch
+1. Publish a release on GitHub
+1. *Optional:* Edit Zenodo metadata (e.g., to add formal cross-references to related works) https://help.zenodo.org/docs/deposit/manage-records/#edit
+
+https://developers.zenodo.org/#add-metadata-to-your-github-repository-release`
+
+tmp <- getwd(); setwd("c:/git_repositories/empirical_cycle"); usethis::use_cc0_license(); setwd(tmp)

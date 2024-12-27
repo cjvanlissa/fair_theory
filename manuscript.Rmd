@@ -78,7 +78,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 
 The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more findable, accessible, interoperable and reusable [REF] for both humans and computers.
-Since their inception in 2014, scholars have demonstrated their relevance for making other information artefacts more open, such as research software [@lamprecht2020towards; @barker2022introducing], computational workflows [@wilkinson2024applying] or simulation studies [@amaro2024need].
+Since their inception in 2014, scholars have demonstrated their relevance for making other information artefacts more open, such as research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying].
 This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
 a digital representation of a scientific theory, compliant with the FAIR principles.
@@ -197,7 +197,7 @@ The remaining 85% of deductive studies lacked an explicit derivation chain from 
 In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
 Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected [@vanlissaTeacherCornerEvaluating2020], and researchers are simply testing them as part of a cultural ritual [@gigerenzerNullRitualWhat2004].
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
-Or to adapt an analogy of @van2021theory, just collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings.
+Put differently: collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings [@vanrooijTheoryTestHow2021].
 
 Theory thus has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
@@ -276,9 +276,9 @@ and formal theory can be represented in a way that is not FAIR.
 It is therefore important for us to emphasize that FAIR theory imposes no restrictions on researchers regarding the manner in which theories are derived and written down. 
 The guidelines introduced by FAIR theory primarily pertain to how theories are documented and shared in digital environments, with the aim of enhancing their reusability and extensibility.
 For example, it is possible to represent a collection of verbal propositions (perhaps derived through qualitative research) as a FAIR theory.
-Conversely, a directed acyclic graph (DAG) is a type of formal theory,
+Conversely, a directed acyclic graph (DAG) is a type of formal theory (for example, see the empirical cycle in Figure \@ref(fig:figec)),
 but if it is embedded within a journal article as a bitmap image without any key words to help search engines index that article as a theory paper,
-then this formal theory is not FAIR.
+it is not FAIR.
 FAIR theory is thus consistent with, but does not require, formal theory (also see *Accessibility*).
 
 ## Findability
@@ -502,6 +502,7 @@ including prior work that new theories are based on,
 even in absence of legal obligations to do so,
 to meet the definition of Reusability (R1.2, Table \@ref(tab:tabfair) and to comply with other definitions of open scholarship [@aalbersbergMakingScienceTransparent2018].
 
+
 ## Additional considerations
 
 We can take inspiration from the field of computer science for well-established processes for iteratively improving information artefacts,  like computer code (which we also have successfully applied in the domain of reproducible research findings, see XXX). <!--AB cite WORCS and Aarons tutorial on how to do the same thing again..-->
@@ -529,17 +530,55 @@ Adopting the FAIR principles for theories can address key challenges in the curr
 
 
 
-# Examples
+# Making a Theory FAIR
 
-## Formalizing the Empirical Cycle
+Open science infrastructure is an area of active development, and as such,
+the approach proposed here should not be considered definitive,
+but rather, as one proposal for a FAIR-compliant implementation of theory using infrastructure available at the time of writing.
 
-In this example, we represent the empirical cycle - a theory of cumulative knowledge production through scientific research - as FAIR theory.
-As several authors have taken inspiration from the work by De Groot  [@degrootMethodologieGrondslagenVan1961],  
-we compare our interpretation of the original theory to the interpretation of others.
-Originally, the theory has the following structure:
+<!-- <!-- The `worcs` R-package documentation contains a digital version of this tutorial, --> -->
+<!-- <!-- to allow for future updates. --> -->
+
+<!-- 1. Create project folder -->
+<!-- 1. Add theory file -->
+<!-- 1. Add LICENSE file -->
+<!-- 1. Add readme.md -->
+<!--     * Include project Title, Description, Usage of the theory file, How to Contribute, How to Cite the FAIR theory, Related Works (e.g., the paper that documents the theory) -->
+<!-- 1. Add .zenodo.json file to provide metadata that will allow Zenodo to index the repository as a FAIR theory -->
+<!-- 1. Initialize a Git repository in the project folder -->
+<!-- 1. Create Git remote repository (e.g., on GitHub) -->
+<!-- 1. Connect local to remote Git repository -->
+<!-- 1. Add the repository to Zenodo -->
+<!--     * Sync Zenodo to import recent GitHub repositories (may take some time before it shows) -->
+<!--     * Flip Switch -->
+<!-- 1. Publish a release on GitHub -->
+<!-- 1. *Optional:* Edit Zenodo metadata (e.g., to add formal cross-references to related works) https://help.zenodo.org/docs/deposit/manage-records/#edit -->
+
+<!-- https://developers.zenodo.org/#add-metadata-to-your-github-repository-release` -->
+
+
+
+## 1. Implementing the Theory 
+
+Given that we structured our argument around the importance of FAIR theory for cumulative knowledge production through scientific research around the *empirical cycle*,
+we decided to use it as an example for this tutorial.
+Note that, while the empirical cycle is not explicitly referred to as a "theory" by De Groot, he derives it from "a theory of thinking" by Selz (REF).
+We can thus consider it a meta-theory of the process of theory construction.
+<!-- The first step in making a theory FAIR is constructing a specific *implementation* [@guestHowComputationalModeling2021]. -->
+The empirical cycle is described on page 28 of @degrootMethodologyFoundationsInference1969:
+
+> *Phase 1:* 'Observation': collection and grouping of empirical materials; (tentative) formation of hypotheses.  
+*Phase 2:* 'Induction': formulation of hypotheses.  
+*Phase 3:* 'Deduction': derivation of specific consequences from the hypotheses, in the form of testable predictions.  
+*Phase 4:* 'Testing': of the hypotheses against new empirical materials, by way of checking whether or not the predictions are fulfilled.  
+*Phase 5:* 'Evaluation': of the outcome of the testing procedure with respect to the hypotheses or theories stated, as well as with a view to subsequent, continued or related, investigations.
+
+If we compare it to the levels of theory formalization [@guestHowComputationalModeling2021],
+De Groot's theory is either at the "theory" or "specification" level.
+It consists of a series of natural language statements.
+We can increase the level of formalization, and present an "implementation" in the human- and machine-readable DOT language:
 
 ```
-
 digraph {
 
   observation;
@@ -556,6 +595,106 @@ digraph {
   
 }
 ```
+
+This language describes the model as a directed graph.
+Note that the code has been organized so that the first half describes an ontology of the entities the theory postulates,
+and the second half describes their proposed interrelations.
+This follows the first two properties of good theory according to Meehl [@meehlAppraisingAmendingTheories1990].
+
+We can now write this implementation of the empirical cycle to a text file, say `empirical_cycle.dot`.
+
+## 2. Creating a Project Folder
+
+Create a new folder and copy the theory file from the previous step into it.
+To help meet the Interoperability and Reusability criteria,
+add two more files:
+A README.md file with instructions for future users of your theory,
+and a LICENSE file with the legal conditions for reuse.
+We recommend using the `CC0` license, but other options are available, see [https://choosealicense.com](https://choosealicense.com/non-software/).
+
+
+### What's in a README?
+
+The readme should contain information to help people get started with using your FAIR theory.
+We suggest the following elements:
+
+* Title, prefaced with `# FAIR theory: The Theory's Name`
+* Description: A plain-text description of the theory and its scope
+* Interoperability: This section, also often labeled "Getting Started", "Instructions", or "How to Use" might be better labeled Interoperability from a FAIR perspective. Following the discussion in the respective section, we propose focusing on X-interoperability, and telling users exactly what they can use the theory for, and how. For example, our example is implemented in the DOT language for describing graphs, so we would provide instructions here on how to plot a DOT graph.
+* Contributing: Pertaining to the Reusability criterion, this section should tell users the *social expectations regarding reuse and contributions*.
+* License: As a complement to the preceding section, this section should refer readers to the LICENSE file to learn about the *legal constraints to reuse*.
+* Citing this work: Tell users how to cite the theory.
+* Related works: This section should refer to the work that the FAIR theory is derived from, or documented in. Note that this is redundant with metadata entered in Zenodo (step 5). The advantage is that documenting related works in the README makes it more readily accessible to users. The disadvantage is that you may have to maintain this section of the readme. A compromise might be to use this section to document one canonical reference for the theory that is unlikely to change going forward. For example, we referenced the original empirical cycle paper here:
+
+```
+This repository contains an implementation of the "empirical cycle",
+a model proposed by De Groot and Spiekerman (1969, p. 28)
+
+> De Groot, A. D., & Spiekerman, J. A. A. (1969). Methodology:
+Foundations of inference and research in the behavioral sciences.
+De Gruyter Mouton. https://doi.org/10.1515/9783112313121
+```
+
+
+## 3. Version Control the Repository
+
+The field of computer science provides well-established processes for creating information artefacts that can be iteratively improved.
+In particular, the practice of version control offers extensive benefits for scientific work [@ramGitCanFacilitate2013, @vanlissaWORCSWorkflowOpen2021].
+To version control our project, we initiate a Git repository in the project folder.
+This can be done by [installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) locally,
+opening a terminal in the project folder,
+and running the command `git init`.
+We subsequently create a remote repository to host a copy of this local Git repository, which will in turn be archived.
+To [do this on GitHub](https://github.blog/developer-skills/github/beginners-guide-to-github-repositories-how-to-create-your-first-repo/), create an account and press the button labeled `Create new repository`.
+The default settings for the repository are fine;
+for the next steps of the tutorial it must be set to "Public".
+Copy the repository's URL, which usually has the form `https://github.com/username/repository.git`.
+Next, in the terminal window, run the following lines of code sequentially:
+
+```
+git add .
+git commit -m "First commit"
+git remote add origin *[the repository URL you copied]*
+git branch -M main
+git push -u origin main
+```
+
+The local files should now be backed up to the Git remote repository;
+refresh the webpage to verify.
+
+## 4. Archive the Theory on Zenodo 
+
+The process of archiving a GitHub repository on Zenodo is documented in a vignette in the `theorytools` R-package, so that it can be kept up-to-date.
+We present a brief summary of the instructions at the time of writing here.
+First, create a Zenodo account with your existing GitHub account.
+Then in Zenodo, go to the GitHub section under your account.
+Syncronize Zenodo to import all of your public GitHub repositories.
+Following the instructions on the page, activate Zenodo for your theory repository.
+Then, head to the repository's GitHub page, and create a new release.
+You have to choose a tag and release title;
+we suggest using semantic versioning for both, starting with version `0.1.0`,  unless you use another convention for versioning (which should be documented in README.md).
+After publishing the release,
+you should be able to see it in your Zenodo account.
+
+## 5. Entering Meta-Data
+
+By default, Zenodo assumes that GitHub repositories contain software and documents them as such.
+To document our archive as a FAIR theory requires adding some extra information on Zenodo.
+Supplying the following information helps improve the Findability of a theory:
+
+- Set the *resource type* to `Model`
+- Verify that the *title* is prefaced with `FAIR theory:`
+- Add the *keyword* `fairtheory`
+- List the DOIs/identifiers of *related works*. Use the `Relation` field as appropriate. For example:
+    + `Is documented by` can be used to reference a theory paper you wrote, in which you introduce this FAIR theory
+    + `Is derived from` could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used `Is derived from` to reference De Groot and Spiekerman's empirical cycle.
+
+
+## Comparing Implementations of a Theory
+
+As several authors have taken inspiration from the work by De Groot  [@degrootMethodologieGrondslagenVan1961],  
+we compare our interpretation of the original theory to the interpretation of others.
+
 
 Subsequently, Wagenmakers and colleagues modified the theory by *"[adding the] Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification"*:
 
@@ -607,7 +746,7 @@ digraph {
   observation -> theory [label="generalization"];
 
 }
-```
+
 
 In our representation,
 induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory.
