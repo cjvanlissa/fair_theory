@@ -534,29 +534,28 @@ Adopting the FAIR principles for theories can address key challenges in the curr
 
 Open science infrastructure is an area of active development, and as such,
 the approach proposed here should not be considered definitive,
-but rather, as one proposal for a FAIR-compliant implementation of theory using infrastructure available at the time of writing.
+but rather, as one proposal for a FAIR-compliant implementation of theory.
+At the time of writing (2024), the integration of GitHub and Zenodo makes for a particularly user-friendly approach.
+Nevertheless, it is important to stress that alternatives to GitHub  (Gitlab, Bitbucket, etc.) and Zenodo (e.g., institutional repositories) exist.
+The principles described here
+(using version control and archiving major versions) could be implemented in a different workflow.
 
-<!-- <!-- The `worcs` R-package documentation contains a digital version of this tutorial, --> -->
-<!-- <!-- to allow for future updates. --> -->
+The process described here can be largely automated in R using the `theorytools` package; see the package vignette on FAIR theory, `vignette("fairtheory", package = "theorytools")`.
+<!-- R-users can use the following code (see the package documentation for more information): -->
 
-<!-- 1. Create project folder -->
-<!-- 1. Add theory file -->
-<!-- 1. Add LICENSE file -->
-<!-- 1. Add readme.md -->
-<!--     * Include project Title, Description, Usage of the theory file, How to Contribute, How to Cite the FAIR theory, Related Works (e.g., the paper that documents the theory) -->
-<!-- 1. Add .zenodo.json file to provide metadata that will allow Zenodo to index the repository as a FAIR theory -->
-<!-- 1. Initialize a Git repository in the project folder -->
-<!-- 1. Create Git remote repository (e.g., on GitHub) -->
-<!-- 1. Connect local to remote Git repository -->
-<!-- 1. Add the repository to Zenodo -->
-<!--     * Sync Zenodo to import recent GitHub repositories (may take some time before it shows) -->
-<!--     * Flip Switch -->
-<!-- 1. Publish a release on GitHub -->
-<!-- 1. *Optional:* Edit Zenodo metadata (e.g., to add formal cross-references to related works) https://help.zenodo.org/docs/deposit/manage-records/#edit -->
-
-<!-- https://developers.zenodo.org/#add-metadata-to-your-github-repository-release` -->
-
-
+<!-- ``` -->
+<!-- install.packages("theorytools") -->
+<!-- library(theorytools) -->
+<!-- # Use worcs to check if GitHub permissions are set: -->
+<!-- library(worcs) -->
+<!-- check_github() -->
+<!-- # Create the theory repository: -->
+<!-- fair_theory(path = "directory/for/theory", -->
+<!--             title = "The Theory's Title", -->
+<!--             theory_file = "path_to_existing_theory.txt", -->
+<!--             remote_repo = "github_repo_name", -->
+<!--             add_license = "cc0") -->
+<!-- ``` -->
 
 ## 1. Implementing the Theory 
 
@@ -610,8 +609,7 @@ To help meet the Interoperability and Reusability criteria,
 add two more files:
 A README.md file with instructions for future users of your theory,
 and a LICENSE file with the legal conditions for reuse.
-We recommend using the `CC0` license, but other options are available, see [https://choosealicense.com](https://choosealicense.com/non-software/).
-
+We recommend the `CC0` license, but other options are available, see [https://choosealicense.com](https://choosealicense.com/non-software/).
 
 ### What's in a README?
 
@@ -620,47 +618,46 @@ We suggest the following elements:
 
 * Title, prefaced with `# FAIR theory: The Theory's Name`
 * Description: A plain-text description of the theory and its scope
-* Interoperability: This section, also often labeled "Getting Started", "Instructions", or "How to Use" might be better labeled Interoperability from a FAIR perspective. Following the discussion in the respective section, we propose focusing on X-interoperability, and telling users exactly what they can use the theory for, and how. For example, our example is implemented in the DOT language for describing graphs, so we would provide instructions here on how to plot a DOT graph.
+* Interoperability: Most README files contain a section labeled "Getting Started", "Instructions", or "How to Use". From a FAIR perspective, such a section might be better labeled "Interoperability", or "How to Use (Interoperability)". We propose explicitly addressing the theory's X-interoperability, telling users exactly what they can use the theory for, and how. For example, our example is implemented in the DOT language for describing graphs, so we would could provide instructions here on how to plot a DOT graph.
 * Contributing: Pertaining to the Reusability criterion, this section should tell users the *social expectations regarding reuse and contributions*.
-* License: As a complement to the preceding section, this section should refer readers to the LICENSE file to learn about the *legal constraints to reuse*.
-* Citing this work: Tell users how to cite the theory.
-* Related works: This section should refer to the work that the FAIR theory is derived from, or documented in. Note that this is redundant with metadata entered in Zenodo (step 5). The advantage is that documenting related works in the README makes it more readily accessible to users. The disadvantage is that you may have to maintain this section of the readme. A compromise might be to use this section to document one canonical reference for the theory that is unlikely to change going forward. For example, we referenced the original empirical cycle paper here:
+* License: The legal complement to the preceding section, this section should refer readers to the LICENSE file to learn about the *legal conditions of reuse*.
+* Citing this work: Tell users how to cite the theory. Note that this section is redundant with the Zenodo archive, which has a preferred citation field. The disadvantage of redundant information is that you may have to maintain this section of the README going forward. The advantage is that documenting related works in the README makes it more readily accessible to users. We suggest a compromise: to retain this section, but refer the reader to the Zenodo page.
+* Related works: This section should refer to the work that the FAIR theory is derived from, or documented in. Again, this is redundant with metadata entered in Zenodo (step 5). We nevertheless recommend using this section to refer to Zenodo, and/or to document one canonical reference for the theory that is unlikely to change going forward. For example, we referenced the original empirical cycle paper here:
 
 ```
 This repository contains an implementation of the "empirical cycle",
-a model proposed by De Groot and Spiekerman (1969, p. 28)
+a model proposed by De Groot and Spiekerman (1969, p. 28). See Zenodo for other related works.
 
 > De Groot, A. D., & Spiekerman, J. A. A. (1969). Methodology:
 Foundations of inference and research in the behavioral sciences.
 De Gruyter Mouton. https://doi.org/10.1515/9783112313121
 ```
 
-
 ## 3. Version Control the Repository
 
 The field of computer science provides well-established processes for creating information artefacts that can be iteratively improved.
 In particular, the practice of version control offers extensive benefits for scientific work [@ramGitCanFacilitate2013, @vanlissaWORCSWorkflowOpen2021].
 To version control our project, we initiate a Git repository in the project folder.
-This can be done by [installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) locally,
-opening a terminal in the project folder,
-and running the command `git init`.
-We subsequently create a remote repository to host a copy of this local Git repository, which will in turn be archived.
-To [do this on GitHub](https://github.blog/developer-skills/github/beginners-guide-to-github-repositories-how-to-create-your-first-repo/), create an account and press the button labeled `Create new repository`.
-The default settings for the repository are fine;
-for the next steps of the tutorial it must be set to "Public".
-Copy the repository's URL, which usually has the form `https://github.com/username/repository.git`.
-Next, in the terminal window, run the following lines of code sequentially:
+<!-- This can be done by [installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) locally, -->
+<!-- opening a terminal in the project folder, -->
+<!-- and running the command `git init`. -->
+We subsequently create a remote repository to host a copy of this local Git repository on GitHub, which will in turn be archived.
+<!-- To [do this on GitHub](https://github.blog/developer-skills/github/beginners-guide-to-github-repositories-how-to-create-your-first-repo/), create an account and press the button labeled `Create new repository`. -->
+<!-- The default settings for the repository are fine; -->
+<!-- for the next steps of the tutorial it  -->
+Note that the repository
+must be set to "Public" to take advantage of GitHub's Zenodo integration.
+<!-- Copy the repository's URL, which usually has the form `https://github.com/username/repository.git`. -->
+<!-- Next, in the terminal window, run the following lines of code sequentially: -->
 
-```
-git add .
-git commit -m "First commit"
-git remote add origin *[the repository URL you copied]*
-git branch -M main
-git push -u origin main
-```
-
-The local files should now be backed up to the Git remote repository;
-refresh the webpage to verify.
+<!-- ``` -->
+<!-- git add . -->
+<!-- git commit -m "First commit" -->
+<!-- git remote add origin *[the repository URL you copied]* -->
+<!-- git branch -M main -->
+<!-- git push -u origin main -->
+<!-- ``` -->
+Push the local files to the Git remote repository, and keep them synchronized going forward.
 
 ## 4. Archive the Theory on Zenodo 
 
@@ -668,13 +665,13 @@ The process of archiving a GitHub repository on Zenodo is documented in a vignet
 We present a brief summary of the instructions at the time of writing here.
 First, create a Zenodo account with your existing GitHub account.
 Then in Zenodo, go to the GitHub section under your account.
-Syncronize Zenodo to import all of your public GitHub repositories.
 Following the instructions on the page, activate Zenodo for your theory repository.
-Then, head to the repository's GitHub page, and create a new release.
+Then, create a new release of the GitHub repository.
 You have to choose a tag and release title;
 we suggest using semantic versioning for both, starting with version `0.1.0`,  unless you use another convention for versioning (which should be documented in README.md).
 After publishing the release,
-you should be able to see it in your Zenodo account.
+you should be able to see the archived version in your Zenodo account,
+along with a DOI.
 
 ## 5. Entering Meta-Data
 
@@ -685,10 +682,10 @@ Supplying the following information helps improve the Findability of a theory:
 - Set the *resource type* to `Model`
 - Verify that the *title* is prefaced with `FAIR theory:`
 - Add the *keyword* `fairtheory`
+- Optionally, submit the theory to the ["FAIR Theory Community"](https://zenodo.org/communities/fairtheory) to increase its findability
 - List the DOIs/identifiers of *related works*. Use the `Relation` field as appropriate. For example:
     + `Is documented by` can be used to reference a theory paper you wrote, in which you introduce this FAIR theory
     + `Is derived from` could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used `Is derived from` to reference De Groot and Spiekerman's empirical cycle.
-
 
 ## Comparing Implementations of a Theory
 
@@ -746,7 +743,7 @@ digraph {
   observation -> theory [label="generalization"];
 
 }
-
+```
 
 In our representation,
 induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory.
