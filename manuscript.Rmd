@@ -541,21 +541,6 @@ The principles described here
 (using version control and archiving major versions) could be implemented in a different workflow.
 
 The process described here can be largely automated in R using the `theorytools` package; see the package vignette on FAIR theory, `vignette("fairtheory", package = "theorytools")`.
-<!-- R-users can use the following code (see the package documentation for more information): -->
-
-<!-- ``` -->
-<!-- install.packages("theorytools") -->
-<!-- library(theorytools) -->
-<!-- # Use worcs to check if GitHub permissions are set: -->
-<!-- library(worcs) -->
-<!-- check_github() -->
-<!-- # Create the theory repository: -->
-<!-- fair_theory(path = "directory/for/theory", -->
-<!--             title = "The Theory's Title", -->
-<!--             theory_file = "path_to_existing_theory.txt", -->
-<!--             remote_repo = "github_repo_name", -->
-<!--             add_license = "cc0") -->
-<!-- ``` -->
 
 ## 1. Implementing the Theory 
 
@@ -593,6 +578,58 @@ digraph {
   evaluation -> observation;
   
 }
+```
+
+```{r include = FALSE}
+library(DiagrammeR)
+library(DiagrammeRsvg)
+library(rsvg)
+ec_groot <- grViz(diagram = 
+'digraph neato { node [fontsize = 6]; 
+    edge [fontsize = 6];
+    overlap = false; fontsize = 7;
+  graph [layout = neato]
+  
+  observation [pos = "2,3!"];
+  induction [pos = "3,2!"];
+  deduction [pos = "3,1!"];
+  test [pos = "1,1!"];
+  evaluation [pos = "1,2!"];
+  
+  observation -> induction;
+  induction -> deduction;
+  deduction -> test;
+  test -> evaluation;
+  evaluation -> observation;
+  
+}')
+ec_wagenmakers <- grViz(diagram = 
+'digraph neato { node [fontsize = 6]; 
+    edge [fontsize = 6];
+    overlap = false; fontsize = 7;
+  graph [layout = neato]
+  
+  subgraph cluster_discovery {
+    label="Discovery";
+    induction [label="New hypothesis" pos = "3,2!"];
+    deduction [label="New prediction" pos = "3,1!"];
+  }
+  observation  [label="Old knowledge and old data" pos = "2,3!"];
+  subgraph cluster_justification {
+    label="Justification";
+    test [label="Test on new data" pos = "1,1!"];
+    evaluation [pos = "1,2!"];
+  }
+
+  observation -> induction [label="Speculate & explore" labeljust=r];
+  induction -> deduction  [label="Deduce"];
+  deduction -> test  [label="Design new experiment"];
+  test -> evaluation  [label="Statistical analysis"];
+  evaluation -> observation  [label="Knowledge accumulation"];
+
+}')
+rsvg_svg(charToRaw(export_svg(ec_groot)), "ec_groot.svg")
+rsvg_svg(charToRaw(export_svg(ec_wagenmakers)), "graph.svg")
 ```
 
 This language describes the model as a directed graph.
@@ -687,34 +724,66 @@ Supplying the following information helps improve the Findability of a theory:
     + `Is documented by` can be used to reference a theory paper you wrote, in which you introduce this FAIR theory
     + `Is derived from` could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used `Is derived from` to reference De Groot and Spiekerman's empirical cycle.
 
-## Comparing Implementations of a Theory
+## Automating these Steps
 
-As several authors have taken inspiration from the work by De Groot  [@degrootMethodologieGrondslagenVan1961],  
-we compare our interpretation of the original theory to the interpretation of others.
+R-users can use the `theorytools` package to partly automate the preceding steps, for example, using following code (see the package documentation for more information):
 
+```
+install.packages("theorytools")
+library(theorytools)
+# Use worcs to check if GitHub permissions are set:
+library(worcs)
+check_git()
+check_github()
+# Create the theory repository:
+fair_theory(path = "c:/theoryfolder/empirical_cycle",
+            title = "The Empirical Cycle",
+            theory_file = "empirical_cycle.dot",
+            remote_repo = "empirical_cycle",
+            add_license = "cc0")
+```
 
-Subsequently, Wagenmakers and colleagues modified the theory by *"[adding the] Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification"*:
+Note that this function also automatically provides basic FAIR theory metadata to Zenodo.
+
+## Forking Different Implementations of a Theory
+
+De Groot's empirical cycle has inspired several authors,
+but closer examination reveals that not all of them have interpreted his work in the same way.
+For example, Wagenmakers and colleagues [-@wagenmakersCreativityVerificationCyclePsychological2018] write *"De Groot’s “empirical cycle,” shown here in Figure 6"* - but Figure 6 diverges substantially from De Groot's description, and from our implementation of it.
+One advantage of FAIR theory is that we can take work that has been done before - in this case, the repository created above, and create an independent copy that we can modify as we wish, while retaining cross-references to the original.
+This illustrates an important advantage of FAIR theory:
+we can implement different versions of a theory, and study their relationships.
+In practice, this is achieved by ["forking the repository"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo),
+["cloning"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the forked repository to our local computer,
+making any changes we want, and then completing steps 4-5 of "Making a Theory FAIR".
+
+We attempted to implement Wagenmakers and colleagues' version as a DOT graph,
+to illustrate some clear deviations from the original.
+The authors deviate from De Groot in a minor way by renaming the five phases. 
+While this change was not made explicit (thus illustrating an advantage of FAIR theory), we assumed that the phases are identical, just with different labels.
+The authors do mention one explicit change: *"We added the Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification"*.
+The DOT graph below illustrates this change:
 
 ```
 digraph {
 
   subgraph cluster_discovery {
     label="Discovery";
-    hypothesis [label="New hypothesis"];
-    prediction [label="New prediction"];
+    induction [label="New hypothesis"];
+    deduction [label="New prediction"];
   }
-  data  [label="Old knowledge and old data"];      
+  observation  [label="Old knowledge and old data"];
   subgraph cluster_justification {
     label="Justification";
     test [label="Test on new data"];
     evaluation;
   }
 
-  data -> hypothesis [label="Speculate & explore"];
-  hypothesis -> prediction  [label="Deduce"];
-  prediction -> test  [label="Design new experiment"];
+  observation -> induction [label="Speculate & explore"];
+  induction -> deduction  [label="Deduce"];
+  deduction -> test  [label="Design new experiment"];
   test -> evaluation  [label="Statistical analysis"];
-  evaluation -> data  [label="Knowledge accumulation"];
+  evaluation -> observation  [label="Knowledge accumulation"];
 
 }
 ```
