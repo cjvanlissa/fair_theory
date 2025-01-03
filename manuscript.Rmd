@@ -62,7 +62,9 @@ figurelist        : no
 tablelist         : no
 footnotelist      : no
 classoption       : "man"
-output            : papaja::apa6_pdf
+output            :
+  papaja::apa6_pdf: default
+  md_document: default
 ---
 
 ```{r setup, include = FALSE}
@@ -628,8 +630,28 @@ ec_wagenmakers <- grViz(diagram =
   evaluation -> observation  [label="Knowledge accumulation"];
 
 }')
+ec_lissa <- grViz(diagram = 
+'digraph neato { node [fontsize = 6]; 
+    edge [fontsize = 6];
+    overlap = false; fontsize = 7;
+  graph [layout = neato]
+
+  theory [pos = "2,3!"];
+  prediction [pos = "3,2!"];
+  data [pos = "1,1!"];
+  test [pos = "2,1!"];
+  results [pos = "1,2!"];
+  
+  theory -> prediction [label="deduction"];
+  prediction -> test [label = "implement inferential procedure"];
+  data -> results;
+  test -> results;
+  results -> theory [label="interpretation and generalization"];
+
+}')
 rsvg_svg(charToRaw(export_svg(ec_groot)), "ec_groot.svg")
-rsvg_svg(charToRaw(export_svg(ec_wagenmakers)), "graph.svg")
+rsvg_svg(charToRaw(export_svg(ec_wagenmakers)), "ec_wagenmakers.svg")
+rsvg_svg(charToRaw(export_svg(ec_lissa)), "ec_lissa.svg")
 ```
 
 This language describes the model as a directed graph.
@@ -748,21 +770,25 @@ Note that this function also automatically provides basic FAIR theory metadata t
 ## Forking Different Implementations of a Theory
 
 De Groot's empirical cycle has inspired several authors,
-but closer examination reveals that not all of them have interpreted his work in the same way.
+but not all of them have interpreted his work the same.
 For example, Wagenmakers and colleagues [-@wagenmakersCreativityVerificationCyclePsychological2018] write *"De Groot’s “empirical cycle,” shown here in Figure 6"* - but Figure 6 diverges substantially from De Groot's description, and from our implementation of it.
-One advantage of FAIR theory is that we can take work that has been done before - in this case, the repository created above, and create an independent copy that we can modify as we wish, while retaining cross-references to the original.
-This illustrates an important advantage of FAIR theory:
-we can implement different versions of a theory, and study their relationships.
-In practice, this is achieved by ["forking the repository"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo),
+An important advantage of FAIR theory is that we can implement different versions of a theory, compare them, and document their cross-relationships.
+We can take work that has been done before - in this case, the repository created above, and create an independent copy that we can modify as we wish, while retaining cross-references to the original.
+This is achieved by ["forking the repository"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo),
 ["cloning"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) the forked repository to our local computer,
 making any changes we want, and then completing steps 4-5 of "Making a Theory FAIR".
 
-We attempted to implement Wagenmakers and colleagues' version as a DOT graph,
+We have implemented Wagenmakers and colleagues' version as a DOT graph
 to illustrate some clear deviations from the original.
-The authors deviate from De Groot in a minor way by renaming the five phases. 
-While this change was not made explicit (thus illustrating an advantage of FAIR theory), we assumed that the phases are identical, just with different labels.
-The authors do mention one explicit change: *"We added the Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification"*.
-The DOT graph below illustrates this change:
+First, the phases of the cycle have been renamed.
+While this change was not described in the paper,
+we assumed that the labels are meant to illustrate the phases, not substantially change the ontology.
+We represent this change by adding labels to the original DOT graph.
+Note, however, that the labels suggest a focus on empirical psychology that was absent in the original formulation, which was more general.
+Furthermore, the label "knowledge accumulation" invites the question of exactly *how* knowledge accumulates upon evaluation of a prior experiment.
+As this lack of cumulative knowledge acquisition appears to be precisely where contemporary research practice falls short, this ambiguity invites further improvement of the theory.
+Second, the authors mention an explicit change: *"We added the Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification"*.
+The DOT graph below shows our implementation of this version of the empirical cycle, by adding subgraphs.
 
 ```
 digraph {
@@ -788,44 +814,45 @@ digraph {
 }
 ```
 
-<!--AB TODO: Also add images of the graph syntax - not everyone will be able to read this in syntax and see the graph in their minds-->
-
-Note, however, that there appear to be further changes:
-the phases of the cycle have been renamed,
-and the annotations suggest a move towards experimental empirical psychology that was absent in the original formulation.
-Moreover, the label "knowledge accumulation" invites the question of exactly *how* knowledge accumulates upon evaluation of a prior experiment.
-As this lack of cumulative knowledge acquisition appears to be precisely where contemporary research practice falls short, this ambiguity invites further improvement of the theory.
-
-Our work, too is inspired by De Groot, but our take on the empirical cycle is different again:
+The first author was inspired by De Groot too,
+but they conceive of the empirical cycle in yet another way.
+First, notice that the nodes in De Groot's formulation mostly refer to processes.
+This invites the question of what the deliverables are in each phase, or in other words: what actually changes when going through the cycle, except the scholar's mind.
+In our implementation below, we account for this difference by having the nodes refer to specific deliverables; the edges now refer to processes.
+Second, De Groot's strict distinction between processes of observation, induction, and deduction is not widely supported by philosophy of science.
+<!-- In our representation, -->
+<!-- induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory. -->
+<!-- For example, the refutation of a hypothesized effect, -->
+<!-- or the serendipitous observation of some pattern in data, -->
+<!-- might be a reason to revise or construct theory. -->
+<!-- Induction, incidentally, also occurs within the link from prediction to testing: -->
+<!-- in the form of the inductive bias of methods used to perform the test, -->
+<!-- and auxiliary assumptions that must be made to address remaining theoretical ambiguities. -->
+<!-- # And then for example: I understand Aaron's work about inductive bias to be about the link "prediction -> test;", because the test is not identified without making auxiliary assumptions; if the auxiliary assumption is made based on the data, inductive bias is introduced. -->
+<!-- ``` -->
+For example, many have argued that observation is value-laden, and as such, involves induction.
+The derivation of hypotheses from theory is also not purely deductive,
+as auxiliary assumptions are often made (which are, again, an inductive process).
+Furthermore, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [REF Peikert].
+With these alterations, we implement the empirical cycle as follows:
 
 ```
 digraph {
 
   theory;
   prediction;
-  test [label="inferential procedure"];
-  observation;
+  data;
+  test;
+  results;
   
   theory -> prediction [label="deduction"];
-  prediction -> test;
-  test -> observation;
-  observation -> theory [label="generalization"];
+  prediction -> test [label = "implement inferential procedure"];
+  data -> results;
+  test -> results [label = "apply to data"];
+  results -> theory [label="interpretation and generalization"];
 
 }
 ```
-
-In our representation,
-induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory.
-For example, the refutation of a hypothesized effect,
-or the serendipitous observation of some pattern in data,
-might be a reason to revise or construct theory.
-Induction, incidentally, also occurs within the link from prediction to testing:
-in the form of the inductive bias of methods used to perform the test,
-and auxiliary assumptions that must be made to address remaining theoretical ambiguities.
-
-<!-- # And then for example: I understand Aaron's work about inductive bias to be about the link "prediction -> test;", because the test is not identified without making auxiliary assumptions; if the auxiliary assumption is made based on the data, inductive bias is introduced. -->
-<!-- ``` -->
-
 
 ## Using FAIR theory to Perform Causal Inference
 
@@ -848,20 +875,87 @@ https://www.r-bloggers.com/2018/08/applications-of-dags-in-causal-inference/
 
 <!-- NOTES -->
 
-* Theory is the vehicle of cumulative knowledge acquisition
-* According to the empirical cycle, ideally, hypotheses are derived from theory, then tested in data, and theory is amended based on the resulting insights. When this cycle is regularly completed, theories become ever more veracious representations of social scientific phenomena.
-* At present, there is concern over a theory crisis in the social sciences, which highlights that this system is not functioning as intended, and highlights the need for better theory.
-* One source of potential improvements of theory methodology that has not been previously considered is computer science.
-* The process of "iteratively improving" digital objects - in this case, computer code - is well understood.
-* Recent work like the FAIR software principles has demonstrated that ideals of open science apply to computer science as well.
-* This paper argues that, conversely, principles of computer science - particularly version control, algorithmic hypothesis generation (find better word; this is about using the digital theory object to derive implied hypotheses), and integrated testing, can also be used to improve theory methods in the social science.
-* We introduce "FAIR theory", a digital research artifact to represent formal social scientific theories
-* FAIR theory can be version controlled; any time new insights require modifications of the theory, these modifications can be documented in a traceable and reversable manner. Version control also enables diffuse collaboration in theory development, as other researchers can submit "pull requests" to suggest modifications of a theory, or can "fork" existing theories to create a spin-off from an existing theory.
-* FAIR theory allows for algorithmic derivation of hypotheses implied by the theory.
-* FAIR theory enables integration testing: researchers can build a "test suite" of evidence that must be explainable by the theory, and any modifications of the theory must also pass the test suite.
-* To illustrate FAIR theory's potential to accelerate cumulative knowledge acquisition, we present several tutorial examples, developed in collaboration with applied researchers across fields of social science.
+<!-- * Theory is the vehicle of cumulative knowledge acquisition -->
+<!-- * According to the empirical cycle, ideally, hypotheses are derived from theory, then tested in data, and theory is amended based on the resulting insights. When this cycle is regularly completed, theories become ever more veracious representations of social scientific phenomena. -->
+<!-- * At present, there is concern over a theory crisis in the social sciences, which highlights that this system is not functioning as intended, and highlights the need for better theory. -->
+<!-- * One source of potential improvements of theory methodology that has not been previously considered is computer science. -->
+<!-- * The process of "iteratively improving" digital objects - in this case, computer code - is well understood. -->
+<!-- * Recent work like the FAIR software principles has demonstrated that ideals of open science apply to computer science as well. -->
+<!-- * This paper argues that, conversely, principles of computer science - particularly version control, algorithmic hypothesis generation (find better word; this is about using the digital theory object to derive implied hypotheses), and integrated testing, can also be used to improve theory methods in the social science. -->
+<!-- * We introduce "FAIR theory", a digital research artifact to represent formal social scientific theories -->
+<!-- * FAIR theory can be version controlled; any time new insights require modifications of the theory, these modifications can be documented in a traceable and reversable manner. Version control also enables diffuse collaboration in theory development, as other researchers can submit "pull requests" to suggest modifications of a theory, or can "fork" existing theories to create a spin-off from an existing theory. -->
+<!-- * FAIR theory allows for algorithmic derivation of hypotheses implied by the theory. -->
+<!-- * FAIR theory enables integration testing: researchers can build a "test suite" of evidence that must be explainable by the theory, and any modifications of the theory must also pass the test suite. -->
+<!-- * To illustrate FAIR theory's potential to accelerate cumulative knowledge acquisition, we present several tutorial examples, developed in collaboration with applied researchers across fields of social science. -->
 
 # Discussion
+
+The replication crisis has brought the inadequacies of contemporary theoretical practices in the social sciences into focus.
+Psychological theories often fall short of all FAIR principles: they are hard to find and access, have limited interoperability, and are rarely reused.
+These limitations impede cumulative knowledge production in our field,
+leading to an accumulation of "one-shot" empirical findings, without commensurate advancement in our principled understanding of psychological phenomena.
+We argued that applying the FAIR principles to theory offers a structured solution to these shortcomings.
+We demonstrated how to create, version-control, and archive theories as digital information artifacts.
+We introduced the `theorytools` R-package to partly automate these processes, reducing barrier of entry for researchers,
+and creating a FAIR resource for theory construction tools and documentation that can be continuously updated as best practices develop further.
+
+Making theory FAIR allows researchers to more easily find a relevant framework;
+access and understand it; interact with it in a very practical manner, for example, by deriving predictions from it, or using it to select control variables; and reuse it, contributing changes to existing theories or splitting of in a new direction.
+Whereas the idea of theory can be quite nebulous to empirical social scientists,
+FAIR theory makes theoretical work practical and tangible, incorporating theory into scholars' workflows.
+Having a concrete object to iterate upon facilitates the systematic improvement and iterative refinement of psychological theories, thus substantially increasing the efficiency of research.
+While FAIR theory does not directly resolve the problem of strategic ambiguity, it does provide a framework within which scholars can increase the precision and formalization of theories.
+FAIR principles also facilitates new ways of collaboration,
+leveraging tools like Git for version control and Zenodo for archiving to document provenance and facilitate contributions from diverse researchers.
+<!-- These practices align with the open science ethos, ensuring theories evolve dynamically based on empirical evidence and collaborative input. -->
+
+## Strengths
+
+One important strength of FAIR theory is that it provides much-needed open science methods for the underemphasized inductive phase of the empirical cycle.
+Most extant open science methods focus on increased rigor in testing, but provide little guidance as to what to do with the newly collected empirical evidence.
+By providing much-needed open science methods for theory construction,
+FAIR theory helps restore the balance between inductive and deductive research and contributes to closing the "open empirical cycle" [REF Hoijtink].
+
+Our approach aligns closely with contemporary developments in open science,
+such as modular publishing, interdisciplinarity, meta-research, and team science.
+The advantage of modular publishing is that authors can be credited for theory development.
+Given the current emphasis on empirical papers [REF], theoretical papers can be hard to publish.
+FAIR theories, by contrast, can be readily disseminated as citable information artifacts, thus changing the incentive structure to favor theory development.
+
+Interdisciplinarity benefits from FAIR theory's accessibility across different fields; thus, theoretical frameworks can be reused, adapted, or used for analogical modeling [REF Oisin paper].
+Meta-research benefit from the fact that FAIR theory enables studying the structure, content, and development of theories over time.
+In terms of team science, FAIR theory facilitates collaboration by ensuring that all contributors have access to the same information and
+clarifying any remaining areas of contention or misunderstanding. 
+Version control provides a framework to resolve parallel developments from multiple collaborators in a non-destructive manner.
+This facilitates collaboration across geographical boundaries,
+and adversarial collaboration, where others strive to falsify a theory or identify its inconsistencies, and democratizes collaboration with as-of-yet unknown collaborators via platforms like GitHub, where researchers outside one's network can identify issues or suggest improvements to theories.
+
+Finally, FAIR theory plays an important role in science communication, because theory synthesizes contemporary scientific understanding about a phenomenon.
+Theory bridges the gap between academic research and practitioners by summarizing actionable insights, relieving practitioners from the need to sift through extensive empirical literature.
+By providing a mechanism for iterative improvement based on emerging evidence, FAIR theory also supports effective evidence-based decision making.
+
+## Limitations
+
+One important limitation of the present work is that,
+while we build on well-established information architecture like Zenodo,
+it is unlikely that the proposed metadata standard is definitive.
+Community adoption can reveal areas of further improvement.
+Furthermore, at the time of writing, dedicated indexing systems for FAIR theory are non-existent.
+Using the Zenodo search function and submitting theories to the "FAIR Theory Community" on Zenodo can help overcome this limitation in the short term.
+
+Another limitation is the learning curve associated with tools like Git and Zenodo.
+The `theorytools` R-package mitigates this limitation by automating key steps in the process.
+Moreover, the initial investment in time can be offset by long-term productivity gains and increased impact of FAIR theory.
+One barrier to adoption of FAIR theory is cultural resistance to sharing and modifying theories, also known as the "toothbrush problem".
+Education might help address this limitation; with this in mind,
+we are developing open educational materials on theory development.
+
+One limitation of scope is that FAIR theory does not directly resolve problems related to strategic ambiguity [REF] and lack of theory formalization [REF].
+However, our work does establish a framework within which theories can be further formalized.
+The example of the empirical cycle demonstrates how FAIR principles can guide theory formalization and foster cumulative progress.
+Another limitation of scope is that FAIR theory does not resolve other related issues in social sciences, such as the measurement crisis [REF] and lack of standardized ontologies for psychological constructs [REF].
+However, our work here provides a template for addressing such challenges,
+and any advancements in the areas of measurement and ontology will serve to amplify the value of FAIR theories, particularly when such resources are cross-referenced in the metadata (e.g., on Zenodo).
 
 ## Future Directions
 
@@ -881,6 +975,14 @@ More efficient and transparent communication about theory democratizes and accel
 removes barriers for knowledge exchange with the global scholarly community,
 opens theory development to diverse perspectives, and enables (distributed and adversarial) collaboration.
 
+## Conclusion
+
+FAIR theory is a major step forwards towards more transparent, collaborative, and efficient theory construction.
+It provides much-needed open science methods for the inductive phase of the empirical cycle,
+closing a critical gap in the scientific process.
+FAIR theory makes theory more tangible, enabling scholars to incorporate it in their day-to-day workflows in order to derive hypotheses, select control variables, and contribute new data-driven insights.
+This paves the way for more theory-driven scholarship,
+and accelerates cumulative knowledge acquisition in the social sciences and beyond.
 
 
 \newpage

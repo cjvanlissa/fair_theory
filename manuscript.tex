@@ -164,11 +164,12 @@
 \makeatletter
 \xapptocmd\appendix
   {\xapptocmd\section
-    {\addcontentsline{toc}{section}{\appendixname\ifoneappendix\else~\theappendix\fi\\: #1}}
+    {\addcontentsline{toc}{section}{\appendixname\ifoneappendix\else~\theappendix\fi: #1}}
     {}{\InnerPatchFailed}%
   }
 {}{\PatchFailed}
-\keywords{meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 6897}
+\makeatother
+\keywords{meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 6844}
 \usepackage{lineno}
 
 \linenumbers
@@ -196,7 +197,7 @@
 
 \authornote{
 
-This is a preprint paper, generated from Git Commit \# 9c5837f3.
+This is a preprint paper, generated from Git Commit \# ec81348c.
 
 The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing.
 
@@ -801,69 +802,82 @@ fair_theory(path = "c:/theoryfolder/empirical_cycle",
 
 Note that this function also automatically provides basic FAIR theory metadata to Zenodo.
 
-\subsection{Comparing Implementations of a Theory}\label{comparing-implementations-of-a-theory}
+\subsection{Forking Different Implementations of a Theory}\label{forking-different-implementations-of-a-theory}
 
-As several authors have taken inspiration from the work by De Groot (de Groot, 1961),\\
-we compare our interpretation of the original theory to the interpretation of others.
+De Groot's empirical cycle has inspired several authors,
+but not all of them have interpreted his work the same.
+For example, Wagenmakers and colleagues (\textbf{wagenmakersCreativityVerificationCyclePsychological2018?}) write \emph{``De Groot's ``empirical cycle,'' shown here in Figure 6''} - but Figure 6 diverges substantially from De Groot's description, and from our implementation of it.
+An important advantage of FAIR theory is that we can implement different versions of a theory, compare them, and document their cross-relationships.
+We can take work that has been done before - in this case, the repository created above, and create an independent copy that we can modify as we wish, while retaining cross-references to the original.
+This is achieved by \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo}{``forking the repository''},
+\href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo}{``cloning''} the forked repository to our local computer,
+making any changes we want, and then completing steps 4-5 of ``Making a Theory FAIR''.
 
-Subsequently, Wagenmakers and colleagues modified the theory by \emph{``{[}adding the{]} Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification''}:
+We have implemented Wagenmakers and colleagues' version as a DOT graph
+to illustrate some clear deviations from the original.
+First, the phases of the cycle have been renamed.
+While this change was not described in the paper,
+we assumed that the labels are meant to illustrate the phases, not substantially change the ontology.
+We represent this change by adding labels to the original DOT graph.
+Note, however, that the labels suggest a focus on empirical psychology that was absent in the original formulation, which was more general.
+Furthermore, the label ``knowledge accumulation'' invites the question of exactly \emph{how} knowledge accumulates upon evaluation of a prior experiment.
+As this lack of cumulative knowledge acquisition appears to be precisely where contemporary research practice falls short, this ambiguity invites further improvement of the theory.
+Second, the authors mention an explicit change: \emph{``We added the Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification''}.
+The DOT graph below shows our implementation of this version of the empirical cycle, by adding subgraphs.
 
 \begin{verbatim}
 digraph {
 
   subgraph cluster_discovery {
     label="Discovery";
-    hypothesis [label="New hypothesis"];
-    prediction [label="New prediction"];
+    induction [label="New hypothesis"];
+    deduction [label="New prediction"];
   }
-  data  [label="Old knowledge and old data"];      
+  observation  [label="Old knowledge and old data"];
   subgraph cluster_justification {
     label="Justification";
     test [label="Test on new data"];
     evaluation;
   }
 
-  data -> hypothesis [label="Speculate & explore"];
-  hypothesis -> prediction  [label="Deduce"];
-  prediction -> test  [label="Design new experiment"];
+  observation -> induction [label="Speculate & explore"];
+  induction -> deduction  [label="Deduce"];
+  deduction -> test  [label="Design new experiment"];
   test -> evaluation  [label="Statistical analysis"];
-  evaluation -> data  [label="Knowledge accumulation"];
+  evaluation -> observation  [label="Knowledge accumulation"];
 
 }
 \end{verbatim}
 
-Note, however, that there appear to be further changes:
-the phases of the cycle have been renamed,
-and the annotations suggest a move towards experimental empirical psychology that was absent in the original formulation.
-Moreover, the label ``knowledge accumulation'' invites the question of exactly \emph{how} knowledge accumulates upon evaluation of a prior experiment.
-As this lack of cumulative knowledge acquisition appears to be precisely where contemporary research practice falls short, this ambiguity invites further improvement of the theory.
-
-Our work, too is inspired by De Groot, but our take on the empirical cycle is different again:
+The first author was inspired by De Groot too,
+but they conceive of the empirical cycle in yet another way.
+First, notice that the nodes in De Groot's formulation mostly refer to processes.
+This invites the question of what the deliverables are in each phase, or in other words: what actually changes when going through the cycle, except the scholar's mind.
+In our implementation below, we account for this difference by having the nodes refer to specific deliverables; the edges now refer to processes.
+Second, De Groot's strict distinction between processes of observation, induction, and deduction is not widely supported by philosophy of science.
+For example, many have argued that observation is value-laden, and as such, involves induction.
+The derivation of hypotheses from theory is also not purely deductive,
+as auxiliary assumptions are often made (which are, again, an inductive process).
+Furthermore, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well {[}REF Peikert{]}.
+With these alterations, we implement the empirical cycle as follows:
 
 \begin{verbatim}
 digraph {
 
   theory;
   prediction;
-  test [label="inferential procedure"];
-  observation;
+  data;
+  test;
+  results;
   
   theory -> prediction [label="deduction"];
-  prediction -> test;
-  test -> observation;
-  observation -> theory [label="generalization"];
+  prediction -> test [label = "implement inferential procedure"];
+  data -> results;
+  test -> results [label = "apply to data"];
+  results -> theory [label="interpretation and generalization"];
 
 }
 \end{verbatim}
-
-In our representation,
-induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory.
-For example, the refutation of a hypothesized effect,
-or the serendipitous observation of some pattern in data,
-might be a reason to revise or construct theory.
-Induction, incidentally, also occurs within the link from prediction to testing:
-in the form of the inductive bias of methods used to perform the test,
-and auxiliary assumptions that must be made to address remaining theoretical ambiguities.
 
 \subsection{Using FAIR theory to Perform Causal Inference}\label{using-fair-theory-to-perform-causal-inference}
 
@@ -882,34 +896,6 @@ We can find more examples of causal inference with DAGs in these tutorials:
 \url{https://www.r-bloggers.com/2019/08/causal-inference-with-dags-in-r/}
 
 \url{https://www.r-bloggers.com/2018/08/applications-of-dags-in-causal-inference/}
-
-\begin{itemize}
-\tightlist
-\item
-  Theory is the vehicle of cumulative knowledge acquisition
-\item
-  According to the empirical cycle, ideally, hypotheses are derived from theory, then tested in data, and theory is amended based on the resulting insights. When this cycle is regularly completed, theories become ever more veracious representations of social scientific phenomena.
-\item
-  At present, there is concern over a theory crisis in the social sciences, which highlights that this system is not functioning as intended, and highlights the need for better theory.
-\item
-  One source of potential improvements of theory methodology that has not been previously considered is computer science.
-\item
-  The process of ``iteratively improving'' digital objects - in this case, computer code - is well understood.
-\item
-  Recent work like the FAIR software principles has demonstrated that ideals of open science apply to computer science as well.
-\item
-  This paper argues that, conversely, principles of computer science - particularly version control, algorithmic hypothesis generation (find better word; this is about using the digital theory object to derive implied hypotheses), and integrated testing, can also be used to improve theory methods in the social science.
-\item
-  We introduce ``FAIR theory'', a digital research artifact to represent formal social scientific theories
-\item
-  FAIR theory can be version controlled; any time new insights require modifications of the theory, these modifications can be documented in a traceable and reversable manner. Version control also enables diffuse collaboration in theory development, as other researchers can submit ``pull requests'' to suggest modifications of a theory, or can ``fork'' existing theories to create a spin-off from an existing theory.
-\item
-  FAIR theory allows for algorithmic derivation of hypotheses implied by the theory.
-\item
-  FAIR theory enables integration testing: researchers can build a ``test suite'' of evidence that must be explainable by the theory, and any modifications of the theory must also pass the test suite.
-\item
-  To illustrate FAIR theory's potential to accelerate cumulative knowledge acquisition, we present several tutorial examples, developed in collaboration with applied researchers across fields of social science.
-\end{itemize}
 
 \section{Discussion}\label{discussion}
 
