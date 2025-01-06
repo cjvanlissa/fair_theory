@@ -54,18 +54,45 @@ Instrumental variable methods can be used to correct for this bias.
 \section{Ontology}
 The constructs used are
 \begin{itemize}
- \item performance
- \item performance estimation
- \item skill
- \item confidence
- \item measurement error
+ \item performance as a test score
+ \item performance estimation as the difference between the expected and the actual test score
+ \item skill as the ability to perform well on a given test
+ \item overconfidence as the difference between self-assessed and actual skill
+ \item measurement error as luck on a test
 \end{itemize}
 
 \section{Relationships}
 
+\subsection{Original DK Paper}
+
+\begin{figure}[ht]
+  \vspace{1cm}
+  \begin{center}
+  \input{figures/original_dk.tex}
+  \end{center}
+  %\caption{Subtypes of `AbstractSem`.}
+  \label{fig:typetree}
+\end{figure}
+
+With $-$ signifying a negative association and $\simeq$ meaning measured by.
+
+
+
+\begin{itemize}
+ \item low skilled are more overconfident in assessing their skill than high skilled
+\end{itemize}
+
+
 \section{Mathematical Formulation}
 
 \section{(Statistical) Models}
+
+\subsection{Correction}
+There are different ways to correct for the bias introduced by measurement error:
+\begin{itemize}
+ \item use different test performances to calculate skill and overconfidence, but a small test-retest correlation can bias the estimate towrds zero then (Krueger and Mueller, 2002)
+\end{itemize}
+
 
 \section{Open Questions / Ambiguities}
 
