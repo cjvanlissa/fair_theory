@@ -431,21 +431,9 @@ Thirdly, theory (meta)data should include qualified references to other (meta)da
 The first part of this principle allows for nested theories;
 for example, a theory that specifies causal relationships between constructs could refer back to an ontological theory from which those constructs are derived.
 This can be achieved by linking the DOI of those nested theories [@ContributingCitationsReferences].
-However, "[i]n systems with many dependencies, releasing new [...] versions can quickly become a nightmare."
-The tension lies in balancing regular versioned updates with maintaining interconnected theories: changes risk breaking links between theories, but assuming every change does so leads to an overly sparse network.
-In software development this problem is colloquially called "dependency hell" and usually addressed via semantic versioning.
-Traditional version control only tracks changes but semantic versioning tracks what those changes mean to other users of the theory by using a specific format of version numbers.
-We propose the following adaptation of semantic versioning for theories:
-
-```
-Given a version number MAJOR.MINOR.PATCH, increment the:
-
-MAJOR version when you make incompatible changes, i.e., change the meaning or derived empierical statements
-MINOR version when you expand the set of empierical statements in a backward compatible manner
-PATCH version when you make backward compatible bug fixes, or clarifications
-```
-
-Semantic versioning and clearly documented interdependencies allow for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
+The second part of this principle allows for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
+This can be achieved by using Git for version control and Zenodo for archiving.
+Git tracks the internal provenance of a theory repository; Zenodo is used to archive relations to external references (e.g., papers that influenced the theory, previous theories that inspired it, models based upon the theory).
 
 As the original definition of interoperability was somewhat narrow [@wilkinsonFAIRGuidingPrinciples2016a],
 the concept has recently been further refined in terms of facilitating "successful communication between machines and between humans and machines", where "A and B are considered X-interoperable if a common operation X exists that can be applied to both" [@vogtFAIR20Extending2024].
@@ -537,6 +525,7 @@ explicitly referring back to it enables clear comparison of the differences [@ra
 From a meta-science perspective, FAIR theory facilitates studying the state of theory in a particular subfield, and comparing theories' substantive and structural properties. 
 
 ### Making Theories FAIR Accelerates Scientific Progress
+
 Adopting the FAIR principles for theories can address key challenges in the current research landscape, where theories often remain isolated and underutilized. By making theories findable, accessible, interoperable, and reusable, researchers can ensure that their work is grounded in a shared, transparent, and cumulative body of knowledge. This approach enhances scholarly communication, allowing for greater scrutiny, replication, and collaboration across disciplines, ultimately leading to faster, more reliable, and more impactful scientific progress.
 
 
@@ -760,6 +749,25 @@ Supplying the following information helps improve the Findability of a theory:
 - List the DOIs/identifiers of *related works*. Use the `Relation` field as appropriate. For example:
     + `Is documented by` can be used to reference a theory paper you wrote, in which you introduce this FAIR theory
     + `Is derived from` could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used `Is derived from` to reference De Groot and Spiekerman's empirical cycle.
+    
+## 6. Making Changes
+
+<!-- CJ: Aaron, I moved your part here because I don't think it relates to interoperability. But perhaps there's another place where it fits better? -->
+Aside from technical solutions to However, "[i]n systems with many dependencies, releasing new [...] versions can quickly become a nightmare."
+The tension lies in balancing regular versioned updates with maintaining interconnected theories: changes risk breaking links between theories, but assuming every change does so leads to an overly sparse network.
+In software development this problem is colloquially called "dependency hell" and usually addressed via semantic versioning.
+Traditional version control only tracks changes but semantic versioning tracks what those changes mean to other users of the theory by using a specific format of version numbers.
+We propose the following adaptation of semantic versioning for theories:
+
+```
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+MAJOR version when you make incompatible changes, i.e., change the meaning or derived empierical statements
+MINOR version when you expand the set of empierical statements in a backward compatible manner
+PATCH version when you make backward compatible bug fixes, or clarifications
+```
+
+Semantic versioning and clearly documented interdependencies allow for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
 
 ## Automating these Steps
 
