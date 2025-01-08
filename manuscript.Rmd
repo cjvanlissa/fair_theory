@@ -251,9 +251,12 @@ and statements about their specific numerical values [cf. @frankenhuisStrategicA
 
 Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
 This invites the question: if a FAIR theory is a specific instantiation of theory, how does FAIR theory differ from a model?
-There is no principled difference;
-theories and models derived from it exist along a continuum of specificity, where
-a theory has a relatively broader scope and may contain one or more models as specific instances.
+While there may be philosophical differences,
+these differences are largely irrelevant for the purpose of making theories more FAIR.
+When organizing knowledge, we think it is helpful to view theories and models derived from them as existing along a continuum of specificity,
+from broad to narrow, from general to specific,
+where a theory has a relatively broader scope and may contain one or more models as specific instances.
+<!-- Paradigms at the broadest level encompass the larger narrative, frameworks gather and organize concepts and terms, but only theories have a degree of specificity that allows us to derive specific testable and falsifiable hypotheses or models with exact mathematical relations between concepts (cf. Partelow, 2023, Table 1, https://link.springer.com/article/10.1007/s13412-023-00833-w#). -->
 For example, following Meehl, we could envision a theory that merely specifies how specific constructs are causally connected.
 From this theory, we could derive a more specific *statistical model* by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
 This statistical model makes just enough assumptions to allow estimation of the remaining unknown parameters (e.g., regression slopes) from data.
