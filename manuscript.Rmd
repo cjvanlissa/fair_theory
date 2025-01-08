@@ -431,8 +431,21 @@ Thirdly, theory (meta)data should include qualified references to other (meta)da
 The first part of this principle allows for nested theories;
 for example, a theory that specifies causal relationships between constructs could refer back to an ontological theory from which those constructs are derived.
 This can be achieved by linking the DOI of those nested theories [@ContributingCitationsReferences].
-The second part of this principle allows for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
-This can be achieved by using Git for version control and Zenodo for archiving.
+However, "[i]n systems with many dependencies, releasing new [...] versions can quickly become a nightmare."
+The tension lies in balancing regular versioned updates with maintaining interconnected theories: changes risk breaking links between theories, but assuming every change does so leads to an overly sparse network.
+In software development this problem is colloquially called "dependency hell" and usually addressed via semantic versioning.
+Traditional version control only tracks changes but semantic versioning tracks what those changes mean to other users of the theory by using a specific format of version numbers.
+We propose the following adaptation of semantic versioning for theories:
+
+```
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+MAJOR version when you make incompatible changes, i.e., change the meaning or derived empierical statements
+MINOR version when you expand the set of empierical statements in a backward compatible manner
+PATCH version when you make backward compatible bug fixes, or clarifications
+```
+
+Semantic versioning and clearly documented interdependencies allow for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
 
 As the original definition of interoperability was somewhat narrow [@wilkinsonFAIRGuidingPrinciples2016a],
 the concept has recently been further refined in terms of facilitating "successful communication between machines and between humans and machines", where "A and B are considered X-interoperable if a common operation X exists that can be applied to both" [@vogtFAIR20Extending2024].
@@ -729,8 +742,7 @@ First, create a Zenodo account with your existing GitHub account.
 Then in Zenodo, go to the GitHub section under your account.
 Following the instructions on the page, activate Zenodo for your theory repository.
 Then, create a new release of the GitHub repository.
-You have to choose a tag and release title;
-we suggest using semantic versioning for both, starting with version `0.1.0`,  unless you use another convention for versioning (which should be documented in README.md).
+Choose a tag and release title using our adapted semantic versioning, starting with version 1.0.0, if you intend to share your theory with the broader scientific community.
 After publishing the release,
 you should be able to see the archived version in your Zenodo account,
 along with a DOI.
