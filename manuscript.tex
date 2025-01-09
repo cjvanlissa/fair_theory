@@ -54,14 +54,28 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
+\makeatletter
 \ifx\paragraph\undefined\else
   \let\oldparagraph\paragraph
-  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
 \fi
 \ifx\subparagraph\undefined\else
   \let\oldsubparagraph\subparagraph
-  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\makeatother
 % definitions for citeproc citations
 \NewDocumentCommand\citeproctext{}{}
 \NewDocumentCommand\citeproc{mm}{%
@@ -169,7 +183,7 @@
   }
 {}{\PatchFailed}
 \makeatother
-\keywords{meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 7856}
+\keywords{meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 8100}
 \usepackage{lineno}
 
 \linenumbers
@@ -197,7 +211,7 @@
 
 \authornote{
 
-This is a preprint paper, generated from Git Commit \# a125ad91.
+This is a preprint paper, generated from Git Commit \# eed54ad2.
 
 The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing.
 
@@ -353,9 +367,11 @@ and statements about their specific numerical values Guest (2024).
 
 Some have defined a model as a ``specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory'' {[}REF Fried{]}.
 This invites the question: if a FAIR theory is a specific instantiation of theory, how does FAIR theory differ from a model?
-There is no principled difference;
-theories and models derived from it exist along a continuum of specificity, where
-a theory has a relatively broader scope and may contain one or more models as specific instances.
+While there may be philosophical differences,
+these differences are largely irrelevant for the purpose of making theories more FAIR.
+When organizing knowledge, we think it is helpful to view theories and models derived from them as existing along a continuum of specificity,
+from broad to narrow, from general to specific,
+where a theory has a relatively broader scope and may contain one or more models as specific instances.
 For example, following Meehl, we could envision a theory that merely specifies how specific constructs are causally connected.
 From this theory, we could derive a more specific \emph{statistical model} by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
 This statistical model makes just enough assumptions to allow estimation of the remaining unknown parameters (e.g., regression slopes) from data.
@@ -529,6 +545,7 @@ for example, a theory that specifies causal relationships between constructs cou
 This can be achieved by linking the DOI of those nested theories ({``Contributing {Citations} and {References},''} n.d.).
 The second part of this principle allows for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
 This can be achieved by using Git for version control and Zenodo for archiving.
+Git tracks the internal provenance of a theory repository; Zenodo is used to archive relations to external references (e.g., papers that influenced the theory, previous theories that inspired it, models based upon the theory).
 
 As the original definition of interoperability was somewhat narrow (M. D. Wilkinson et al., 2016),
 the concept has recently been further refined in terms of facilitating ``successful communication between machines and between humans and machines'', where ``A and B are considered X-interoperable if a common operation X exists that can be applied to both'' (Vogt et al., 2024).
@@ -747,8 +764,7 @@ First, create a Zenodo account with your existing GitHub account.
 Then in Zenodo, go to the GitHub section under your account.
 Following the instructions on the page, activate Zenodo for your theory repository.
 Then, create a new release of the GitHub repository.
-You have to choose a tag and release title;
-we suggest using semantic versioning for both, starting with version \texttt{0.1.0}, unless you use another convention for versioning (which should be documented in README.md).
+Choose a tag and release title using our adapted semantic versioning, starting with version 1.0.0, if you intend to share your theory with the broader scientific community.
 After publishing the release,
 you should be able to see the archived version in your Zenodo account,
 along with a DOI.
@@ -780,6 +796,24 @@ Supplying the following information helps improve the Findability of a theory:
     \texttt{Is\ derived\ from} could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used \texttt{Is\ derived\ from} to reference De Groot and Spiekerman's empirical cycle.
   \end{itemize}
 \end{itemize}
+
+\subsection{6. Making Changes}\label{making-changes}
+
+Aside from technical solutions to However, ``{[}i{]}n systems with many dependencies, releasing new {[}\ldots{]} versions can quickly become a nightmare.''
+The tension lies in balancing regular versioned updates with maintaining interconnected theories: changes risk breaking links between theories, but assuming every change does so leads to an overly sparse network.
+In software development this problem is colloquially called ``dependency hell'' and usually addressed via semantic versioning.
+Traditional version control only tracks changes but semantic versioning tracks what those changes mean to other users of the theory by using a specific format of version numbers.
+We propose the following adaptation of semantic versioning for theories:
+
+\begin{verbatim}
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+MAJOR version when you make incompatible changes, i.e., change the meaning or derived empierical statements
+MINOR version when you expand the set of empierical statements in a backward compatible manner
+PATCH version when you make backward compatible bug fixes, or clarifications
+\end{verbatim}
+
+Semantic versioning and clearly documented interdependencies allow for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
 
 \subsection{Automating these Steps}\label{automating-these-steps}
 
@@ -1143,7 +1177,7 @@ Vogt, L., Strömert, P., Matentzoglu, N., Karam, N., Konrad, M., Prinz, M., \& B
 Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., Baak, A., \ldots{} Mons, B. (2016). The {FAIR Guiding Principles} for scientific data management and stewardship. \emph{Scientific Data}, \emph{3}(1), 160018. \url{https://doi.org/10.1038/sdata.2016.18}
 
 \bibitem[\citeproctext]{ref-wilkinson2024applying}
-Wilkinson, S. R., Aloqalaa, M., Belhajjame, K., Crusoe, M. R., Kinoshita, B. de P., Gadelha, L., et al.others. (2024). \emph{Applying the {FAIR} principles to computational workflows}. Retrieved from \url{https://arxiv.org/abs/2410.03490}
+Wilkinson, S. R., Aloqalaa, M., Belhajjame, K., Crusoe, M. R., Paula Kinoshita, B. de, Gadelha, L., \ldots{} Goble, C. (2024). \emph{Applying the FAIR principles to computational workflows}. Retrieved from \url{https://arxiv.org/abs/2410.03490}
 
 \end{CSLReferences}
 
