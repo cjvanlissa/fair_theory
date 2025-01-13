@@ -228,28 +228,28 @@ papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\li
 
 There are different definitions of theory,
 and many of those definitions are consistent with the FAIR theory principles.
-This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data [bogen/woodward].
+@scientifictheories describe different schools of thought when it comes to scientific theories: the syntactic, the semantic, and the pragmatic view.
+The syntactic view describes theories as "sets of sentences in a given logical domain language" [@scientifictheories, ch. 2], where domain refers to the scientific field (such as psychology or physics), with each domain having it's own theoretical terms (such as "intelligence" in psychology).
 Meehl [-@meehlAppraisingAmendingTheories1990] provides guidance as to what kinds of "statements" such a theory might contain:
 statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
 and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023, @guestWhatMakesGood2024].
-
-Some have defined a model as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
-This invites the question: if a FAIR theory is a specific instantiation of theory, how does FAIR theory differ from a model?
-While there may be philosophical differences,
-these differences are largely irrelevant for the purpose of making theories more FAIR.
-When organizing knowledge, we think it is helpful to view theories and models derived from them as existing along a continuum of specificity,
-from broad to narrow, from general to specific,
-where a theory has a relatively broader scope and may contain one or more models as specific instances.
-<!-- Paradigms at the broadest level encompass the larger narrative, frameworks gather and organize concepts and terms, but only theories have a degree of specificity that allows us to derive specific testable and falsifiable hypotheses or models with exact mathematical relations between concepts (cf. Partelow, 2023, Table 1, https://link.springer.com/article/10.1007/s13412-023-00833-w#). -->
-For example, following Meehl, we could envision a theory that merely specifies how specific constructs are causally connected.
-From this theory, we could derive a more specific *statistical model* by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
+The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematical tools.
+It shifts the focus from theories as collections of sentences to mathematical models.
+The term model is not uniquely defined within the literature, one rather general definition would be a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
+-<!-- Paradigms at the broadest level encompass the larger narrative, frameworks gather and organize concepts and terms, but only theories have a degree of specificity that allows us to derive specific testable and falsifiable hypotheses or models with exact mathematical relations be
+tween concepts (cf. Partelow, 2023, Table 1, https://link.springer.com/article/10.1007/s13412-023-00833-w#). -->
+The pragmatic view argues that there might not be one structure or definition of scientific theories, but instead, different scientific domains might very well define theory differently.
+It also argues that nonformal aspects (e.g. commonly used analogies) and practice (e.g. experimental designs) can be an important part of scientific theories.
+Since the primary purpose of FAIR theories should be to help advancing science, we believe that it is best left to the scientists to decide which parts of theory, models, or other aspects should belong to a specific FAIR theory, depending on whether certain information is assumed to be useful to the their scientific (sub)community.
+As a FAIR theory evolves, the nature of information tracked might also change.
+For example, following Meehl, we could envision a theory that starts out specifying how specific constructs are causally connected.
+From this theory, more specific *statistical/mathematical models* could be derived by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
 This statistical model makes just enough assumptions to allow estimation of the remaining unknown parameters (e.g., regression slopes) from data.
-Or, we could derive an even more specific *generative/computational model*, which is completely parametrized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
-Note that broadness and narrowness are relative terms,
-and one person's theory may be another person's model.
-This definition also implies that FAIR models are a special case of FAIR theory.
+Then, an even more specific *generative/computational model* could be added, which is completely parameterized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
+Also, aspects of scientific practice might be added over time, such as commonly used experimental designs (e.g. longitudinal designs observing change over time), measurement tools (e.g. different questionnaires used to assess the same construct), or study subjects (e.g. specific strains of rats).
+
 
 As an applied example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors such as adherence to pandemic mitigation methods (e.g., ), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety) [@taylor2022psychology].
 The theory may encompass a particular transmission _model_ for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
