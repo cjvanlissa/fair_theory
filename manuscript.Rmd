@@ -438,7 +438,7 @@ DOA also renders theories immune to refutation,
 because the author can claim that the theory was misconstrued when confronted with falsifying evidence, thus making it a moving target  [@szollosiArrestedTheoryDevelopment2021].
 The fact that DOA is inherently problematic is illustrated by cases where third parties identify logical inconsistencies within a theory [e.g., @kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008].
 This demonstrates that original authors are not the ultimate authority on their theories.
-DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible; both in terms of availability and in terms of interpretability.
+DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible in terms of both availability and interpretability.
 
 <!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
 
