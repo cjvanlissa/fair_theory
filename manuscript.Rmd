@@ -51,7 +51,7 @@ authornote: |
 
 abstract: |
   Test test.
-keywords          : "meta theory, theory formation, cumulative science, formal models"
+keywords          : "fairtheory, meta theory, theory formation, cumulative science, formal models"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
 bibliography      : "theory-specification.bib"
 floatsintext      : yes
@@ -101,13 +101,11 @@ as the theory's central claims evade falsification.
 <!-- CJ: Maybe we should give an example here. Does anyone know one? -->
 
 Scholars have been raising concerns about the state of theory in social science for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
-Two main concerns are that, first, social scientific theories lack precision compared to theories in the physical sciences [@szollosiArrestedTheoryDevelopment2021].
- and clarity
-In other words, social scientific theories lack *formalization*,
-which means that they do not make very accurate predictions,
-and are thus hard to falsify and difficult to understand on their own,
+One main concern is that social scientific theories lack precision, or  *formalization* [@szollosiArrestedTheoryDevelopment2021].
+When theories do not make very accurate predictions,
+they are hard to falsify and difficult to understand on their own,
 without either substantial interpretation or additional background knowledge.
-A second concern is the lack of transparent and participative scholarly communication about psychological theory and their development over time.
+A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
 The equally critical inductive processes of theory construction and theory improvement have been largely overlooked.
@@ -570,10 +568,12 @@ The process described here can be largely automated in R using the `theorytools`
 
 Given that we structured our argument around the importance of FAIR theory for cumulative knowledge production through scientific research around the *empirical cycle*,
 we decided to use it as an example for this tutorial.
-Note that, while the empirical cycle is not explicitly referred to as a "theory" by De Groot, he derives it from "a theory of thinking" by Selz (REF).
-We can thus consider it a meta-theory of the process of theory construction.
+The resulting FAIR theory is available at <https://doi.org/10.5281/zenodo.14552329>.
+The empirical cycle is described on page 28 of @degrootMethodologyFoundationsInference1969.
+Note that, while De Groot does not explicitly refer to the empirical cycle as a "theory", he derives it from "a theory of thinking".
+We can thus consider it a meta-theory of theory construction.
 <!-- The first step in making a theory FAIR is constructing a specific *implementation* [@guestHowComputationalModeling2021]. -->
-The empirical cycle is described on page 28 of @degrootMethodologyFoundationsInference1969:
+The "empirical cycle" theory presented by De Groot consists of a series of natural language statements:
 
 > *Phase 1:* 'Observation': collection and grouping of empirical materials; (tentative) formation of hypotheses.  
 *Phase 2:* 'Induction': formulation of hypotheses.  
@@ -582,8 +582,7 @@ The empirical cycle is described on page 28 of @degrootMethodologyFoundationsInf
 *Phase 5:* 'Evaluation': of the outcome of the testing procedure with respect to the hypotheses or theories stated, as well as with a view to subsequent, continued or related, investigations.
 
 If we compare it to the levels of theory formalization [@guestHowComputationalModeling2021],
-De Groot's theory is either at the "theory" or "specification" level.
-It consists of a series of natural language statements.
+it is defined at either the "theory" or "specification" level.
 We can increase the level of formalization, and present an "implementation" in the human- and machine-readable DOT language:
 
 ```
@@ -676,7 +675,7 @@ rsvg_svg(charToRaw(export_svg(ec_wagenmakers)), "ec_wagenmakers.svg")
 rsvg_svg(charToRaw(export_svg(ec_lissa)), "ec_lissa.svg")
 ```
 
-This language describes the model as a directed graph.
+This implementation describes the model as a directed graph.
 Note that the code has been organized so that the first half describes an ontology of the entities the theory postulates,
 and the second half describes their proposed interrelations.
 This follows the first two properties of good theory according to Meehl [@meehlAppraisingAmendingTheories1990].
