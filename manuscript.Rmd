@@ -226,30 +226,46 @@ papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\li
 ```
 
 
-There are different definitions of theory,
-and many of those definitions are consistent with the FAIR theory principles.
-@scientifictheories describe different schools of thought when it comes to scientific theories: the syntactic, the semantic, and the pragmatic view.
-The syntactic view describes theories as "sets of sentences in a given logical domain language" [@scientifictheories, ch. 2], where domain refers to the scientific field (such as psychology or physics), with each domain having it's own theoretical terms (such as "intelligence" in psychology).
-Meehl [-@meehlAppraisingAmendingTheories1990] provides guidance as to what kinds of "statements" such a theory might contain:
+## What is Theory?
+
+
+<!-- We don't explicitly define theory, but discuss the most important ideas of what theory might be, and advocate for a pluralism of information that can be tracked as FAIR theory (e.g. also such things as scientific practice (experimental design, materials)). -->
+<!-- The nature of the tracked information can change over time, as a scientific theory matures. -->
+<!-- The discussion about the distinction between FAIR theories and models is removed, as I believe it might be confusing for first-time readers and not really necessary for the bigger picture of the paper (but of course could be re-added). -->
+Definitions of theory abound and are the subject of extensive scholarly debate.
+Given that a pluriformity of definitions are consistent with FAIR theory principles,
+our paper is not aligned with one particular definition.
+Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic [@scientifictheories]
+The syntactic view describes theories as "sets of sentences in a given logical domain language" [@scientifictheories, ch. 2],
+acknowledging that each domain (a scientific field, such as psychology or physics) has its own theoretical vocabulary.
+We recognize the syntactic view in Meehl's hierarchy of ever-more specific "statements" a theory might contain [-@meehlAppraisingAmendingTheories1990]:
 statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
 and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023, @guestWhatMakesGood2024].
-The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematical tools.
+
+The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematics.
 It shifts the focus from theories as collections of sentences to mathematical models.
-The term model is not uniquely defined within the literature, one rather general definition would be a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
+The term "model" is not uniquely defined within the literature;
+it has been described as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
+This implies that theories and models are not fundamentally distinct, but rather, that for each model, there is a more general theory that subsumes it (one person's model is another person's theory).
 -<!-- Paradigms at the broadest level encompass the larger narrative, frameworks gather and organize concepts and terms, but only theories have a degree of specificity that allows us to derive specific testable and falsifiable hypotheses or models with exact mathematical relations be
 tween concepts (cf. Partelow, 2023, Table 1, https://link.springer.com/article/10.1007/s13412-023-00833-w#). -->
-The pragmatic view argues that there might not be one structure or definition of scientific theories, but instead, different scientific domains might very well define theory differently.
-It also argues that nonformal aspects (e.g. commonly used analogies) and practice (e.g. experimental designs) can be an important part of scientific theories.
-Since the primary purpose of FAIR theories should be to help advancing science, we believe that it is best left to the scientists to decide which parts of theory, models, or other aspects should belong to a specific FAIR theory, depending on whether certain information is assumed to be useful to the their scientific (sub)community.
-As a FAIR theory evolves, the nature of information tracked might also change.
+
+The pragmatic view holds that there might not be one structure or definition of scientific theories, but instead, definitions differ across scientific domains.
+It also argues that nonformal aspects (e.g. commonly used analogies) and practices (e.g. experimental designs) can be an important part of scientific theories.
+
+Since the primary purpose of FAIR theories is to advance scholarly communication about theories,
+the method is not contained to any one particular definition.
+It is best left to the scholarly community to decide which parts of theory, models, or other aspects should be represented as FAIR theory. 
+As the practice of FAIRification becomes more embedded,
+we expect that it will become increasingly clear what kind of information is useful.
+As a particular FAIR theory evolves, the nature of information tracked will likely change.
 For example, following Meehl, we could envision a theory that starts out specifying how specific constructs are causally connected.
 From this theory, more specific *statistical/mathematical models* could be derived by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
 This statistical model makes just enough assumptions to allow estimation of the remaining unknown parameters (e.g., regression slopes) from data.
 Then, an even more specific *generative/computational model* could be added, which is completely parameterized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
 Also, aspects of scientific practice might be added over time, such as commonly used experimental designs (e.g. longitudinal designs observing change over time), measurement tools (e.g. different questionnaires used to assess the same construct), or study subjects (e.g. specific strains of rats).
-
 
 As an applied example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors such as adherence to pandemic mitigation methods (e.g., ), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety) [@taylor2022psychology].
 The theory may encompass a particular transmission _model_ for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
