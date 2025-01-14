@@ -74,7 +74,7 @@ The constructs used are
   \label{fig:typetree}
 \end{figure}
 
-With $-$ signifying a negative association and $\simeq$ meaning measured by.
+With $-$ signifying a negative association and $\simeq$ signifying measured by.
 
 \begin{itemize}
  \item low skilled are more overconfident in assessing their skill than high skilled
@@ -82,18 +82,60 @@ With $-$ signifying a negative association and $\simeq$ meaning measured by.
 
 
 \section{Mathematical Formulation}
+Define random variables
+\begin{itemize}
+ \item $s^*$ denoting skill
+ \item $\epsilon$ denoting measurement error, with $\Exp[\epsilon] = 0$, $\epsilon$ independent of all other random variables included in the model
+ \item $s^*_s$ denoting self-assessed skill
+\end{itemize}
 
+\noindent Then we define performance $p$ as
+\begin{equation} \label{p}
+  p \coloneq s^* + \epsilon
+\end{equation}
+and overconfidence $oc^*$ as
+\begin{equation} \label{oc}
+  oc^* \coloneq s^*_s-s^*
+\end{equation}
+and expected performance $p_e$ as
+\begin{equation} \label{ep}
+  p_e \coloneq s^* + oc^*
+\end{equation}
+Overconfidence $oc^*$ is measured by overestimation $oe$ defined as
+\begin{equation}
+  oe \coloneq p_e - p
+\end{equation}
+
+\noindent From eq. \ref{oc} and \ref{ep} it follows that $p_e = s^*_s$ and further from eq. \ref{ep} and \ref{p} we see
+\begin{align}
+  oe &= p_e - p \\
+  &= (s^* + oc^*) - (s^* + \epsilon) \\
+  &= oc^* - \epsilon
+\end{align}
 \section{(Statistical) Models}
 
 
 \subsection{Correction}
 There are different ways to correct for the bias introduced by measurement error:
 \begin{itemize}
- \item use different test performances to calculate skill and overconfidence, but a small test-retest correlation can bias the estimate towrds zero then (Krueger and Mueller, 2002)
+ \item use different test performances to calculate skill and overconfidence, but a small test-retest correlation can bias the estimate towards zero then (Krueger and Mueller, 2002)
 \end{itemize}
 
+\section{Common Experimental Paradigm}
+\begin{itemize}
+ \item participants take a test
+ \item participants guess their test performance either before or after the test
+ \item bottom quartile performers vastly overestimate their performance, while top quartile performers access their performance more accurately
+\end{itemize}
+
+There are many replications for different populations and different tasks.
 
 \section{Open Questions / Ambiguities}
+
+\section{Notes}
+\begin{itemize}
+ \item difference in metacognitive skills drives the relationship between skill and overconfidence
+\end{itemize}
 
 
 \end{document}
