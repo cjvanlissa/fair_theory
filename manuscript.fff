@@ -1,0 +1,7 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{empirical_cycle.pdf}
+\caption{\label{fig:figec}A take on the empirical cycle by De Groot}
+\end{figure*}

@@ -1,0 +1,56 @@
+Caspar:
+
+* paper draft
+* package draft
+* i2c2 conference
+* meta-science conference
+
+Aaron:
+
+* 150 comments
+* semantic versioning
+
+Max:
+
+* Comments
+* Discuss: how to define theory
+* Dunning-Kruger effect is going well
+
+Andreas:
+
+* Comments
+
+Felix:
+
+* Write about social process of how to use FAIR theory?
+* Write about theory specification in line with your other paper? 
+* Help develop a worked example?
+
+Noah: 
+
+* What is intended audience?
+	+ 3x Meta-Psychology (community-run diamond)
+	+ 2x AMPPS
+	+ Psych Methods (Fred Oswald)
+	+ Perspectives Psych Science
+* Definition of theory - continuum theory to model
+* What is the medium of the theory?
+
+
+
+* Check the case of fair theory keyword in the paper
+* Is community automatic?
+* No education materials in the community
+
+* Ambiguity between whether you're publishing a paper or a seperate unit
+* Get Zenodo to read cross-refs from paper
+
+* Dunning-Kruger: ontology
+
+* Section on comprehensive citation
+
+* CRediT statement? NEWS file with attriution? All Contributors (GitHub)
+
+* Andreas: Bad actor wants do disrupt, what if someone registers all existing theories as FAIR theories
+
+* When implementing someone else's theory, preferentially cite their theory over your implementation

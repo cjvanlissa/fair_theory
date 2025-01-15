@@ -1,0 +1,61 @@
+Original De Groot:
+
+digraph {
+
+  observation;
+  induction;
+  deduction;
+  test;
+  evaluation;
+  
+  observation -> induction;
+  induction -> deduction;
+  deduction -> test;
+  test -> evaluation;
+  evaluation -> observation;
+  
+}
+
+# Wagenmakers' version; "We added the Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification."
+
+digraph {
+
+  subgraph cluster_discovery {
+    label="Discovery";
+    hypothesis [label="New hypothesis"];
+    prediction [label="New prediction"];
+  }
+  data  [label="Old knowledge and old data"];      
+  subgraph cluster_justification {
+    label="Justification";
+    test [label="Test on new data"];
+    evaluation;
+  }
+
+  data -> hypothesis [label="Speculate & explore"];
+  hypothesis -> prediction  [label="Deduce"];
+  prediction -> test  [label="Design new experiment"];
+  test -> evaluation  [label="Statistical analysis"];
+  evaluation -> data  [label="Knowledge accumulation"];
+
+}
+
+# Caspar's take
+
+digraph {
+
+  theory;
+  prediction;
+  test [label="inferential procedure"];
+  data;
+  results;
+  
+  theory -> prediction [label="deduction"];
+  prediction -> test;
+  data -> results;
+  test -> results  [label="inference"];
+  results -> theory [label="induction"];
+
+}
+
+# And then for example: I understand Aaron's work about inductive bias to be about the link "prediction -> test;", because the test is not identified without making auxiliary assumptions; if the auxiliary assumption is made based on the data, inductive bias is introduced.

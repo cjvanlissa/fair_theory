@@ -1,0 +1,40 @@
+Conceptual stance is good
+
+Work to be done on implementation
+* How findable are theories? Google Scholar
+* Being cited works
+* CrossRef is a hub for aggregating different resources
+
+---
+
+Andreas: not focus on google scholar too much
+
+* Put theories on Zenodo, ORCID, OSF
+* Make sure they are indexed, for example by
+ Google Scholar
+ 
+* Acknowledge that representations of theories are not necessarily the whole theory
+* Taking the same theory but completely reformulating it: use linked list to track etymology
+
+---
+
+Felix: well-described role as minion
+
+Use the PsychArchives Leibniz institute
+* They have digital research objects of different types
+
+Quick introduction commits/PRs
+
+---
+
+Max
+
+Aaron's presentation
+People using theory are mostly applied researchers
+Should be a convincing argument for practitioners
+Benefit in terms of saving time
+
+---
+
+Less misunderstood
+Efficiency gain for academia as a whole

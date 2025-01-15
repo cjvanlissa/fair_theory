@@ -1,0 +1,74 @@
+Action points:
+
+Max will review paper and formalize Dunning-Kruger theory
+Aaron will do experiments with trying to get theory indexed, and will submit review of PR, draft semantic versioning text
+Andreas will help eliminate Issues
+Caspar work on minimal example, more background on how to specify theories
+Noah: read/review paper, provide relevant philosophical context?
+Felix: Write about social process of how to use FAIR theory? Write about theory specification in line with your other paper? Help develop a worked example?
+
+Priorities:
+
+1. Philosophy
+2. Implementation
+3. Examples
+4. Social process: we shouldn't ajudicate the quality of theories, but we should describe how people can operate on FAIR theories
+
+
+Aaron: 
+
+Not clear how to proceed with getting theories indexed
+
+Meeting with CrossRef/Google Scholar infrastructure people
+
+What should metadata look like?
+* We need a metadata standard
+* CFF? To align with crossref
+* Maybe also need YAML standard that extends CFF
+
+Andreas
+
+* Conceptual layer VS implementation layer
+* We use the platforms to have now (which all support keywords)
+
+Aaron
+
+* Create a FAIR theory and then CITE IT so it gets indexed
+* Have another look at the definition of theory
+
+Andreas
+
+* Implementation is not so important
+* Debate converging
+* Give example of development of a theory over time
+		+ Jan Feld Dunning-Kruger
+		
+
+If everyone worked FAIR from the start, Dunning-Kruger would have their verbal theory FAIR already
+
+Caspar:
+
+* We should mention machine-readable hypotheses and continuous integration as a way to continuously arbitrate between candidate theories
+
+Noah:
+
+* No priorities to add
+* Willing to update from philosophy perspective
+* Your theory is only a phenomenon - that's fine; as long as people represent it FAIRly then a proper theory that explains the phenomenon could be developed and reference it
+
+
+Examples
+
+1. Empirical cycle
+2. Dunning-Kruger https://www.sciencedirect.com/science/article/pii/S2214804317300344?casa_token=YhhpqlfpnZwAAAAA:QMvakgoKDeV29KEYDgzWPP2fHuaS8B9WZh1uQf_DHKFKsmi0_jJ5Zj266p4eZ3FxxC__95BvVw
+3. Tripartite model of emo reg https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1467-9507.2007.00389.x?casa_token=Gbe1_5PZq10AAAAA%3Awe4ZlLm53ony1r-wVIFPp2WdRiXIlLfG1EHuMqibRerFHfWsr-9A6bfO2SvozTJQYUIIqFbQXrQKo4Y
+4. https://en.wikipedia.org/wiki/Laura_L._Carstensen
+
+
+Max will review paper and formalize Dunning-Kruger theory
+Aaron will do experiments with trying to get theory indexed, and will submit review of PR, draft semantic versioning text
+Andreas will help eliminate Issues
+Caspar work on minimal example, more background on how to specify theories
+
+
+Olivia Guest: Framework -> theory -> specification -> implementation -> hypothesis

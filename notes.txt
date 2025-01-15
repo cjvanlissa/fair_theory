@@ -1,0 +1,9 @@
+
+In the spirit of DORA, extending the FAIR principles to theory helps researchers obtain credit for their theoretical contributions - obviating the necessity of publishing a theoretical paper, which can be challenging.
+From a meta-science perspective, FAIR theory facilitates studying the state of theory in a particular subfield, and comparing theories' substantive and structural properties. Version control and cross-referencing additionally enable tracing and studying the ancestry and development of theories.
+
+FAIR theory provides a clear deliverable, and a clear goal, for scholars and institutions seeking to promote contributions to theory.
+
+There are key distinctions between theory and other FAIR digital research artefacts. With this in mind, following the example of Lamprecht and colleagues, we reflect on how the criteria underlying the FAIR Principles apply to theory.
+
+
