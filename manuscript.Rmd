@@ -194,7 +194,7 @@ According to @kuhbergerPublicationBiasPsychology2014, 89.6% of papers published 
 Closer examination of reported deductive research reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
 Only 15% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis [@mcphetresDecadeTheoryReflected2021].
 The remaining 85% of deductive studies lacked an explicit derivation chain from theory to hypothesis.
-In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit [@friedTheoriesModelsWhat2020;@norouziCapturingCausalClaims2024].
+In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
 Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected [@vanlissaTeacherCornerEvaluating2020], and researchers are simply testing them as part of a cultural ritual [@gigerenzerNullRitualWhat2004].
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
 Put differently: collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings [@vanrooijTheoryTestHow2021].
@@ -265,15 +265,14 @@ It is best left to the scholarly community to decide which parts of theory, mode
 As the practice of FAIRification becomes more embedded,
 we expect that it will become increasingly clear what kind of information is useful.
 As a particular FAIR theory evolves, the nature of information tracked will likely change.
-For example, following Meehl, we could envision a theory that starts out specifying how specific constructs are defined and causally connected.
+For example, following Meehl, we could envision a theory that starts out specifying how specific constructs are causally connected.
 From this theory, more specific *statistical/mathematical models* could be derived by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
 This statistical model makes just enough assumptions to allow estimation of the remaining unknown parameters (e.g., regression slopes) from data.
 Then, an even more specific *generative/computational model* could be added, which is completely parameterized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
 Also, aspects of scientific practice might be added over time, such as commonly used experimental designs (e.g. longitudinal designs observing change over time), measurement tools (e.g. different questionnaires used to assess the same construct), or study subjects (e.g. specific strains of rats).
 
-As an applied example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors such as adherence to pandemic mitigation methods (e.g., TODO), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems [e.g., anxiety\; Taylor, -@taylor2022psychology].
-While the latter psychological factors might be narratively described as vague directional causal statements, 
-the theory may also encompass a particular transmission _model_ for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
+As an applied example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors such as adherence to pandemic mitigation methods (e.g., ), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety) [@taylor2022psychology].
+The theory may encompass a particular transmission _model_ for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
 
 ### The Role of Theory Formalization
 
@@ -365,7 +364,7 @@ grounding their work in established theoretical foundations.
 It further increases the impact and reuse potential of theories across disciplines,
 either through direct application (where one discipline stumbles upon a problem that is already well-understood in another discipline),
 or through analogical modeling.
-In analogical modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
+In analog modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
 For example, predator-prey models have inspired theories of XXX, and the Eysenck model of atomic magnetism has inspired a network theory of depression.
 Findability also enables meta-research on theories, 
 in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
@@ -373,7 +372,7 @@ In a similar way, it would become much easier to explicitly compare different th
 or to study structural properties of theories.
 
 The four Findability criteria are applicable to theory with only minor adjustments, see Table \@ref(tab:tabfair).
-First, this requires assigning a globally unique and persistent identifier (such as a DOI) to each theory (F1).
+First, this requires assigning a globally unique and persistent identifier, or DOI, to each theory (F1).
 Of the many services that provide DOIs for scientific information artefacts,
 Zenodo and the Open Science Framework are commonly used in psychology.
 Second, Findable theory is described with rich metadata	(F2).
@@ -462,7 +461,7 @@ Rather, it may benefit scientific discourse to anticipate misunderstanding,
 and use it to drive further explication of theory.
 In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, explication of assumptions,
 and cross-references to resources that provide relevant context (papers, ontologies, macro-theories, theories of measurement)
-will advance its Accessibility [@langeChecklist2025].
+will advance its Accessibility.
 
 A third impediment arises when theories have a "dependency on the author" (DOA). <!-- AB citation needed?! Who came up with this term? -->
 DOA occurs when a theory cannot be understood by independent scholars,
@@ -581,10 +580,10 @@ in many cases, it may be sensible to explicitly license theories in a way that e
 The CC0 (no rights reserved) license does this by explicitly waiving all rights and encouraging reuse.
 
 Aside from legal conditions for reuse, there are also social considerations.
-For example, while a CC0 license does not mandate attribution from a legal perspective,
-the norms of good scientific practice require that scholars comprehensively cite theory and related works [@aalbersbergMakingScienceTransparent2018].
+For example, while a CC0 license does not mandate attribution,
+it is nonetheless essential that scholars comprehensively cite theory and related works to comply with established norms of attribution and comprehensive citation [@aalbersbergMakingScienceTransparent2018].
 Another way to guide the social process of (diffuse) collaboration is to include a "README" file in the theory repository, which informs users about the ways in which they can reuse and contribute to a FAIR theory.
-It is also possible to create or adopt a "Code of Conduct" which prescribes how others can contribute to or reuse a theory.
+It is also possible to create or adopt a "Code of Conduct" which prescribes 
 
 
 # Making a Theory FAIR
@@ -621,7 +620,7 @@ and consists of a series of natural language statements:
 
 If we compare it to the levels of theory formalization [@guestHowComputationalModeling2021],
 it is defined at either the "theory" or "specification" level.
-We can increase the level of formalization, and present an "implementation" in the human- and machine-readable DOT language (and thereby fulfill criterion I1 of Table \@ref(tab:tabfair)):
+We can increase the level of formalization, and present an "implementation" in the human- and machine-readable DOT language:
 
 ```
 digraph {
