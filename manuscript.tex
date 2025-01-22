@@ -178,12 +178,11 @@
 \makeatletter
 \xapptocmd\appendix
   {\xapptocmd\section
-    {\addcontentsline{toc}{section}{\appendixname\ifoneappendix\else~\theappendix\fi: #1}}
+    {\addcontentsline{toc}{section}{\appendixname\ifoneappendix\else~\theappendix\fi\\: #1}}
     {}{\InnerPatchFailed}%
   }
 {}{\PatchFailed}
-\makeatother
-\keywords{fairtheory, meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 8163}
+\keywords{fairtheory, meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 8200}
 \usepackage{lineno}
 
 \linenumbers
@@ -196,14 +195,14 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={FAIR theory: Applying Open Science Principles to the Construction and Iterative Improvement of Scientific Theories},
-  pdfauthor={Caspar J. Van Lissa1, Aaron Peikert2,3, Andreas M. Brandmaier2,3,4, \& Felix D. Schönbrodt5},
+  pdfauthor={Caspar J. Van Lissa1, Aaron Peikert2,3, Andreas M. Brandmaier2,3,4, Felix D. Schönbrodt5, \& Noah N.N. van Dongen6},
   pdflang={en-EN},
   pdfkeywords={fairtheory, meta theory, theory formation, cumulative science, formal models},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 \title{FAIR theory: Applying Open Science Principles to the Construction and Iterative Improvement of Scientific Theories}
-\author{Caspar J. Van Lissa\textsuperscript{1}, Aaron Peikert\textsuperscript{2,3}, Andreas M. Brandmaier\textsuperscript{2,3,4}, \& Felix D. Schönbrodt\textsuperscript{5}}
+\author{Caspar J. Van Lissa\textsuperscript{1}, Aaron Peikert\textsuperscript{2,3}, Andreas M. Brandmaier\textsuperscript{2,3,4}, Felix D. Schönbrodt\textsuperscript{5}, \& Noah N.N. van Dongen\textsuperscript{6}}
 \date{}
 
 
@@ -211,15 +210,15 @@
 
 \authornote{
 
-This is a preprint paper, generated from Git Commit \# 070e7292.
+This is a preprint paper, generated from Git Commit \# 09ba7dc6.
 
-The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing.
+The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing; Noah N.N. van Dongen: Writing -- review \& editing.
 
 Correspondence concerning this article should be addressed to Caspar J. Van Lissa, Professor Cobbenhagenlaan 125, 5037 DB Tilburg, The Netherlands. E-mail: \href{mailto:c.j.vanlissa@tilburguniversity.edu}{\nolinkurl{c.j.vanlissa@tilburguniversity.edu}}
 
 }
 
-\affiliation{\vspace{0.5cm}\textsuperscript{1} Tilburg University, dept. Methodology \& Statistics\\\textsuperscript{2} Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany\\\textsuperscript{3} Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany\\\textsuperscript{4} Department of Psychology, MSB Medical School Berlin, Berlin, Germany\\\textsuperscript{5} Ludwig-Maximilians-Universität München, Germany}
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Tilburg University, dept. Methodology \& Statistics\\\textsuperscript{2} Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany\\\textsuperscript{3} Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany\\\textsuperscript{4} Department of Psychology, MSB Medical School Berlin, Berlin, Germany\\\textsuperscript{5} Ludwig-Maximilians-Universität München, Germany\\\textsuperscript{6} University of Amsterdam, the Netherlands}
 
 \abstract{%
 Test test.
@@ -283,7 +282,7 @@ According to Kühberger, Fritz, and Scherndl (2014), 89.6\% of papers published 
 Closer examination of reported deductive research reveals, however, that the link between theory and hypothesis is often tenuous (Oberauer \& Lewandowsky, 2019; Scheel, Tiokhin, Isager, \& Lakens, 2021).
 Only 15\% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis (McPhetres et al., 2021).
 The remaining 85\% of deductive studies lacked an explicit derivation chain from theory to hypothesis.
-In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit Norouzi, Kleinberg, Vermunt, \& Van Lissa (2024).
+In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit (Fried, 2020; Norouzi, Kleinberg, Vermunt, \& Van Lissa, 2024).
 Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected (Van Lissa et al., 2020), and researchers are simply testing them as part of a cultural ritual (Gigerenzer, Krauss, \& Vitouch, 2004).
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
 Put differently: collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings (van Rooij \& Baggio, 2021).
@@ -334,15 +333,15 @@ A1.1 & The protocol is open, free, and universally implementable & The protocol 
 A1.2 & The protocol allows for an authentication and authorization procedure, where necessary & The protocol allows for an authentication and authorization procedure, where necessary & Remain the same, but less relevant\\
 A2 & Metadata are accessible, even when the data are no longer available & Theory metadata are accessible, even when the theory is no longer available & Rephrased, but less relevant\\
 I1 & (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation & Theory and its associated metadata use a formal, accessible, shared and broadly applicable language to facilitate machine readability and reuse & Rephrased and extended\\
-I2 & (Meta)data use vocabularies that follow FAIR principles & (Meta)data use vocabularies that follow FAIR principles & Rephrased\\
+I2 & (Meta)data use vocabularies that follow FAIR principles & Theory and its associated metadata\ \ use vocabularies that follow FAIR principles & Rephrased\\
 I2S.1 & - &  & \\
 I2S.2 & - &  & \\
-I3 & (Meta)data include qualified references to other (meta)data & (Meta)data includes qualified references to other (meta)data, including previous versions of the theory & Extended\\
+I3 & (Meta)data include qualified references to other (meta)data & Theory and its associated metadata includes qualified references to other theories and their metadata, including previous versions of the theory & Extended\\
 I4S & - &  & \\
 R1 & (Meta)data are richly described with a plurality of accurate and relevant attributes & Theory and its associated metadata are richly described with a plurality of accurate and relevant attributes & Rephrased\\
-R1.1 & (Meta)data are released with a clear and accessible data usage license & Theory (meta)data are released with a clear and accessible license & Rephrased\\
-R1.2 & (Meta)data are associated with detailed provenance & Theory (meta)data are associated with detailed provenance & Rephrased\\
-R1.3 & (Meta)data meet domain-relevant community standards & Theory (meta)data and documentation meet domain-relevant community standards & Rephrased\\
+R1.1 & (Meta)data are released with a clear and accessible data usage license & Theory and its associated metadata are released with a clear and accessible license & Rephrased\\
+R1.2 & (Meta)data are associated with detailed provenance & Theory and its associated metadata are associated with detailed provenance & Rephrased\\
+R1.3 & (Meta)data meet domain-relevant community standards & Theory and its associated metadata and documentation meet domain-relevant community standards & Rephrased\\
 \bottomrule
 \end{longtable}
 
@@ -378,14 +377,15 @@ It is best left to the scholarly community to decide which parts of theory, mode
 As the practice of FAIRification becomes more embedded,
 we expect that it will become increasingly clear what kind of information is useful.
 As a particular FAIR theory evolves, the nature of information tracked will likely change.
-For example, following Meehl, we could envision a theory that starts out specifying how specific constructs are causally connected.
+For example, following Meehl, we could envision a theory that starts out specifying how specific constructs are defined and causally connected.
 From this theory, more specific \emph{statistical/mathematical models} could be derived by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
 This statistical model makes just enough assumptions to allow estimation of the remaining unknown parameters (e.g., regression slopes) from data.
 Then, an even more specific \emph{generative/computational model} could be added, which is completely parameterized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
 Also, aspects of scientific practice might be added over time, such as commonly used experimental designs (e.g.~longitudinal designs observing change over time), measurement tools (e.g.~different questionnaires used to assess the same construct), or study subjects (e.g.~specific strains of rats).
 
-As an applied example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors such as adherence to pandemic mitigation methods (e.g., ), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety) (Taylor, 2022).
-The theory may encompass a particular transmission \emph{model} for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
+As an applied example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors such as adherence to pandemic mitigation methods (e.g., TODO), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety; Taylor, 2022).
+While the latter psychological factors might be narratively described as vague directional causal statements,
+the theory may also encompass a particular transmission \emph{model} for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
 
 \subsubsection{The Role of Theory Formalization}\label{the-role-of-theory-formalization}
 
@@ -473,7 +473,7 @@ grounding their work in established theoretical foundations.
 It further increases the impact and reuse potential of theories across disciplines,
 either through direct application (where one discipline stumbles upon a problem that is already well-understood in another discipline),
 or through analogical modeling.
-In analog modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
+In analogical modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
 For example, predator-prey models have inspired theories of XXX, and the Eysenck model of atomic magnetism has inspired a network theory of depression.
 Findability also enables meta-research on theories,
 in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
@@ -481,7 +481,7 @@ In a similar way, it would become much easier to explicitly compare different th
 or to study structural properties of theories.
 
 The four Findability criteria are applicable to theory with only minor adjustments, see Table \ref{tab:tabfair}.
-First, this requires assigning a globally unique and persistent identifier, or DOI, to each theory (F1).
+First, this requires assigning a globally unique and persistent identifier (such as a DOI) to each theory (F1).
 Of the many services that provide DOIs for scientific information artefacts,
 Zenodo and the Open Science Framework are commonly used in psychology.
 Second, Findable theory is described with rich metadata (F2).
@@ -562,7 +562,7 @@ Rather, it may benefit scientific discourse to anticipate misunderstanding,
 and use it to drive further explication of theory.
 In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, explication of assumptions,
 and cross-references to resources that provide relevant context (papers, ontologies, macro-theories, theories of measurement)
-will advance its Accessibility.
+will advance its Accessibility (Lange, Freyer, Musfeld, Schönbrodt, \& Leising, 2025).
 
 A third impediment arises when theories have a ``dependency on the author'' (DOA).
 DOA occurs when a theory cannot be understood by independent scholars,
@@ -684,10 +684,10 @@ in many cases, it may be sensible to explicitly license theories in a way that e
 The CC0 (no rights reserved) license does this by explicitly waiving all rights and encouraging reuse.
 
 Aside from legal conditions for reuse, there are also social considerations.
-For example, while a CC0 license does not mandate attribution,
-it is nonetheless essential that scholars comprehensively cite theory and related works to comply with established norms of attribution and comprehensive citation (Aalbersberg et al., 2018).
+For example, while a CC0 license does not mandate attribution from a legal perspective,
+the norms of good scientific practice require that scholars comprehensively cite theory and related works (Aalbersberg et al., 2018).
 Another way to guide the social process of (diffuse) collaboration is to include a ``README'' file in the theory repository, which informs users about the ways in which they can reuse and contribute to a FAIR theory.
-It is also possible to create or adopt a ``Code of Conduct'' which prescribes
+It is also possible to create or adopt a ``Code of Conduct'' which prescribes how others can contribute to or reuse a theory.
 
 \section{Making a Theory FAIR}\label{making-a-theory-fair}
 
@@ -722,7 +722,7 @@ and consists of a series of natural language statements:
 
 If we compare it to the levels of theory formalization (Guest \& Martin, 2021),
 it is defined at either the ``theory'' or ``specification'' level.
-We can increase the level of formalization, and present an ``implementation'' in the human- and machine-readable DOT language:
+We can increase the level of formalization, and present an ``implementation'' in the human- and machine-readable DOT language (and thereby fulfill criterion I1 of Table \ref{tab:tabfair}):
 
 \begin{verbatim}
 digraph {
@@ -1117,6 +1117,9 @@ Lakens, D., \& DeBruine, L. M. (2021). Improving {Transparency}, {Falsifiability
 
 \bibitem[\citeproctext]{ref-lamprechtFAIRPrinciplesResearch2019}
 Lamprecht, A.-L., Garcia, L., Kuzak, M., Martinez, C., Arcila, R., Martin Del Pico, E., \ldots{} Capella-Gutierrez, S. (2019). Towards {FAIR} principles for research software. \emph{Data Science}, 1--23. \url{https://doi.org/10.3233/DS-190026}
+
+\bibitem[\citeproctext]{ref-langeChecklist2025}
+Lange, J., Freyer, N., Musfeld, P., Schönbrodt, F. D., \& Leising, D. (2025). \emph{A checklist for incentivizing and facilitating good theory building}. OSF Preprints. \url{https://doi.org/10.31219/osf.io/7qvfz}
 
 \bibitem[\citeproctext]{ref-lavelleWhenCrisisBecomes2021}
 Lavelle, J. S. (2021). When a {Crisis Becomes} an {Opportunity}: {The Role} of {Replications} in {Making Better Theories}. \emph{The British Journal for the Philosophy of Science}, 714812. \url{https://doi.org/10.1086/714812}
