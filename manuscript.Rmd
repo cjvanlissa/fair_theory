@@ -105,9 +105,11 @@ Psychological theories rarely provide hypotheses that are corroborated by eviden
 Furthermore, theories are often so vague that they can accommodate mutually inconsistent findings,
 as the theory's central claims evade falsification.
 <!-- CJ: Maybe we should give an example here. Does anyone know one? -->
+<!-- NvD: Harris 1976 has a nice example about how cognitive dissonance theory can be formalized in multiple ways, which offer hypotheses that contradict each other -->
 
 Scholars have been raising concerns about the state of theory in social science for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
 One main concern is that social scientific theories lack precision, or  *formalization* [@szollosiArrestedTheoryDevelopment2021].
+<!-- NvD: We should add somewhere what we mean by "formalization." In philosophy of science, formal logic about syntax (the propositions and predicates can have any meaning). However, what we mean, I think, is the explication of a narrative in (something so detailed and explicit that it can be captured with little error in) analytical or computational form (but the meaning remains. E, M, and C stand form something is E = MC<sup>2</sup>).   -->
 When theories do not make precise predictions,
 they are hard to falsify and difficult to understand on their own,
 without either substantial interpretation or additional background knowledge.
@@ -182,27 +184,32 @@ knitr::include_graphics("empirical_cycle.pdf")
 ```
 
 In a progressive research program [@lakatosHistoryScienceIts1971],
+<!-- NvD: This is not exactly what Lakatos said. Also, I don't think many psychologists are familiar with his work. We do not need to reference his perspective. -->
 this cycle is regularly completed to iteratively advance our understanding of the studied phenomena
 <!-- by successively increasing the empirical content of a theory. -->
 <!-- In psychology, this is typically achieved by either generalizing to a larger set of people, contexts, situations, or environments. <!--AB would you agree?-->
 <!-- CJ: I am not sure if I agree; I think increasing the empirical content rather implies more and more precision, which loses generality but gains specificity. Not sure how to resolve.
 This needs more work! -->
+<!-- NvD: SOmething like? "In the envisioned ideal, the empirical cycle is a virtuous spiral where theories become increasingly more precise and/or universal (i.e., Popper's empirical content), offering hypotheses that can be more easily falsified / severely tested, data become more informative / less ambiguous about the patterns in nature, which in turn inform even more precise and/or universal theories. -->
 .
 There are, however, indications that contemporary psychology falls short of this ideal.
 Firstly, because hypothesis-testing research is over-represented in the literature: 
 According to @kuhbergerPublicationBiasPsychology2014, 89.6% of papers published in psychology report confirmatory hypothesis tests.
-Closer examination of reported deductive research reveals, however, that the link between theory and hypothesis is often tenuous [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
+In addition, the link between theory and hypothesis is often tenuous or absent [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
 Only 15% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis [@mcphetresDecadeTheoryReflected2021].
-The remaining 85% of deductive studies lacked an explicit derivation chain from theory to hypothesis.
+The remaining 85% of deductive studies lacked an explicit connection between theory and hypothesis.
+<!-- NvD: (most of) The other papers also don't have a true derivation chain. It is rare to see a logical derivation, analytical proof, or simulation that connects hypothesis to theory.  -->
 In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
 Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected [@vanlissaTeacherCornerEvaluating2020], and researchers are simply testing them as part of a cultural ritual [@gigerenzerNullRitualWhat2004].
+<!-- NvD: I am not sure what is being said here. In the statistical sense, people are testing the null hypothesis. However, that is (almost always) not the hypothesis they are interested in nor the one they mention the introduction of their papers. Also, I thought that gigerenzer's paper was about the ritualistic use of NHST, not the origin of the hypotheses that were being tested. -->
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
+<!-- NvD: I don't think that statement completely covers it. How about: "Testing ad-hoc hypotheses not grounded in theory might inform us of the psychological phenomena that we can consistently observe (e.g., cognitive biases, attentional blindess, comorbidity of depression and anxiety disorder, etc.). However, it does not advance our understanding of the processes and mechanisms that bring about these phenomena. -->
 Put differently: collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings [@vanrooijTheoryTestHow2021].
 
 Theory thus has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
-but these are rarely derived from theory,
-and test results do not routinely contribute to the improvement of existing theories.
+but these are rarely connected, let alone derived, from theory,
+and test results do not routinely reference back to theories, contributing to their improvement or rejection.
 The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology "lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest" [@meehlTheoreticalRisksTabular1978].
 
 ## Making Theory FAIR
@@ -236,6 +243,7 @@ papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\li
 <!-- We don't explicitly define theory, but discuss the most important ideas of what theory might be, and advocate for a pluralism of information that can be tracked as FAIR theory (e.g. also such things as scientific practice (experimental design, materials)). -->
 <!-- The nature of the tracked information can change over time, as a scientific theory matures. -->
 <!-- The discussion about the distinction between FAIR theories and models is removed, as I believe it might be confusing for first-time readers and not really necessary for the bigger picture of the paper (but of course could be re-added). -->
+<!-- NvD: I wonder if we need what is stated about the syntactic, semantic, and pragmatic perspectives. We can leave it at the characterization that theories are (typically) concerned with the explanation and understanding of what can be observed (directly or indirectly) tested (in the laboratory or natural experiments) and manipulated. But, this can come in many forms and we do not exclude the possibility that there are acceptions to this characterization that we could still consider a scientific theory. We can then state that we use Meehl's view for convenience in this paper, but that it is compatible other perspectives (or something.  -->
 Definitions of theory abound and are the subject of extensive scholarly debate.
 Given that a pluriformity of definitions are consistent with FAIR theory principles,
 our paper is not aligned with one particular definition.
@@ -253,8 +261,7 @@ It shifts the focus from theories as collections of sentences to mathematical mo
 The term "model" is not uniquely defined within the literature;
 it has been described as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
 This implies that theories and models are not fundamentally distinct, but rather, that for each model, there is a more general theory that subsumes it (one person's model is another person's theory).
--<!-- Paradigms at the broadest level encompass the larger narrative, frameworks gather and organize concepts and terms, but only theories have a degree of specificity that allows us to derive specific testable and falsifiable hypotheses or models with exact mathematical relations be
-tween concepts (cf. Partelow, 2023, Table 1, https://link.springer.com/article/10.1007/s13412-023-00833-w#). -->
+-<!-- Paradigms at the broadest level encompass the larger narrative, frameworks gather and organize concepts and terms, but only theories have a degree of specificity that allows us to derive specific testable and falsifiable hypotheses or models with exact mathematical relations between concepts (cf. Partelow, 2023, Table 1, https://link.springer.com/article/10.1007/s13412-023-00833-w#). -->
 
 The pragmatic view holds that there might not be one structure or definition of scientific theories, but instead, definitions differ across scientific domains.
 It also argues that nonformal aspects (e.g. commonly used analogies) and practices (e.g. experimental designs) can be an important part of scientific theories.
@@ -263,11 +270,11 @@ Since the primary purpose of FAIR theories is to advance scholarly communication
 the method is not contained to any one particular definition.
 It is best left to the scholarly community to decide which parts of theory, models, or other aspects should be represented as FAIR theory. 
 As the practice of FAIRification becomes more embedded,
-we expect that it will become increasingly clear what kind of information is useful.
-As a particular FAIR theory evolves, the nature of information tracked will likely change.
+we expect that it will become increasingly clear what kind and form of information is useful.
+As a particular FAIR theory evolves, the nature of the information tracked will likely change.
 For example, following Meehl, we could envision a theory that starts out specifying how specific constructs are causally connected.
-From this theory, more specific *statistical/mathematical models* could be derived by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
-This statistical model makes just enough assumptions to allow estimation of the remaining unknown parameters (e.g., regression slopes) from data.
+From this theory, more precise *statistical/mathematical models* could be derived by the theory's suggestions for functional form (e.g., linear effects) and error families (e.g., normal distributions).
+This statistical model makes just enough assumptions to allow the estimation of the remaining unknown parameters (e.g., regression slopes) from data.
 Then, an even more specific *generative/computational model* could be added, which is completely parameterized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
 Also, aspects of scientific practice might be added over time, such as commonly used experimental designs (e.g. longitudinal designs observing change over time), measurement tools (e.g. different questionnaires used to assess the same construct), or study subjects (e.g. specific strains of rats).
 
@@ -276,29 +283,33 @@ The theory may encompass a particular transmission _model_ for disease spread in
 
 ### The Role of Theory Formalization
 
-Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use.
-Greater formalization increases theories' *empirical content* [REF] because it involves expressing ideas as precise statements.
-For example, Baddeley's verbal description of the phonological loop in his theory of working memory allows for at least 144 different implementations depending on the precise implementations of decay rate, recall success, or rehearsal sequence [@lewandowsky2010computational].
+Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use. 
+<!-- NvD: Maybe we should add "specification" as part of "formalization" or "formalisation" as a part of "specification", because not everybody that is advocating better theories thinks that we should focus on formalization.  -->
+Greater formalization increases theories' *empirical content* [REF]<!-- NvD: We could add Popper 1956 "Logic of Scientific Discovery" here. --> because it expresses ideas as precise statements, clearly demarcating what should (not) be observed.
+For example, Baddeley's verbal description of the phonological loop in his theory of working memory allows for at least 144 different implementations depending on the specification of the decay rate, recall success, or rehearsal sequence [@lewandowsky2010computational].
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
 Committing to specific implementations of the different components, their causal connections, and the functional forms of these relationships makes the theory more precise.
 More precise theories are easier to falsify,
 which necessitates specific revisions and advances our principled understanding of the phenomena they describe.
 
+Although we are in favor of the advancement towards formal theories, 
+this might not always be desirable or feasible. 
+Fortunately, formalization is not required to make theories FAIR.
 To some extent, FAIRness and formalization are orthogonal.
 <!-- : FAIR theory does not require theories to be formal, -->
 <!-- and formal theory can be represented in a way that is not FAIR. -->
 <!-- We stress that  -->
 FAIR theory imposes no restrictions on the manner in which theories are derived and implemented;
-rather, it increases the precision with which they are communicated.
-The FAIR principles pertain to theories' documentation, archival and sharing in digital environments, with the aim of enhancing their reusability and extensibility.
+rather, it increases the fidelity and ease with which they are communicated.
+The FAIR principles pertain to theories' documentation, archival, and sharing in digital environments, with the aim of enhancing their reusability and extensibility.
 For example, a collection of verbal propositions derived through qualitative research could be represented as a FAIR theory.
 Conversely, a formal theory is not FAIR if it is represented as a bitmap image in a journal article without any key words to identify it as a theory paper to search engines.
 FAIR theory is thus consistent with, but does not require, formalization (also see *Accessibility*).
 
 ### Modular Publishing
 
-FAIR theory is an example of modular publishing [@kirczModularityNextForm1998].
+We propose FAIR theory as an instantiation of modular publishing [@kirczModularityNextForm1998].
 At present, the primary unit of social scientific communication is the academic paper.
 A paper may depend on multiple resources - materials, data, code, and theory - but these are often merely described in the text.
 Modular publishing is the practice of making each of these resources available as independent citable *information artifacts* in their own right,
@@ -317,13 +328,13 @@ Similarly, FAIR theories can be connected to a specific paper which might serve 
 
 ### Version Control
 
-We can take inspiration from the field of computer science for well-established processes for iteratively improving information artefacts.
+We can take inspiration from the field of computer science for well-established processes for iteratively improving information artifacts.
 Version control systems, like Git, have long been used to iteratively improve computer code, while managing parallel contributions and allowing for diverging development.
 Git tracks line-by-line changes to text-based files,
 and maintains a complete history of those changes.
 It has long been argued that Git is particularly well-suited to academic work [@ramGitCanFacilitate2013].
 Git can be used, for example, to facilitate reproducible research, manage distributed collaboration, and improve preregistration [@vanlissaWORCSWorkflowOpen2021; @peikertReproducibleResearchTutorial2021].
-The present paper considers advantages of Git for FAIR theory.
+The present paper considers the advantages of Git for FAIR theory.
 Git enables explicitly comparing versions of a file (or: theory),
 incorporating changes by different authors,
 and branching off into different directions (e.g., competing hypotheses) while retaining an explicit link to the common ancestor.
@@ -332,8 +343,9 @@ This makes it possible for meta-scientists to study the provenance of a theory a
 ### Semantic Versioning
 
 Aside from technical solutions, version control is a social process as well.
-On the one hand, regular updates can improve theories - but on the other hand, it risks breaking compatibility between theories and hypotheses derived from them, or compatibility between one theory and others that depend upon it.
+On the one hand, regular updates can improve theories - but on the other hand, it risks breaking the compatibility between theories and hypotheses derived from them, or compatibility between one theory and others that depend upon it.
 For example, if we construct a theory to explain a specific phenomenon, and we cross-reference an existing theory comprising an ontology for our field - that dependency is broken if the ontology is later updated and our phenomenon of interest is removed.
+<!-- NvD: Maybe we can add an  example (e.g., the theory that explains ego-depletion and the failed replication of the phenomenon). -->
 In computer science, these challenges are navigated by assigning version numbers.
 Specifically, *semantic versioning* comprises a simple set of rules for assigning version numbers to information artifacts.
 Whereas version control tracks changes,
