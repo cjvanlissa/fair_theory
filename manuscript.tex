@@ -183,7 +183,7 @@
   }
 {}{\PatchFailed}
 \makeatother
-\keywords{meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 8368}
+\keywords{fairtheory, meta theory, theory formation, cumulative science, formal models\newline\indent Word count: 8688}
 \usepackage{lineno}
 
 \linenumbers
@@ -196,14 +196,14 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={FAIR theory: Applying Open Science Principles to the Construction and Iterative Improvement of Scientific Theories},
-  pdfauthor={Caspar J. Van Lissa1, Aaron Peikert2,3, Andreas M. Brandmaier2,3,4, \& Felix D. Schönbrodt5},
+  pdfauthor={Caspar J. Van Lissa1, Aaron Peikert2,3, Andreas M. Brandmaier2,3,4, Felix D. Schönbrodt5, \& Noah N.N. van Dongen6},
   pdflang={en-EN},
-  pdfkeywords={meta theory, theory formation, cumulative science, formal models},
+  pdfkeywords={fairtheory, meta theory, theory formation, cumulative science, formal models},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 \title{FAIR theory: Applying Open Science Principles to the Construction and Iterative Improvement of Scientific Theories}
-\author{Caspar J. Van Lissa\textsuperscript{1}, Aaron Peikert\textsuperscript{2,3}, Andreas M. Brandmaier\textsuperscript{2,3,4}, \& Felix D. Schönbrodt\textsuperscript{5}}
+\author{Caspar J. Van Lissa\textsuperscript{1}, Aaron Peikert\textsuperscript{2,3}, Andreas M. Brandmaier\textsuperscript{2,3,4}, Felix D. Schönbrodt\textsuperscript{5}, \& Noah N.N. van Dongen\textsuperscript{6}}
 \date{}
 
 
@@ -211,15 +211,15 @@
 
 \authornote{
 
-This is a preprint paper, generated from Git Commit \# cca0d45c.
+This is a preprint paper, generated from Git Commit \# c910eaa6.
 
-The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing.
+The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing; Noah N.N. van Dongen: Writing -- review \& editing.
 
 Correspondence concerning this article should be addressed to Caspar J. Van Lissa, Professor Cobbenhagenlaan 125, 5037 DB Tilburg, The Netherlands. E-mail: \href{mailto:c.j.vanlissa@tilburguniversity.edu}{\nolinkurl{c.j.vanlissa@tilburguniversity.edu}}
 
 }
 
-\affiliation{\vspace{0.5cm}\textsuperscript{1} Tilburg University, dept. Methodology \& Statistics\\\textsuperscript{2} Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany\\\textsuperscript{3} Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany\\\textsuperscript{4} Department of Psychology, MSB Medical School Berlin, Berlin, Germany\\\textsuperscript{5} Ludwig-Maximilians-Universität München, Germany}
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Tilburg University, dept. Methodology \& Statistics\\\textsuperscript{2} Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany\\\textsuperscript{3} Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany\\\textsuperscript{4} Department of Psychology, MSB Medical School Berlin, Berlin, Germany\\\textsuperscript{5} Ludwig-Maximilians-Universität München, Germany\\\textsuperscript{6} University of Amsterdam, the Netherlands}
 
 \abstract{%
 Test test.
@@ -246,21 +246,19 @@ Concern that undisclosed flexibility in analyses was a major factor for the abun
 These various practices ensure transparent and repeated testing of hypotheses.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence (Scheel, Schijen, \& Lakens, 2021).
 Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
-Psychological theories rarely produce hypotheses that are corroborated by evidence.
-Furthermore, theories are often so vague that they can accommodate findings that are mutually inconsistent,
+Psychological theories rarely provide hypotheses that are corroborated by evidence.
+Furthermore, theories are often so vague that they can accommodate mutually inconsistent findings,
 as the theory's central claims evade falsification.
 
 Scholars have been raising concerns about the state of theory in social science for nearly 50 years (Paul E. Meehl, 1978; Robinaugh, Haslbeck, Ryan, Fried, \& Waldorp, 2021).
-Two main concerns are that, first, social scientific theories lack precision compared to theories in the physical sciences (Szollosi \& Donkin, 2021).
-and clarity
-In other words, social scientific theories lack \emph{formalization},
-which means that they do not make very accurate predictions,
-and are thus hard to falsify and difficult to understand on their own,
+One main concern is that social scientific theories lack precision, or \emph{formalization} (Szollosi \& Donkin, 2021).
+When theories do not make precise predictions,
+they are hard to falsify and difficult to understand on their own,
 without either substantial interpretation or additional background knowledge.
-A second concern is the lack of transparent and participative scholarly communication about psychological theory and their development over time.
+A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
-The equally critical inductive processes of theory construction and theory improvement have been largely overlooked.
+The equally critical inductive processes of theory construction and theory improvement have been largely overlooked\footnote{We use induction to describe inferences from specific observations to general theories; others have coined \emph{abduction} to describe ``inference to the best explanation'' {[}REF Peirce{]}. However, Peirce also acknowledged that abduction ``is not essentially different from induction'' (p.4481). Defining what makes a theory ``best'' requires making auxiliary assumptions. For present purposes, induction and abduction are interchangeable terms.}.
 The present paper restores balance by applying, for the first time,
 open science principles to psychological theory.
 We apply the FAIR principles to scientific theories,
@@ -270,7 +268,7 @@ facilitate transparent scholarly communication and accelerate cumulative knowled
 \subsection{Theory and Scientific Progress}\label{theory-and-scientific-progress}
 
 According to the \emph{empirical cycle} (de Groot, 1961),
-a philosophical model of cumulative knowledge acquisition,
+a meta-theoretical model of cumulative knowledge acquisition,
 research ideally follows a cyclical process with two phases (Figure \ref{fig:figec}).
 In the deductive phase, hypotheses derived from theory are tested on data. In the inductive phase, patterns observed in data are generalized to theoretical principles.
 In this model, theories are the vehicle of scientists' understanding of phenomena.
@@ -288,9 +286,9 @@ this cycle is regularly completed to iteratively advance our understanding of th
 There are, however, indications that contemporary psychology falls short of this ideal.
 Firstly, because hypothesis-testing research is over-represented in the literature:
 According to Kühberger, Fritz, and Scherndl (2014), 89.6\% of papers published in psychology report confirmatory hypothesis tests.
-Closer examination of reported deductive research reveals, however, that the link between theory and hypothesis is often tenuous (Oberauer \& Lewandowsky, 2019; Scheel, Tiokhin, Isager, \& Lakens, 2021).
+In addition, the link between theory and hypothesis is often tenuous or absent (Oberauer \& Lewandowsky, 2019; Scheel, Tiokhin, Isager, \& Lakens, 2021).
 Only 15\% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis (McPhetres et al., 2021).
-The remaining 85\% of deductive studies lacked an explicit derivation chain from theory to hypothesis.
+The remaining 85\% of deductive studies lacked an explicit connection between theory and hypothesis.
 In the best case, such ungrounded hypotheses are rooted in researchers' implicit theories, in which case it is particularly important to make these explicit Norouzi, Kleinberg, Vermunt, \& Van Lissa (2024).
 Or, perhaps the hypotheses are not of substantive interest, such as null hypotheses that exist purely for the purpose of being rejected (Van Lissa et al., 2020), and researchers are simply testing them as part of a cultural ritual (Gigerenzer, Krauss, \& Vitouch, 2004).
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
@@ -298,8 +296,8 @@ Put differently: collecting significance statements about ad-hoc hypotheses is m
 
 Theory thus has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
-but these are rarely derived from theory,
-and test results do not routinely contribute to the improvement of existing theories.
+but these are rarely connected, let alone derived, from theory,
+and test results do not routinely reference back to theories, contributing to their improvement or rejection.
 The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology ``lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest'' (Paul E. Meehl, 1978).
 
 \subsection{Making Theory FAIR}\label{making-theory-fair}
@@ -356,29 +354,41 @@ R1.3 & (Meta)data meet domain-relevant community standards & Theory (meta)data a
 
 \end{lltable}
 
-There are different definitions of theory,
-and many of those definitions are consistent with the FAIR theory principles.
-This paper defines theory as an integrated set of statements that explain phenomena consistently evidenced by patterns in data {[}bogen/woodward{]}.
-Meehl (1990) provides guidance as to what kinds of ``statements'' such a theory might contain:
+\subsection{What is Theory?}\label{what-is-theory}
+
+Definitions of theory abound and are the subject of extensive scholarly debate.
+Given that a pluriformity of definitions are consistent with FAIR theory principles,
+our paper is not aligned with one particular definition.
+Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic (Winther, 2021)
+The syntactic view describes theories as ``sets of sentences in a given logical domain language'' (Winther, 2021, ch.~2),
+acknowledging that each domain (a scientific field, such as psychology or physics) has its own theoretical vocabulary.
+We recognize the syntactic view in Meehl's hierarchy of ever-more specific ``statements'' a theory might contain (1990):
 statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
 and statements about their specific numerical values Guest (2024).
 
-Some have defined a model as a ``specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory'' {[}REF Fried{]}.
-This invites the question: if a FAIR theory is a specific instantiation of theory, how does FAIR theory differ from a model?
-While there may be philosophical differences,
-these differences are largely irrelevant for the purpose of making theories more FAIR.
-When organizing knowledge, we think it is helpful to view theories and models derived from them as existing along a continuum of specificity,
-from broad to narrow, from general to specific,
-where a theory has a relatively broader scope and may contain one or more models as specific instances.
-For example, following Meehl, we could envision a theory that merely specifies how specific constructs are causally connected.
-From this theory, we could derive a more specific \emph{statistical model} by assuming functional form (e.g., linear effects) and error families (e.g., normal distributions).
-This statistical model makes just enough assumptions to allow estimation of the remaining unknown parameters (e.g., regression slopes) from data.
-Or, we could derive an even more specific \emph{generative/computational model}, which is completely parametrized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
-Note that broadness and narrowness are relative terms,
-and one person's theory may be another person's model.
-This definition also implies that FAIR models are a special case of FAIR theory.
+The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematics.
+It shifts the focus from theories as collections of sentences to mathematical models.
+The term ``model'' is not uniquely defined within the literature;
+it has been described as a ``specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory'' {[}REF Fried{]}.
+This implies that theories and models are not fundamentally distinct, but rather, that for each model, there is a more general theory that subsumes it (one person's model is another person's theory).
+-
+
+The pragmatic view holds that there might not be one structure or definition of scientific theories, but instead, definitions differ across scientific domains.
+It also argues that nonformal aspects (e.g.~commonly used analogies) and practices (e.g.~experimental designs) can be an important part of scientific theories.
+
+Since the primary purpose of FAIR theories is to advance scholarly communication about theories,
+the method is not contained to any one particular definition.
+It is best left to the scholarly community to decide which parts of theory, models, or other aspects should be represented as FAIR theory.
+As the practice of FAIRification becomes more embedded,
+we expect that it will become increasingly clear what kind and form of information is useful.
+As a particular FAIR theory evolves, the nature of the information tracked will likely change.
+For example, following Meehl, we could envision a theory that starts out specifying how specific constructs are causally connected.
+From this theory, more precise \emph{statistical/mathematical models} could be derived by the theory's suggestions for functional form (e.g., linear effects) and error families (e.g., normal distributions).
+This statistical model makes just enough assumptions to allow the estimation of the remaining unknown parameters (e.g., regression slopes) from data.
+Then, an even more specific \emph{generative/computational model} could be added, which is completely parameterized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
+Also, aspects of scientific practice might be added over time, such as commonly used experimental designs (e.g.~longitudinal designs observing change over time), measurement tools (e.g.~different questionnaires used to assess the same construct), or study subjects (e.g.~specific strains of rats).
 
 As an applied example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors such as adherence to pandemic mitigation methods (e.g., ), pandemic-related social disruption (e.g., panic buying), or pandemic-related distress and related problems (e.g., anxiety) (Taylor, 2022).
 The theory may encompass a particular transmission \emph{model} for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
@@ -386,24 +396,28 @@ The theory may encompass a particular transmission \emph{model} for disease spre
 \subsubsection{The Role of Theory Formalization}\label{the-role-of-theory-formalization}
 
 Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use.
-Greater formalization increases theories' \emph{empirical content} {[}REF{]} as it forces researchers to use precise statements, for example by specifying exact functional forms for relations or forces them to specify processes that would otherwise get away with their vague formulation in verbal theories.
-For example, the phonological loop in Baddeley's verbal description of his working memory model allows at least 144 different implementations, for example, depending on how decay rate, recall success, or rehearsal sequence are precisely implemented (Lewandowsky \& Farrell, 2010).
-More precise theories makes them easier to falsify,
-which necessitates revising them,
-thus advancing our principled understanding of the phenomena they describe.
-FAIR theory does not require theories to be formal,
-and formal theory can be represented in a way that is not FAIR.
-It is therefore important for us to emphasize that FAIR theory imposes no restrictions on researchers regarding the manner in which theories are derived and written down.
-The guidelines introduced by FAIR theory primarily pertain to how theories are documented and shared in digital environments, with the aim of enhancing their reusability and extensibility.
-For example, it is possible to represent a collection of verbal propositions (perhaps derived through qualitative research) as a FAIR theory.
-Conversely, a directed acyclic graph (DAG) is a type of formal theory (for example, see the empirical cycle in Figure \ref{fig:figec}),
-but if it is embedded within a journal article as a bitmap image without any key words to help search engines index that article as a theory paper,
-it is not FAIR.
-FAIR theory is thus consistent with, but does not require, formal theory (also see \emph{Accessibility}).
+Greater formalization increases theories' \emph{empirical content} {[}REF{]} because it expresses ideas as precise statements, clearly demarcating what should (not) be observed.
+For example, Baddeley's verbal description of the phonological loop in his theory of working memory allows for at least 144 different implementations depending on the specification of the decay rate, recall success, or rehearsal sequence (Lewandowsky \& Farrell, 2010).
+Without committing to specific implementations a-priori,
+the theory becomes hard to test.
+Committing to specific implementations of the different components, their causal connections, and the functional forms of these relationships makes the theory more precise.
+More precise theories are easier to falsify,
+which necessitates specific revisions and advances our principled understanding of the phenomena they describe.
+
+Although we are in favor of the advancement towards formal theories,
+this might not always be desirable or feasible.
+Fortunately, formalization is not required to make theories FAIR.
+To some extent, FAIRness and formalization are orthogonal.
+FAIR theory imposes no restrictions on the manner in which theories are derived and implemented;
+rather, it increases the fidelity and ease with which they are communicated.
+The FAIR principles pertain to theories' documentation, archival, and sharing in digital environments, with the aim of enhancing their reusability and extensibility.
+For example, a collection of verbal propositions derived through qualitative research could be represented as a FAIR theory.
+Conversely, a formal theory is not FAIR if it is represented as a bitmap image in a journal article without any key words to identify it as a theory paper to search engines.
+FAIR theory is thus consistent with, but does not require, formalization (also see \emph{Accessibility}).
 
 \subsubsection{Modular Publishing}\label{modular-publishing}
 
-FAIR theory is an example of modular publishing (\textbf{kirczModularityNextForm1998?}).
+We propose FAIR theory as an instantiation of modular publishing (\textbf{kirczModularityNextForm1998?}).
 At present, the primary unit of social scientific communication is the academic paper.
 A paper may depend on multiple resources - materials, data, code, and theory - but these are often merely described in the text.
 Modular publishing is the practice of making each of these resources available as independent citable \emph{information artifacts} in their own right,
@@ -421,17 +435,39 @@ Similarly, FAIR theories can be connected to a specific paper which might serve 
 
 \subsubsection{Version Control}\label{version-control}
 
-We can take inspiration from the field of computer science for well-established processes for iteratively improving information artefacts.
+We can take inspiration from the field of computer science for well-established processes for iteratively improving information artifacts.
 Version control systems, like Git, have long been used to iteratively improve computer code, while managing parallel contributions and allowing for diverging development.
 Git tracks line-by-line changes to text-based files,
 and maintains a complete history of those changes.
 It has long been argued that Git is particularly well-suited to academic work (Ram, 2013).
 Git can be used, for example, to facilitate reproducible research, manage distributed collaboration, and improve preregistration (Peikert, Van Lissa, \& Brandmaier, 2021; Van Lissa et al., 2021).
-The present paper considers advantages of Git for FAIR theory.
+The present paper considers the advantages of Git for FAIR theory.
 Git enables explicitly comparing versions of a file (or: theory),
 incorporating changes by different authors,
 and branching off into different directions (e.g., competing hypotheses) while retaining an explicit link to the common ancestor.
 This makes it possible for meta-scientists to study the provenance of a theory and determine how well different versions of a theory explain empirical evidence (Van Lissa, 2023).
+
+\subsubsection{Semantic Versioning}\label{semantic-versioning}
+
+Aside from technical solutions, version control is a social process as well.
+On the one hand, regular updates can improve theories - but on the other hand, it risks breaking compatibility between theories and hypotheses derived from them, or compatibility between one theory and others that depend upon it.
+For example, if we construct a theory to explain a specific phenomenon, and we cross-reference an existing theory comprising an ontology for our field - that dependency is broken if the ontology is later updated and our phenomenon of interest is removed.
+In computer science, these challenges are navigated by assigning version numbers.
+Specifically, \emph{semantic versioning} comprises a simple set of rules for assigning version numbers to information artifacts.
+Whereas version control tracks changes,
+semantic versioning communicates what those changes mean to users of the theory.
+We propose the following adaptation of semantic versioning for theories:
+
+\begin{verbatim}
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+MAJOR version when you make backwards incompatible changes, i.e., the theory now contains empirical statements that are at odds with a previous version
+MINOR version when you expand the set of empirical statements in a backward compatible manner (i.e., the previous version is subsumed within the new version)
+PATCH version when you make backward compatible bug fixes,
+cosmetic changes, fix spelling errors, or add clarifications
+\end{verbatim}
+
+Semantic versioning guides the social process of theory development, communicating how much a theory is changing over tiem.
 
 \section{The FAIR Principles}\label{the-fair-principles}
 
@@ -446,7 +482,7 @@ In analog modeling, the structure of a theory from one discipline is applied to 
 For example, predator-prey models have inspired theories of XXX, and the Eysenck model of atomic magnetism has inspired a network theory of depression.
 Findability also enables meta-research on theories,
 in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
-In a similar way, it would become possible to compare all theories of a specific phenomenon,
+In a similar way, it would become much easier to explicitly compare different theories of a specific phenomenon,
 or to study structural properties of theories.
 
 The four Findability criteria are applicable to theory with only minor adjustments, see Table \ref{tab:tabfair}.
@@ -529,7 +565,9 @@ while acknowledging that accessibility exists on a spectrum,
 and that it is impossible to eliminate all ambiguity.
 Rather, it may benefit scientific discourse to anticipate misunderstanding,
 and use it to drive further explication of theory.
-In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, embedding within shared contexts, and explication of assumptions, will advance its Accessibility.
+In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, explication of assumptions,
+and cross-references to resources that provide relevant context (papers, ontologies, macro-theories, theories of measurement)
+will advance its Accessibility.
 
 A third impediment arises when theories have a ``dependency on the author'' (DOA).
 DOA occurs when a theory cannot be understood by independent scholars,
@@ -542,7 +580,7 @@ DOA also renders theories immune to refutation,
 because the author can claim that the theory was misconstrued when confronted with falsifying evidence, thus making it a moving target (Szollosi \& Donkin, 2021).
 The fact that DOA is inherently problematic is illustrated by cases where third parties identify logical inconsistencies within a theory (e.g., Kissner, 2008).
 This demonstrates that original authors are not the ultimate authority on their theories.
-DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible; both in terms of availability and in terms of interpretability.
+DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible in terms of both availability and interpretability.
 
 \subsection{Interoperability}\label{interoperability}
 
@@ -556,12 +594,12 @@ Depending on the level of formalization of the theory,
 different formats may be appropriate,
 such as verbal statements in plain text,
 mathematical formulae,
-and statements expressed in some axiomatic system.
+and statements expressed in some formal language.
 Examples of the latter include pseudo-code,
 interpretable computer code,
 and Gray's theory maps (Gray, 2017).
 While a theory represented as a bitmap image is not very interoperable,
-the same image represented in the DOT language for representing graphs does meet this ideal.
+the same image represented in the DOT language (\textbf{DOTLanguage?}) for representing graphs does meet this ideal.
 
 Secondly, theory (meta)data should use vocabularies that follow FAIR principles (I2).
 Aside from the aforementioned Datacite metadata schema (\textbf{datacitemetadataworkinggroupDataCiteMetadataSchema2024?}),
@@ -651,8 +689,8 @@ in many cases, it may be sensible to explicitly license theories in a way that e
 The CC0 (no rights reserved) license does this by explicitly waiving all rights and encouraging reuse.
 
 Aside from legal conditions for reuse, there are also social considerations.
-For example, while a CC0 license does not require attribution,
-it is nonetheless essential that scholars comprehensively cite theory and related works to comply with the norms of open scholarship (Aalbersberg et al., 2018).
+For example, while a CC0 license does not mandate attribution,
+it is nonetheless essential that scholars comprehensively cite theory and related works to comply with established norms of attribution and comprehensive citation (Aalbersberg et al., 2018).
 Another way to guide the social process of (diffuse) collaboration is to include a ``README'' file in the theory repository, which informs users about the ways in which they can reuse and contribute to a FAIR theory.
 It is also possible to create or adopt a ``Code of Conduct'' which prescribes
 
@@ -676,9 +714,11 @@ The process described here can be largely automated in R using the \texttt{theor
 
 Given that we structured our argument around the importance of FAIR theory for cumulative knowledge production through scientific research around the \emph{empirical cycle},
 we decided to use it as an example for this tutorial.
-Note that, while the empirical cycle is not explicitly referred to as a ``theory'' by De Groot, he derives it from ``a theory of thinking'' by Selz (REF).
-We can thus consider it a meta-theory of the process of theory construction.
-The empirical cycle is described on page 28 of De Groot and Spiekerman (1969):
+The resulting FAIR theory is available at \url{https://doi.org/10.5281/zenodo.14552329}.
+The empirical cycle is described on page 28 of De Groot and Spiekerman (1969).
+Note that, while De Groot does not explicitly refer to the empirical cycle as a ``theory'', he derives it from ``a theory of thinking''.
+We can thus consider it a meta-theory of theory construction.
+The ``empirical cycle'' theory presented by De Groot consists of a series of natural language statements:
 
 \begin{quote}
 \emph{Phase 1:} `Observation': collection and grouping of empirical materials; (tentative) formation of hypotheses.\\
@@ -689,8 +729,7 @@ The empirical cycle is described on page 28 of De Groot and Spiekerman (1969):
 \end{quote}
 
 If we compare it to the levels of theory formalization (Guest \& Martin, 2021),
-De Groot's theory is either at the ``theory'' or ``specification'' level.
-It consists of a series of natural language statements.
+it is defined at either the ``theory'' or ``specification'' level.
 We can increase the level of formalization, and present an ``implementation'' in the human- and machine-readable DOT language:
 
 \begin{verbatim}
@@ -711,7 +750,7 @@ digraph {
 }
 \end{verbatim}
 
-This language describes the model as a directed graph.
+This implementation describes the model as a directed graph.
 Note that the code has been organized so that the first half describes an ontology of the entities the theory postulates,
 and the second half describes their proposed interrelations.
 This follows the first two properties of good theory according to Meehl (Paul E. Meehl, 1990).
@@ -762,7 +801,7 @@ De Gruyter Mouton. https://doi.org/10.1515/9783112313121
 \subsection{3. Version Control the Repository}\label{version-control-the-repository}
 
 The field of computer science provides well-established processes for creating information artefacts that can be iteratively improved.
-In particular, the practice of version control offers extensive benefits for scientific work Van Lissa et al. (2021).
+In particular, the practice of version control offers extensive benefits for scientific work (Ram, 2013; Van Lissa et al., 2021).
 To version control our project, we initiate a Git repository in the project folder.
 We subsequently create a remote repository to host a copy of this local Git repository on GitHub, which will in turn be archived.
 Note that the repository
@@ -792,13 +831,13 @@ Supplying the following information helps improve the Findability of a theory:
 \begin{itemize}
 \tightlist
 \item
-  Set the \emph{resource type} to \texttt{Model}
+  Set the \emph{resource type} to \texttt{Model}; this ensures proper archival in Zenodo
 \item
-  Verify that the \emph{title} is prefaced with \texttt{FAIR\ theory:}
+  Verify that the \emph{title} is prefaced with \texttt{FAIR\ theory:}; this allows sentient readers to recognize the work as a FAIR theory
 \item
-  Add the \emph{keyword} \texttt{fairtheory}
+  Add the \emph{keyword} \texttt{fairtheory}; this aids search engine indexation
 \item
-  Optionally, submit the theory to the \href{https://zenodo.org/communities/fairtheory}{``FAIR Theory Community''} to increase its findability
+  Optionally, submit the theory to the \href{https://zenodo.org/communities/fairtheory}{``FAIR Theory Community''} to contribute to community building
 \item
   List the DOIs/identifiers of \emph{related works}. Use the \texttt{Relation} field as appropriate. For example:
 
@@ -812,22 +851,6 @@ Supplying the following information helps improve the Findability of a theory:
 \end{itemize}
 
 \subsection{6. Making Changes}\label{making-changes}
-
-Aside from technical solutions to However, ``{[}i{]}n systems with many dependencies, releasing new {[}\ldots{]} versions can quickly become a nightmare.''
-The tension lies in balancing regular versioned updates with maintaining interconnected theories: changes risk breaking links between theories, but assuming every change does so leads to an overly sparse network.
-In software development this problem is colloquially called ``dependency hell'' and usually addressed via semantic versioning.
-Traditional version control only tracks changes but semantic versioning tracks what those changes mean to other users of the theory by using a specific format of version numbers.
-We propose the following adaptation of semantic versioning for theories:
-
-\begin{verbatim}
-Given a version number MAJOR.MINOR.PATCH, increment the:
-
-MAJOR version when you make incompatible changes, i.e., change the meaning or derived empierical statements
-MINOR version when you expand the set of empierical statements in a backward compatible manner
-PATCH version when you make backward compatible bug fixes, or clarifications
-\end{verbatim}
-
-Semantic versioning and clearly documented interdependencies allow for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
 
 \subsection{Automating these Steps}\label{automating-these-steps}
 
@@ -1214,6 +1237,9 @@ Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., B
 
 \bibitem[\citeproctext]{ref-wilkinson2024applying}
 Wilkinson, S. R., Aloqalaa, M., Belhajjame, K., Crusoe, M. R., Paula Kinoshita, B. de, Gadelha, L., \ldots{} Goble, C. (2024). \emph{Applying the FAIR principles to computational workflows}. Retrieved from \url{https://arxiv.org/abs/2410.03490}
+
+\bibitem[\citeproctext]{ref-scientifictheories}
+Winther, R. G. (2021). The structure of scientific theories. In E. N. Zalta (Ed.), \emph{The {Stanford} encyclopedia of philosophy} ({S}pring 2021). \url{https://plato.stanford.edu/archives/spr2021/entries/structure-scientific-theories/}; Metaphysics Research Lab, Stanford University.
 
 \end{CSLReferences}
 

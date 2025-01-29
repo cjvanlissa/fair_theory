@@ -97,7 +97,7 @@ accelerate cumulative knowledge acquisition.
 ## The Need for FAIR theory
 
 The so-called "replication crisis" has prompted extensive reforms in social science [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
-Concern that undisclosed flexibility in analyses was a major factor for the abundance of non-replicable findings led to the widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
+Concern that undisclosed flexibility in analyses was a major factor for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 These various practices ensure transparent and repeated testing of hypotheses.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
@@ -116,8 +116,13 @@ without either substantial interpretation or additional background knowledge.
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
-The equally critical inductive processes of theory construction and theory improvement have been largely overlooked. <!-- NvD: In philosophy of science, induction is considered to be problematic (logically invalid). It is more appropriate to talk about abduction when it comes to theory development. I am fine with sticking to induction if that is what psychologists "know". In that case, I suggest adding a clarifying footnote on abduction vs induction.  -->
-The present paper restores balance by applying, for the first time, <!-- NvD: Are we sure that this is the first time? Do we need to make this claim? -->
+The equally critical inductive processes of theory construction and theory improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories; others have coined *abduction* to describe "inference to the best explanation" [@peirceCollectedPapersCharles1960]. However, Peirce also acknowledged that abduction "is not essentially different from induction" (p.4881). Defining what makes a theory "best" requires making auxiliary assumptions. For present purposes, induction and abduction are interchangeable terms.].
+<!-- Peirce: CP 8.233 Cross-Ref:†† -->
+<!-- 233. This is not essentially different from induction. Only it is most -->
+<!-- usually an induction from instances which are not discrete and numerable. I now -->
+<!-- call it Qualitative Induction. It is this which I used to confound with the second -->
+<!-- line of procedure, or at least not to distinguish it sharply. -->
+The present paper restores balance by applying, for the first time,
 open science principles to psychological theory.
 We apply the FAIR principles to scientific theories,
 introducing the concept of *FAIR theory* to 
@@ -195,7 +200,7 @@ This needs more work! -->
 There are, however, indications that contemporary psychology falls short of this ideal.
 Firstly, because hypothesis-testing research is over-represented in the literature: 
 According to @kuhbergerPublicationBiasPsychology2014, 89.6% of papers published in psychology report confirmatory hypothesis tests.
-In addition, the link between theory and hypothesis is often tenuous or absent [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
+Closer examination of deductive research reveals, however, that the link between theory and hypothesis is often tenuous or absent [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
 Only 15% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis [@mcphetresDecadeTheoryReflected2021].
 The remaining 85% of deductive studies lacked an explicit connection between theory and hypothesis.
 <!-- NvD: (most of) The other papers also don't have a true derivation chain. It is rare to see a logical derivation, analytical proof, or simulation that connects hypothesis to theory.  -->
@@ -343,7 +348,7 @@ This makes it possible for meta-scientists to study the provenance of a theory a
 ### Semantic Versioning
 
 Aside from technical solutions, version control is a social process as well.
-On the one hand, regular updates can improve theories - but on the other hand, it risks breaking the compatibility between theories and hypotheses derived from them, or compatibility between one theory and others that depend upon it.
+On the one hand, regular updates can improve theories - but on the other hand, it risks breaking compatibility between theories and hypotheses derived from them, or compatibility between one theory and others that depend upon it.
 For example, if we construct a theory to explain a specific phenomenon, and we cross-reference an existing theory comprising an ontology for our field - that dependency is broken if the ontology is later updated and our phenomenon of interest is removed.
 <!-- NvD: Maybe we can add an  example (e.g., the theory that explains ego-depletion and the failed replication of the phenomenon). -->
 In computer science, these challenges are navigated by assigning version numbers.
