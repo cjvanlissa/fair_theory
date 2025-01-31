@@ -116,7 +116,7 @@ without either substantial interpretation or additional background knowledge.
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
-The equally critical inductive processes of theory construction and theory improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories; others have coined *abduction* to describe "inference to the best explanation" [@peirceCollectedPapersCharles1960]. However, Peirce also acknowledged that abduction "is not essentially different from induction" (p.4881). Defining what makes a theory "best" requires making auxiliary assumptions. For present purposes, induction and abduction are interchangeable terms.].
+The equally critical inductive processes of theory construction and theory improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories. This is a more general interpretation than enumerative induction where a general conclusion (e.g., all swans are white) is drawn from a limited set of observations (e.g., the *n* observed white swans). Another term is *abduction*, which is used to describe the logical process of proposing explanatory propositions that make the observations unsurprising or "follow as a matter of course" [@peirceCollectedPapersCharles1960]. We decided to use the term induction, because this is what most psychologists are familiar with. We also note that Peirce acknowledged that abduction "is not essentially different from induction" (p.4881). Thus, for present purposes, induction and abduction are interchangeable terms.].
 <!-- Peirce: CP 8.233 Cross-Ref:†† -->
 <!-- 233. This is not essentially different from induction. Only it is most -->
 <!-- usually an induction from instances which are not discrete and numerable. I now -->
@@ -372,13 +372,13 @@ Semantic versioning guides the social process of theory development, communicati
 
 ## Findability
 
-Making theories Findable would allow researchers to easily identify relevant theories to inform their hypotheses,
+Making theories Findable would allow researchers to easily identify relevant theories <!-- NvD: for hypothesis derivation --> <!-- NvD: "to inform their hypotheses" reads a bit like they already have hypotheses and go for a "post-hoc search" to justify them -->,
 grounding their work in established theoretical foundations.
 It further increases the impact and reuse potential of theories across disciplines,
 either through direct application (where one discipline stumbles upon a problem that is already well-understood in another discipline),
 or through analogical modeling.
 In analog modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
-For example, predator-prey models have inspired theories of XXX, and the Eysenck model of atomic magnetism has inspired a network theory of depression.
+For example, predator-prey models have inspired theories of <!-- NvD: intelligence (van der maas et al. 2006 https://doi.org/10.1037/0033-295x.113.4.842)-->, and the Eysenck model of atomic magnetism has inspired a network theory of depression.
 Findability also enables meta-research on theories, 
 in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
 In a similar way, it would become much easier to explicitly compare different theories of a specific phenomenon,
@@ -398,7 +398,7 @@ Zenodo handles this by default by providing an overarching DOI for an informatio
 
 Finally, metadata should be registered or indexed in a searchable registry (F4).
 Zenodo and GitHub are both searchable.
-Standardized metadata further enhance Findability in these repositories.
+Standardized metadata further improve Findability in these repositories.
 The DataCite Metadata Schema provides a controlled vocabulary for research output, and the `resource_type: model` matches the description of FAIR theory [@datacitemetadataworkinggroupDataCiteMetadataSchema2024].
 <!-- > An abstract, conceptual, graphical, mathematical or visualization model that represents empirical objects, phenomena, or physical processes. -->
 Furthermore, a standard keyword can be used; we suggest using the keyword `"fairtheory"` for all resources that constitute or reference a FAIR theory.
@@ -423,18 +423,18 @@ Conversely, as organizations begin to recognize the value in tracking academic o
 There have been notable efforts to improve theories' findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
 and post many examples on their website [@grayHowMapTheory2017].
-Similarly, Borsboom and colleagues seek to establish a database of psychological theories [REF BORSBOOM].
+Similarly, <!-- NvD: van Dongen and colleagues are working on a database of models and formalized theories  PREPRINT will be uploaded soon, I hope. -->
 Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability, however.
 Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
 
 ## Accessibility
 
 Transparent scholarly communication about theory requires that theories are accessible to all researchers and other stakeholders.
-If theories are accessible, researchers can reuse and refine them,
-thus accelerating cumulative knowledge acquisition.
-Making theories accessible also allows stakeholders (e.g., practitioners, policy makers, advocates) to inform themselves of the current scientific understanding of specific phenomena.
+If theories are not accessible, researchers cannot reuse and refine them. <!-- NvD: the original was logically unsound. Accessibility is necessary for reuse, but not sufficient, right?) --> 
+Thus, accessibility can accelerate cumulative knowledge acquisition.
+Making theories accessible also allows stakeholders (e.g., practitioners, policymakers, advocates) to inform themselves of the current scientific understanding of specific phenomena.
 While isolated empirical findings can appear fragmented and contradictory [@dumas-malletPoorReplicationValidity2017],
-theories offer a top-down, big picture representation of the phenomena studied in a field.
+theories offer a top-down, big-picture representation of the phenomena studied in a field.
 In other words, theories are an important instrument in science communication.
 
 The Accessibility principles pertain to *regulating* access, not only maximizing it.
@@ -446,7 +446,7 @@ Secondly (A2), theory metadata should be accessible, even when the theory is no 
 which is also achieved via long-term storage (e.g., on Zenodo).
 Git remote repositories allow for access control,
 and Zenodo allows for access control of individual files/resources.
-<!-- An unavailable theory typically refers to a theory that was abandoned in favor of a better or more general theory (such as the phlogiston theory, which was superseded by thermodynamics). -->
+<!-- An unavailable theory typically refers to a theory that was abandoned in favor of a better or more general theory (such as the phlogiston theory, which was superseded by the oxygen theory). -->
 In general, it makes sense to retain outdated theories, in order to be able to track the genesis of theories over time, yet, we require the availability of meta data as a minimum requirement.
 
 At present, there are several impediments to theories' accessibility.
@@ -456,8 +456,9 @@ Open Access publishing thus increases the accessibility of all academic output, 
 A second impediment is more indirect:
 While open access publishing increases practical access to theories,
 accessibility also requires clear and explicit communication.
-This property of good theories has been dubbed "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024].
-At present, psychological theories are often ambiguous, rendering them difficult to understand [@frankenhuisStrategicAmbiguitySocial2023].
+<!-- NvD: I am not sure if we need to go into this much detail as presented in the rest of this Section. My suggestion is to remove most of it. I'll indicate which elements I suggest keeping -->
+This property of good theories has been dubbed "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024]. <!-- NvD: I suggest keeping this -->
+At present, psychological theories are often ambiguous, rendering them difficult to understand [@frankenhuisStrategicAmbiguitySocial2023].<!-- NvD: I suggest keeping this -->
 It is important to acknowledge the *indeterminacy of translation* [@quineReasonsIndeterminacyTranslation1970]:
 which holds that every communicative utterance has multiple alternative translations, with no *objective* means of choosing the correct one.
 It follows that an idea cannot be formalized to the point that it becomes unambiguously interpretable.
@@ -466,15 +467,15 @@ This places a theoretical upper bound on theories' ability to be understood.
 Successful communication requires shared background knowledge between sender and receiver [@vogtFAIR20Extending2024].
 The Kuhnian notion of "normal science", conducted within the context of a shared paradigm, provides shared background knowledge to facilitate mutual understanding [@kuhnStructureScientificRevolutions2009].
 From a pragmatic perspective, these considerations indicate that,
-when striving to make theory accessible,
-it is important to be as explicit as possible (e.g., about assumptions  and ontological definitions),
-while acknowledging that accessibility exists on a spectrum,
-and that it is impossible to eliminate all ambiguity.
-Rather, it may benefit scientific discourse to anticipate misunderstanding,
-and use it to drive further explication of theory.
+when striving to make theory accessible, <!-- NvD: I suggest keeping this -->
+it is important to be as explicit as possible (e.g., about assumptions  and ontological definitions), <!-- NvD: I suggest keeping this -->
+while acknowledging that accessibility exists on a spectrum, <!-- NvD: I suggest keeping this -->
+and that it is impossible to eliminate all ambiguity.<!-- NvD: I suggest keeping this -->
+Rather, it may benefit scientific discourse to anticipate misunderstanding,<!-- NvD: I suggest keeping this -->
+and use it to drive further explication of theory.<!-- NvD: I suggest keeping this -->
 In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, explication of assumptions,
-and cross-references to resources that provide relevant context (papers, ontologies, macro-theories, theories of measurement)
-will advance its Accessibility.
+and cross-references to resources that provide relevant context (papers, ontologies, macro-theories, theories of measurement)<!-- NvD: I suggest keeping this -->
+will advance its Accessibility.<!-- NvD: I suggest keeping this -->
 
 A third impediment arises when theories have a "dependency on the author" (DOA). <!-- AB citation needed?! Who came up with this term? -->
 DOA occurs when a theory cannot be understood by independent scholars,
@@ -547,7 +548,7 @@ Interoperability of psychological theory may be limited when theories are instan
 <!-- which are not machine-readable and l -->
 
 With regard to the state of interoperability in contemporary psychology, 
-Kurt Lewin's adage "there's nothing as practical as a good theory" [@lewinPsychologyProcessGroup1943] implies that ought to be highly X-interoperable in psychological researchers' day-to-day work.
+Kurt Lewin's adage "there's nothing as practical as a good theory" [@lewinPsychologyProcessGroup1943] implies that theories ought to be highly X-interoperable in psychological researchers' day-to-day work.
 But, as we argued, this is not the case.
 The examples of X-interoperability offered in Table \@ref(tab:tabmeehl) illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-interoperable within software used for analysis.
 For example, interoperable theory could be used
@@ -560,20 +561,20 @@ For example, it should be possible to embed a theory about emotion regulation [e
 ## Reusability
 
 If we take cumulative knowledge acquisition to be a goal of scientific research, then Reusability is the ultimate purpose of making theory FAIR.
-Applied to FAIR theory, reusability requires that  theory and its associated metadata are richly described with a plurality of accurate and relevant attributes (R1) with a clear and accessible license for reuse (R1.1).
+Applied to FAIR theory, reusability requires that  each theory and its associated metadata are richly described with a plurality of accurate and relevant attributes (R1) with a clear and accessible license for reuse (R1.1).
 It should further have detailed provenance (R1.2), 
 which is achieved through version control with Git and archival on Zenodo.
 Finally, the (meta)data which meets domain-relevant community standards (R1.3).
 The Datacite metadata schema offers an initial template in this regard,
-and this paper takes one step towards establishing more fine grained community standards for FAIR theory.
+and this paper takes one step towards establishing more fine-grained community standards for FAIR theory.
 
 If we consider the current state of Reusability in psychological theory, there appears to be a norm *against* theory reuse:
 *"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008].
 As cumulative knowledge acquisition requires reusable theories that are continuously updated based on insights from new data, such a norm impedes scientific progress [@degrootMethodologieGrondslagenVan1961].
-In FAIR theory workshops, we similarly notice reluctance to reusing and adapting existing theories.
-Students ask questions such as "who owns theory",
-and "who determines how a theory may be reused or changed"?
-These questions imply a norm against modifying theory without consent from the author reminiscent of the aforementioned problem of dependency on the author.
+In FAIR theory workshops, we similarly notice a reluctance to reuse and adapt existing theories.
+Students ask questions such as "Who owns a theory?",
+and "Who determines how a theory may be reused or changed?".
+These questions imply a norm against modifying theory without consent from the author. <!-- NvD: I suggest removing the rest of the sentence (as a result of an earlier suggestion). -- > reminiscent of the aforementioned problem of dependency on the author.
 
 Licensing theories for reuse unambiguously answers these questions.
 With the caveat that legislation may vary across contexts and jurisdictions, the following should not be interpreted as legal advice.
@@ -890,8 +891,8 @@ digraph {
 }
 ```
 
-The first author was inspired by De Groot too,
-but they conceive of the empirical cycle in yet another way.
+The first author was inspired by De Groot as well,
+but they specify the empirical cycle differently.
 First, notice that the nodes in De Groot's formulation mostly refer to processes.
 This invites the question of what the deliverables are in each phase, or in other words: what actually changes when going through the cycle, except the scholar's mind.
 In our implementation below, we account for this difference by having the nodes refer to specific deliverables; the edges now refer to processes.
@@ -935,7 +936,7 @@ digraph {
 Some have argued that *causal explanations* are a property of good theory [REF Meehl, etc?].
 According to Pearl and colleagues,
 explicit assumptions about the direction of causality allow one to perform causal inference even on cross-sectional data.
-Any formal theory that is explicit about direction of causality could thus be used to guide causal inference,
+Any formal theory that is explicit about the direction of causality could thus be used to guide causal inference,
 and could even be integrated into the analysis environment.
 
 In this example, we illustrate how to use DAGs for causal inference, including the detection of a violation of the initial model and subsequent adaptation of the DAG. We could use that to illustrate updating FAIR theory:
@@ -972,7 +973,7 @@ These limitations impede cumulative knowledge production in our field,
 leading to an accumulation of "one-shot" empirical findings, without commensurate advancement in our principled understanding of psychological phenomena.
 We argued that applying the FAIR principles to theory offers a structured solution to these shortcomings.
 We demonstrated how to create, version-control, and archive theories as digital information artifacts.
-We introduced the `theorytools` R-package to partly automate these processes, reducing barrier of entry for researchers,
+We introduced the `theorytools` R-package to partly automate these processes, reducing the barrier of entry for researchers,
 and creating a FAIR resource for theory construction tools and documentation that can be continuously updated as best practices develop further.
 
 Making theory FAIR allows researchers to more easily find a relevant framework;
@@ -982,7 +983,7 @@ FAIR theory makes theoretical work practical and tangible, incorporating theory 
 Having a concrete object to iterate upon facilitates the systematic improvement and iterative refinement of psychological theories, thus substantially increasing the efficiency of research.
 While FAIR theory does not directly reduce ambiguity,
 it provides a framework within which scholars can iteratively increase precision and formalization.
-FAIR principles also facilitates new ways of collaboration,
+FAIR principles also facilitate new ways of collaboration,
 leveraging tools like Git for version control and Zenodo for archiving to document provenance and facilitate contributions from diverse researchers.
 <!-- These practices align with the open science ethos, ensuring theories evolve dynamically based on empirical evidence and collaborative input. -->
 
@@ -997,11 +998,11 @@ Modular publishing capitalizes on these changing metrics,
 and publishing theories as citeable artifacts allows scholars to be credited for contributions to theory [@kirczModularityNextForm1998].
 Journals that publish theoretical papers could require authors to additionally publish their theories in a FAIR format, cross-referencing the paper,
 to expedite its effective reuse and iterative improvement.
-A second factor is to lower barriers for the adoption of FAIR theory by building upon existing widely adopted open science infrastructures.
+A second factor is to lower barriers to adopting FAIR theory by building upon existing widely adopted open science infrastructures.
 For this reason, we advocate the use of Git for version control, Zenodo for archiving, and DataCite for standardized metadata.
-Barriers of entry can also be lowered by simplifying workflows, which is the goal of the `theorytools` R-package.
+Barriers to entry can also be lowered by simplifying workflows, which is the goal of the `theorytools` R-package.
 Fourth, the availability of Open Educational Materials (OEM) about theory development contributes to doctoral socialization.
-These materials allow teachers to incorporate theory development into their curriculum without investing substantial time into course development,
+These materials allow teachers to incorporate theory development into their curriculum without investing substantial time on course development,
 thus educating the next generation to make use of and contribute to FAIR theory.
 Finally, community building plays an important role;
 the international network of open science communities, reproducibility networks, and other similar initiatives provide platforms for disseminating FAIR theories and related methodological innovations.
@@ -1021,7 +1022,7 @@ Given the current emphasis on empirical papers [REF], theoretical papers can be 
 FAIR theories, by contrast, can be readily disseminated as citable information artifacts, thus changing the incentive structure to favor theory development.
 
 Interdisciplinarity benefits from FAIR theory's accessibility across different fields; thus, theoretical frameworks can be reused, adapted, or used for analogical modeling [REF Oisin paper].
-Meta-research benefit from the fact that FAIR theory enables studying the structure, content, and development of theories over time.
+Meta-research benefits from the fact that FAIR theory enables studying the structure, content, and development of theories over time.
 In terms of team science, FAIR theory facilitates collaboration by ensuring that all contributors have access to the same information and
 clarifying any remaining areas of contention or misunderstanding. 
 Version control provides a framework to resolve parallel developments from multiple collaborators in a non-destructive manner.
@@ -1042,23 +1043,23 @@ Furthermore, at the time of writing, dedicated indexing systems for FAIR theory 
 Using the Zenodo search function and submitting theories to the "FAIR Theory Community" on Zenodo can help overcome this limitation in the short term.
 
 Another limitation is the learning curve associated with tools like Git and Zenodo.
-The `theorytools` R-package mitigates this limitation by automating key steps in the process.
-Moreover, the initial investment in time can be offset by long-term productivity gains and increased impact of FAIR theory.
-One barrier to adoption of FAIR theory is cultural resistance to sharing and modifying theories, also known as the "toothbrush problem".
+The `theorytools` R-package mitigates this limitation to some extent by automating key steps in the process. <!-- NvD: However, some skill with R is still required. -->
+Moreover, the initial investment in time can be offset by long-term productivity gains and an increased impact of FAIR theory.
+One barrier to adopting FAIR theory is cultural resistance to sharing and modifying theories, also known as the "toothbrush problem".
 Education might help address this limitation; with this in mind,
-we are developing open educational materials on theory development.
+and we are developing open educational materials on theory development.
 
-One limitation of scope is that FAIR theory does not directly resolve problems related to strategic ambiguity [REF] and lack of theory formalization [REF].
-However, our work does establish a framework within which theories can be further formalized.
+A limitation of scope is that FAIR theory does not directly resolve problems related to strategic ambiguity [REF] and lack of theory formalization [REF].
+However, our work does establish a framework that allows for and promotes the formalization of theories. 
 The example of the empirical cycle demonstrates how FAIR principles can guide theory formalization and foster cumulative progress.
-Another limitation of scope is that FAIR theory does not resolve other related issues in social sciences, such as the measurement crisis [REF] and lack of standardized ontologies for psychological constructs [REF].
-However, our work here provides a template for addressing such challenges,
+Another limitation of scope is that FAIR theory does not resolve other related issues in social sciences, such as the measurement crisis [REF] and lack of standardized ontologies for psychological constructs [REF].<!-- NvD: Adding this might go a bit too far, we are also not solving world hunger and poverty ;-) -->
+However, our work here provides a template for addressing such challenges, <!-- NvD: I am not sure if we are offering a template to address these challenges. If we do, we should make this explicit. -->
 and any advancements in the areas of measurement and ontology will serve to amplify the value of FAIR theories, particularly when such resources are cross-referenced in the metadata (e.g., on Zenodo).
 
 ## Future Directions
 
 One remaining issue that intersects with FAIR theory is the measurement and operationalization of psychological constructs.
-Aside from the aforementioned "theory crisis", there has been talk of a "measurement crisis":  <!--AB very important point that I was already missing in the introduction; seems we also need FAIR measurements :) -->
+Aside from the aforementioned "theory crisis", there has been talk of a "measurement crisis":  <!--AB very important point that I was already missing in the introduction; seems we also need FAIR measurements :) --> <!-- NvD: I agree. Also, if we mention it here, we should definitely not mention it under limitations ->
 it is not always clear how theoretical constructs are operationalized, and many existing instruments have poor psychometric properties [REF].
 Additionally, the "jingle-jangle" fallacy is prevalent in the social sciences:
 the same term is often used for distinct constructs, and conversely, different terms are used to refer to the same construct.
@@ -1068,14 +1069,14 @@ since theories can reference other theories and resources, it is possible to ext
 FAIR theory incorporates theory into open science workflows,
 facilitates scholarly communication about theories,
 making it easier to share theories with less opportunity for ambiguity and misunderstanding.
-FAIR Theories are easier to find, and facilitate sharing, reusing, and updating open theories.
+FAIR Theories are easier to find; they facilitate sharing, reusing, and updating open theories.
 More efficient and transparent communication about theory democratizes and accelerates cumulative knowledge acquisition,
-removes barriers for knowledge exchange with the global scholarly community,
+removes barriers to knowledge exchange with the global scholarly community,
 opens theory development to diverse perspectives, and enables (distributed and adversarial) collaboration.
 
 ## Conclusion
 
-FAIR theory is a major step forwards towards more transparent, collaborative, and efficient theory construction.
+FAIR theory is a major step forward. A step towards more transparent, collaborative, and efficient theory construction.
 It provides much-needed open science methods for the inductive phase of the empirical cycle,
 closing a critical gap in the scientific process.
 FAIR theory makes theory more tangible, enabling scholars to incorporate it in their day-to-day workflows in order to derive hypotheses, select control variables, and contribute new data-driven insights.
