@@ -116,7 +116,7 @@ without either substantial interpretation or additional background knowledge.
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
-The equally critical inductive processes of theory construction and theory improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories. This is a more general interpretation than enumerative induction where a general conclusion (e.g., all swans are white) is drawn from a limited set of observations (e.g., the *n* observed white swans). Another term is *abduction*, which is used to describe the logical process of proposing explanatory propositions that make the observations unsurprising or "follow as a matter of course" [@peirceCollectedPapersCharles1960]. We decided to use the term induction, because this is what most psychologists are familiar with. We also note that Peirce acknowledged that abduction "is not essentially different from induction" (p.4881). Thus, for present purposes, induction and abduction are interchangeable terms.].
+The equally critical inductive processes of theory construction and theory improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories; others have coined *abduction* to describe "inference to the best explanation" [@peirceCollectedPapersCharles1960]. However, Peirce also acknowledged that abduction "is not essentially different from induction" (p.4881). Defining what makes a theory "best" requires making auxiliary assumptions. For present purposes, induction and abduction are interchangeable terms.].
 <!-- Peirce: CP 8.233 Cross-Ref:†† -->
 <!-- 233. This is not essentially different from induction. Only it is most -->
 <!-- usually an induction from instances which are not discrete and numerable. I now -->
@@ -372,13 +372,13 @@ Semantic versioning guides the social process of theory development, communicati
 
 ## Findability
 
-Making theories Findable would allow researchers to easily identify relevant theories <!-- NvD: for hypothesis derivation --> <!-- NvD: "to inform their hypotheses" reads a bit like they already have hypotheses and go for a "post-hoc search" to justify them -->,
-grounding their work in established theoretical foundations.
+Making theories Findable would allow researchers to easily identify relevant theories
+and ground their hypotheses in established theoretical foundations.
 It further increases the impact and reuse potential of theories across disciplines,
 either through direct application (where one discipline stumbles upon a problem that is already well-understood in another discipline),
 or through analogical modeling.
 In analog modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
-For example, predator-prey models have inspired theories of <!-- NvD: intelligence (van der maas et al. 2006 https://doi.org/10.1037/0033-295x.113.4.842)-->, and the Eysenck model of atomic magnetism has inspired a network theory of depression.
+For example, predator-prey models have inspired theories of intelligence [@vandermaasDynamicalModelGeneral2006], and the Eysenck model of atomic magnetism has inspired a network theory of depression [@cramerMajorDepressionComplex2016].
 Findability also enables meta-research on theories, 
 in the same way libraries and search engines have enabled scholars to study the literature via systematic reviews.
 In a similar way, it would become much easier to explicitly compare different theories of a specific phenomenon,
@@ -423,7 +423,7 @@ Conversely, as organizations begin to recognize the value in tracking academic o
 There have been notable efforts to improve theories' findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
 and post many examples on their website [@grayHowMapTheory2017].
-Similarly, <!-- NvD: van Dongen and colleagues are working on a database of models and formalized theories  PREPRINT will be uploaded soon, I hope. -->
+Similarly, Van Dongen and colleagues are working on a database of models and formalized theories.
 Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability, however.
 Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
 
@@ -896,7 +896,7 @@ but they specify the empirical cycle differently.
 First, notice that the nodes in De Groot's formulation mostly refer to processes.
 This invites the question of what the deliverables are in each phase, or in other words: what actually changes when going through the cycle, except the scholar's mind.
 In our implementation below, we account for this difference by having the nodes refer to specific deliverables; the edges now refer to processes.
-Second, De Groot's strict distinction between processes of observation, induction, and deduction is not widely supported by philosophy of science.
+Second, De Groot's distinction between phases of observation, induction, and deduction is not fully congruent with philosophy of science.
 <!-- In our representation, -->
 <!-- induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory. -->
 <!-- For example, the refutation of a hypothesized effect, -->
@@ -907,10 +907,10 @@ Second, De Groot's strict distinction between processes of observation, inductio
 <!-- and auxiliary assumptions that must be made to address remaining theoretical ambiguities. -->
 <!-- # And then for example: I understand Aaron's work about inductive bias to be about the link "prediction -> test;", because the test is not identified without making auxiliary assumptions; if the auxiliary assumption is made based on the data, inductive bias is introduced. -->
 <!-- ``` -->
-For example, many have argued that observation is value-laden, and as such, involves induction.
-The derivation of hypotheses from theory is also not purely deductive,
-as auxiliary assumptions are often made (which are, again, an inductive process).
-Furthermore, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [REF Peikert].
+For example, many have argued that observation is theory-laden, and as such, involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
+Deriving hypotheses from theory is also not purely deductive,
+as auxiliary assumptions are often made (which, again, involves induction).
+Furthermore, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [@peikertTransparencyOpenScience2023].
 With these alterations, we implement the empirical cycle as follows:
 
 ```
@@ -933,9 +933,9 @@ digraph {
 
 ## Using FAIR theory to Perform Causal Inference
 
-Some have argued that *causal explanations* are a property of good theory [REF Meehl, etc?].
+Some have argued that *causal explanations* are a property of good theory [@meehlAppraisingAmendingTheories1990].
 According to Pearl and colleagues,
-explicit assumptions about the direction of causality allow one to perform causal inference even on cross-sectional data.
+explicit assumptions about the direction of causality allow one to perform causal inference even on cross-sectional data [-@pearlCausalDiagramsEmpirical1995].
 Any formal theory that is explicit about the direction of causality could thus be used to guide causal inference,
 and could even be integrated into the analysis environment.
 
@@ -983,7 +983,7 @@ FAIR theory makes theoretical work practical and tangible, incorporating theory 
 Having a concrete object to iterate upon facilitates the systematic improvement and iterative refinement of psychological theories, thus substantially increasing the efficiency of research.
 While FAIR theory does not directly reduce ambiguity,
 it provides a framework within which scholars can iteratively increase precision and formalization.
-FAIR principles also facilitate new ways of collaboration,
+The FAIR principles also facilitate new ways of collaboration,
 leveraging tools like Git for version control and Zenodo for archiving to document provenance and facilitate contributions from diverse researchers.
 <!-- These practices align with the open science ethos, ensuring theories evolve dynamically based on empirical evidence and collaborative input. -->
 
@@ -1043,16 +1043,16 @@ Furthermore, at the time of writing, dedicated indexing systems for FAIR theory 
 Using the Zenodo search function and submitting theories to the "FAIR Theory Community" on Zenodo can help overcome this limitation in the short term.
 
 Another limitation is the learning curve associated with tools like Git and Zenodo.
-The `theorytools` R-package mitigates this limitation to some extent by automating key steps in the process. <!-- NvD: However, some skill with R is still required. -->
-Moreover, the initial investment in time can be offset by long-term productivity gains and an increased impact of FAIR theory.
+The `theorytools` R-package mitigates this limitation by automating key steps in the process.
+Moreover, the initial investment in time can be offset by long-term productivity gains and increased impact of FAIR theory.
 One barrier to adopting FAIR theory is cultural resistance to sharing and modifying theories, also known as the "toothbrush problem".
 Education might help address this limitation; with this in mind,
-and we are developing open educational materials on theory development.
+we are developing open educational materials on theory development.
 
-A limitation of scope is that FAIR theory does not directly resolve problems related to strategic ambiguity [REF] and lack of theory formalization [REF].
+A limitation of scope is that FAIR theory does not directly resolve problems related to strategic ambiguity [@frankenhuisStrategicAmbiguitySocial2023] and lack of theory formalization [@robinaughInvisibleHandsFine2021].
 However, our work does establish a framework that allows for and promotes the formalization of theories. 
 The example of the empirical cycle demonstrates how FAIR principles can guide theory formalization and foster cumulative progress.
-Another limitation of scope is that FAIR theory does not resolve other related issues in social sciences, such as the measurement crisis [REF] and lack of standardized ontologies for psychological constructs [REF].<!-- NvD: Adding this might go a bit too far, we are also not solving world hunger and poverty ;-) -->
+Another limitation of scope is that FAIR theory does not resolve other related issues in social sciences, such as the measurement crisis [@bringmannBackBasicsImportance2022] and lack of standardized ontologies for psychological constructs [@boscoMetaBUSVehicleFacilitating2017].
 However, our work here provides a template for addressing such challenges, <!-- NvD: I am not sure if we are offering a template to address these challenges. If we do, we should make this explicit. -->
 and any advancements in the areas of measurement and ontology will serve to amplify the value of FAIR theories, particularly when such resources are cross-referenced in the metadata (e.g., on Zenodo).
 
@@ -1076,7 +1076,7 @@ opens theory development to diverse perspectives, and enables (distributed and a
 
 ## Conclusion
 
-FAIR theory is a major step forward. A step towards more transparent, collaborative, and efficient theory construction.
+FAIR theory is a major step forward towards more transparent, collaborative, and efficient theory construction.
 It provides much-needed open science methods for the inductive phase of the empirical cycle,
 closing a critical gap in the scientific process.
 FAIR theory makes theory more tangible, enabling scholars to incorporate it in their day-to-day workflows in order to derive hypotheses, select control variables, and contribute new data-driven insights.
