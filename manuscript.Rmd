@@ -895,7 +895,7 @@ but they conceive of the empirical cycle in yet another way.
 First, notice that the nodes in De Groot's formulation mostly refer to processes.
 This invites the question of what the deliverables are in each phase, or in other words: what actually changes when going through the cycle, except the scholar's mind.
 In our implementation below, we account for this difference by having the nodes refer to specific deliverables; the edges now refer to processes.
-Second, De Groot's strict distinction between processes of observation, induction, and deduction is not widely supported by philosophy of science.
+Second, De Groot's distinction between phases of observation, induction, and deduction is not fully congruent with philosophy of science.
 <!-- In our representation, -->
 <!-- induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory. -->
 <!-- For example, the refutation of a hypothesized effect, -->
@@ -906,10 +906,10 @@ Second, De Groot's strict distinction between processes of observation, inductio
 <!-- and auxiliary assumptions that must be made to address remaining theoretical ambiguities. -->
 <!-- # And then for example: I understand Aaron's work about inductive bias to be about the link "prediction -> test;", because the test is not identified without making auxiliary assumptions; if the auxiliary assumption is made based on the data, inductive bias is introduced. -->
 <!-- ``` -->
-For example, many have argued that observation is value-laden, and as such, involves induction.
-The derivation of hypotheses from theory is also not purely deductive,
-as auxiliary assumptions are often made (which are, again, an inductive process).
-Furthermore, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [REF Peikert].
+For example, many have argued that observation is theory-laden, and as such, involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
+Deriving hypotheses from theory is also not purely deductive,
+as auxiliary assumptions are often made (which, again, involves induction).
+Furthermore, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [@peikertTransparencyOpenScience2023].
 With these alterations, we implement the empirical cycle as follows:
 
 ```
@@ -932,9 +932,9 @@ digraph {
 
 ## Using FAIR theory to Perform Causal Inference
 
-Some have argued that *causal explanations* are a property of good theory [REF Meehl, etc?].
+Some have argued that *causal explanations* are a property of good theory [@meehlAppraisingAmendingTheories1990].
 According to Pearl and colleagues,
-explicit assumptions about the direction of causality allow one to perform causal inference even on cross-sectional data.
+explicit assumptions about the direction of causality allow one to perform causal inference even on cross-sectional data [-@pearlCausalDiagramsEmpirical1995].
 Any formal theory that is explicit about direction of causality could thus be used to guide causal inference,
 and could even be integrated into the analysis environment.
 
