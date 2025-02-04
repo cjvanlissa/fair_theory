@@ -55,8 +55,7 @@ affiliation:
 authornote: |
   This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`.
 
-abstract: |
-  Test test.
+abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
 keywords          : "fairtheory, meta theory, theory formation, cumulative science, formal models"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
 bibliography      : "theory-specification.bib"
