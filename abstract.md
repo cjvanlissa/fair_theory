@@ -1,0 +1,6 @@
+Many meta‐scientific initiatives have focused on enhancing the rigor of theory testing, yet the systematic specification of theories remains underdeveloped.
+We present FAIR theory, a new approach that transforms scientific theories into digital, evolving artifacts—developed collaboratively—to bolster the robustness and interconnectedness of scientific knowledge.
+By representing theories as formal, machine‐readable objects (e.g., mathematical models, computer code, nomological networks, or explicit operational definitions) and tracking their evolution through version control and semantic versioning, FAIR theory provides a structured, cumulative framework for theory development.
+We propose that each theory is assigned a universally unique identifier and enriched with detailed metadata, ensuring it is Findable, Accessible, Interoperable, and Reusable.
+This digital infrastructure addresses a critical gap in scholarly practice by introducing the collaborative tools and standards for theory specification that have already revolutionized methodology, data sharing, and publishing.
+Ultimately, FAIR theory aims to transform how scientific ideas are communicated, evaluated, and iteratively refined, thereby accelerating cumulative knowledge acquisition across disciplines.
