@@ -1,0 +1,25 @@
+Caspar
+
+* Incorporated notes
+* Submitted conference abstract(s): Meta-Science London, IC2S2 Nörrkoping, 
+
+Aaron
+
+* More notes (pull request)
+* Previously presented as: DGPS, Meta-Rep
+
+Noah
+
+* Gave comments
+* Accessibility
+* Quine / Kuhn
+
+Einstein's general theory of relativity: expanding universe, invented constant to keep the university static
+
+Induction: general conclusions from specific observations (enumerative induction)
+Abduction: proposing explanatory principles that make observations plausible
+
+
+Max
+
+* Example Dunning-Kruger: make it X-interoperable for plotting the function or generating data
