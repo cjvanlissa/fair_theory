@@ -99,10 +99,16 @@ The so-called "replication crisis" has prompted extensive reforms in social scie
 Concern that undisclosed flexibility in analyses was a major factor for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 These various practices ensure transparent and repeated testing of hypotheses.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
-Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
-Psychological theories rarely provide hypotheses that are corroborated by evidence.
-Furthermore, theories are often so vague that they can accommodate mutually inconsistent findings,
-as the theory's central claims evade falsification.
+Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental: Psychological theories rarely provide hypotheses that are corroborated by evidence.
+Furthermore, theories are often so steeped in ambiguity that they can accommodate mutually inconsistent findings, as the theory’s central claims evade falsification.
+A good example of this is found in “self-determination theory” (SDT), which emphasizes the role of intrinsic and extrinsic motivation in human behavior.
+Since its introduction, the very definition of intrinsic and extrinsic motivation has shifted.
+Initially, intrinsic motivation was understood as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures [@deciEffectsExternallyMediated1971].
+Over time, however, SDT expanded its definition to include motivations driven by the fulfillment of basic psychological needs—autonomy, competence, and relatedness—all still categorized as "intrinsic" [@ryanSelfdeterminationTheoryFacilitation2000].
+The profound difference between these definitions becomes clear when considering the act of changing a child’s dirty diaper.
+Under the original definition, few would be considered intrinsically motivated, after all, it’s not exactly a joy-filled experience
+Yet, under the expanded framework, many would be, as the act may fulfill deeper needs, such as the desire to nurture and care for one’s child.
+
 <!-- CJ: Maybe we should give an example here. Does anyone know one? -->
 <!-- NvD: Harris 1976 has a nice example about how cognitive dissonance theory can be formalized in multiple ways, which offer hypotheses that contradict each other -->
 
