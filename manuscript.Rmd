@@ -472,15 +472,6 @@ The notion of "normal science" describes a phase in which a scientific community
 creating the background knowledge needed for mutual understanding and productive scientific work [@kuhnStructureScientificRevolutions2009].
 In reality, however, paradigms are rarely clear-cut, and shared background knowledge can come from different sources,
 including education, cultures of communication, and availability of particular instruments for observation, measurement, and analysis - or it can be problematically absent.
-From a pragmatic perspective,
-this underscores the importance of being as explicit as possible about assumptions and ontological definitions when making theory Accessible,
-while acknowledging that Accessibility exists on a spectrum, 
-and that it is impossible to eliminate all ambiguity.
-Rather, it may benefit scientific discourse to anticipate misunderstanding,
-and use it to drive further explication of theory.
-In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, explication of assumptions,
-and cross-references to resources that provide relevant context (papers, ontologies, macro-theories, theories of measurement)
-will advance its Accessibility [@langeChecklist2025].
 
 A third impediment arises when theories have a "dependency on the author" (DOA). <!-- AB citation needed?! Who came up with this term? -->
 DOA occurs when a theory cannot be understood by independent scholars,
@@ -494,6 +485,16 @@ because the author can claim that the theory was misconstrued when confronted wi
 The fact that DOA is inherently problematic is illustrated by cases where third parties identify logical inconsistencies within a theory [e.g., @kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008].
 This demonstrates that original authors are not the ultimate authority on their theories.
 DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible in terms of both availability and interpretability.
+
+From a pragmatic perspective,
+these considerations underscore the importance of being as explicit as possible about assumptions and ontological definitions when making theory Accessible,
+while acknowledging that Accessibility exists on a spectrum, 
+and that it is impossible to eliminate all ambiguity.
+Rather, it may benefit scientific discourse to anticipate misunderstanding,
+and use it to drive further explication of theory.
+In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, explication of assumptions,
+and cross-references to resources that provide relevant context (papers, ontologies, macro-theories, theories of measurement)
+will advance its Accessibility [@langeChecklist2025].
 
 <!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
 
