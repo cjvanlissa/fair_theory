@@ -470,7 +470,8 @@ accessibility also requires clear and explicit communication.
 This property of good theories has been dubbed "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024]. 
 At present, psychological theories are often ambiguous, rendering them difficult to understand [@frankenhuisStrategicAmbiguitySocial2023].
 It is important to acknowledge the *indeterminacy of translation* [@quineReasonsIndeterminacyTranslation1970]:
-which holds that every communicative utterance has multiple alternative translations, with no *objective* means of choosing the correct one.
+which holds that every communicative utterance (e.g., a statement in natural language, a mathematical formula, et cetera)
+has multiple alternative translations, with no *objective* means of choosing the correct one.
 It follows that an idea cannot be formalized to the point that it becomes unambiguously interpretable.
 This places a theoretical upper bound on theories' ability to be understood.
 
