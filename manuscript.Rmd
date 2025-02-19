@@ -470,7 +470,8 @@ This places a theoretical upper bound on theories' ability to be understood.
 Successful communication requires shared background knowledge between sender and receiver [@vogtFAIR20Extending2024].
 The notion of "normal science" describes a phase in which a scientific community operates within the context of a shared paradigm,
 creating the background knowledge needed for mutual understanding and productive scientific work [@kuhnStructureScientificRevolutions2009].
-In reality, however, paradigms are rarely clear-cut, and shared background knowledge can come from different sources, or be problematically absent.
+In reality, however, paradigms are rarely clear-cut, and shared background knowledge can come from different sources,
+including education, cultures of communication, and availability of particular instruments for observation, measurement, and analysis - or it can be problematically absent.
 From a pragmatic perspective,
 this underscores the importance of being as explicit as possible about assumptions and ontological definitions when making theory Accessible,
 while acknowledging that Accessibility exists on a spectrum, 
