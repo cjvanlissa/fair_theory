@@ -407,7 +407,7 @@ Zenodo handles this by default by providing an overarching DOI for an informatio
 Finally, metadata should be registered or indexed in a searchable registry (F4).
 It is important to note that, while may archives are technically searchable (e.g., GitHub, FigShare, the Open Science Framework, institutional repositories),
 only few are specifically designed for FAIR-compliant archival.
-Zenodo stands out in this respect, and it is in turn [indexed by Google Scholar](https://support.zenodo.org/help/en-gb/29-indexing/61-is-zenodo-indexed-by-google-scholar), Google Dataset Search, and other services.
+Zenodo stands out in this respect.
 Thus, while it is fine (and recommended) to use GitHub for version control,
 the version of record should be archived in a FAIR repository like Zenodo.
 Using standardized metadata further improves the Findability of theories archived within FAIR repositories.
