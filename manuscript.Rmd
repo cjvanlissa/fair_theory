@@ -300,23 +300,21 @@ The theory may encompass a particular transmission _model_ for disease spread in
 
 Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use. 
 <!-- NvD: Maybe we should add "specification" as part of "formalization" or "formalisation" as a part of "specification", because not everybody that is advocating better theories thinks that we should focus on formalization.  -->
-Greater formalization increases theories' *empirical content* [REF]<!-- NvD: We could add Popper 1956 "Logic of Scientific Discovery" here. --> because it expresses ideas as precise statements, clearly demarcating what should (not) be observed.
+Greater formalization increases theories' *empirical content* [@popperLogicScientificDiscovery2002] because it expresses ideas as precise statements, clearly demarcating what should (not) be observed.
 For example, Baddeley's verbal description of the phonological loop in his theory of working memory allows for at least 144 different implementations depending on the specification of the decay rate, recall success, or rehearsal sequence [@lewandowsky2010computational].
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
+Compared to theories expressed in natural language,
+formal theories facilitate inconsistency.
 Committing to specific implementations of the different components, their causal connections, and the functional forms of these relationships makes the theory more precise.
 More precise theories are easier to falsify,
 which necessitates specific revisions and advances our principled understanding of the phenomena they describe.
 
 Although we are in favor of the advancement towards formal theories, 
-this might not always be desirable or feasible. 
-Fortunately, formalization is not required to make theories FAIR.
-To some extent, FAIRness and formalization are orthogonal.
-<!-- : FAIR theory does not require theories to be formal, -->
-<!-- and formal theory can be represented in a way that is not FAIR. -->
-<!-- We stress that  -->
 FAIR theory imposes no restrictions on the manner in which theories are derived and implemented;
 rather, it increases the fidelity and ease with which they are communicated.
+Thus, FAIR theory does not require theories to be formal,
+and formal theory can be represented in a way that is not FAIR.
 The FAIR principles pertain to theories' documentation, archival, and sharing in digital environments, with the aim of enhancing their reusability and extensibility.
 For example, a collection of verbal propositions derived through qualitative research could be represented as a FAIR theory.
 Conversely, a formal theory is not FAIR if it is represented as a bitmap image in a journal article without any key words to identify it as a theory paper to search engines.
@@ -500,9 +498,13 @@ while acknowledging that Accessibility exists on a spectrum,
 and that it is impossible to eliminate all ambiguity.
 Rather, it may benefit scientific discourse to anticipate misunderstanding,
 and use it to drive further explication of theory.
-In sum, efforts to communicate theory clearly, with as few dependencies on shared background knowledge as possible, including by formalization, explication of assumptions,
-and cross-references to resources that provide relevant context (papers, ontologies, macro-theories, theories of measurement)
-will advance its Accessibility [@langeChecklist2025].
+In sum, while it is impossible to communicate a theory completely unambiguously,
+scholars should strive to reduce unnecessary ambiguity to the greatest possible extent.
+A theory's Accessibility is increased by
+reducing dependencies on (implicit) background knowledge,
+explication of assumptions,
+formalization,
+and explicit cross-references to relevant resources (papers, ontologies, macro-theories, measurement instruments, experimental designs) [@langeChecklist2025].
 
 <!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
 
