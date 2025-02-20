@@ -58,7 +58,7 @@ authornote: |
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
 keywords          : "fairtheory, meta theory, theory formation, cumulative science, formal models"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
-bibliography      : "theory-specification.bib"
+bibliography      : "fair_theory.bib"
 floatsintext      : yes
 linenumbers       : yes
 draft             : no
@@ -122,7 +122,7 @@ without either substantial interpretation or additional background knowledge.
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
-The equally critical inductive processes of theory construction and theory improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories; others have coined *abduction* to describe "inference to the best explanation" [@peirceCollectedPapersCharles1960]. However, Peirce also acknowledged that abduction "is not essentially different from induction" (p.4881). Defining what makes a theory "best" requires making auxiliary assumptions. For present purposes, induction and abduction are interchangeable terms.].
+The equally critical inductive processes of theory construction and theory improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories. Others have used the term "abduction", coined by Peirce to describe "inference to the best explanation". However, Peirce later acknowledged that abduction "is not essentially different from induction" [@peirceCollectedPapersCharles1960, p.4881]. As defining what makes a theory "best" requires auxiliary assumptions, we consider abduction to be a special case of induction. For present purposes, however, the terms are interchangeable.].
 <!-- Peirce: CP 8.233 Cross-Ref:†† -->
 <!-- 233. This is not essentially different from induction. Only it is most -->
 <!-- usually an induction from instances which are not discrete and numerable. I now -->
@@ -508,7 +508,7 @@ A theory's Accessibility is increased by
 reducing dependencies on (implicit) background knowledge,
 explication of assumptions,
 formalization,
-and explicit cross-references to relevant resources (papers, ontologies, macro-theories, measurement instruments, experimental designs) [@langeChecklist2025].
+and explicit cross-references to relevant resources (papers, ontologies, macro-theories, measurement instruments, experimental designs) [REF langeChecklist2025].
 
 <!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
 
