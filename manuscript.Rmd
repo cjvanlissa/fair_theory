@@ -628,19 +628,21 @@ It is also possible to create or adopt a "Code of Conduct" which prescribes beha
 
 # Making a Theory FAIR
 
-Open science infrastructure is an area of active development, and as such,
-the approach proposed here should not be considered definitive,
-but rather, as one proposal for a FAIR-compliant implementation of theory.
-The guiding principle of our implementation is to align and build upon existing successful open science infrastructures to the maximum possible extent.
-At the time of writing (2024), 
-the value of using Git for version control of academic research is well-established,
-and the integration of GitHub and Zenodo makes for a particularly user-friendly approach.
-Zenodo and GitHub are also integrated with the Open Science Framework (OSF),
+To concretize the FAIR principles,
+we propose an applied workflow for making theory FAIR.
+The guiding principle of our approach is to align and build upon existing successful open science infrastructures to the greatest possible extent.
+At the time of writing (2024),
+the value of using Git for version control of academic research is well-established [@ramGitCanFacilitate2013],
+and the integration of GitHub and Zenodo makes for a particularly user-friendly approach that meets *all* of the FAIR principles (Table \@ref(tab:tabfair)).
+Zenodo and GitHub are both integrated with the Open Science Framework (OSF),
 a popular platform in psychology.
-Creating a front page on the OSF increases the visibility of a FAIR theory,
-while the integration with Zenodo and GitHub removes the need for uploading and maintaining the same information on multiple platforms.
-While we make use of specific open science infrastructures, it is important to stress that our workflow illustrates general principles which can also be implemented using other open science infrastructures.
-The process described here can be largely automated in R using the `theorytools` package; see the package vignette on FAIR theory, `vignette("fairtheory", package = "theorytools")`.
+Thus, it is possible to create a project page on the OSF to increase the visibility of a FAIR theory amongst users of that platform,
+while the integration of the OSF with Zenodo and GitHub removes the need for maintaining the same information on multiple platforms.
+Note that open science infrastructure is an area of active development, and as such,
+the approach proposed here is subject to change.
+Nevertheless, it illustrates general principles which can also be implemented using other open science infrastructures.
+Our workflow can be largely automated in R using the `theorytools` package.
+For the most recent version of our proposed workflow, see the package vignette on FAIR theory, `vignette("fairtheory", package = "theorytools")`.
 
 ## 1. Implementing the Theory 
 
