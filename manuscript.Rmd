@@ -84,18 +84,19 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
 
-The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and reusable [REF] for both humans and computers.
-Since their inception in 2014, scholars have demonstrated their relevance for making other information artefacts more open, such as research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying].
+The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and Reusable [@wilkinsonFAIRGuidingPrinciples2016] for both humans and computers.
+Since the FAIR principles' inception, scholars have demonstrated their relevance for making other information artefacts more open, such as research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying].
 This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
 a digital instantiation of a scientific theory, published as a self-contained and citable information artifact distinct from the scientific paper,
 compliant with the FAIR principles.
 FAIR theory has the potential to improve the efficiency of scholarly communication and
 accelerate cumulative knowledge acquisition.
+We focus on applications in psychology, but the principles are relevant across the social sciences, and beyond.
 
 ## The Need for FAIR theory
 
-The so-called "replication crisis" has prompted extensive reforms in social science [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
+The so-called "replication crisis" has prompted extensive reforms in psychology and other scientific fields [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that undisclosed flexibility in analyses was a major factor for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 These various practices ensure transparent and repeated testing of hypotheses.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
@@ -113,8 +114,8 @@ Yet, under the expanded framework, many would be, as the act may fulfill deeper 
 <!-- CJ: Maybe we should give an example here. Does anyone know one? -->
 <!-- NvD: Harris 1976 has a nice example about how cognitive dissonance theory can be formalized in multiple ways, which offer hypotheses that contradict each other -->
 
-Scholars have been raising concerns about the state of theory in social science for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
-One main concern is that social scientific theories lack precision, or  *formalization* [@szollosiArrestedTheoryDevelopment2021].
+Scholars have been raising concerns about the state of theory in psychology for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
+One main concern is that theories lack precision, or  *formalization* [@szollosiArrestedTheoryDevelopment2021].
 <!-- NvD: We should add somewhere what we mean by "formalization." In philosophy of science, formal logic about syntax (the propositions and predicates can have any meaning). However, what we mean, I think, is the explication of a narrative in (something so detailed and explicit that it can be captured with little error in) analytical or computational form (but the meaning remains. E, M, and C stand form something is E = MC<sup>2</sup>).   -->
 When theories do not make precise predictions,
 they are hard to falsify and difficult to understand on their own,
@@ -225,20 +226,21 @@ The paradoxical role of theory in psychology is perhaps best described by Meehl'
 
 ## Making Theory FAIR
 
-The present paper introduces open science methods for theory specification.
+The present paper introduces open science methods for theory specification and archival.
 Merely publishing theory in a research article does not make it open;
 to be open, theory should adhere to established open science standards.
-We do so by implementing theories as information artifacts compliant with the FAIR principles.
-The resulting FAIR theories are archived with apropriate metadata in a FAIR-compliant repository (e.g., Zenodo). 
+We do so by implementing theories as information artifacts,
+archived with apropriate metadata in a FAIR-compliant repository (e.g., Zenodo).
 FAIR theories are *Findable* via a DOI or search,
 *Accessible* in a machine- and human-readable filetype,
 *Interoperable* within the data analysis environment,
 and *Reusable* in the practical and legal sense, so that they may be iteratively improved - potentially via a participative process.
-Digital representations of theory intentionally is a broad term, particularly including textual representations of a given theory, as well as formal representations, such as mathematical notation, algorithmic pseudo code, or a set of logical clauses. <!-- AB I think some initial word on what is covered is needed here; otherwise readers may wonder what we mean to cover--> 
+<!-- AB I think some initial word on what is covered is needed here; otherwise readers may wonder what we mean to cover--> 
+<!-- CJ: Since this is in the next paragraph, I think it's redundant. Will merge there -->
 Following the original proposal of Lamprecht and colleagues,
 we adapt the FAIR principles for theory, see Table \@ref(tab:tabfair).
 We reflect on the necessary changes (which are minor),
-as well as on the current state and future of FAIR theory in the social sciences.
+as well as on the current state and future of FAIR theory in psychology.
 The resulting principles provide guidance for instantiating theory as a FAIR information artifact,
 and we provide worked examples to encourage their adoption.
 
@@ -271,7 +273,7 @@ and statements about their specific numerical values [cf. @frankenhuisStrategicA
 The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematics.
 It shifts the focus from theories as collections of sentences to mathematical models.
 The term "model" is not uniquely defined within the literature;
-it has been described as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [REF Fried].
+it has been described as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [@friedTheoriesModelsWhat2020].
 This implies that theories and models are not fundamentally distinct, but rather, that for each model, there is a more general theory that subsumes it (one person's model is another person's theory).
 -<!-- Paradigms at the broadest level encompass the larger narrative, frameworks gather and organize concepts and terms, but only theories have a degree of specificity that allows us to derive specific testable and falsifiable hypotheses or models with exact mathematical relations between concepts (cf. Partelow, 2023, Table 1, https://link.springer.com/article/10.1007/s13412-023-00833-w#). -->
 
@@ -280,6 +282,7 @@ It also argues that nonformal aspects (e.g. commonly used analogies) and practic
 
 Since the primary purpose of FAIR theories is to advance scholarly communication about theories,
 the method is not contained to any one particular definition.
+
 It is best left to the scholarly community to decide which parts of theory, models, or other aspects should be represented as FAIR theory. 
 As the practice of FAIRification becomes more embedded,
 we expect that it will become increasingly clear what kind and form of information is useful.
@@ -306,25 +309,27 @@ For example, Baddeley's verbal description of the phonological loop in his theor
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
 Compared to theories expressed in natural language,
-formal theories facilitate inconsistency.
+formal theories facilitate inconsistency checking and evaluation of a theory's (lack of) ambiguity.
 Committing to specific implementations of the different components, their causal connections, and the functional forms of these relationships makes the theory more precise.
 More precise theories are easier to falsify,
 which necessitates specific revisions and advances our principled understanding of the phenomena they describe.
 
-Although we are in favor of the advancement towards formal theories, 
 FAIR theory imposes no restrictions on the manner in which theories are derived and implemented;
 rather, it increases the fidelity and ease with which they are communicated.
 Thus, FAIR theory does not require theories to be formal,
 and formal theory can be represented in a way that is not FAIR.
-The FAIR principles pertain to theories' documentation, archival, and sharing in digital environments, with the aim of enhancing their reusability and extensibility.
-For example, a collection of verbal propositions derived through qualitative research could be represented as a FAIR theory.
-Conversely, a formal theory is not FAIR if it is represented as a bitmap image in a journal article without any key words to identify it as a theory paper to search engines.
+The FAIR principles pertain to theories' metadata documentation and sharing in digital archives, with the aim of enhancing their reusability and extensibility.
+They can be applied to theories representated in natural language,
+as well as formal theories represented using mathematical notation, algorithmic pseudo code, or a set of logical clauses.
+Thus, for example, "grounded theory", derived from qualitative research,
+can be represented as a FAIR theory if it is represented as plain-text propositions and archived in a FAIR repository with appropriate metadata.
+Conversely, a formal theory is not FAIR if it is confined to in a journal article without any key words to identify it as a theory paper (lacking Findability), represented as a bitmap image (limiting Accessibility and Interoperability), and behind a paywall (limiting Reusability).
 FAIR theory is thus consistent with, but does not require, formalization (also see *Accessibility*).
 
 ### Modular Publishing
 
 We propose FAIR theory as an instantiation of modular publishing [@kirczModularityNextForm1998].
-At present, the primary unit of social scientific communication is the academic paper.
+In most fields, the primary unit of scientific communication is the academic paper.
 A paper may depend on multiple resources - materials, data, code, and theory - but these are often merely described in the text.
 Modular publishing is the practice of making each of these resources available as independent citable *information artifacts* in their own right,
 with adequate metadata that is indexed in standardized repositories [@vandesompelRethinkingScholarlyCommunication2004].
@@ -334,7 +339,7 @@ which was developed by [CERN](https://home.cern/) under the European Union's [Op
 To maintain a persistent record of scholarly communication,
 Zenodo mints DOIs for information artifacts - as does, for example, the [Crossref](https://www.crossref.org/) association,
 which is used by many academic publishers.
-Finally, the [DataCite Metadata Schema]() offers a standard way to document the nature of relationships between information artifacts.
+Finally, the DataCite Metadata Schema offers a standard way to document the nature of relationships between information artifacts [@datacitemetadataworkinggroupDataCiteMetadataSchema2024].
 <!-- Platforms like the [Open Science Framework](https://osf.io/) connect these various research infrastructures to offer a more user-friendly front end for open science-related workflows. -->
 For example, a dataset collected for a specific paper would be archived in Zenodo with the metadata property `resourceType: dataset`,
 and cross-reference the published paper with `relationType: IsSupplementTo`.
@@ -988,7 +993,7 @@ https://www.r-bloggers.com/2018/08/applications-of-dags-in-causal-inference/
 
 # Discussion
 
-The replication crisis has brought the inadequacies of contemporary theoretical practices in the social sciences into focus.
+The replication crisis has brought the inadequacies of contemporary theoretical practices in psychology and other fields into focus.
 Psychological theories often fall short of all FAIR principles: they are hard to find and access, have limited Interoperability, and are rarely Reused.
 These limitations impede cumulative knowledge production in our field,
 leading to an accumulation of "one-shot" empirical findings, without commensurate advancement in our principled understanding of psychological phenomena.
@@ -999,7 +1004,7 @@ and creating a FAIR resource for theory construction tools and documentation tha
 
 Making theory FAIR allows researchers to more easily find a relevant framework;
 access and understand it; interact with it in a very practical manner, for example, by deriving predictions from it, or using it to select control variables; and reuse it, contributing changes to existing theories or splitting of in a new direction.
-Whereas the idea of theory can be quite nebulous to empirical social scientists,
+Whereas the idea of theory can be quite nebulous to empirical psychologists,
 FAIR theory makes theoretical work practical and tangible, incorporating theory into scholars' workflows.
 Having a concrete object to iterate upon facilitates the systematic improvement and iterative refinement of psychological theories, thus substantially increasing the efficiency of research.
 While FAIR theory does not directly reduce ambiguity,
@@ -1073,7 +1078,7 @@ we are developing open educational materials on theory development.
 A limitation of scope is that FAIR theory does not directly resolve problems related to strategic ambiguity [@frankenhuisStrategicAmbiguitySocial2023] and lack of theory formalization [@robinaughInvisibleHandsFine2021].
 However, our work does establish a framework that allows for and promotes the formalization of theories. 
 The example of the empirical cycle demonstrates how FAIR principles can guide theory formalization and foster cumulative progress.
-Another limitation of scope is that FAIR theory does not resolve other related issues in social sciences, such as the measurement crisis [@bringmannBackBasicsImportance2022] and lack of standardized ontologies for psychological constructs [@boscoMetaBUSVehicleFacilitating2017].
+Another limitation of scope is that FAIR theory does not resolve other related issues in psychology, such as the measurement crisis [@bringmannBackBasicsImportance2022] and lack of standardized ontologies for psychological constructs [@boscoMetaBUSVehicleFacilitating2017].
 However, our work here provides a template for addressing such challenges, <!-- NvD: I am not sure if we are offering a template to address these challenges. If we do, we should make this explicit. -->
 and any advancements in the areas of measurement and ontology will serve to amplify the value of FAIR theories, particularly when such resources are cross-referenced in the metadata (e.g., on Zenodo).
 
@@ -1081,8 +1086,8 @@ and any advancements in the areas of measurement and ontology will serve to ampl
 
 One issue that intersects with FAIR theory is the measurement and operationalization of psychological constructs.
 Aside from the aforementioned "theory crisis", there has been talk of a "measurement crisis":
-it is not always clear how theoretical constructs are operationalized, and many existing instruments have poor psychometric properties [REF].
-Additionally, the "jingle-jangle" fallacy is prevalent in the social sciences:
+it is not always clear how theoretical constructs are operationalized, and many existing instruments have poor psychometric properties [@bringmannBackBasicsImportance2022].
+Additionally, the "jingle-jangle" fallacy is prevalent in psychology:
 the same term is often used for distinct constructs, and conversely, different terms are used to refer to the same construct.
 FAIR theory can help address the measurement crisis:
 since theories can reference other theories and resources, it is possible to extend a structural theory with a theory of measurement.
@@ -1102,7 +1107,7 @@ It provides much-needed open science methods for the inductive phase of the empi
 closing a critical gap in the scientific process.
 FAIR theory makes theory more tangible, enabling scholars to incorporate it in their day-to-day workflows in order to derive hypotheses, select control variables, and contribute new data-driven insights.
 This paves the way for more theory-driven scholarship,
-and accelerates cumulative knowledge acquisition in the social sciences and beyond.
+and accelerates cumulative knowledge acquisition in the psychology, other social sciences, and beyond.
 
 
 \newpage
