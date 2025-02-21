@@ -598,7 +598,7 @@ which is achieved through version control with Git and archival on Zenodo.
 Finally, the (meta)data which meets domain-relevant community standards (R1.3).
 The Datacite metadata schema offers an initial template in this regard,
 and this paper takes one step towards establishing more fine-grained community standards for FAIR theory.
-[This is an example of FAIR metadata](https://raw.githubusercontent.com/cjvanlissa/fair_theory/refs/heads/main/DGPSabstract.md) extracted from Zenodo.
+[This is an example of FAIR metadata](https://raw.githubusercontent.com/cjvanlissa/fair_theory/refs/heads/main/example_metadata.json) extracted from Zenodo.
 
 If we consider the current state of Reusability in psychological theory, there appears to be a norm *against* theory reuse:
 *"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008].
