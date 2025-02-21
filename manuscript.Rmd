@@ -85,7 +85,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 
 The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and Reusable [@wilkinsonFAIRGuidingPrinciples2016] for both humans and computers.
-Since the FAIR principles' inception, scholars have demonstrated their relevance for making other information artefacts more open, such as research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying].
+Since the FAIR principles' inception, scholars have demonstrated their relevance for making other information artifacts more open, such as research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying].
 This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
 a digital instantiation of a scientific theory, published as a self-contained and citable information artifact distinct from the scientific paper,
@@ -231,10 +231,12 @@ Merely publishing theory in a research article does not make it open;
 to be open, theory should adhere to established open science standards.
 We do so by implementing theories as information artifacts,
 archived with apropriate metadata in a FAIR-compliant repository (e.g., Zenodo).
-FAIR theories are *Findable* via a DOI or search,
-*Accessible* in a machine- and human-readable filetype,
-*Interoperable* within the data analysis environment,
-and *Reusable* in the practical and legal sense, so that they may be iteratively improved - potentially via a participative process.
+Metadata are "data about the data", they provide information about the nature and content of an information artifact.
+Metadata are stored in the repository where the version of record of the FAIR theory is deposited.
+FAIR theories are *Findable* via a DOI or by searching the repository they are archived in;
+*Accessible* in a machine- and human-readable filetype;
+*Interoperable* for specific purposed, for example, within the data analysis environment;
+and *Reusable* in the practical and legal sense, so that they may be iteratively improved by the author or by others.
 <!-- AB I think some initial word on what is covered is needed here; otherwise readers may wonder what we mean to cover--> 
 <!-- CJ: Since this is in the next paragraph, I think it's redundant. Will merge there -->
 Following the original proposal of Lamprecht and colleagues,
@@ -401,7 +403,7 @@ or to study structural properties of theories.
 
 The four Findability criteria are applicable to theory with only minor adjustments, see Table \@ref(tab:tabfair).
 First, this requires assigning a globally unique and persistent identifier, such as a DOI, to each theory (F1).
-Of the many services that provide DOIs for scientific information artefacts,
+Of the many services that provide DOIs for scientific information artifacts,
 Zenodo and the Open Science Framework are commonly used in psychology.
 Second, Findable theory is described with rich metadata	(F2).
 This includes citation metadata (e.g., referencing a scientific paper that documents the theory, or a psychometric paper that operationalizes specific constructs).
@@ -415,7 +417,7 @@ Finally, metadata should be registered or indexed in a searchable registry (F4).
 It is important to note that, while may archives are technically searchable (e.g., GitHub, FigShare, the Open Science Framework, institutional repositories),
 only few are specifically designed for FAIR-compliant archival.
 Zenodo stands out in this respect.
-Thus, while it is fine (and recommended) to use GitHub for version control,
+Thus, while using Git for version control and GitHub for collaboration has specific advantages for scientific work [@ramGitCanFacilitate2013],
 the version of record should be archived in a FAIR repository like Zenodo.
 Using standardized metadata further improves the Findability of theories archived within FAIR repositories.
 The DataCite Metadata Schema provides a controlled vocabulary for research output, and the `resource_type: model` matches the description of FAIR theory [@datacitemetadataworkinggroupDataCiteMetadataSchema2024].
@@ -425,7 +427,7 @@ Furthermore, we suggest using the keyword `"fairtheory"` for all resources that 
 
 Findability is substantially amplified if intended users of a resource know where to search for it.
 This is a known problem in relation to research data and software [@katzSpecialIssueSoftware2024].
-Regrettably, most academic search engines are designed to index traditional print publications, not other information artifacts.
+Regrettably, most academic search engines only index traditional print publications, not other information artifacts.
 Since the status quo is to publish theories in papers,
 the FAIR requirements are met if scholars continue to do so,
 and additionally publish theories as separate information artifacts.
@@ -437,14 +439,16 @@ In the longer term, it may not be necessary to write a paper for each theory.
 If Zenodo becomes more recognized as centralized repository for information artifacts, researchers may begin to search there more regularly.
 Conversely, as organizations begin to recognize the value in tracking academic output other than papers, repositories may begin to index information artifacts stored in Zenodo.
 
-
-
 There have been notable efforts to improve theories' Findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
 and post many examples on their website [@grayHowMapTheory2017].
 Similarly, Van Dongen and colleagues are working on a database of models and formalized theories.
-Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability, however.
+Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability.
 Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
+Both approaches can be complementary, however.
+for example, post-hoc curation could make use of existing FAIR-compliant archival infrastructure like Zenodo.
+Conversely, the database engineering adage "Lots of Copies Keeps Stuff Safe" (LOCKSS) implies that it is fine to archive theories in multiple places,
+although it is advisable to make use of automatic integration (as exists between GitHub, Zenodo, and OSF) to avoid the need to maintain information in multiple places and prevent inconsistencies from arising.
 
 ## Accessibility
 
@@ -521,7 +525,7 @@ and explicit cross-references to relevant resources (papers, ontologies, macro-t
 
 ## Interoperability
 
-Interoperability pertains to the property of information artefacts to "integrate or work together [...] with minimal effort" [@wilkinsonFAIRGuidingPrinciples2016a].
+Interoperability pertains to the property of information artifacts to "integrate or work together [...] with minimal effort" [@wilkinsonFAIRGuidingPrinciples2016a].
 Firstly, theory and its associated metadata should use a formal, Accessible, shared and broadly applicable language to facilitate (human- and) machine readability and reuse (I1).
 The common practice of instantiating theory as lengthy prose or schematic drawing falls short of this ideal.
 Instead, FAIR theory should, ad minimum,
@@ -594,6 +598,7 @@ which is achieved through version control with Git and archival on Zenodo.
 Finally, the (meta)data which meets domain-relevant community standards (R1.3).
 The Datacite metadata schema offers an initial template in this regard,
 and this paper takes one step towards establishing more fine-grained community standards for FAIR theory.
+[This is an example of FAIR metadata](https://raw.githubusercontent.com/cjvanlissa/fair_theory/refs/heads/main/DGPSabstract.md) extracted from Zenodo.
 
 If we consider the current state of Reusability in psychological theory, there appears to be a norm *against* theory reuse:
 *"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008].
@@ -795,7 +800,7 @@ We recommend the `CC0` license, but other options are available, see [https://ch
 
 ## 3. Version Control the Repository
 
-The field of computer science provides well-established processes for creating information artefacts that can be iteratively improved.
+The field of computer science provides well-established processes for creating information artifacts that can be iteratively improved.
 In particular, the practice of version control offers extensive benefits for scientific work [@ramGitCanFacilitate2013; @vanlissaWORCSWorkflowOpen2021].
 To version control our project, we initiate a Git repository in the project folder.
 <!-- This can be done by [installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) locally, -->
@@ -870,7 +875,7 @@ fair_theory(path = "c:/theoryfolder/empirical_cycle",
             add_license = "cc0")
 ```
 
-Note that this function also automatically provides basic FAIR theory metadata to Zenodo.
+Note that this function also automatically submits basic FAIR theory metadata to Zenodo.
 
 ## Forking Different Implementations of a Theory
 

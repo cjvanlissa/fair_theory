@@ -1,0 +1,248 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "open"
+  },
+  "created": "2024-12-24T13:57:13.783572+00:00",
+  "custom_fields": {
+    "code:codeRepository": "https://github.com/cjvanlissa/empirical_cycle"
+  },
+  "deletion_status": {
+    "is_deleted": false,
+    "status": "P"
+  },
+  "files": {
+    "count": 1,
+    "enabled": true,
+    "entries": {
+      "cjvanlissa/empirical_cycle-first_release.zip": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:496e12749d7e73a13c3c625f2234331c",
+        "ext": "zip",
+        "id": "97162212-a21d-41ec-9c96-cd2c2d4e16b8",
+        "key": "cjvanlissa/empirical_cycle-first_release.zip",
+        "links": {
+          "content": "https://zenodo.org/api/records/14552329/files/cjvanlissa/empirical_cycle-first_release.zip/content",
+          "self": "https://zenodo.org/api/records/14552329/files/cjvanlissa/empirical_cycle-first_release.zip"
+        },
+        "metadata": null,
+        "mimetype": "application/zip",
+        "size": 4724,
+        "storage_class": "L"
+      }
+    },
+    "order": [],
+    "total_bytes": 4724
+  },
+  "id": "14552329",
+  "is_draft": false,
+  "is_published": true,
+  "links": {
+    "access": "https://zenodo.org/api/records/14552329/access",
+    "access_grants": "https://zenodo.org/api/records/14552329/access/grants",
+    "access_links": "https://zenodo.org/api/records/14552329/access/links",
+    "access_request": "https://zenodo.org/api/records/14552329/access/request",
+    "access_users": "https://zenodo.org/api/records/14552329/access/users",
+    "archive": "https://zenodo.org/api/records/14552329/files-archive",
+    "archive_media": "https://zenodo.org/api/records/14552329/media-files-archive",
+    "communities": "https://zenodo.org/api/records/14552329/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/14552329/communities-suggestions",
+    "doi": "https://doi.org/10.5281/zenodo.14552329",
+    "draft": "https://zenodo.org/api/records/14552329/draft",
+    "files": "https://zenodo.org/api/records/14552329/files",
+    "latest": "https://zenodo.org/api/records/14552329/versions/latest",
+    "latest_html": "https://zenodo.org/records/14552329/latest",
+    "media_files": "https://zenodo.org/api/records/14552329/media-files",
+    "parent": "https://zenodo.org/api/records/14552328",
+    "parent_doi": "https://doi.org/10.5281/zenodo.14552328",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.14552328",
+    "parent_html": "https://zenodo.org/records/14552328",
+    "requests": "https://zenodo.org/api/records/14552329/requests",
+    "reserve_doi": "https://zenodo.org/api/records/14552329/draft/pids/doi",
+    "self": "https://zenodo.org/api/records/14552329",
+    "self_doi": "https://doi.org/10.5281/zenodo.14552329",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.14552329",
+    "self_html": "https://zenodo.org/records/14552329",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:14552329/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:14552329/sequence/default",
+    "versions": "https://zenodo.org/api/records/14552329/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "creators": [
+      {
+        "affiliations": [
+          {
+            "name": "Utrecht University"
+          }
+        ],
+        "person_or_org": {
+          "family_name": "C. J. van Lissa",
+          "name": "C. J. van Lissa",
+          "type": "personal"
+        }
+      }
+    ],
+    "description": "<p>First proof-of-concept release</p>",
+    "publication_date": "2024-12-24",
+    "publisher": "Zenodo",
+    "related_identifiers": [
+      {
+        "identifier": "10.1515/9783112313121",
+        "relation_type": {
+          "id": "isderivedfrom",
+          "title": {
+            "de": "Wird abgeleitet von",
+            "en": "Is derived from"
+          }
+        },
+        "resource_type": {
+          "id": "publication-book",
+          "title": {
+            "de": "Buch",
+            "en": "Book"
+          }
+        },
+        "scheme": "doi"
+      }
+    ],
+    "resource_type": {
+      "id": "model",
+      "title": {
+        "de": "Modell",
+        "en": "Model"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": "CC0 waives copyright interest in a work you've created and dedicates it to the world-wide public domain. Use CC0 to opt out of copyright entirely and ensure your work has the widest reach."
+        },
+        "icon": "cc-cc0-icon",
+        "id": "cc0-1.0",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+        },
+        "title": {
+          "en": "Creative Commons Zero v1.0 Universal"
+        }
+      }
+    ],
+    "subjects": [
+      {
+        "subject": "fairtheory"
+      }
+    ],
+    "title": "FAIR theory: Empirical Cycle",
+    "version": "0.1.0"
+  },
+  "parent": {
+    "access": {
+      "grants": [],
+      "links": [],
+      "owned_by": {
+        "user": "146192"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {
+      "default": "a5bed294-d785-4bd5-bf05-787ba8381741",
+      "entries": [
+        {
+          "access": {
+            "member_policy": "open",
+            "members_visibility": "public",
+            "record_submission_policy": "open",
+            "review_policy": "closed",
+            "visibility": "public"
+          },
+          "children": {
+            "allow": false
+          },
+          "created": "2024-12-24T13:13:57.994869+00:00",
+          "custom_fields": {},
+          "deletion_status": {
+            "is_deleted": false,
+            "status": "P"
+          },
+          "id": "a5bed294-d785-4bd5-bf05-787ba8381741",
+          "links": {},
+          "metadata": {
+            "title": "FAIR Theory Community"
+          },
+          "revision_id": 2,
+          "slug": "fairtheory",
+          "updated": "2024-12-24T13:13:58.081996+00:00"
+        }
+      ],
+      "ids": [
+        "a5bed294-d785-4bd5-bf05-787ba8381741"
+      ]
+    },
+    "id": "14552328",
+    "pids": {
+      "doi": {
+        "client": "datacite",
+        "identifier": "10.5281/zenodo.14552328",
+        "provider": "datacite"
+      }
+    }
+  },
+  "pids": {
+    "doi": {
+      "client": "datacite",
+      "identifier": "10.5281/zenodo.14552329",
+      "provider": "datacite"
+    },
+    "oai": {
+      "identifier": "oai:zenodo.org:14552329",
+      "provider": "oai"
+    }
+  },
+  "revision_id": 6,
+  "stats": {
+    "all_versions": {
+      "data_volume": 18896.0,
+      "downloads": 4,
+      "unique_downloads": 4,
+      "unique_views": 30,
+      "views": 34
+    },
+    "this_version": {
+      "data_volume": 18896.0,
+      "downloads": 4,
+      "unique_downloads": 4,
+      "unique_views": 30,
+      "views": 34
+    }
+  },
+  "status": "published",
+  "swh": {
+    "swhid": "swh:1:dir:365e39d406c7687a9a8fa6dc09d2d910a2dabbde;origin=https://doi.org/10.5281/zenodo.14552328;visit=swh:1:snp:e645babd77c0fca5844f7e4c839da271ca42abbe;anchor=swh:1:rel:b45498acce04a1b2a958df08a87593918ce24405;path=cjvanlissa-empirical_cycle-1f9ef94"
+  },
+  "updated": "2024-12-25T11:21:17.213745+00:00",
+  "versions": {
+    "index": 1,
+    "is_latest": true,
+    "is_latest_draft": true
+  }
+}
