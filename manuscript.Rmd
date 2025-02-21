@@ -327,7 +327,7 @@ At present, the primary unit of social scientific communication is the academic 
 A paper may depend on multiple resources - materials, data, code, and theory - but these are often merely described in the text.
 Modular publishing is the practice of making each of these resources available as independent citable *information artifacts* in their own right,
 with adequate metadata that is indexed in standardized repositories [@vandesompelRethinkingScholarlyCommunication2004].
-Data sharing is a good example of a modular publishing practice that is  widely adopted and increasingly required by funding agencies, journals, and universities.
+Data sharing is a good example of a modular publishing practice that is widely adopted and increasingly required by funding agencies, journals, and universities.
 Scholars can archive information artifacts in repositories like [Zenodo](https://zenodo.org/),
 which was developed by [CERN](https://home.cern/) under the European Union's [OpenAIRE](https://www.openaire.eu/) program.
 To maintain a persistent record of scholarly communication,
@@ -337,7 +337,8 @@ Finally, the [DataCite Metadata Schema]() offers a standard way to document the 
 <!-- Platforms like the [Open Science Framework](https://osf.io/) connect these various research infrastructures to offer a more user-friendly front end for open science-related workflows. -->
 For example, a dataset collected for a specific paper would be archived in Zenodo with the metadata property `resourceType: dataset`,
 and cross-reference the published paper with `relationType: IsSupplementTo`.
-Similarly, FAIR theories can be connected to a specific paper which might serve as the theory's documentation and canonical reference.
+Similarly, a FAIR theory object can be connected to a specific paper which might serve as the theory's documentation and canonical reference by using `relationType: IsDescribedBy`, while the reverse relationship, documented in the canonical reference paper, is `relationType: Describes`. Other types are useful for making relationships between multiple theory objects explicit: If an existing narrative theory is FAIRified without much own contribution, the FAIR theory would cross-reference the paper with the narrative theory as `relationType: IsDerivedFrom`; if substantial own contributions were necessary, `relationType:IsNewVersionOf` could be used. If a variation of an existing FAIR theory is created, cross-reference it with `relationType: IsVariantFormOf`.
+<!-- FS: I still think we should have a dedicated term for a digital FAIR theory object -->
 
 ### Version Control
 
