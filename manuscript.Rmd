@@ -84,7 +84,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
 
-The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more findable, accessible, interoperable and reusable [REF] for both humans and computers.
+The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and reusable [REF] for both humans and computers.
 Since their inception in 2014, scholars have demonstrated their relevance for making other information artefacts more open, such as research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying].
 This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
@@ -131,7 +131,7 @@ The equally critical inductive processes of theory construction and theory impro
 The present paper restores balance by applying, for the first time,
 open science principles to psychological theory.
 We apply the FAIR principles to scientific theories,
-introducing the concept of *FAIR theory* to 
+introducing *FAIR theory* to 
 facilitate transparent scholarly communication and accelerate cumulative knowledge acquisition.
 
 ## Theory and Scientific Progress
@@ -225,14 +225,15 @@ The paradoxical role of theory in psychology is perhaps best described by Meehl'
 
 ## Making Theory FAIR
 
-The present paper addresses the lack of open science methods for theory development and suggests an improvement of the state of affairs by applying the FAIR principles to scientific theories.
+The present paper introduces open science methods for theory specification.
 Merely publishing theory in a research article does not make it open;
 to be open, theory should adhere to established open science standards.
-We apply the FAIR principles to digital representations of theory,
-introducing a FAIR metadata format to make theories *Findable* via a DOI,
+We do so by implementing theories as information artifacts compliant with the FAIR principles.
+The resulting FAIR theories are archived with apropriate metadata in a FAIR-compliant repository (e.g., Zenodo). 
+FAIR theories are *Findable* via a DOI or search,
 *Accessible* in a machine- and human-readable filetype,
 *Interoperable* within the data analysis environment,
-and *Reusable* in the practical and legal sense, so that they may be improved over time -- at best, in a participative process.
+and *Reusable* in the practical and legal sense, so that they may be iteratively improved - potentially via a participative process.
 Digital representations of theory intentionally is a broad term, particularly including textual representations of a given theory, as well as formal representations, such as mathematical notation, algorithmic pseudo code, or a set of logical clauses. <!-- AB I think some initial word on what is covered is needed here; otherwise readers may wonder what we mean to cover--> 
 Following the original proposal of Lamprecht and colleagues,
 we adapt the FAIR principles for theory, see Table \@ref(tab:tabfair).
@@ -432,7 +433,7 @@ Conversely, as organizations begin to recognize the value in tracking academic o
 
 
 
-There have been notable efforts to improve theories' findability through post-hoc curation.
+There have been notable efforts to improve theories' Findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
 and post many examples on their website [@grayHowMapTheory2017].
 Similarly, Van Dongen and colleagues are working on a database of models and formalized theories.
@@ -441,33 +442,33 @@ Ideally, Findability would be addressed ante-hoc, through documentation with ric
 
 ## Accessibility
 
-Transparent scholarly communication about theory requires that theories are accessible to all researchers and other stakeholders.
-If theories are not accessible, researchers cannot reuse and refine them. <!-- NvD: the original was logically unsound. Accessibility is necessary for reuse, but not sufficient, right?) --> 
-Thus, accessibility can accelerate cumulative knowledge acquisition.
-Making theories accessible also allows stakeholders (e.g., practitioners, policymakers, advocates) to inform themselves of the current scientific understanding of specific phenomena.
+Transparent scholarly communication about theory requires that theories are Accessible to all researchers and other stakeholders.
+If theories are not Accessible, researchers cannot reuse and refine them. <!-- NvD: the original was logically unsound. Accessibility is necessary for reuse, but not sufficient, right?) --> 
+Thus, Accessibility can accelerate cumulative knowledge acquisition.
+Making theories Accessible also allows stakeholders (e.g., practitioners, policymakers, advocates) to inform themselves of the current scientific understanding of specific phenomena.
 While isolated empirical findings can appear fragmented and contradictory [@dumas-malletPoorReplicationValidity2017],
 theories offer a top-down, big-picture representation of the phenomena studied in a field.
 In other words, theories are an important instrument in science communication.
 
 The Accessibility principles pertain to *regulating* access, not only maximizing it.
 They apply to theory with minor changes.
-Firstly, theory and its associated metadata should be accessible by their identifier using a standardized communications protocol (A1).
+Firstly, theory and its associated metadata should be Accessible by their identifier using a standardized communications protocol (A1).
 This can be achieved, for example, by hosting theory in a version-controlled remote repository (such as git), and archiving that repository on Zenodo for long-term storage.
 The resulting resource will then have an identifier (DOI) which allows the theory to be accessed using a standardized communications protocol (download via `https` or `git`).
-Secondly (A2), theory metadata should be accessible, even when the theory is no longer available,
+Secondly (A2), theory metadata should be Accessible, even when the theory is no longer available,
 which is also achieved via long-term storage (e.g., on Zenodo).
 Git remote repositories allow for access control,
 and Zenodo allows for access control of individual files/resources.
 <!-- An unavailable theory typically refers to a theory that was abandoned in favor of a better or more general theory (such as the phlogiston theory, which was superseded by the oxygen theory). -->
 In general, it makes sense to retain outdated theories, in order to be able to track the genesis of theories over time, yet, we require the availability of meta data as a minimum requirement.
 
-At present, there are several impediments to theories' accessibility.
+At present, there are several impediments to theories' Accessibility.
 To the extent that theories are still contained within papers,
 paywalls erected by commercial publishers constitute a barrier.
-Open Access publishing thus increases the accessibility of all academic output, including theory.
+Open Access publishing thus increases the Accessibility of all academic output, including theory.
 A second impediment is more indirect:
 While open access publishing increases practical access to theories,
-accessibility also requires clear and explicit communication.
+Accessibility also requires clear and explicit communication.
 <!-- NvD: I am not sure if we need to go into this much detail as presented in the rest of this Section. My suggestion is to remove most of it. I'll indicate which elements I suggest keeping -->
 This property of good theories has been dubbed "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024]. 
 At present, psychological theories are often ambiguous, rendering them difficult to understand [@frankenhuisStrategicAmbiguitySocial2023].
@@ -494,7 +495,7 @@ DOA also renders theories immune to refutation,
 because the author can claim that the theory was misconstrued when confronted with falsifying evidence, thus making it a moving target  [@szollosiArrestedTheoryDevelopment2021].
 The fact that DOA is inherently problematic is illustrated by cases where third parties identify logical inconsistencies within a theory [e.g., @kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008].
 This demonstrates that original authors are not the ultimate authority on their theories.
-DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as accessible as possible in terms of both availability and interpretability.
+DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as Accessible as possible in terms of both availability and interpretability.
 
 From a pragmatic perspective,
 these considerations underscore the importance of being as explicit as possible about assumptions and ontological definitions when making theory Accessible,
@@ -510,12 +511,12 @@ explication of assumptions,
 formalization,
 and explicit cross-references to relevant resources (papers, ontologies, macro-theories, measurement instruments, experimental designs) [REF langeChecklist2025].
 
-<!-- The data usually need to be integrated with other data. In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing. -->
+<!-- The data usually need to be integrated with other data. In addition, the data need to Interoperate with applications or workflows for analysis, storage, and processing. -->
 
 ## Interoperability
 
 Interoperability pertains to the property of information artefacts to "integrate or work together [...] with minimal effort" [@wilkinsonFAIRGuidingPrinciples2016a].
-Firstly, theory and its associated metadata should use a formal, accessible, shared and broadly applicable language to facilitate (human- and) machine readability and reuse (I1).
+Firstly, theory and its associated metadata should use a formal, Accessible, shared and broadly applicable language to facilitate (human- and) machine readability and reuse (I1).
 The common practice of instantiating theory as lengthy prose or schematic drawing falls short of this ideal.
 Instead, FAIR theory should, ad minimum,
 be instantiated in a human- and machine-readable datatype,
@@ -528,7 +529,7 @@ and statements expressed in some formal language.
 Examples of the latter include pseudo-code,
 interpretable computer code,
 and Gray's theory maps [@grayHowMapTheory2017].
-While a theory represented as a bitmap image is not very interoperable,
+While a theory represented as a bitmap image is not very Interoperable,
 the same image represented in the DOT language [@DOTLanguage]<!--AB citation needed; also Aaron has his own Julia package for graph language specs - not sure whether Aaron wants to refer to this?--> for representing graphs does meet this ideal.
 
 Secondly, theory (meta)data should use vocabularies that follow FAIR principles (I2).
@@ -542,20 +543,20 @@ The second part of this principle allows for tracing the provenance of a theory;
 This is achieved by using Git for version control and Zenodo for archiving.
 Git tracks the internal provenance of a theory repository; Zenodo is used to cross-reference external relationships (e.g., papers that influenced the theory, previous theories that inspired it, models based upon the theory).
 
-Recent work points out that interoperability is not an all-or-nothing property.
-The concept of X-interoperability was introduced to answer the question: *interoperable for what?*
-X-interoperability is defined as facilitating "successful communication between machines and between humans and machines [, where] A and B are considered X-interoperable if a common operation X exists that can be applied to both" [@vogtFAIR20Extending2024].
-This revised definition makes it possible to outline a theory's affordances in terms of X-interoperability.
-For example, a FAIR theory may be X-interoperable for deriving testable hypotheses,
+Recent work points out that Interoperability is not an all-or-nothing property.
+The concept of X-Interoperability was introduced to answer the question: *Interoperable for what?*
+X-Interoperability is defined as facilitating "successful communication between machines and between humans and machines [, where] A and B are considered X-Interoperable if a common operation X exists that can be applied to both" [@vogtFAIR20Extending2024].
+This revised definition makes it possible to outline a theory's affordances in terms of X-Interoperability.
+For example, a FAIR theory may be X-Interoperable for deriving testable hypotheses,
 or for the purpose of selecting relevant control variables,
 or for the purpose of indicating the conditions necessary for observing a particular phenomenon.
 If we consider Meehl's nine properties of strong theories (properties 3-8 are grouped because they all refer to functional form),
-we see how each of these properties incurs certain affordances in terms of X-interoperability (Table \@ref(tab:tabmeehl)).
+we see how each of these properties incurs certain affordances in terms of X-Interoperability (Table \@ref(tab:tabmeehl)).
 
 ```{r tabmeehl}
 data.frame(
   "Property" = c("1) Ontology", "2) Causal connections", "3-8) Functional Form", "9) Numerical Value"),
-  "X-interoperability" = c("Variable selection", "Model specification, covariate selection, causal inference", "Deriving specific hypotheses", "Simulating data"), check.names = FALSE
+  "X-Interoperability" = c("Variable selection", "Model specification, covariate selection, causal inference", "Deriving specific hypotheses", "Simulating data"), check.names = FALSE
 ) |>
 papaja::apa_table()
 ```
@@ -567,21 +568,21 @@ Interoperability of psychological theory may be limited when theories are instan
 <!-- What can go wrong? A well-formed sentence may be logically inconsistent (e.g., the theory that conceptualized father involvement simultaneously as mediator and moderator); a picture may seem sensible but there's no straightforward way to translate it to hypotheses, etc. -->
 <!-- which are not machine-readable and l -->
 
-With regard to the state of interoperability in contemporary psychology, 
-Kurt Lewin's adage "there's nothing as practical as a good theory" [@lewinPsychologyProcessGroup1943] implies that theories ought to be highly X-interoperable in psychological researchers' day-to-day work.
+With regard to the state of Interoperability in contemporary psychology, 
+Kurt Lewin's adage "there's nothing as practical as a good theory" [@lewinPsychologyProcessGroup1943] implies that theories ought to be highly X-Interoperable in psychological researchers' day-to-day work.
 But, as we argued, this is not the case.
-The examples of X-interoperability offered in Table \@ref(tab:tabmeehl) illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-interoperable within software used for analysis.
-For example, interoperable theory could be used
+The examples of X-Interoperability offered in Table \@ref(tab:tabmeehl) illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-Interoperable within software used for analysis.
+For example, Interoperable theory could be used
 to select control variables for causal inference [@cinelliCrashCourseGood2022],
 or to preregister the inferential procedure that would lead to specific modifications of a theory after analyzing empirical data [@peikertReproducibleResearchTutorial2021],
 or to derive machine-readable hypotheses [@lakensImprovingTransparencyFalsifiability2021] which could be automatically evaluated through integration testing [@vanlissaUsingEndpointsCheck2023].
-Furthermore, theories can be X-interoperable with each other to enable nesting, or using one theory to clarify elements of another theory.
+Furthermore, theories can be X-Interoperable with each other to enable nesting, or using one theory to clarify elements of another theory.
 For example, it should be possible to embed a theory about emotion regulation [e.g., @grossEmotionRegulationCurrent2015] within a theory of emotion regulation development [@morrisRoleFamilyContext2007].
 
 ## Reusability
 
 If we take cumulative knowledge acquisition to be a goal of scientific research, then Reusability is the ultimate purpose of making theory FAIR.
-Applied to FAIR theory, reusability requires that  each theory and its associated metadata are richly described with a plurality of accurate and relevant attributes (R1) with a clear and accessible license for reuse (R1.1).
+Applied to FAIR theory, reusability requires that  each theory and its associated metadata are richly described with a plurality of accurate and relevant attributes (R1) with a clear and Accessible license for reuse (R1.1).
 It should further have detailed provenance (R1.2), 
 which is achieved through version control with Git and archival on Zenodo.
 Finally, the (meta)data which meets domain-relevant community standards (R1.3).
@@ -769,7 +770,7 @@ We recommend the `CC0` license, but other options are available, see [https://ch
 
 <!-- * Title, prefaced with `# FAIR theory: The Theory's Name` -->
 <!-- * Description: A plain-text description of the theory and its scope -->
-<!-- * Interoperability: Most README files contain a section labeled "Getting Started", "Instructions", or "How to Use". From a FAIR perspective, such a section might be better labeled "Interoperability", or "How to Use (Interoperability)". We propose explicitly addressing the theory's X-interoperability, telling users exactly what they can use the theory for, and how. For example, our example is implemented in the DOT language for describing graphs, so we would could provide instructions here on how to plot a DOT graph. -->
+<!-- * Interoperability: Most README files contain a section labeled "Getting Started", "Instructions", or "How to Use". From a FAIR perspective, such a section might be better labeled "Interoperability", or "How to Use (Interoperability)". We propose explicitly addressing the theory's X-Interoperability, telling users exactly what they can use the theory for, and how. For example, our example is implemented in the DOT language for describing graphs, so we would could provide instructions here on how to plot a DOT graph. -->
 <!-- * Contributing: Pertaining to the Reusability criterion, this section should tell users the *social expectations regarding reuse and contributions*. -->
 <!-- * License: The legal complement to the preceding section, this section should refer readers to the LICENSE file to learn about the *legal conditions of reuse*. -->
 <!-- * Citing this work: Tell users how to cite the theory. Note that this section is redundant with the Zenodo archive, which has a preferred citation field. The disadvantage of redundant information is that you may have to maintain this section of the README going forward. The advantage is that documenting related works in the README makes it more readily accessible to users. We suggest a compromise: to retain this section, but refer the reader to the Zenodo page. -->
@@ -839,7 +840,7 @@ Supplying the following information helps improve the Findability of a theory:
     
 ## 6. Making Changes
 
-<!-- CJ: Aaron, I moved your part here because I don't think it relates to interoperability. But perhaps there's another place where it fits better? -->
+<!-- CJ: Aaron, I moved your part here because I don't think it relates to Interoperability. But perhaps there's another place where it fits better? -->
 
 
 ## Automating these Steps
@@ -987,7 +988,7 @@ https://www.r-bloggers.com/2018/08/applications-of-dags-in-causal-inference/
 # Discussion
 
 The replication crisis has brought the inadequacies of contemporary theoretical practices in the social sciences into focus.
-Psychological theories often fall short of all FAIR principles: they are hard to find and access, have limited interoperability, and are rarely reused.
+Psychological theories often fall short of all FAIR principles: they are hard to find and access, have limited Interoperability, and are rarely Reused.
 These limitations impede cumulative knowledge production in our field,
 leading to an accumulation of "one-shot" empirical findings, without commensurate advancement in our principled understanding of psychological phenomena.
 We argued that applying the FAIR principles to theory offers a structured solution to these shortcomings.
@@ -1040,7 +1041,7 @@ The advantage of modular publishing is that authors can be credited for theory d
 Given the current emphasis on empirical papers [REF], theoretical papers can be hard to publish.
 FAIR theories, by contrast, can be readily disseminated as citable information artifacts, thus changing the incentive structure to favor theory development.
 
-Interdisciplinarity benefits from FAIR theory's accessibility across different fields; thus, theoretical frameworks can be reused, adapted, or used for analogical modeling [REF Oisin paper].
+Interdisciplinarity benefits from FAIR theory's Accessibility across different fields; thus, theoretical frameworks can be reused, adapted, or used for analogical modeling [REF Oisin paper].
 Meta-research benefits from the fact that FAIR theory enables studying the structure, content, and development of theories over time.
 In terms of team science, FAIR theory facilitates collaboration by ensuring that all contributors have access to the same information and
 clarifying any remaining areas of contention or misunderstanding. 
