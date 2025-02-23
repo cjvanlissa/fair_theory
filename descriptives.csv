@@ -1,0 +1,17 @@
+"","Construct","Range","Age","Variable","n","M","SD","type","min","max"
+"1","Immigrant","0 = no, 1 = yes","13","IMM1","1057","0.50","0.50","ordered","0","1"
+"2","Adversity","0–4","13","ADV1","1017","0.83","0.80","ordered","0","4"
+"3","Involvement","1–5","13","INV1","889","3.38","1.15","ordered","1","5"
+"4","Self-efficacy","1–7","13","SEF1","967","5.43","0.87","ordered","1","7"
+"5","Academic","1–20","13","GPA1","843","13.7","3.02","ordered","1","20"
+"6","Academic","1–20","14","GPA2","748","13.3","2.97","ordered","1","20"
+"7","Academic","1–20","15","GPA3","620","13.4","3.02","ordered","1","20"
+"8","Conduct","1–5","13","CON1","1026","4.59","0.72","ordered","1","5"
+"9","Conduct","1–5","14","CON2","546","4.45","0.76","ordered","1","5"
+"10","Conduct","1–5","15","CON3","522","4.37","0.76","ordered","1","5"
+"11","Emotional","0–2","13","EMO1","965","1.45","0.46","ordered","0","2"
+"12","Emotional","0–2","14","EMO2","730","1.54","0.44","ordered","0","2"
+"13","Emotional","0–2","15","EMO3","589","1.46","0.51","ordered","0","2"
+"14","Peer popularity","z score within	classroom","13","POP1","1045","0.00","0.98","numeric",NA,NA
+"15","Peer popularity","z score within	classroom","14","POP2","719","0.03","0.99","numeric",NA,NA
+"16","Peer popularity","z score within	classroom","15","POP3","571","0.04","0.98","numeric",NA,NA
