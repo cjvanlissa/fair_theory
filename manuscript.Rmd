@@ -673,7 +673,7 @@ Interoperability of psychological theory may be limited when theories are instan
 <!-- which are not machine-readable and l -->
 
 With regard to the state of Interoperability in psychology, 
-Kurt Lewin's -@lewinPsychologyProcessGroup1943 adage "there's nothing as practical as a good theory" paints a hopeful picture of theories as useful tools in psychological researchers' day-to-day work.
+Kurt Lewin's [-@lewinPsychologyProcessGroup1943] adage "there's nothing as practical as a good theory" paints a hopeful picture of theories as useful tools in psychological researchers' day-to-day work.
 But, as we argued, this is not the case.
 The examples of X-Interoperability offered in Table \@ref(tab:tabmeehl) illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-Interoperable within software used for analysis.
 For example, Interoperable theory could be used
