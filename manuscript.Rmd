@@ -739,8 +739,8 @@ a popular platform in psychology.
 Thus, it is possible to create a project page on the OSF to increase the visibility of a FAIR theory amongst users of that platform,
 while the integration of the OSF with Zenodo and GitHub removes the need for maintaining the same information on multiple platforms.
 Note that open science infrastructure is an area of active development, and as such,
-the approach proposed here might change.
-Our workflow can be largely automated in R using the `theorytools` package.
+the approach proposed here might change as new tools or databases are developed or existing tools and database change over time.
+Our suggested workflow can be largely automated in R using the `theorytools` package but note that our workflow is not contingent upon researchers using R at all.
 To anticipate workflow changes, the package includes a living document with the most recent version of our proposed workflow.
 It can be accessed by running `vignette("fairtheory", package = "theorytools")` in R.
 We present a brief summary of the instructions at the time of writing here,
@@ -860,7 +860,7 @@ See here for [an example of the resulting FAIR metadata](https://raw.githubuserc
 - Set the *resource type* to `Model`; this ensures proper archival in Zenodo
 - Verify that the *title* is prefaced with `FAIR theory:`; this allows sentient readers to recognize the work as a FAIR theory
 - Add the *keyword* `fairtheory`; this aids search engine indexation
-- Optionally, submit the theory to the ["FAIR Theory Community"](https://zenodo.org/communities/fairtheory) to contribute to community building
+- Optionally, submit the theory to the ["FAIR Theory Community"](https://zenodo.org/communities/fairtheory) to contribute to community building; communities on Zenodo are shared spaces to manage and curate research outputs.
 - List the DOIs/identifiers of *related works*. Use the `Relation` field as appropriate. For example:
     + `Is documented by` can be used to reference a theory paper you wrote, in which you introduce this FAIR theory
     + `Is derived from` could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used `Is derived from` to reference De Groot and Spiekerman's empirical cycle.
@@ -887,6 +887,7 @@ fair_theory(path = "c:/theoryfolder/empirical_cycle",
             remote_repo = "empirical_cycle",
             add_license = "cc0")
 ```
+The first two lines install and load the `theorytools` package. Lines 4--6 use the `worcs` package to check whether git for version control is installed and a connection to github can be established to publish the theory. Line 8 calls the main entry function `fair_theory` for a local repository in a specified local `path` with a given `title` and the aforementioned dot `theory_file` containing the theory, uploading it to the user's remote github repository with name given in `remote_repo` and a given license specified in `add_license`. 
 
 ## Updating a Theory
 
