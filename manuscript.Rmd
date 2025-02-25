@@ -867,6 +867,9 @@ See here for [an example of the resulting FAIR metadata](https://raw.githubuserc
 - List the DOIs/identifiers of *related works*. Use the `Relation` field as appropriate. For example:
     + `Is documented by` can be used to reference a theory paper you wrote, in which you introduce this FAIR theory
     + `Is derived from` could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used `Is derived from` to reference De Groot and Spiekerman's empirical cycle.
+- Optionally, add *References* to related works in plain text. For example, here we can provide the full citation of De Groot and Spiekerman:
+    > De Groot, A. D., & Spiekerman, J. A. A. (1969). Methodology: Foundations of inference and research in the behavioral sciences. De Gruyter Mouton. https://doi.org/10.1515/9783112313121
+
     
 <!-- ## 6. Making Changes -->
 <!-- CJ: Aaron, I moved your part here because I don't think it relates to Interoperability. But perhaps there's another place where it fits better? -->
