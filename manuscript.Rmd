@@ -416,7 +416,7 @@ They can be applied to theories representated in natural language,
 as well as formal theories represented using mathematical notation, algorithmic pseudo code, or a set of logical clauses.
 Thus, for example, "grounded theory", derived from qualitative research,
 can be represented as a FAIR theory if it is represented as plain-text propositions and archived in a FAIR repository with appropriate metadata.
-Conversely, a formal theory is not FAIR if it is confined to in a journal article without any key words to identify it as a theory paper (lacking Findability), represented as a bitmap image (limiting Accessibility and Interoperability), and behind a paywall (limiting Reusability).
+Conversely, a formal theory is not FAIR if it is confined to a publication in a journal article without any key words to identify it as a theory paper (lacking Findability), represented merely as a bitmap image (limiting Accessibility and Interoperability), or behind a paywall (limiting Reusability).
 FAIR theory is thus consistent with, but does not require, formalization (also see *Accessibility*).
 
 ### Modular Publishing
@@ -469,18 +469,16 @@ semantic versioning communicates what those changes mean to users of the theory,
 guides the social process of theory development, and signals how much a theory has been changed.
 We propose the following adaptation of semantic versioning for theories:
 
-```
-Given a version number MAJOR.MINOR.PATCH, increment the:
+Given a version number in the format MAJOR.MINOR.PATCH (where MAJOR, MINOR, and PATCH are placeholders for positive integer numbers including zero), increment the:
 
-MAJOR version when you make backwards incompatible changes, i.e., the
+- MAJOR version when you commit backwards incompatible changes, i.e., the
       theory now contains empirical statements that are at odds with
-      a previous version
-MINOR version when you expand the set of empirical statements in a
+      a previous version of the theory
+- MINOR version when you expand the set of empirical statements in a
       backward compatible manner (i.e., the previous version is
       subsumed within the new version)
-PATCH version when you make backward compatible bug fixes, cosmetic
+- PATCH version when you make backward compatible bug fixes, cosmetic
       changes, fix spelling errors, or add clarifications
-```
 
 # The FAIR Principles
 
