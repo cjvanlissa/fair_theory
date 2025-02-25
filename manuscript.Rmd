@@ -89,7 +89,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and Reusable [@wilkinsonFAIRGuidingPrinciples2016] for both humans and computers.
 Since the FAIR principles' inception, scholars have demonstrated their relevance for making other information artifacts more open, such as research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying].
-This paper argues that the FAIR principles can advance effective and transparent scholarly communication about theory.
+This paper argues that the FAIR principles can also promote effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
 a digital instantiation of a scientific theory, published as a self-contained and citable information artifact distinct from the scientific paper,
 compliant with the FAIR principles.
@@ -101,7 +101,7 @@ We focus on applications in psychology, but the principles are relevant across t
 
 The so-called "replication crisis" has prompted extensive reforms in psychology and other scientific fields [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that undisclosed flexibility in analyses was a major factor for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
-These various practices ensure transparent and repeated testing of hypotheses.
+These various practices ensure transparent and repeated testing of hypotheses by commiting to an analysis plan in advance.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
 Psychological theories rarely provide hypotheses that are corroborated by evidence.
@@ -111,8 +111,8 @@ A good example of this is found in “self-determination theory” (SDT), which 
 Initially, intrinsic motivation was understood as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures [@deciEffectsExternallyMediated1971].
 Over time, however, SDT expanded its definition to include motivations driven by the fulfillment of basic psychological needs—autonomy, competence, and relatedness—all still categorized as "intrinsic" [@ryanSelfdeterminationTheoryFacilitation2000].
 The profound difference between these definitions becomes clear when considering the act of changing a child’s dirty diaper.
-Under the original definition, few would be considered intrinsically motivated, after all, it’s not exactly a joy-filled experience
-Yet, under the expanded framework, many would be, as the act may fulfill deeper needs, such as the desire to nurture and care for one’s child.
+Under the original definition, few caregivers would be considered intrinsically motivated, after all, it’s not exactly a joy-filled experience.
+Yet, under the expanded definition, many would be, as the act may fulfill deeper needs, such as the desire to nurture and care for one’s child.
 
 <!-- CJ: Maybe we should give an example here. Does anyone know one? -->
 <!-- NvD: Harris 1976 has a nice example about how cognitive dissonance theory can be formalized in multiple ways, which offer hypotheses that contradict each other -->
@@ -233,7 +233,7 @@ knitr::include_graphics("ec_wagenmakers.pdf")
 knitr::include_graphics("ec_lissa.pdf")
 ```
 
-```{r figecs, eval = TRUE, fig.cap='Three implementations of the "empirical cycle".'}
+```{r figecs, eval = TRUE, fig.cap='Three implementations of the "empirical cycle" [@degrootMethodologieGrondslagenVan1961].'}
 knitr::include_graphics("ec_visio.pdf")
 ```
 
