@@ -1145,8 +1145,8 @@ FAIR theory is a major step forward towards more transparent, collaborative, and
 It provides much-needed open science methods for the inductive phase of the empirical cycle,
 closing a critical gap in the scientific process.
 FAIR theory makes theory more tangible, enabling scholars to incorporate it in their day-to-day workflows in order to derive hypotheses, select control variables, and contribute new data-driven insights.
-This paves the way for more theory-driven scholarship,
-and accelerates cumulative knowledge acquisition in the psychology, other social sciences, and beyond.
+This paves the way for more theory-driven scholarship
+and acceleration of cumulative knowledge acquisition in psychology, the social sciences, and beyond.
 
 
 \newpage
