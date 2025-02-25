@@ -304,7 +304,7 @@ Closer examination of deductive research reveals, however, that the link between
 Only 15% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis [@mcphetresDecadeTheoryReflected2021].
 The remaining 85% of deductive studies lacked an explicit connection between theory and hypothesis.
 Perhaps some of these ungrounded hypotheses are rooted in implicit theories privy only to the author,
-in which case it would be straightforward and important to make these explicit [@friedTheoriesModelsWhat2020, @norouziCapturingCausalClaims2024].
+in which case it would be straightforward and important to make these explicit [@friedTheoriesModelsWhat2020; @norouziCapturingCausalClaims2024].
 Or, perhaps some hypotheses are thoughtlessly reported as part of entrenched research practices [@gigerenzerNullRitualWhat2004],
 but are not of substantive interest, such as null hypotheses that exist solely for the purpose of being rejected [@vanlissaTeacherCornerEvaluating2020].
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
@@ -328,7 +328,7 @@ Metadata are "data about the data", they provide information about the nature an
 Metadata are stored in the repository where the version of record of the FAIR theory is deposited.
 FAIR theories are *Findable* via a DOI or by searching the repository they are archived in;
 *Accessible* in a machine- and human-readable filetype;
-*Interoperable* for specific purposed, for example, within the data analysis environment;
+*Interoperable* for specific purposes, for example, within the data analysis environment;
 and *Reusable* in the practical and legal sense, so that they may be iteratively improved by the author or by others.
 <!-- AB I think some initial word on what is covered is needed here; otherwise readers may wonder what we mean to cover--> 
 <!-- CJ: Since this is in the next paragraph, I think it's redundant. Will merge there -->
@@ -353,18 +353,17 @@ papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\li
 <!-- The nature of the tracked information can change over time, as a scientific theory matures. -->
 <!-- The discussion about the distinction between FAIR theories and models is removed, as I believe it might be confusing for first-time readers and not really necessary for the bigger picture of the paper (but of course could be re-added). -->
 <!-- NvD: I wonder if we need what is stated about the syntactic, semantic, and pragmatic perspectives. We can leave it at the characterization that theories are (typically) concerned with the explanation and understanding of what can be observed (directly or indirectly) tested (in the laboratory or natural experiments) and manipulated. But, this can come in many forms and we do not exclude the possibility that there are acceptions to this characterization that we could still consider a scientific theory. We can then state that we use Meehl's view for convenience in this paper, but that it is compatible other perspectives (or something.  -->
-Definitions of theory abound and are the subject of extensive scholarly debate.
+Definitions of theory are abundant, and are the subject of extensive scholarly debate.
 Given that a pluriformity of definitions are consistent with FAIR theory principles,
-the method is not contained to any one particular definition.
-Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic [@scientifictheories]
+our suggested approach is not limited to any one particular definition.
+Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic [@scientifictheories].
 The syntactic view describes theories as "sets of sentences in a given logical domain language" [@scientifictheories, ch. 2],
 acknowledging that each domain (a scientific field, such as psychology or physics) has its own theoretical vocabulary.
-We recognize the syntactic view in Meehl's hierarchy of ever-more specific "statements" a theory might contain [-@meehlAppraisingAmendingTheories1990]:
+We recognize the syntactic view in Meehl's [-@meehlAppraisingAmendingTheories1990] hierarchy of ever-more specific "statements" a theory might contain:
 statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
 and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023; @guestWhatMakesGood2024].
-
 The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematics.
 It shifts the focus from theories as collections of sentences to mathematical models.
 The term "model" is not uniquely defined within the literature;
@@ -385,7 +384,7 @@ This allows for the specification of statistical models, which make just enough 
 Going even further, a *generative/computational model* could be specified,
 which is completely parameterized (i.e., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
 Also, aspects of scientific practice might be added over time - either to the theory itself, or as references recorded in the theory metadata.
-Examples include experimental designs (e.g. longitudinal designs observing change over time), measurement tools (e.g. different questionnaires used to assess the same construct), or study subjects (e.g. specific strains of rats).
+Examples include experimental designs (e.g., longitudinal designs observing change over time), measurement tools (e.g., different questionnaires used to assess the same construct), or study subjects (e.g., specific strains of rats).
 
 As an applied example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors
 such as adherence to infection prevention protocols (e.g., social distancing),
@@ -398,8 +397,8 @@ The theory may encompass a particular transmission _model_ for disease spread in
 
 Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use. 
 <!-- NvD: Maybe we should add "specification" as part of "formalization" or "formalisation" as a part of "specification", because not everybody that is advocating better theories thinks that we should focus on formalization.  -->
-Greater formalization increases theories' *empirical content* [@popperLogicScientificDiscovery2002] because it expresses ideas as precise statements, clearly demarcating what should (not) be observed.
-For example, Baddeley's verbal description of the phonological loop in his theory of working memory allows for at least 144 different implementations depending on the specification of the decay rate, recall success, or rehearsal sequence [@lewandowsky2010computational].
+More rigorous formalization increases theories' *empirical content* [@popperLogicScientificDiscovery2002] because it expresses ideas as precise statements, clearly demarcating what should be observed and what not if the theory were true.
+For example, Baddeley's verbal description of the phonological loop in his theory of working memory stands out for its particular clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate, recall success, or rehearsal sequence, which were left undefined in the original theory [@lewandowsky2010computational].
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
 Compared to theories expressed in natural language,
@@ -410,8 +409,8 @@ which necessitates specific revisions and advances our principled understanding 
 
 FAIR theory imposes no restrictions on the manner in which theories are derived and implemented;
 rather, it increases the fidelity and ease with which they are communicated.
-Thus, FAIR theory does not require theories to be formal,
-and formal theory can be represented in a way that is not FAIR.
+Thus, FAIR theory does not require theories to be formal.
+At the same time, not every formal theory is FAIR.
 The FAIR principles pertain to theories' metadata documentation and sharing in digital archives, with the aim of enhancing their reusability and extensibility.
 They can be applied to theories representated in natural language,
 as well as formal theories represented using mathematical notation, algorithmic pseudo code, or a set of logical clauses.
