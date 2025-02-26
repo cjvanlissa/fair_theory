@@ -1,0 +1,38 @@
+\begin{tikzpicture}
+        [manifest/.style={rectangle,draw=black!80,semithick,minimum width=1cm,inner sep=4pt,text centered},
+        latent/.style={circle,draw=black!80,thick,inner sep=2,text centered},
+        latent_wide/.style={circle,draw=black!80,thick,inner sep=4,text centered},
+        from/.style={<-,>=stealth',semithick},
+        text height=1.75ex, text depth=.5ex]
+
+\begin{scope}
+
+% types
+\node[manifest] at (0,0) (skill) {\texttt{skill}};
+
+\node[manifest] at (6, 0) (overconfidence) {\texttt{overconfidence}};
+
+\node[manifest] at (0, -2) (performance) {\texttt{performance}};
+
+\node[manifest] at (6,-2) (estimate) {\texttt{overestimation}};
+
+\node[manifest] at (0, -6) (skillerror) {\texttt{skill + error}};
+
+\node[manifest] at (6, -4) (pminusp) {\texttt{expected performance - performance}};
+
+\node[manifest] at (6, -6) (ocerror) {\texttt{overconfidence - error}};
+
+
+%arrows
+\draw[-,>=stealth',semithick] (skill) -- node [fill=white] {$-$} (overconfidence);
+\draw[-,>=stealth',semithick] (performance) -- node [fill=white] {$-$} (estimate);
+\draw[-,>=stealth',semithick] (skill) -- node [fill=white] {$\simeq$} (performance);
+\draw[-,>=stealth',semithick] (overconfidence) -- node [fill=white] {$\simeq$} (estimate);
+\draw[-,>=stealth',semithick] (skillerror) -- node [fill=white] {$-$} (ocerror);
+\draw[-,>=stealth',semithick] (performance) -- node [fill=white] {$\coloneq$} (skillerror);
+\draw[-,>=stealth',semithick] (estimate) -- node [fill=white] {$\coloneq$} (pminusp);
+\draw[-,>=stealth',semithick] (pminusp) -- node [fill=white] {$=$ (derived below)} (ocerror);
+
+\end{scope}
+
+\end{tikzpicture}

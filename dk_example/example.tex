@@ -62,7 +62,7 @@ The constructs used are
  \item measurement error as luck on a test
 \end{itemize}
 
-\section{Relationships}
+\section{Relationships between constructs}
 
 \subsection{Original DK Paper}
 
@@ -75,7 +75,7 @@ The constructs used are
   \label{fig:typetree}
 \end{figure}
 
-With $-$ signifying a negative association and $\simeq$ signifying measured by.
+With $-$ signifying a negative association and $\simeq$ signifying ``measured by''.
 
 \begin{itemize}
  \item low skilled are more overconfident in assessing their skill than high skilled
@@ -91,6 +91,9 @@ With $-$ signifying a negative association and $\simeq$ signifying measured by.
   \caption{A caption}
   \label{fig:typetree}
 \end{figure}
+
+
+With $-$ signifying a negative association, $\simeq$ signifying ``measured by'' and $\coloneq$ signifying ``defined as''.
 
 \section{Mathematical Formulation}
 Define random variables
@@ -118,18 +121,28 @@ Overconfidence $oc^*$ is measured by overestimation $oe$ defined as
 \end{equation}
 
 \noindent From eq. \ref{oc} and \ref{ep} it follows that $p_e = s^*_s$ and further from eq. \ref{ep} and \ref{p} we see
-\begin{align}
+\begin{align} \label{dd}
   oe &= p_e - p \\
   &= (s^* + oc^*) - (s^* + \epsilon) \\
   &= oc^* - \epsilon
 \end{align}
-\section{(Statistical) Models}
 
+\section{(Statistical) Models}
+Using a linear regression model, the Dunning-Kruger effect can be stated as
+\begin{equation}
+ oc^* = \alpha + \beta_1 s^* + u
+\end{equation}
+with $\beta_1 < 0$.
+Substituting the obervable variables and rearranging according to eq. \ref{p} and \ref{dd}:
+\begin{equation}
+  oe = \alpha + \beta_1 p + u - \epsilon(1 + \beta_1)
+\end{equation}
 
 \subsection{Correction}
 There are different ways to correct for the bias introduced by measurement error:
 \begin{itemize}
- \item use different test performances to calculate skill and overconfidence, but a small test-retest correlation can bias the estimate towards zero then (Krueger and Mueller, 2002)
+ \item Bias correction: use a bias correction formula that takes into account the correlation between performance and the error term
+ \item IV approach: measure performance on a second test ($p_2$) and compute $\beta_1 = \frac{\cov(oe, p_2)}{\cov(p, p_2)}$.
 \end{itemize}
 
 \section{Common Experimental Paradigm}
@@ -142,6 +155,7 @@ There are different ways to correct for the bias introduced by measurement error
 There are many replications for different populations and different tasks.
 
 \section{Open Questions / Ambiguities}
+The paper states they assume performance expectations are measured before the test - the derivations differ substantially if they are measured after the test.
 
 \section{Notes}
 \begin{itemize}
