@@ -41,7 +41,7 @@ author:
       - Writing – review & editing
   - name: "Maximilian S. Ernst"
     affiliation: "2,7"
-    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+    role:
       - Writing – review & editing
       - Investigation
 affiliation:
