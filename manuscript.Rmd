@@ -39,6 +39,11 @@ author:
     affiliation: "6"
     role:
       - Writing – review & editing
+  - name: "Maximilian S. Ernst"
+    affiliation: "2,7"
+    role:
+      - Writing – review & editing
+      - Investigation
 affiliation:
   - id            : "1"
     institution   : "Tilburg University, dept. Methodology & Statistics"
@@ -52,6 +57,8 @@ affiliation:
     institution   : "Ludwig-Maximilians-Universität München, Germany"
   - id            : "6"
     institution   : "University of Amsterdam, the Netherlands"
+  - id            : "7"
+    institution   : "Max Planck School of Cognition, Leipzig, Germany"
 authornote: |
   This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`.
 
@@ -67,6 +74,7 @@ figurelist        : no
 tablelist         : no
 footnotelist      : no
 classoption       : "man, noextraspace"
+urlcolor          : blue
 output            :
   papaja::apa6_pdf: default
   md_document: default
@@ -89,13 +97,13 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and Reusable [@wilkinsonFAIRGuidingPrinciples2016] for both humans and computers.
 Since the FAIR principles' inception, scholars have demonstrated their relevance for making other information artifacts more open, such as research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying].
-This paper argues that the FAIR principles can also promote effective and transparent scholarly communication about theory.
+This paper argues that the FAIR principles can similarly advance effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
 a digital instantiation of a scientific theory, published as a self-contained and citable information artifact distinct from the scientific paper,
 compliant with the FAIR principles.
 FAIR theory has the potential to improve the efficiency of scholarly communication and
 accelerate cumulative knowledge acquisition.
-We focus on applications in psychology, but the principles are relevant across the social sciences, and beyond.
+We focus on applications in psychology, but the principles are relevant across the social sciences and beyond.
 
 ## The Need for FAIR theory
 
@@ -118,11 +126,13 @@ Yet, under the expanded definition, many would be, as the act may fulfill deeper
 <!-- NvD: Harris 1976 has a nice example about how cognitive dissonance theory can be formalized in multiple ways, which offer hypotheses that contradict each other -->
 
 Scholars have been raising concerns about the state of theory in psychology for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
-One main concern is that theories lack precision, or  *formalization* [@szollosiArrestedTheoryDevelopment2021].
+One main concern is that theories lack *formalization* [@szollosiArrestedTheoryDevelopment2021].
+<!-- I still believe formalization != precision. Theories can be 100% formal and still 0% precise. -->
 <!-- NvD: We should add somewhere what we mean by "formalization." In philosophy of science, formal logic about syntax (the propositions and predicates can have any meaning). However, what we mean, I think, is the explication of a narrative in (something so detailed and explicit that it can be captured with little error in) analytical or computational form (but the meaning remains. E, M, and C stand form something is E = MC<sup>2</sup>).   -->
-When theories do not make precise predictions,
-they are hard to falsify and difficult to understand on their own,
-without either substantial interpretation or additional background knowledge.
+When theories are difficult to understand on their own,
+without either substantial interpretation or additional background knowledge,
+it becomes difficult do derive precise predictions,
+and therefore hard to falsify the theory. 
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
@@ -397,7 +407,7 @@ The theory may encompass a particular transmission _model_ for disease spread in
 
 Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use. 
 <!-- NvD: Maybe we should add "specification" as part of "formalization" or "formalisation" as a part of "specification", because not everybody that is advocating better theories thinks that we should focus on formalization.  -->
-More rigorous formalization increases theories' *empirical content* [@popperLogicScientificDiscovery2002] because it expresses ideas as precise statements, clearly demarcating what should be observed and what not if the theory were true.
+More rigorous formalization increases theories' *empirical content* [@popperLogicScientificDiscovery2002] because it expresses ideas as precise statements, clearly demarcating what should (not) be observed if the theory were true.
 For example, Baddeley's verbal description of the phonological loop in his theory of working memory stands out for its particular clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate, recall success, or rehearsal sequence, which were left undefined in the original theory [@lewandowsky2010computational].
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
@@ -410,13 +420,13 @@ which necessitates specific revisions and advances our principled understanding 
 FAIR theory imposes no restrictions on the manner in which theories are derived and implemented;
 rather, it increases the fidelity and ease with which they are communicated.
 Thus, FAIR theory does not require theories to be formal.
-At the same time, not every formal theory is FAIR.
+At the same time, formal theories are not automatically FAIR.
 The FAIR principles pertain to theories' metadata documentation and sharing in digital archives, with the aim of enhancing their reusability and extensibility.
 They can be applied to theories representated in natural language,
 as well as formal theories represented using mathematical notation, algorithmic pseudo code, or a set of logical clauses.
 Thus, for example, "grounded theory", derived from qualitative research,
 can be represented as a FAIR theory if it is represented as plain-text propositions and archived in a FAIR repository with appropriate metadata.
-Conversely, a formal theory is not FAIR if it is confined to a publication in a journal article without any key words to identify it as a theory paper (lacking Findability), represented merely as a bitmap image (limiting Accessibility and Interoperability), or behind a paywall (limiting Reusability).
+Conversely, a formal theory is not FAIR if it is confined to a journal article without any key words to identify it as a theory paper (lacking Findability), represented merely as a bitmap image (limiting Accessibility and Interoperability), or behind a paywall (limiting Reusability).
 FAIR theory is thus consistent with, but does not require, formalization (also see *Accessibility*).
 
 ### Modular Publishing
@@ -531,13 +541,14 @@ The `"fairtheory"` keyword can also be used to signal the presence of theory wit
 <!-- There is even a journal - the [Journal of Open Source Software](https://joss.theoj.org/) - that publishes software documentation as a paper so that it will be indexed by search engines. -->
 <!-- The same solution could be applied to theories. -->
 In the longer term, it may not be necessary to write a paper for each theory.
-If Zenodo becomes more recognized as centralized repository for information artifacts, researchers may begin to search there more regularly.
+If Zenodo becomes more recognized as a centralized repository for information artifacts, researchers may begin to search there more regularly.
 Conversely, as organizations begin to recognize the value in tracking academic output other than papers, repositories may begin to index information artifacts stored in Zenodo.
 
 There have been notable efforts to improve theories' Findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
 and post many examples on their website [@grayHowMapTheory2017].
 Similarly, Van Dongen and colleagues are working on a database of models and formalized theories.
+<!-- Is there something to reference? Website/preprint? Otherwise is seems a bit weird to just mention this without any further information. -->
 Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability.
 Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
 Both approaches can be complementary, however.
@@ -864,6 +875,9 @@ See here for [an example of the resulting FAIR metadata](https://raw.githubuserc
 - List the DOIs/identifiers of *related works*. Use the `Relation` field as appropriate. For example:
     + `Is documented by` can be used to reference a theory paper you wrote, in which you introduce this FAIR theory
     + `Is derived from` could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used `Is derived from` to reference De Groot and Spiekerman's empirical cycle.
+- Optionally, add *References* to related works in plain text. For example, here we can provide the full citation of De Groot and Spiekerman:
+    > De Groot, A. D., & Spiekerman, J. A. A. (1969). Methodology: Foundations of inference and research in the behavioral sciences. De Gruyter Mouton. https://doi.org/10.1515/9783112313121
+
     
 <!-- ## 6. Making Changes -->
 <!-- CJ: Aaron, I moved your part here because I don't think it relates to Interoperability. But perhaps there's another place where it fits better? -->
@@ -982,6 +996,7 @@ Figure \@ref(fig:figbranch) shows how our example `empirical_cycle` repository c
 A branch can also be merged with the main branch, thus incorporating the changes it contains into the version of record.
 If you wish to develop a new version of someone else's FAIR theory,
 it is possible to ["fork their repository"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
+<!-- I think it would be nice if links are colored (blue), so people can see in the PDF that there is something to click. -->
 This creates a copy of their repository onto your GitHub account.
 Both branches and forks can be compared and merged via "pull requests", which are essentially a request to incorporate the changes you have made.
 Figure \@ref(fig:figcompare) shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
@@ -1146,8 +1161,7 @@ It provides much-needed open science methods for the inductive phase of the empi
 closing a critical gap in the scientific process.
 FAIR theory makes theory more tangible, enabling scholars to incorporate it in their day-to-day workflows in order to derive hypotheses, select control variables, and contribute new data-driven insights.
 This paves the way for more theory-driven scholarship
-and acceleration of cumulative knowledge acquisition in psychology, the social sciences, and beyond.
-
+and accelerates cumulative knowledge acquisition in psychology, the social sciences, and beyond.
 
 \newpage
 
