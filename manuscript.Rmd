@@ -39,6 +39,11 @@ author:
     affiliation: "6"
     role:
       - Writing – review & editing
+  - name: "Maximilian S. Ernst"
+    affiliation: "2,7"
+    role:
+      - Writing – review & editing
+      - Investigation
 affiliation:
   - id            : "1"
     institution   : "Tilburg University, dept. Methodology & Statistics"
@@ -52,6 +57,8 @@ affiliation:
     institution   : "Ludwig-Maximilians-Universität München, Germany"
   - id            : "6"
     institution   : "University of Amsterdam, the Netherlands"
+  - id            : "7"
+    institution   : "Max Planck School of Cognition, Leipzig, Germany"
 authornote: |
   This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`.
 
@@ -67,6 +74,7 @@ figurelist        : no
 tablelist         : no
 footnotelist      : no
 classoption       : "man, noextraspace"
+urlcolor          : blue
 output            :
   papaja::apa6_pdf: default
   md_document: default
@@ -95,7 +103,7 @@ a digital instantiation of a scientific theory, published as a self-contained an
 compliant with the FAIR principles.
 FAIR theory has the potential to improve the efficiency of scholarly communication and
 accelerate cumulative knowledge acquisition.
-We focus on applications in psychology, but the principles are relevant across the social sciences, and beyond.
+We focus on applications in psychology, but the principles are relevant across the social sciences and beyond.
 
 ## The Need for FAIR theory
 
@@ -107,22 +115,18 @@ Thus, increased rigor in testing has revealed that the root cause of the replica
 Psychological theories rarely provide hypotheses that are corroborated by evidence.
 Furthermore, theories are often so vague that they can accommodate mutually inconsistent findings,
 as the theory's central claims evade falsification.
-A good example of this is found in “self-determination theory” (SDT), which emphasizes the role of intrinsic and extrinsic motivation in human behavior.
-Initially, intrinsic motivation was understood as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures [@deciEffectsExternallyMediated1971].
-Over time, however, SDT expanded its definition to include motivations driven by the fulfillment of basic psychological needs—autonomy, competence, and relatedness—all still categorized as "intrinsic" [@ryanSelfdeterminationTheoryFacilitation2000].
-The profound difference between these definitions becomes clear when considering the act of changing a child’s dirty diaper.
-Under the original definition, few would be considered intrinsically motivated, after all, it’s not exactly a joy-filled experience
-Yet, under the expanded framework, many would be, as the act may fulfill deeper needs, such as the desire to nurture and care for one’s child.
 
 <!-- CJ: Maybe we should give an example here. Does anyone know one? -->
 <!-- NvD: Harris 1976 has a nice example about how cognitive dissonance theory can be formalized in multiple ways, which offer hypotheses that contradict each other -->
 
 Scholars have been raising concerns about the state of theory in psychology for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
-One main concern is that theories lack precision, or  *formalization* [@szollosiArrestedTheoryDevelopment2021].
+One main concern is that theories lack *formalization* [@szollosiArrestedTheoryDevelopment2021].
+<!-- I still believe formalization != precision. Theories can be 100% formal and still 0% precise. -->
 <!-- NvD: We should add somewhere what we mean by "formalization." In philosophy of science, formal logic about syntax (the propositions and predicates can have any meaning). However, what we mean, I think, is the explication of a narrative in (something so detailed and explicit that it can be captured with little error in) analytical or computational form (but the meaning remains. E, M, and C stand form something is E = MC<sup>2</sup>).   -->
-When theories do not make precise predictions,
-they are hard to falsify and difficult to understand on their own,
-without either substantial interpretation or additional background knowledge.
+When theories are difficult to understand on their own,
+without either substantial interpretation or additional background knowledge,
+it becomes difficult do derive precise predictions,
+and therefore hard to falsify the theory. 
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
@@ -356,7 +360,7 @@ papaja::apa_table(tab_fair, landscape = TRUE, align = "m{.1\\linewidth}m{.35\\li
 Definitions of theory abound and are the subject of extensive scholarly debate.
 Given that a pluriformity of definitions are consistent with FAIR theory principles,
 the method is not contained to any one particular definition.
-Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic [@scientifictheories]
+Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic [@scientifictheories].
 The syntactic view describes theories as "sets of sentences in a given logical domain language" [@scientifictheories, ch. 2],
 acknowledging that each domain (a scientific field, such as psychology or physics) has its own theoretical vocabulary.
 We recognize the syntactic view in Meehl's hierarchy of ever-more specific "statements" a theory might contain [-@meehlAppraisingAmendingTheories1990]:
@@ -534,13 +538,14 @@ The `"fairtheory"` keyword can also be used to signal the presence of theory wit
 <!-- There is even a journal - the [Journal of Open Source Software](https://joss.theoj.org/) - that publishes software documentation as a paper so that it will be indexed by search engines. -->
 <!-- The same solution could be applied to theories. -->
 In the longer term, it may not be necessary to write a paper for each theory.
-If Zenodo becomes more recognized as centralized repository for information artifacts, researchers may begin to search there more regularly.
+If Zenodo becomes more recognized as a centralized repository for information artifacts, researchers may begin to search there more regularly.
 Conversely, as organizations begin to recognize the value in tracking academic output other than papers, repositories may begin to index information artifacts stored in Zenodo.
 
 There have been notable efforts to improve theories' Findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
 and post many examples on their website [@grayHowMapTheory2017].
 Similarly, Van Dongen and colleagues are working on a database of models and formalized theories.
+<!-- Is there something to reference? Website/preprint? Otherwise is seems a bit weird to just mention this without any further information. -->
 Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability.
 Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
 Both approaches can be complementary, however.
@@ -987,6 +992,7 @@ Figure \@ref(fig:figbranch) shows how our example `empirical_cycle` repository c
 A branch can also be merged with the main branch, thus incorporating the changes it contains into the version of record.
 If you wish to develop a new version of someone else's FAIR theory,
 it is possible to ["fork their repository"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
+<!-- I think it would be nice if links are colored (blue), so people can see in the PDF that there is something to click. -->
 This creates a copy of their repository onto your GitHub account.
 Both branches and forks can be compared and merged via "pull requests", which are essentially a request to incorporate the changes you have made.
 Figure \@ref(fig:figcompare) shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
@@ -1151,7 +1157,7 @@ It provides much-needed open science methods for the inductive phase of the empi
 closing a critical gap in the scientific process.
 FAIR theory makes theory more tangible, enabling scholars to incorporate it in their day-to-day workflows in order to derive hypotheses, select control variables, and contribute new data-driven insights.
 This paves the way for more theory-driven scholarship,
-and accelerates cumulative knowledge acquisition in the psychology, other social sciences, and beyond.
+accelerating cumulative knowledge acquisition in psychology, other social sciences, and beyond.
 
 
 \newpage
