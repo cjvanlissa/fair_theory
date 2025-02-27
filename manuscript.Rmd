@@ -74,6 +74,7 @@ figurelist        : no
 tablelist         : no
 footnotelist      : no
 classoption       : "man, noextraspace"
+urlcolor          : blue
 output            :
   papaja::apa6_pdf: default
   md_document: default
@@ -109,7 +110,7 @@ We focus on applications in psychology, but the principles are relevant across t
 The so-called "replication crisis" has prompted extensive reforms in psychology and other scientific fields [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that undisclosed flexibility in analyses was a major factor for the abundance of non-replicable findings led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 These various practices ensure transparent and repeated testing of hypotheses.
-However, recent reviews show that most preregistered hypotheses tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
+However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
 Psychological theories rarely provide hypotheses that are corroborated by evidence.
 Furthermore, theories are often so vague that they can accommodate mutually inconsistent findings,
@@ -119,7 +120,7 @@ as the theory's central claims evade falsification.
 <!-- NvD: Harris 1976 has a nice example about how cognitive dissonance theory can be formalized in multiple ways, which offer hypotheses that contradict each other -->
 
 Scholars have been raising concerns about the state of theory in psychology for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
-One main concern is that theories lack or  *formalization* [@szollosiArrestedTheoryDevelopment2021].
+One main concern is that theories lack *formalization* [@szollosiArrestedTheoryDevelopment2021].
 <!-- I still believe formalization != precision. Theories can be 100% formal and still 0% precise. -->
 <!-- NvD: We should add somewhere what we mean by "formalization." In philosophy of science, formal logic about syntax (the propositions and predicates can have any meaning). However, what we mean, I think, is the explication of a narrative in (something so detailed and explicit that it can be captured with little error in) analytical or computational form (but the meaning remains. E, M, and C stand form something is E = MC<sup>2</sup>).   -->
 When theories are difficult to understand on their own,
