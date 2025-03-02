@@ -244,6 +244,7 @@ knitr::include_graphics("ec_lissa.pdf")
 ```
 
 ```{r figecs, eval = TRUE, fig.cap='Three implementations of the "empirical cycle" [@degrootMethodologieGrondslagenVan1961].'}
+# rsvg::rsvg_pdf("empirical_cycle1.svg", "ec_visio.pdf")
 knitr::include_graphics("ec_visio.pdf")
 ```
 
