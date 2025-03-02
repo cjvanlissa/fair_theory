@@ -6,7 +6,7 @@ FAIR theories are Findable in well-established archives,
 Accessible in practical terms (open file formats) and in terms of their ability to be understood,
 Interoperable for specific purposes, e.g., to guide control variable selection,
 and
-Reusable such that they can be iteratively improved.
+Reusable such that they can be iteratively improved through collaborative efforts.
 This paper adapts the FAIR priciples for theory,
 reflects on the FAIRness of contemporary theoretical practices in psychology,
 introduces a workflow for FAIRifying theory,
