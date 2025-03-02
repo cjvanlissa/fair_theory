@@ -1096,13 +1096,6 @@ Version control provides a framework to resolve parallel developments from multi
 This facilitates collaboration across geographical boundaries,
 and adversarial collaboration, where others strive to falsify a theory or identify its inconsistencies, and democratizes collaboration with as-of-yet unknown collaborators via platforms like GitHub, where researchers outside one's network can identify issues or suggest improvements to theories.
 
-Finally, FAIR theory holds substantial potential for science communication. While the general public is ill-equipped to read and derive actionable insight from large quantities of empirical papers about a particular phenomenon,
-theories encapsulate the bigger picture of contemporary scientific understanding.
-For example, while few people read empirical studies on attachment,
-attachment theory plays a prominent role in popular scientific books about parenting and romantic relationships.
-Theory bridges the gap between academic research and practitioners by summarizing actionable insights, relieving practitioners from the need to sift through extensive empirical literature.
-By providing a mechanism for iterative improvement based on emerging evidence, FAIR theory also supports effective evidence-based decision making.
-
 ## Limitations
 
 One important limitation of the present work is that,
@@ -1143,6 +1136,13 @@ since theories can reference other theories and resources, it is possible to ext
 <!-- More efficient and transparent communication about theory democratizes and accelerates cumulative knowledge acquisition, -->
 <!-- removes barriers to knowledge exchange with the global scholarly community, -->
 <!-- opens theory development to diverse perspectives, and enables (distributed and adversarial) collaboration. -->
+
+Another future direction for FAIR theory is as an instrument of science communication. Practitioners and the general public are rarely able to read and derive actionable insight from large quantities of empirical papers about a particular phenomenon.
+Theories are more accessible, because they encapsulate the bigger picture of contemporary scientific understanding.
+For example, while few people read empirical studies on attachment,
+attachment theory plays a prominent role in popular scientific books about parenting and romantic relationships.
+Theory bridges the gap between academic research and practitioners by summarizing actionable insights, relieving practitioners from the need to sift through extensive empirical literature.
+By providing a mechanism for iterative improvement based on emerging evidence, FAIR theory also supports effective evidence-based decision making.
 
 ## Conclusion
 
