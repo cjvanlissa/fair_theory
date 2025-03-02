@@ -118,9 +118,10 @@ as the theory's central claims evade falsification.
 A good example of this is found in “self-determination theory” (SDT), which emphasizes the role of intrinsic and extrinsic motivation in human behavior.
 Initially, intrinsic motivation was understood as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures [@deciEffectsExternallyMediated1971].
 Over time, however, SDT expanded its definition to include motivations driven by the fulfillment of basic psychological needs—autonomy, competence, and relatedness—all still categorized as "intrinsic" [@ryanSelfdeterminationTheoryFacilitation2000].
-The profound difference between these definitions becomes clear when considering the act of changing a child’s dirty diaper.
-Under the original definition, few caregivers would be considered intrinsically motivated, after all, it’s not exactly a joy-filled experience.
-Yet, under the expanded definition, many would be, as the act may fulfill deeper needs, such as the desire to nurture and care for one’s child.
+Consider, for instance, a research scientist working in a highly competitive laboratory.
+Under the original definition, their intrinsic motivation would be limited to the joy of discovery alone.
+Yet, under the expanded framework, factors that might initially appear extrinsic can be reconceptualized as intrinsic: securing grant funding enhances their autonomy by granting them the freedom to pursue innovative ideas; grappling with deadlines bolsters their sense of competence; and praise from their peers fulfills their need for relatedness.
+This broader definition enables SDT to absorb a wide range of contradictory evidence—external circumstances that once would have undermined intrinsic motivation can now be reframed as fulfilling deeper psychological needs.
 
 <!-- CJ: Maybe we should give an example here. Does anyone know one? -->
 <!-- NvD: Harris 1976 has a nice example about how cognitive dissonance theory can be formalized in multiple ways, which offer hypotheses that contradict each other -->
