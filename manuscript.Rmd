@@ -461,11 +461,14 @@ Git tracks line-by-line changes to text-based files,
 and maintains a complete history of those changes.
 It has long been argued that Git is particularly well-suited to academic work [@ramGitCanFacilitate2013].
 Git can be used, for example, to facilitate reproducible research, manage distributed collaboration, and improve preregistration [@vanlissaWORCSWorkflowOpen2021; @peikertReproducibleResearchTutorial2021].
-The present paper considers the advantages of Git for FAIR theory.
-Git enables explicitly comparing versions of a file (or: theory),
+Git provides a useful framework for developing FAIR theory,
+because it enables explicitly comparing versions of a file (or: theory),
 incorporating changes by different authors,
 and branching off into different directions (e.g., competing hypotheses) while retaining an explicit link to the common ancestor.
 This makes it possible for meta-scientists to study the provenance of a theory and determine how well different versions of a theory explain empirical evidence [@vanlissaUsingEndpointsCheck2023].
+Note, however, that the function of Git(Hub) is *not* to archive a FAIR theory.
+FAIR-compliant repositories like Zenodo serve the specific purpose of archival.
+Thus, while theory development may take place on GitHub, the version of record should be archived in Zenodo, with appropriate metadata.
 
 ### Semantic Versioning
 
