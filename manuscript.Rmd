@@ -906,7 +906,7 @@ fair_theory(path = "c:/theoryfolder/empirical_cycle",
 ```
 The first two lines install and load the `theorytools` package. Lines 4--6 use the `worcs` package to check whether git for version control is installed and a connection to github can be established to publish the theory. Line 8 calls the main entry function `fair_theory` for a local repository in a specified local `path` with a given `title` and the aforementioned dot `theory_file` containing the theory, uploading it to the user's remote github repository with name given in `remote_repo` and a given license specified in `add_license`. 
 
-## Updating a Theory
+## Changing a Theory
 
 De Groot's empirical cycle has inspired several authors,
 but not all of them have interpreted his work the same.
@@ -952,10 +952,11 @@ digraph {
 
 The first author was inspired by De Groot as well,
 but again specified the empirical cycle differently.
-First, notice that the nodes in De Groot's formulation mostly refer to processes.
-This invites the question of what the deliverables are in each phase, or in other words: what actually changes when going through the cycle, except the scholar's mind.
-In the implementation below, we account for this difference by having the nodes refer to specific deliverables; the edges now refer to processes.
-Second, De Groot's distinction between phases of observation, induction, and deduction is not fully congruent with philosophy of science.
+First, in De Groot's formulation, each stage describes a process.
+This invites the question of what the concrete outcomes of these processes are.
+In other words: what actually changes when going through the cycle, except the scholar's mind.
+To address this point, the nodes in Van Lissa's specification refer to specific deliverables, whereas the edges connecting the nodes refer to processes acting upon those deliverables, see Figure \@ref(fig:figecs), panel (c).
+Second, the processes of induction and deduction are perhaps not as neatly confined to specific phases as De Groot proposed.
 <!-- In our representation, -->
 <!-- induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory. -->
 <!-- For example, the refutation of a hypothesized effect, -->
@@ -966,11 +967,11 @@ Second, De Groot's distinction between phases of observation, induction, and ded
 <!-- and auxiliary assumptions that must be made to address remaining theoretical ambiguities. -->
 <!-- # And then for example: I understand Aaron's work about inductive bias to be about the link "prediction -> test;", because the test is not identified without making auxiliary assumptions; if the auxiliary assumption is made based on the data, inductive bias is introduced. -->
 <!-- ``` -->
-Many have argued that observation is theory-laden, and as such, involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
-Deriving hypotheses from theory is also not purely deductive,
-as auxiliary assumptions are often made (which, again, involves induction).
+For example, if observation is theory-laden, it involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
+Deriving hypotheses from theory is not purely deductive either,
+as auxiliary assumptions are often made, which involves induction (e.g., assuming equal variances across groups because groups often have equal variances).
 Furthermore, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [@peikertTransparencyOpenScience2023].
-With these alterations, we implement the empirical cycle as follows:
+These alterations result in the following implementation of the empirical cycle:
 
 ```
 digraph {
@@ -999,7 +1000,6 @@ Figure \@ref(fig:figbranch) shows how our example `empirical_cycle` repository c
 A branch can also be merged with the main branch, thus incorporating the changes it contains into the version of record.
 If you wish to develop a new version of someone else's FAIR theory,
 it is possible to ["fork their repository"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
-<!-- I think it would be nice if links are colored (blue), so people can see in the PDF that there is something to click. -->
 This creates a copy of their repository onto your GitHub account.
 Both branches and forks can be compared and merged via "pull requests", which are essentially a request to incorporate the changes you have made.
 Figure \@ref(fig:figcompare) shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
