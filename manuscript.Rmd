@@ -438,7 +438,7 @@ Modular publishing is the practice of making each of these resources available a
 with adequate metadata that is indexed in standardized repositories [@vandesompelRethinkingScholarlyCommunication2004].
 Data sharing is a good example of a modular publishing practice that is widely adopted and increasingly required by funding agencies, journals, and universities.
 Scholars can archive information artifacts in repositories like [Zenodo](https://zenodo.org/),
-which was developed by [CERN](https://home.cern/) under the European Union's [OpenAIRE](https://www.openaire.eu/) program.
+which was developed by [CERN](https://home.cern/) under the European Union's [OpenAIRE](https://www.openaire.eu/) program [@zenodo].
 To maintain a persistent record of scholarly communication,
 Zenodo mints DOIs for information artifacts - as does, for example, the [Crossref](https://www.crossref.org/) association,
 which is used by many academic publishers.
