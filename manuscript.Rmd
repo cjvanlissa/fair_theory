@@ -623,7 +623,7 @@ A theory's Accessibility is increased by
 reducing dependencies on (implicit) background knowledge,
 explication of assumptions,
 formalization,
-and explicit cross-references to relevant resources such as papers, ontologies, macro-theories, measurement instruments, experimental designs [REF LANGE CHECKLIST].
+and explicit cross-references to relevant resources such as papers, ontologies, macro-theories, measurement instruments, experimental designs [@langeChecklistIncentivizingFacilitating2025a].
 
 <!-- The data usually need to be integrated with other data. In addition, the data need to Interoperate with applications or workflows for analysis, storage, and processing. -->
 
