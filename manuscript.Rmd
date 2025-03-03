@@ -136,7 +136,7 @@ and therefore hard to falsify the theory.
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
-The equally critical inductive processeses of theory construction and improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories. Others have used the term "abduction", coined by Peirce to describe "inference to the best explanation". However, Peirce later acknowledged that abduction "is not essentially different from induction" [@peirceCollectedPapersCharles1960, p.4881]. As defining what makes a theory "best" requires auxiliary assumptions, we consider abduction to be a special case of induction. For present purposes, however, the terms are interchangeable.].
+The equally critical inductive processes of theory construction and improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories. Others have used the term "abduction", coined by Peirce to describe "inference to the best explanation". However, Peirce later acknowledged that abduction "is not essentially different from induction" [@peirceCollectedPapersCharles1960, p.4881]. As defining what makes a theory "best" requires auxiliary assumptions, we consider abduction to be a special case of induction. For present purposes, however, the terms are interchangeable.].
 <!-- Peirce: CP 8.233 Cross-Ref:†† -->
 <!-- 233. This is not essentially different from induction. Only it is most -->
 <!-- usually an induction from instances which are not discrete and numerable. I now -->
@@ -334,7 +334,7 @@ The present paper introduces open science methods for theory specification and a
 Merely publishing theory in a research article does not make it open;
 to be open, theory should adhere to established open science standards.
 We do so by implementing theories as information artifacts,
-archived with apropriate metadata in a FAIR-compliant repository (e.g., Zenodo).
+archived with appropriate metadata in a FAIR-compliant repository (e.g., Zenodo).
 Metadata are "data about the data", they provide information about the nature and content of an information artifact.
 Metadata are stored in the repository where the version of record of the FAIR theory is deposited.
 FAIR theories are *Findable* via a DOI or by searching the repository they are archived in;
@@ -428,7 +428,7 @@ as well as formal theories represented using mathematical notation, algorithmic 
 Thus, for example, "grounded theory", derived from qualitative research,
 can be represented as a FAIR theory if it is represented as plain-text propositions and archived in a FAIR repository with appropriate metadata.
 Conversely, a formal theory is not FAIR if it is confined to a journal article without any key words to identify it as a theory paper (lacking Findability), represented merely as a bitmap image (limiting Accessibility and Interoperability), or behind a paywall (limiting Reusability).
-FAIR theory is thus consistent with, but does not require, formalization (also see *Accessibility*).
+FAIR theory is thus consistent with, but does not require, formalization (also see the section on *Accessibility* below).
 
 ### Modular Publishing
 
@@ -523,7 +523,7 @@ Metadata should also include identifiers for all the versions of the theory it d
 Zenodo handles this by default by providing an overarching DOI for an information artifact which subsumes the DOIs of that artifact's versions.
 
 Finally, metadata should be registered or indexed in a searchable registry (F4).
-It is important to note that, while may archives are technically searchable (e.g., GitHub, FigShare, the Open Science Framework, institutional repositories),
+It is important to note that, while many archives are technically searchable (e.g., GitHub, FigShare, the Open Science Framework, institutional repositories),
 only few are specifically designed for FAIR-compliant archival.
 Zenodo stands out in this respect.
 Thus, while using Git for version control and GitHub for collaboration has specific advantages for scientific work [@ramGitCanFacilitate2013],
@@ -556,7 +556,7 @@ Similarly, Van Dongen and colleagues are working on a database of models and for
 Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability.
 Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
 Both approaches can be complementary, however.
-for example, post-hoc curation could make use of existing FAIR-compliant archival infrastructure like Zenodo.
+For example, post-hoc curation could make use of existing FAIR-compliant archival infrastructure like Zenodo.
 Conversely, the database engineering adage "Lots of Copies Keeps Stuff Safe" (LOCKSS) implies that it is fine to archive theories in multiple places,
 although it is advisable to make use of automatic integration (as exists between GitHub, Zenodo, and OSF) to avoid the need to maintain information in multiple places, which increases the risk of inconsistencies arising.
 
@@ -648,7 +648,7 @@ interpretable computer code,
 and Gray's theory maps [@grayHowMapTheory2017].
 While a theory represented as a bitmap image is not very Interoperable,
 the same image represented in the DOT language [@DOTLanguage2024]
-for representing graphs does meet this ideal.
+for representing graphs does meet this ideal (an example of such a DOT representation is given below).
 
 Secondly, theory (meta)data should use vocabularies that follow FAIR principles (I2).
 Aside from the aforementioned Datacite metadata schema [@datacitemetadataworkinggroupDataCiteMetadataSchema2024],
@@ -780,7 +780,7 @@ The original theory consists of a series of natural language statements:
 If we compare it to the levels of theory formalization [@guestHowComputationalModeling2021],
 it is defined at either the "theory" or "specification" level.
 We can increase the level of formalization, and present an "implementation" in the human- and machine-readable DOT language (and thereby fulfill criterion I1 of [Supplemental Table S1](https://github.com/cjvanlissa/fair_theory/blob/main/fair_principles.csv)).
-The implementation below describes the model as a directed graph.
+The implementation below describes the model as a directed graph (see also Figure \@ref(fig:figecs)a).
 Note that the code has been organized so that the first half describes an ontology of the entities the theory postulates,
 and the second half describes their proposed interrelations.
 This follows the first two properties of good theory according to Meehl [@meehlAppraisingAmendingTheories1990].
@@ -812,7 +812,7 @@ To help meet the Interoperability and Reusability criteria,
 add two more files:
 A README.md file with instructions for future users of your theory,
 and a LICENSE file with the legal conditions for reuse.
-For guidance on writing the README file, see [this vignette](https://cjvanlissa.github.io/theorytools/articles/readme.html)
+For guidance on writing the README file, see [this vignette](https://cjvanlissa.github.io/theorytools/articles/readme.html).
 We recommend the `CC0` license, but other options are available, see [https://choosealicense.com](https://choosealicense.com/non-software/).
 
 <!-- ### What's in a README? -->

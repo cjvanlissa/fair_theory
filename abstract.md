@@ -7,7 +7,7 @@ Accessible in practical terms (open file formats) and in terms of their ability 
 Interoperable for specific purposes, e.g., to guide control variable selection,
 and
 Reusable such that they can be iteratively improved through collaborative efforts.
-This paper adapts the FAIR priciples for theory,
+This paper adapts the FAIR principles for theory,
 reflects on the FAIRness of contemporary theoretical practices in psychology,
 introduces a workflow for FAIRifying theory,
 and explores FAIR theories’ potential impact in terms of reducing research waste,
