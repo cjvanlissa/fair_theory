@@ -112,6 +112,7 @@ Concern that undisclosed flexibility in analyses was a major factor for the abun
 These various practices ensure transparent and repeated testing of hypotheses by commiting to an analysis plan in advance.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
+
 Psychological theories rarely provide hypotheses that are corroborated by evidence.
 Furthermore, theories are often so vague that they can accommodate mutually inconsistent findings,
 as the theory's central claims evade falsification.
