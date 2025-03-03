@@ -148,6 +148,7 @@ We apply the FAIR principles to scientific theories,
 introducing *FAIR theory* to 
 facilitate transparent scholarly communication and accelerate cumulative knowledge acquisition.
 
+
 ## Theory and Scientific Progress
 
 According to the *empirical cycle* [@degrootMethodologieGrondslagenVan1961],
