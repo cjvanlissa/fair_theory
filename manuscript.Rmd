@@ -1012,6 +1012,8 @@ knitr::include_graphics("git_branches.png")
 knitr::include_graphics("git_compare.png")
 ```
 
+## 
+
 ## Further Uses of FAIR Theory
 
 As uses of FAIR theory are best illustrated using tutorial examples,
