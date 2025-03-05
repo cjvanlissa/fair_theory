@@ -114,7 +114,7 @@ These various practices ensure transparent and repeated testing of hypotheses by
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
 Psychological theories rarely provide hypotheses that are corroborated by evidence.
-Furthermore, theories are often so vague that they can accommodate mutually inconsistent findings,
+Furthermore, theories are often so ambiguous that they can accommodate mutually inconsistent findings,
 as the theory's central claims evade falsification.
 A good example of this is found in “self-determination theory” (SDT), which emphasizes the role of intrinsic and extrinsic motivation in human behavior.
 Initially, intrinsic motivation was understood as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures [@deciEffectsExternallyMediated1971].
@@ -127,7 +127,7 @@ Scholars have raised concerns about the state of theory in psychology for nearly
 One main concern is that theories lack *formalization* [@szollosiArrestedTheoryDevelopment2021].
 <!-- I still believe formalization != precision. Theories can be 100% formal and still 0% precise. -->
 <!-- NvD: We should add somewhere what we mean by "formalization." In philosophy of science, formal logic about syntax (the propositions and predicates can have any meaning). However, what we mean, I think, is the explication of a narrative in (something so detailed and explicit that it can be captured with little error in) analytical or computational form (but the meaning remains. E, M, and C stand form something is E = MC<sup>2</sup>).   -->
-When theories are difficult to understand without either subjective interpretation or additional background knowledge,
+When theories are ambiguous and hence require either subjective interpretation or additional background knowledge,
 it becomes difficult do derive precise predictions,
 and therefore hard to falsify the theory. 
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
@@ -407,12 +407,12 @@ The theory may encompass a particular transmission _model_ for disease spread in
 
 Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use. 
 <!-- NvD: Maybe we should add "specification" as part of "formalization" or "formalisation" as a part of "specification", because not everybody that is advocating better theories thinks that we should focus on formalization.  -->
-More rigorous formalization increases theories' *empirical content* [@popperLogicScientificDiscovery2002] because it expresses ideas as specific statements, clearly demarcating what should (not) be observed if the theory were true.
+More rigorous formalization increases theories' falsifiability [@popperLogicScientificDiscovery2002] because it expresses ideas as specific statements, clearly demarcating what should (not) be observed if the theory were true.
 For example, Baddeley's verbal description of the phonological loop in his theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate, recall success, or rehearsal sequence, which were left undefined in the original theory [@lewandowsky2010computational].
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
 Compared to theories expressed in natural language,
-formal theories facilitate inconsistency checking and evaluation of a theory's (lack of) ambiguity.
+formal theories facilitate inconsistency checking and evaluation of a theory's (lack of) vagueness.
 Committing to specific implementations of the different components, their causal connections, and the functional forms of these relationships makes the theory more precise.
 More precise theories are easier to falsify,
 which necessitates specific revisions and advances our principled understanding of the phenomena they describe.
@@ -1052,7 +1052,7 @@ access and understand it; interact with it in a practical sense, for example, by
 Whereas the idea of theory can be quite nebulous to empirical psychologists,
 FAIR theory makes theoretical work practical and tangible, incorporating theory into scholars' workflows.
 Having a concrete object to iterate upon facilitates the systematic improvement and iterative refinement of psychological theories, thus substantially increasing the efficiency of research.
-While FAIR theory does not directly reduce ambiguity,
+While FAIR theory does not directly reduce vagueness,
 it provides a framework within which scholars can iteratively increase precision and formalization.
 The FAIR principles also facilitate new ways of collaboration,
 leveraging tools like Git for version control and Zenodo for archiving to document provenance and facilitate contributions from diverse researchers.
