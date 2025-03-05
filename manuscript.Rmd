@@ -137,6 +137,11 @@ A second concern is the lack of transparent and participative scholarly communic
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
 The equally critical inductive processes of theory construction and improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories. Others have used the term "abduction", coined by Peirce to describe "inference to the best explanation". However, Peirce later acknowledged that abduction "is not essentially different from induction" [@peirceCollectedPapersCharles1960, p.4881]. As defining what makes a theory "best" requires auxiliary assumptions, we consider abduction to be a special case of induction. For present purposes, however, the terms are interchangeable.].
+
+<!-- NvD: I cannot accept this footnote as an adequate characterization. Abduction is not just "inference to the best explanation." It is typically used as inference to a plausible explanation (but there could be more). See for instance Brian Haig's 2005 paper. Also, I don't see why it matters either way "why defining what makes a theory "best" requires auxiliary assumptions". At the very least I would like to change "we consider abduction to be a special case of induction", because I disagree. I am fine with the last sentence though ;-) My suggestion is to write the following: -->
+
+<!-- NvD: We use induction to describe inferences from specific observations to general theories. In philosophy of science the term "abduction" is often used for the inference from observations to plausible explanations. We note that induction and abduction come in several varieties in philosophy science, which overlap in several respects For present purposes, however, the terms are interchangeable. -->
+
 <!-- Peirce: CP 8.233 Cross-Ref:†† -->
 <!-- 233. This is not essentially different from induction. Only it is most -->
 <!-- usually an induction from instances which are not discrete and numerable. I now -->
@@ -614,7 +619,8 @@ DOA also renders theories immune to refutation,
 because the author can claim that the theory was misconstrued when confronted with falsifying evidence, thus making it a moving target  [@szollosiArrestedTheoryDevelopment2021].
 DOA is inherently problematic, as illustrated by cases where third parties identify logical inconsistencies within a theory [e.g., @kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008].
 This example demonstrates that original authors are not the ultimate authority on their theories.
-DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as Accessible as possible, in terms of both availability and interpretability.
+DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as Accessible as possible, in terms of both availability and interoperability.
+<!-- NvD: Above we mention that "The Accessibility principles are sometimes misunderstood as pertaining to *maximizing* access; rather, they should be understood as *regulating* it." This feels a bit at odds. I suspect that we are not talking about the same thing here, this could be interpreted as a contradiction.  -->
 
 In sum, while it is impossible to communicate a theory completely unambiguously,
 scholars should strive to reduce unnecessary ambiguity to the greatest possible extent.
@@ -628,6 +634,7 @@ explication of assumptions,
 formalization,
 and explicit cross-references to relevant resources such as papers, ontologies, macro-theories, measurement instruments, experimental designs [@langeChecklistIncentivizingFacilitating2025a].
 
+<!-- NvD: we use the term 'macro-theory' here for the first time. What does it mean? Do we need it? -->
 <!-- The data usually need to be integrated with other data. In addition, the data need to Interoperate with applications or workflows for analysis, storage, and processing. -->
 
 ## Interoperability
