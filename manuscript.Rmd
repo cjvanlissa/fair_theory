@@ -24,26 +24,26 @@ author:
       - Formal Analysis
       - Writing – original draft
       - Writing – review & editing
+  - name: "Maximilian S. Ernst"
+    affiliation: "2,4"
+    role:
+      - Writing – review & editing
+      - Investigation
+  - name: "Noah N.N. van Dongen"
+    affiliation: "5"
+    role:
+      - Writing – review & editing
+  - name: "Felix D. Schönbrodt"
+    affiliation: "6"
+    role:
+      - Conceptualization
+      - Writing – review & editing
   - name: "Andreas M. Brandmaier"
-    affiliation: "2,3,4"
+    affiliation: "2,3,7"
     role:
       - Formal Analysis
       - Writing – original draft
       - Writing – review & editing
-  - name: "Felix D. Schönbrodt"
-    affiliation: "5"
-    role:
-      - Conceptualization
-      - Writing – review & editing
-  - name: "Noah N.N. van Dongen"
-    affiliation: "6"
-    role:
-      - Writing – review & editing
-  - name: "Maximilian S. Ernst"
-    affiliation: "2,7"
-    role:
-      - Writing – review & editing
-      - Investigation
 affiliation:
   - id            : "1"
     institution   : "Tilburg University, dept. Methodology & Statistics"
@@ -52,15 +52,15 @@ affiliation:
   - id            : "3"
     institution   : "Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany"
   - id            : "4"
-    institution   : "Department of Psychology, MSB Medical School Berlin, Berlin, Germany"
-  - id            : "5"
-    institution   : "Ludwig-Maximilians-Universität München, Germany"
-  - id            : "6"
-    institution   : "University of Amsterdam, the Netherlands"
-  - id            : "7"
     institution   : "Max Planck School of Cognition, Leipzig, Germany"
+  - id            : "5"
+    institution   : "University of Amsterdam, the Netherlands"
+  - id            : "6"
+    institution   : "Ludwig-Maximilians-Universität München, Germany"
+  - id            : "7"
+    institution   : "Department of Psychology, MSB Medical School Berlin, Berlin, Germany"
 authornote: |
-  This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`.
+  This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`. See the CRediT authorship contributions and GitHub repository for specific author contributions.
 
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
 keywords          : "fairtheory, meta theory, theory formation, cumulative science, formal models"
@@ -136,12 +136,10 @@ and therefore hard to falsify the theory.
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 
 Given these concerns, it is an imbalance that scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
-The equally critical inductive processes of theory construction and improvement have been largely overlooked^[We use induction to describe inferences from specific observations to general theories. Others have used the term "abduction", coined by Peirce to describe "inference to the best explanation". However, Peirce later acknowledged that abduction "is not essentially different from induction" [@peirceCollectedPapersCharles1960, p.4881]. As defining what makes a theory "best" requires auxiliary assumptions, we consider abduction to be a special case of induction. For present purposes, however, the terms are interchangeable.].
-
+The equally critical inductive processes of theory construction and improvement have been largely overlooked^[Here, we use "induction" to refer to inferences from specific observations to general theories. Others have used the term "abduction", coined by Peirce to describe "inference to the best explanation". For present purposes, however, the terms are interchangeable.].
+<!-- CvL considers abduction to be a special case of induction, because defining what makes a theory "best" or "plausible" requires making auxiliary assumptions, which restrict the space of potential inductive inferences. Peirce also stated that abduction "is not essentially different from induction" [@peirceCollectedPapersCharles1960, p.4881].  NvD dissents: -->
 <!-- NvD: I cannot accept this footnote as an adequate characterization. Abduction is not just "inference to the best explanation." It is typically used as inference to a plausible explanation (but there could be more). See for instance Brian Haig's 2005 paper. Also, I don't see why it matters either way "why defining what makes a theory "best" requires auxiliary assumptions". At the very least I would like to change "we consider abduction to be a special case of induction", because I disagree. I am fine with the last sentence though ;-) My suggestion is to write the following: -->
-
 <!-- NvD: We use induction to describe inferences from specific observations to general theories. In philosophy of science the term "abduction" is often used for the inference from observations to plausible explanations. We note that induction and abduction come in several varieties in philosophy science, which overlap in several respects For present purposes, however, the terms are interchangeable. -->
-
 <!-- Peirce: CP 8.233 Cross-Ref:†† -->
 <!-- 233. This is not essentially different from induction. Only it is most -->
 <!-- usually an induction from instances which are not discrete and numerable. I now -->
@@ -413,8 +411,8 @@ The theory may encompass a particular transmission _model_ for disease spread in
 
 Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use. 
 <!-- NvD: Maybe we should add "specification" as part of "formalization" or "formalisation" as a part of "specification", because not everybody that is advocating better theories thinks that we should focus on formalization.  -->
-More rigorous formalization increases theories' *empirical content* [@popperLogicScientificDiscovery2002] because it expresses ideas as precise statements, clearly demarcating what should (not) be observed if the theory were true.
-For example, Baddeley's verbal description of the phonological loop in his theory of working memory stands out for its particular clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate, recall success, or rehearsal sequence, which were left undefined in the original theory [@lewandowsky2010computational].
+More rigorous formalization increases theories' *empirical content* [@popperLogicScientificDiscovery2002] because it expresses ideas as specific statements, clearly demarcating what should (not) be observed if the theory were true.
+For example, Baddeley's verbal description of the phonological loop in his theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate, recall success, or rehearsal sequence, which were left undefined in the original theory [@lewandowsky2010computational].
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
 Compared to theories expressed in natural language,
@@ -575,8 +573,10 @@ While isolated empirical findings can appear fragmented and contradictory [@duma
 theories offer a top-down, big-picture representation of the phenomena studied in a field.
 In other words, theories are an important instrument in science communication.
 
-The Accessibility principles are sometimes misunderstood as pertaining to *maximizing* access; rather, they should be understood as *regulating* it.
-They apply to theory with minor changes.
+The Accessibility principles 
+<!-- are sometimes misunderstood as pertaining to *maximizing* access; rather, they should be understood as *regulating* it [@landiFAIROpenPossible2020]. -->
+<!-- They  -->
+apply to theory with minor changes.
 Firstly, theory and its associated metadata should be Accessible by their identifier using a standardized communications protocol (A1).
 This can be achieved, for example, by hosting theory in a version-controlled remote repository (such as Git), and archiving that repository on Zenodo for long-term storage.
 The resulting resource will then have an identifier (DOI) which allows the theory to be accessed using a standardized communications protocol (download via `https` or `git`).
@@ -588,27 +588,26 @@ and Zenodo allows for access control of individual files/resources.
 In general, it makes sense to retain outdated theories, in order to be able to track the genesis of theories over time, yet, we require the availability of meta data as a minimum requirement.
 
 At present, there are several impediments to theories' Accessibility.
-To the extent that theories are still contained within papers,
-paywalls erected by publishers constitute a barrier.
-Open Access publishing increases the Accessibility of all academic output, including theory.
-A second impediment is more indirect:
-While open access publishing increases practical access to theories,
-Accessibility also requires clear and explicit communication.
-<!-- NvD: I am not sure if we need to go into this much detail as presented in the rest of this Section. My suggestion is to remove most of it. I'll indicate which elements I suggest keeping -->
-This property of good theories has been dubbed "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024]. 
+One impediment is that, 
+when theories are published in paywalled journal articles,
+they might not be practically Accessible to all,
+even if they are in principle Accessible to those who can pay the fee.
+Open Access publishing increases the practical Accessibility of all academic output, including theory.
+
+A second impediment to Accessibility is more indirect
+and pertains to a theory's intelligibility to those with practical Access.
+It has been proposed that good theories have the property of "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024]. 
 At present, psychological theories are often ambiguous, rendering them difficult to understand [@frankenhuisStrategicAmbiguitySocial2023].
-It is important to acknowledge the *indeterminacy of translation*^[Every communicative utterance (e.g., a statement in natural language, a mathematical formula, et cetera)
+Successful communication requires shared background knowledge between sender and receiver [@vogtFAIR20Extending2024].
+Shared background knowledge can come from paradigms held by members of a scientific community [@kuhnStructureScientificRevolutions2009],
+from education, and from the available instrumentation for observation, measurement, and analysis - or it can be problematically absent.
+Accessibility is improved by explicitly referring to sources of assumed backround knowledge, and by reducing unnecessary ambiguity.
+At the same time, it is important to acknowledge the *indeterminacy of translation*^[Every communicative utterance (e.g., a statement in natural language, a mathematical formula, et cetera)
 has multiple alternative translations, with no objective means of choosing the correct one.],
-which implies that it is not possible to remove all ambiguity when communicating an idea [@quineReasonsIndeterminacyTranslation1970].
+which implies that it is not possible to remove *all* ambiguity when communicating an idea [@quineReasonsIndeterminacyTranslation1970].
 This places a theoretical upper bound on theories' ability to be understood.
 
-Successful communication requires shared background knowledge between sender and receiver [@vogtFAIR20Extending2024].
-The notion of "normal science" describes a phase in which a scientific community operates within the context of a shared paradigm,
-creating the background knowledge needed for mutual understanding and productive scientific work [@kuhnStructureScientificRevolutions2009].
-In real life, paradigms are rarely clear-cut, and shared background knowledge can come from different sources,
-including education, cultures of communication, and availability of particular instruments for observation, measurement, and analysis - or it can be problematically absent.
-
-A third impediment arises when theories have, what we call, a "dependency on the author" (DOA). <!-- AB citation needed?! Who came up with this term? -->
+A third impediment arises when theories have, what we call, a "dependency on the author" (DOA).
 DOA occurs when a theory cannot be understood by independent scholars,
 requiring the original author to provide interpretation and clarification.
 <!-- We have heard DOA referred to apocryphally as the "ask Leon" phenomenon, -->
@@ -619,22 +618,21 @@ DOA also renders theories immune to refutation,
 because the author can claim that the theory was misconstrued when confronted with falsifying evidence, thus making it a moving target  [@szollosiArrestedTheoryDevelopment2021].
 DOA is inherently problematic, as illustrated by cases where third parties identify logical inconsistencies within a theory [e.g., @kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008].
 This example demonstrates that original authors are not the ultimate authority on their theories.
-DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as Accessible as possible, in terms of both availability and interoperability.
+DOA thus unduly impedes scientific progress.
+<!-- DOA thus unduly impedes scientific progress, and authors should make good-faith efforts to make theories as Accessible as possible, in terms of both availability and interoperability. -->
 <!-- NvD: Above we mention that "The Accessibility principles are sometimes misunderstood as pertaining to *maximizing* access; rather, they should be understood as *regulating* it." This feels a bit at odds. I suspect that we are not talking about the same thing here, this could be interpreted as a contradiction.  -->
 
-In sum, while it is impossible to communicate a theory completely unambiguously,
-scholars should strive to reduce unnecessary ambiguity to the greatest possible extent.
-<!-- Accessibility requires theoreticians to explicit as possible about assumptions and ontological definitions to eliminate unnecessary ambiguity. -->
-<!-- At the same time, it is important to recognize that there is an upper bound on interpretability, which means that it is impossible to eliminate all ambiguity. -->
+
+In sum, authors should make good-faith efforts to make theories as Accessible as possible, in terms of both availability, intelligibility, and freedom from dependencies that cannot be resolved (including dependencies on the author, or manuscripts that can no longer be accessed with reasonable effort).
+It is important to recognize that there is an upper bound on interpretability, which means that it is impossible to communicate a theory completely unambiguously.
+Nevertheless, scholars should strive to reduce unnecessary ambiguity to the greatest possible extent.
 It may benefit scientific discourse to normalize explicit ambiguity (these are things we don't know yet) and anticipate misunderstanding,
 to invite others to fill in the blanks and motivate ever further explication of theory.
 A theory's Accessibility is increased by
 reducing dependencies on (implicit) background knowledge,
 explication of assumptions,
 formalization,
-and explicit cross-references to relevant resources such as papers, ontologies, macro-theories, measurement instruments, experimental designs [@langeChecklistIncentivizingFacilitating2025a].
-
-<!-- NvD: we use the term 'macro-theory' here for the first time. What does it mean? Do we need it? -->
+and explicit cross-references to relevant resources such as papers, ontologies, other related theories, measurement instruments, experimental designs [@langeChecklistIncentivizingFacilitating2025a].
 <!-- The data usually need to be integrated with other data. In addition, the data need to Interoperate with applications or workflows for analysis, storage, and processing. -->
 
 ## Interoperability
