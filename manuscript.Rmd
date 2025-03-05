@@ -1002,17 +1002,16 @@ knitr::include_graphics("git_branches.png")
 knitr::include_graphics("git_compare.png")
 ```
 
-## 
-
 ## Further Uses of FAIR Theory
 
 As uses of FAIR theory are best illustrated using tutorial examples,
 the `theorytools` package contains several vignettes that showcase specific applications.
-At the time of writing, the package includes a [vignette on theory specification](),
-that is to say, moving from a theory represented as prose to a FAIR theory,
-based on the many-theorists project by Glöckner and Fiedler (in preparation).
-Another vignette illustrates the use of FAIR theory for causal inference [@pearlCausalDiagramsEmpirical1995].
-Furthermore, one vignette illustrates the use of FAIR theory for [conducting a simulation study]().
+At the time of writing, the package includes a
+vignette [introducing augmented Directed Acyclic Graphs (aDAGs)](https://cjvanlissa.github.io/theorytools/articles/augmented_dags.html) as a format for theory specification that meets the requirements of good psychological theory.
+This vignette also shows the `theorytools` package's functionality for generating scripts for simulation studies, based on the information about distributions and functional form encoded in the aDAG.
+Another vignette describes how to take Self-Determination Theory [@langeSelfDeterminationTheory2012], a theory originally represented as prose, and [specify it as a FAIR aDAG](https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html).
+Another vignette describes how to take the Dunning-Krüger effect and [specify it as a FAIR mathematical formula](https://cjvanlissa.github.io/theorytools/articles/dunning_krueger.html) [@feldEstimatingRelationshipSkill2017].
+Another vignette illustrates the use of FAIR theory for [covariate selection and causal inference](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html) [@pearlCausalDiagramsEmpirical1995].
 More vignettes may be added over time, and users are encouraged to submit their own reproducible examples as package vignettes.
 <!-- Some have argued that good theories involve *causal explanations* [@meehlAppraisingAmendingTheories1990]. -->
 <!-- Explicit assumptions about the direction of causality allow one to perform causal inference even on cross-sectional data [-@pearlCausalDiagramsEmpirical1995]. -->
