@@ -1,0 +1,28 @@
+Caspar
+
+* Finished paper
+* Incorporated issues
+* Wrote vignettes
+* Updated package
+
+Noah
+
+* Accessibility
+	+ Not maximizing but regulating / later we say maximize it (Felix?) Something can be FAIR, even if you have to pay for access
+	+ Also applies to Reuse, should we put it as a general point outside the FAIR principles?
+* Footnote: Noah does not agree, indicate this disagreement
+
+Maximilian
+
+* What is the best format to represent math as FAIR theory?
+* How to cross-reference three instantiations of theory?
+
+Aaron
+
+* Diaper example: Core things change in a meaningful way
+* Escape falsification by changing theory
+* Precision/clarity? Rephrase this; consider using "specificity" instead of clarity (it's more specific)
+
+Andreas
+
+* ?
