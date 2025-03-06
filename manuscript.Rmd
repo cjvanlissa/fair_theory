@@ -120,9 +120,13 @@ as the theory's central claims evade falsification.
 A good example of this is found in “self-determination theory” (SDT), which emphasizes the role of intrinsic and extrinsic motivation in human behavior.
 Initially, intrinsic motivation was understood as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures [@deciEffectsExternallyMediated1971].
 Over time, however, SDT expanded its definition to include motivations driven by the fulfillment of basic psychological needs—autonomy, competence, and relatedness—all still categorized as "intrinsic" [@ryanSelfdeterminationTheoryFacilitation2000].
+<!-- Consider, for instance, a research scientist working in a highly competitive laboratory.
+Under the original definition, their intrinsic motivation would be limited to the joy of discovery alone.
+Yet, under the expanded framework, factors that might initially appear extrinsic can be reconceptualized as intrinsic: securing grant funding enhances their autonomy by granting them the freedom to pursue innovative ideas; grappling with deadlines bolsters their sense of competence; and praise from their peers fulfills their need for relatedness. -->
 The difference between these definitions becomes clear when considering the act of changing an infant's dirty diaper.
 Under the original definition, one might hypothesize that caregivers are not intrinsically motivated to change diapers, as this is hardly a joyous experience.
 Under the expanded definition, one might hypothesize the opposite, as the act may fulfill the need for relatedness.
+The expanded definition thus enables SDT to absorb potentially falsifying evidence.
 
 Scholars have raised concerns about the state of theory in psychology for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
 One main concern is that theories lack *formalization* [@szollosiArrestedTheoryDevelopment2021].
