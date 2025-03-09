@@ -3,10 +3,10 @@ yet methods for specifying, sharing, and iteratively improving theories remain u
 To address these limitations, we introduce *FAIR theory*:
 A standard for specifying theories as Findable, Accessible, Interoperable, and Reusable information artifacts.
 FAIR theories are Findable in well-established archives,
-Accessible in practical terms (open file formats) and in terms of their ability to be understood,
+Accessible in practical terms and in terms of their ability to be understood,
 Interoperable for specific purposes, e.g., to guide control variable selection,
 and
-Reusable such that they can be iteratively improved through collaborative efforts.
+Reusable so that they can be iteratively improved through collaborative efforts.
 This paper adapts the FAIR principles for theory,
 reflects on the FAIRness of contemporary theoretical practices in psychology,
 introduces a workflow for FAIRifying theory,

@@ -63,7 +63,7 @@ authornote: |
   This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`.
 
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
-keywords          : "fairtheory, meta theory, theory formation, cumulative science, formal models"
+keywords          : "fairtheory, meta science, theory formation, open science, formal models"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
 bibliography      : "fair_theory.bib"
 floatsintext      : yes
@@ -79,7 +79,7 @@ output            :
   papaja::apa6_pdf: default
   md_document: default
 header-includes:
-  - \usepackage{longtable, setspace}
+  - \usepackage{longtable, setspace, subfig}
   - \raggedbottom
 ---
 
@@ -110,7 +110,7 @@ We focus on applications in psychology, but the principles are relevant across t
 The so-called "replication crisis" has prompted extensive scientific reforms [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that the abundance of non-replicable findings 
 was caused by undisclosed flexibility in analyses led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
-These various practices ensure transparent and repeated testing of hypotheses by commiting to an analysis plan in advance.
+These various practices ensure transparent and repeated testing of hypotheses by committing to an analysis plan in advance.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
 
@@ -137,7 +137,7 @@ it becomes difficult do derive precise predictions,
 and therefore hard to falsify the theory. 
 A second concern is the lack of transparent and participative scholarly communication about psychological theory, which limits its progression and development.
 Despite these concerns, scientific reform initiated by the open science movement has focused primarily on improving deductive methods.
-The equally critical inductive processes of theory construction and improvement have been largely overlooked^[Here, we use "induction" to refer to inferences from specific observations to general theories. Others have used the term "abduction" to describe "inference to the best explanation" [@peirceCollectedPapersCharles1960]. For present purposes, the terms are interchangeable.].
+The equally critical processes of theory construction and improvement have been largely overlooked.
 <!-- CvL considers abduction to be a special case of induction, because defining what makes a theory "best" or "plausible" requires making auxiliary assumptions, which restrict the space of potential inductive inferences. Peirce also stated that abduction "is not essentially different from induction" [@peirceCollectedPapersCharles1960, p.4881].  NvD dissents: -->
 <!-- NvD: I cannot accept this footnote as an adequate characterization. Abduction is not just "inference to the best explanation." It is typically used as inference to a plausible explanation (but there could be more). See for instance Brian Haig's 2005 paper. Also, I don't see why it matters either way "why defining what makes a theory "best" requires auxiliary assumptions". At the very least I would like to change "we consider abduction to be a special case of induction", because I disagree. I am fine with the last sentence though ;-) My suggestion is to write the following: -->
 <!-- NvD: We use induction to describe inferences from specific observations to general theories. In philosophy of science the term "abduction" is often used for the inference from observations to plausible explanations. We note that induction and abduction come in several varieties in philosophy science, which overlap in several respects For present purposes, however, the terms are interchangeable. -->
@@ -156,8 +156,9 @@ facilitate transparent scholarly communication and accelerate cumulative knowled
 
 According to the *empirical cycle* [@degrootMethodologieGrondslagenVan1961],
 a meta-theoretical model of cumulative knowledge acquisition,
-research ideally follows a cyclical process with two phases, see Figure \@ref(fig:figecs), panel (a).
-In the deductive phase, hypotheses derived from theory are tested on data. In the inductive phase, patterns observed in data are generalized to theoretical principles.
+research ideally follows a cyclical process with two phases, see Figure \@ref(fig:figecs)a.
+In one half of the cycle, labeled the "Context of Justification" by Wagenmakers and colleagues, hypotheses derived from theory are tested on data. In the other half of the cycle (the "Context of Discovery"),
+patterns observed in data are generalized to theoretical principles, Figure \@ref(fig:figecs)b.
 In this model, theories are the vehicle of scientists' understanding of phenomena.
 Ideally, they are iteratively updated based on deductive testing and inductive theory construction.
 
@@ -248,7 +249,7 @@ knitr::include_graphics("ec_lissa.pdf")
 ```
 
 ```{r figecs, eval = TRUE, fig.cap='Three implementations of the "empirical cycle" [@degrootMethodologieGrondslagenVan1961].'}
-# rsvg::rsvg_pdf("empirical_cycle1.svg", "ec_visio.pdf")
+# rsvg::rsvg_pdf("empirical_cycle2.svg", "ec_visio.pdf")
 knitr::include_graphics("ec_visio.pdf")
 ```
 
@@ -881,9 +882,7 @@ See here for [an example of the metadata](https://raw.githubusercontent.com/cjva
 - List the DOIs/identifiers of *related works*. Use the `Relation` field as appropriate. For example:
     + `Is documented by` can be used to reference a theory paper you wrote, in which you introduce this FAIR theory
     + `Is derived from` could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used `Is derived from` to reference De Groot and Spiekerman's empirical cycle.
-- Optionally, add *References* to related works in plain text. For example, here we can provide the full citation of De Groot and Spiekerman:
-
-> De Groot, A. D., & Spiekerman, J. A. A. (1969). Methodology: Foundations of inference and research in the behavioral sciences. De Gruyter Mouton. https://doi.org/10.1515/9783112313121
+- Optionally, add *References* to related works in plain text. For example, we cite De Groot and Spiekerman in this field.
 
 ## Automating these Steps
 
@@ -951,7 +950,7 @@ but again specified the empirical cycle differently.
 First, in De Groot's formulation, each stage describes a process.
 This invites the question of what the concrete outcomes of these processes are.
 In other words: what actually changes when going through the cycle, except the scholar's mind?
-To address this point, the nodes in Van Lissa's specification refer to specific deliverables, whereas the edges connecting the nodes refer to processes acting upon those deliverables, see Figure \@ref(fig:figecs), panel (c).
+To address this point, the nodes in Van Lissa's specification refer to specific deliverables, whereas the edges connecting the nodes refer to processes acting upon those deliverables, see Figure \@ref(fig:figecs)c).
 Second, the processes of induction and deduction are perhaps not as neatly confined to specific phases as De Groot proposed.
 <!-- In our representation, -->
 <!-- induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory. -->
@@ -963,9 +962,20 @@ Second, the processes of induction and deduction are perhaps not as neatly confi
 <!-- and auxiliary assumptions that must be made to address remaining theoretical ambiguities. -->
 <!-- # And then for example: I understand Aaron's work about inductive bias to be about the link "prediction -> test;", because the test is not identified without making auxiliary assumptions; if the auxiliary assumption is made based on the data, inductive bias is introduced. -->
 <!-- ``` -->
-For example, observation is theory-laden, and thus involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
-Deriving hypotheses from theory is not purely deductive either,
-as auxiliary assumptions are often made, which involves induction (e.g., assuming equal variances across groups because groups often have equal variances).
+Theory testing, as takes place in the "context of justification", can be said to involve mostly deductive reasoning.
+Theory development and amendment, as takes place in the "context of discovery", involves primarily inductive reasoning^[Here, "induction" is defined forming general theories based on specific observations. Others have used the term "abduction" to describe "inference to the best explanation" [@peirceCollectedPapersCharles1960]. For present purposes, the terms are interchangeable.].
+<!-- CvL considers abduction to be a special case of induction, because defining what makes a theory "best" or "plausible" requires making auxiliary assumptions, which restrict the space of potential inductive inferences. Peirce also stated that abduction "is not essentially different from induction" [@peirceCollectedPapersCharles1960, p.4881].  NvD dissents: -->
+<!-- NvD: I cannot accept this footnote as an adequate characterization. Abduction is not just "inference to the best explanation." It is typically used as inference to a plausible explanation (but there could be more). See for instance Brian Haig's 2005 paper. Also, I don't see why it matters either way "why defining what makes a theory "best" requires auxiliary assumptions". At the very least I would like to change "we consider abduction to be a special case of induction", because I disagree. I am fine with the last sentence though ;-) My suggestion is to write the following: -->
+<!-- NvD: We use induction to describe inferences from specific observations to general theories. In philosophy of science the term "abduction" is often used for the inference from observations to plausible explanations. We note that induction and abduction come in several varieties in philosophy science, which overlap in several respects For present purposes, however, the terms are interchangeable. -->
+<!-- Peirce: CP 8.233 Cross-Ref:†† -->
+<!-- 233. This is not essentially different from induction. Only it is most -->
+<!-- usually an induction from instances which are not discrete and numerable. I now -->
+<!-- call it Qualitative Induction. It is this which I used to confound with the second -->
+<!-- line of procedure, or at least not to distinguish it sharply. -->
+However, deriving hypotheses from theory is not purely deductive
+as auxiliary assumptions must often be made to account for remaining ambiguities in theory, which involves induction.
+A rudimentary example is assuming equal variances across groups when testing a mean difference between groups, because groups often have equal variances.
+Similarly, if we consider the claim that observation is theory-laden, then it too involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
 Furthermore, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [@peikertTransparencyOpenScience2023].
 These alterations result in the following implementation of the empirical cycle:
 
@@ -992,19 +1002,25 @@ If you start with an existing GitHub repository, and wish to make some changes t
 this is commonly done by [creating a "branch"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository).
 A branch allows you to make non-destructive changes and can continue to exist in parallel to the main repository.
 Thus, it is possible to have one main theory with several branches that each contain competing theories derived from it.
-Figure \@ref(fig:figbranch) shows how our example `empirical_cycle` repository contains branches with Wagenmakers' and Van Lissa's implementations.
+Figure \@ref(fig:figgithub-1) shows how our example `empirical_cycle` repository contains branches with Wagenmakers' and Van Lissa's implementations.
 A branch can also be merged with the main branch, thus incorporating the changes it contains into the version of record.
 If you wish to develop a new version of someone else's FAIR theory,
 it is possible to ["fork their repository"](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
 This creates a copy of their repository onto your GitHub account.
 Both branches and forks can be compared and merged via "pull requests", which are essentially a request to incorporate the changes you have made.
-Figure \@ref(fig:figcompare) shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
+Figure \@ref(fig:figgithub-2) shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
+     
+```{r figgithub, out.width = "50%", fig.show='hold', fig.cap='FAIR Theories on GitHub', fig.subcap=c('Branches contain different versions of a theory', 'These versions can be compared'), fig.ncol = 2}
+#par(mfrow=c(1,2))
+knitr::include_graphics("git_branches.png")
+knitr::include_graphics("git_compare_short.png")
+```
 
-```{r figbranch, fig.cap="Branches can contain different versions of a theory.", out.width = "50%"}
+```{r figbranch, eval = FALSE, fig.cap="Branches can contain different versions of a theory.", out.width = "50%"}
 knitr::include_graphics("git_branches.png")
 ```
 
-```{r figcompare, fig.cap="GitHub's compare functionality.", out.width = "50%"}
+```{r figcompare, eval = FALSE, fig.cap="GitHub's compare functionality.", out.width = "50%"}
 knitr::include_graphics("git_compare.png")
 ```
 
@@ -1014,9 +1030,10 @@ As uses of FAIR theory are best illustrated using tutorial examples,
 the `theorytools` package contains several vignettes that showcase specific applications.
 At the time of writing, the package includes a
 vignette [introducing augmented Directed Acyclic Graphs (aDAGs)](https://cjvanlissa.github.io/theorytools/articles/augmented_dags.html) as a format for theory specification that meets the requirements of good psychological theory.
-This vignette also shows the `theorytools` package's functionality for generating scripts for simulation studies, based on the information about distributions and functional form encoded in the aDAG.
+These aDAGs are X-interoperable for plotting (using `dagitty` and `tidySEM`),
+for automatically selecting control variables, and for simulating data (using `theorytools`).
 Another vignette describes how to take Self-Determination Theory [@langeSelfDeterminationTheory2012], a theory originally represented as prose, and [specify it as a FAIR aDAG](https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html).
-Another vignette describes how to take the Dunning-Krüger effect and [specify it as a FAIR mathematical formula](https://cjvanlissa.github.io/theorytools/articles/dunning_krueger.html) [@feldEstimatingRelationshipSkill2017].
+Another vignette describes how to take the Dunning-Krüger effect and [specify it as a FAIR mathematical formula](https://cjvanlissa.github.io/theorytools/articles/dunning-kruger.html) [@feldEstimatingRelationshipSkill2017].
 Another vignette illustrates the use of FAIR theory for [covariate selection and causal inference](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html) [@pearlCausalDiagramsEmpirical1995].
 More vignettes may be added over time, and users are encouraged to submit their own reproducible examples as package vignettes.
 <!-- Some have argued that good theories involve *causal explanations* [@meehlAppraisingAmendingTheories1990]. -->
