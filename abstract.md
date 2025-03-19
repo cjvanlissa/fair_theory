@@ -3,19 +3,15 @@ yet methods for specifying, sharing, and iteratively improving theories remain u
 To address these limitations, we introduce *FAIR theory*:
 A standard for specifying theories as Findable, Accessible, Interoperable, and Reusable information artifacts.
 FAIR theories are Findable in well-established archives,
-Accessible in practical terms and in terms of their ability to be understood,
-Interoperable for specific purposes, e.g., to guide control variable selection,
+Accessible in terms of availability and their ability to be understood,
+Interoperable for specific purposes, such as selecting control variables,
 and
 Reusable so that they can be iteratively improved through collaborative efforts.
 This paper adapts the FAIR principles for theory,
-reflects on the FAIRness of contemporary theoretical practices in psychology,
+reflects on the FAIRness of contemporary psychological practices,
 introduces a workflow for FAIRifying theory,
-and explores FAIR theories’ potential impact in terms of reducing research waste,
-enabling meta-research on the structure and development of theories,
+and discusses FAIR theories’ potential impact in terms of reducing research waste,
+enabling meta-research on theories' structure and development,
 and incorporating theory into reproducible research workflows – from hypothesis generation to simulation studies.
-We make use of well-established open science infrastructure, including
-Git for version control, GitHub for collaboration, and Zenodo for archival and search indexing.
-By applying the principles and infrastructure that have already revolutionized sharing of data and publications to theory, 
-we establish a sustainable, transparent, and collaborative approach to theory development.
-FAIR theory equips scholars with a standard for systematically specifying and refining theories, bridging a critical gap in open research practices and supporting the renewed interest in theory development in psychology and beyond.
-FAIR theory provides a structured, cumulative framework for theory development, increasing efficiency and potentially accelerating the pace of cumulative knowledge acquisition.
+FAIR theory constitutes framework for specifying and refining theories, bridging a critical gap in open scholarly practices and supporting the renewed interest in theory development in psychology and beyond.
+FAIR theory builds on existing open science principles and infrastructures to provide a structured, cumulative framework for theory development, potentially increasing efficiency and potentially accelerating the pace of cumulative knowledge acquisition.

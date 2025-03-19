@@ -184,7 +184,7 @@
   }
 {}{\PatchFailed}
 \makeatother
-\keywords{fairtheory, meta science, theory formation, open science, formal models\newline\indent Word count: 9211}
+\keywords{fairtheory, meta science, theory formation, open science\newline\indent Word count: 9211}
 \usepackage{lineno}
 
 \linenumbers
@@ -201,7 +201,7 @@
   pdftitle={To be FAIR: Theory Specification Needs an Update},
   pdfauthor={Caspar J. Van Lissa1, Aaron Peikert2,3, Maximilian S. Ernst2,4, Noah N.N. van Dongen5, Felix D. Schönbrodt6, \& Andreas M. Brandmaier2,3,7},
   pdflang={en-EN},
-  pdfkeywords={fairtheory, meta science, theory formation, open science, formal models},
+  pdfkeywords={fairtheory, meta science, theory formation, open science},
   colorlinks=true,
   linkcolor={Maroon},
   filecolor={Maroon},
@@ -218,7 +218,7 @@
 
 \authornote{
 
-This is a preprint paper, generated from Git Commit \# 985c9433. The first and senior author positions were fixed, and remaining author positions randomized using \texttt{set.seed(6999982);\ sample(c("Aaron",\ "Felix",\ "Noah",\ "Maximilian"))}.
+This is a preprint paper, generated from Git Commit \# 7b710ba5. The first and senior author positions were fixed, and remaining author positions randomized using \texttt{set.seed(6999982);\ sample(c("Aaron",\ "Felix",\ "Noah",\ "Maximilian"))}.
 
 The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Maximilian S. Ernst: Writing -- review \& editing, Investigation; Noah N.N. van Dongen: Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing.
 
@@ -229,7 +229,7 @@ Correspondence concerning this article should be addressed to Caspar J. Van Liss
 \affiliation{\vspace{0.5cm}\textsuperscript{1} Tilburg University, dept. Methodology \& Statistics\\\textsuperscript{2} Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany\\\textsuperscript{3} Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany\\\textsuperscript{4} Max Planck School of Cognition, Leipzig, Germany\\\textsuperscript{5} University of Amsterdam, the Netherlands\\\textsuperscript{6} Ludwig-Maximilians-Universität München, Germany\\\textsuperscript{7} Department of Psychology, MSB Medical School Berlin, Berlin, Germany}
 
 \abstract{%
-Innovations in open science and meta-science have focused on rigorous \emph{theory testing}, yet methods for specifying, sharing, and iteratively improving theories remain underdeveloped. To address these limitations, we introduce \emph{FAIR theory}: A standard for specifying theories as Findable, Accessible, Interoperable, and Reusable information artifacts. FAIR theories are Findable in well-established archives, Accessible in practical terms and in terms of their ability to be understood, Interoperable for specific purposes, e.g., to guide control variable selection, and Reusable so that they can be iteratively improved through collaborative efforts. This paper adapts the FAIR principles for theory, reflects on the FAIRness of contemporary theoretical practices in psychology, introduces a workflow for FAIRifying theory, and explores FAIR theories' potential impact in terms of reducing research waste, enabling meta-research on the structure and development of theories, and incorporating theory into reproducible research workflows -- from hypothesis generation to simulation studies. We make use of well-established open science infrastructure, including Git for version control, GitHub for collaboration, and Zenodo for archival and search indexing. By applying the principles and infrastructure that have already revolutionized sharing of data and publications to theory, we establish a sustainable, transparent, and collaborative approach to theory development. FAIR theory equips scholars with a standard for systematically specifying and refining theories, bridging a critical gap in open research practices and supporting the renewed interest in theory development in psychology and beyond. FAIR theory provides a structured, cumulative framework for theory development, increasing efficiency and potentially accelerating the pace of cumulative knowledge acquisition
+Innovations in open science and meta-science have focused on rigorous \emph{theory testing}, yet methods for specifying, sharing, and iteratively improving theories remain underdeveloped. To address these limitations, we introduce \emph{FAIR theory}: A standard for specifying theories as Findable, Accessible, Interoperable, and Reusable information artifacts. FAIR theories are Findable in well-established archives, Accessible in terms of availability and their ability to be understood, Interoperable for specific purposes, such as selecting control variables, and Reusable so that they can be iteratively improved through collaborative efforts. This paper adapts the FAIR principles for theory, reflects on the FAIRness of contemporary psychological practices, introduces a workflow for FAIRifying theory, and discusses FAIR theories' potential impact in terms of reducing research waste, enabling meta-research on theories' structure and development, and incorporating theory into reproducible research workflows -- from hypothesis generation to simulation studies. FAIR theory constitutes framework for specifying and refining theories, bridging a critical gap in open scholarly practices and supporting the renewed interest in theory development in psychology and beyond. FAIR theory builds on existing open science principles and infrastructures to provide a structured, cumulative framework for theory development, potentially increasing efficiency and potentially accelerating the pace of cumulative knowledge acquisition.
 }
 
 
@@ -282,7 +282,7 @@ facilitate transparent scholarly communication and accelerate cumulative knowled
 
 \subsection{Theory and Scientific Progress}\label{theory-and-scientific-progress}
 
-According to the \emph{empirical cycle} (de Groot, 1961),
+According to the \emph{empirical cycle} (De Groot \& Spiekerman, 1969),
 a meta-theoretical model of cumulative knowledge acquisition,
 research ideally follows a cyclical process with two phases, see Figure \ref{fig:figecs}a.
 In one half of the cycle, labeled the ``Context of Justification'' by Wagenmakers and colleagues, hypotheses derived from theory are tested on data. In the other half of the cycle (the ``Context of Discovery''),
@@ -293,7 +293,7 @@ Ideally, they are iteratively updated based on deductive testing and inductive t
 \begin{figure}
 \centering
 \includegraphics{ec_visio.pdf}
-\caption{\label{fig:figecs}Three implementations of the ``empirical cycle'' (de Groot, 1961).}
+\caption{\label{fig:figecs}Three implementations of the ``empirical cycle'' (De Groot \& Spiekerman, 1969).}
 \end{figure}
 
 In a progressive research program (Lakatos, 1971),
@@ -680,7 +680,7 @@ and this paper takes one step towards establishing more fine-grained community s
 
 If we consider the current state of Reusability in psychological theory, there appears to be a norm against theory reuse:
 \emph{``{[}Theories are{]} like toothbrushes --- no self-respecting person wants to use anyone else's''} (Mischel, 2008).
-As cumulative knowledge acquisition requires reusable theories that are continuously updated based on insights from new data, such a norm impedes scientific progress (de Groot, 1961).
+As cumulative knowledge acquisition requires reusable theories that are continuously updated based on insights from new data, such a norm impedes scientific progress (De Groot \& Spiekerman, 1969).
 In FAIR theory workshops, we similarly notice a reluctance to reuse and adapt existing theories.
 Students ask questions such as ``Who owns a theory?'',
 and ``Who determines how a theory may be reused or changed?''.
@@ -1098,9 +1098,6 @@ Cramer, A. O. J., Borkulo, C. D. van, Giltay, E. J., Maas, H. L. J. van der, Ken
 
 \bibitem[\citeproctext]{ref-datacitemetadataworkinggroupDataCiteMetadataSchema2024}
 DataCite Metadata Working Group. (2024). \emph{{DataCite Metadata Schema Documentation} for the {Publication} and {Citation} of {Research Data} and {Other Research Outputs} v4.6}. \url{https://doi.org/10.14454/MZV1-5B55}
-
-\bibitem[\citeproctext]{ref-degrootMethodologieGrondslagenVan1961}
-de Groot, A. D. (1961). \emph{Methodologie: Grondslagen van onderzoek en denken in de gedragswetenschappen}. 's Gravenhage: Uitgeverij Mouton. Retrieved from \url{https://books.google.com?id=6hiBDwAAQBAJ}
 
 \bibitem[\citeproctext]{ref-degrootMethodologyFoundationsInference1969}
 De Groot, A. D., \& Spiekerman, J. A. A. (1969). \emph{Methodology: {Foundations} of inference and research in the behavioral sciences}. De Gruyter Mouton. \url{https://doi.org/10.1515/9783112313121}

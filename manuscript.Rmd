@@ -63,7 +63,7 @@ authornote: |
   This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`.
 
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
-keywords          : "fairtheory, meta science, theory formation, open science, formal models"
+keywords          : "fairtheory, meta science, theory formation, open science"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
 bibliography      : "fair_theory.bib"
 floatsintext      : yes
@@ -154,7 +154,7 @@ facilitate transparent scholarly communication and accelerate cumulative knowled
 
 ## Theory and Scientific Progress
 
-According to the *empirical cycle* [@degrootMethodologieGrondslagenVan1961],
+According to the *empirical cycle* [@degrootMethodologyFoundationsInference1969],
 a meta-theoretical model of cumulative knowledge acquisition,
 research ideally follows a cyclical process with two phases, see Figure \@ref(fig:figecs)a.
 In one half of the cycle, labeled the "Context of Justification" by Wagenmakers and colleagues, hypotheses derived from theory are tested on data. In the other half of the cycle (the "Context of Discovery"),
@@ -248,7 +248,7 @@ knitr::include_graphics("ec_wagenmakers.pdf")
 knitr::include_graphics("ec_lissa.pdf")
 ```
 
-```{r figecs, eval = TRUE, fig.cap='Three implementations of the "empirical cycle" [@degrootMethodologieGrondslagenVan1961].'}
+```{r figecs, eval = TRUE, fig.cap='Three implementations of the "empirical cycle" [@degrootMethodologyFoundationsInference1969].'}
 # rsvg::rsvg_pdf("empirical_cycle2.svg", "ec_visio.pdf")
 knitr::include_graphics("ec_visio.pdf")
 ```
@@ -718,7 +718,7 @@ and this paper takes one step towards establishing more fine-grained community s
 
 If we consider the current state of Reusability in psychological theory, there appears to be a norm against theory reuse:
 *"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008].
-As cumulative knowledge acquisition requires reusable theories that are continuously updated based on insights from new data, such a norm impedes scientific progress [@degrootMethodologieGrondslagenVan1961].
+As cumulative knowledge acquisition requires reusable theories that are continuously updated based on insights from new data, such a norm impedes scientific progress [@degrootMethodologyFoundationsInference1969].
 In FAIR theory workshops, we similarly notice a reluctance to reuse and adapt existing theories.
 Students ask questions such as "Who owns a theory?",
 and "Who determines how a theory may be reused or changed?".
