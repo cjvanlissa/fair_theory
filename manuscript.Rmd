@@ -716,7 +716,7 @@ A FAIR theory is designed to make predictions and be revised in light of empiric
 
 This difference can be illustrated with a Bayesian analogy.
 A preregistration is akin to a statistical model---it formalizes assumptions about data generation but is in itself indifferent to the data.
-Combining a theory with a specific sampling strategy, study design, measurement, etc. allows one to make predictions even before observing data.
+Combining a theory with a specific sampling strategy, study design, measurement, etc. allows one to make predictions even before observing data [@peikertWhyDoesPreregistration2023].
 However, after observing data, the theory might require revision.
 In this sense, a theory is first a prior, and then after conducting a specific investigation as prescribed by the preregistration, is refined to become a posterior.
 In short, a preregistration rooted in a FAIR theory not only supports transparency, but also strengthens the epistemic cycle of prediction, testing, and revision---moving us closer to a cumulative science.
