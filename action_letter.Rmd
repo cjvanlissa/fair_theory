@@ -16,6 +16,8 @@ We appreciate the feedback that you and the reviewers have provided.
 In the following itemised list we respond to each comment point by point.
 
 ```{r setup-chunk, include = FALSE}
+library(revise)
+revise::read_manuscript("abstract.md")
 revise::read_manuscript("manuscript.Rmd")
 ```
 
@@ -86,14 +88,21 @@ To address this comment, <font color="red">in the Revision:
 In this manuscript, the authors introduce a framework for FAIR theory specification while outlining what makes a theory FAIR, which is accompanied by practical guidance on how to implement this in one’s own work. In my opinion, the paper is relevant for the journal and presents research that is significant for the field of psychology but also adjacent fields that rely on theories similar in nature to ours. FAIR theory is a promising idea that could significantly advance psychological research, especially in terms of transparency and replicability.
 ```
 
+We thank the Reviewer for their thoughtful review and detailed comments. We have sought to address all comments, and feel that doing so has improved the quality of the manuscript.
 
 ```{asis}
 The abstract provides a (mostly) comprehensive overview of the paper that can be easily followed and understood. I personally felt that the introduction of the theorytools R-package was an important aspect of the paper and should thus briefly be mentioned in the abstract.
 ```
 
+Thank you for this suggestion; as proposed, we now briefly mention the R-package in the abstract:
+
+`r get_revision("abstractpackage")`
+
 ```{asis}
 In the abstract, the authors mention the discussion of “FAIR theories’ potential impact in terms of reducing research waste,” which I couldn’t really find at any point in the manuscript.
 ```
+
+nakagawaPoorHypothesesResearch2024
 
 <!-- AB: -->
 3.	Regarding missing reference to "research waste" - yes, this should be picked up. By the way, the latest revision of the Declaration of Helsinki states that ethical science has to avoid "research waste". Pretty cool.
@@ -170,6 +179,7 @@ In my opinion, it is very important that the learning curve is mentioned; even t
 Line 852: I’d add a reference for the jingle-jangle fallacy.
 ```
 
+gonzalezExtrinsicConvergentValidity2021
 
 ```{asis}
 The affiliations could be changed to follow a common system.
