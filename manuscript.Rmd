@@ -47,7 +47,7 @@ author:
       - Writing – review & editing
 affiliation:
   - id            : "1"
-    institution   : "Tilburg University, dept. Methodology & Statistics"
+    institution   : "Tilburg University department of Methodology & Statistics, Tilburg, The Netherlands"
   - id            : "2"
     institution   : "Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany"
   - id            : "3"
@@ -55,11 +55,11 @@ affiliation:
   - id            : "4"
     institution   : "Max Planck School of Cognition, Leipzig, Germany"
   - id            : "5"
-    institution   : "University of Amsterdam, the Netherlands"
+    institution   : "University of Amsterdam, Amsterdam, The Netherlands"
   - id            : "6"
-    institution   : "Ludwig-Maximilians-Universität München, Germany"
+    institution   : "Ludwig-Maximilians-Universität München, München, Germany"
   - id            : "7"
-    institution   : "Department of Psychology, MSB Medical School Berlin, Berlin, Germany"
+    institution   : "MSB Medical School Berlin Department of Psychology, Berlin, Germany"
 authornote: |
   This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`.
 
@@ -96,13 +96,13 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
 
-The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and Reusable [@wilkinsonFAIRGuidingPrinciples2016] for both humans and computers.
+The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and Reusable [@wilkinsonFAIRGuidingPrinciples2016] for both humans and computers^[[As the colloquial use of these terms differs in important ways from their definition according to the FAIR principles, we capitalize these terms when we refer to a specific FAIR principle.]{#faircap}].
 Since the FAIR principles' inception, scholars have demonstrated their relevance for making other information artifacts more open, such as research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying].
 This paper argues that the FAIR principles can similarly advance effective and transparent scholarly communication about theory.
 To this end, we introduce "FAIR theory":
 a digital instantiation of a scientific theory, published as a self-contained and citable information artifact distinct from the scientific paper,
 compliant with the FAIR principles.
-FAIR theory has the potential to improve the efficiency of scholarly communication and
+[FAIR theory has the potential to improve the efficiency of scholarly communication and]{#test2}
 accelerate cumulative knowledge acquisition.
 We focus on applications in psychology, but the principles are relevant across the social sciences and beyond.
 
@@ -681,11 +681,12 @@ If we consider Meehl's nine properties of strong theories (properties 3-8 are gr
 we see how each of these properties incurs certain affordances in terms of X-Interoperability (Table \@ref(tab:tabmeehl)).
 
 ```{r tabmeehl}
-data.frame(
+tab_meehl <- data.frame(
   "Property" = c("1) Ontology", "2) Causal connections", "3-8) Functional Form", "9) Numerical Value"),
   "X-Interoperability" = c("Variable selection", "Model specification, covariate selection, causal inference", "Deriving specific hypotheses", "Simulating data"), check.names = FALSE
-) |>
-papaja::apa_table()
+)
+write.csv(tab_meehl, "tab_meehl.csv")
+papaja::apa_table(tab_meehl)
 ```
 
 
