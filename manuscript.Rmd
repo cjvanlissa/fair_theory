@@ -698,30 +698,15 @@ Interoperability of psychological theory may be limited when theories are instan
 
 With regard to the state of Interoperability in psychology, 
 Kurt Lewin's [-@lewinPsychologyProcessGroup1943] adage "there's nothing as practical as a good theory" paints a hopeful picture of theories as useful tools in psychological researchers' day-to-day work.
-But, as we argued, this is not the case.
+But, as we argued, contemporary practice falls short of this ideal.
 The examples of X-Interoperability offered in Table \@ref(tab:tabmeehl) illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-Interoperable within software used for analysis.
 For example, Interoperable theory could be used
 to select control variables for causal inference [@cinelliCrashCourseGood2022],
+or to preregister a study with an explicit derivation chain from theory to hypothesis,
+as well as an inferential procedure that would suggest specific modifications to theory after analyzing empirical data [@peikertReproducibleResearchTutorial2021],
 or to derive machine-readable hypotheses [@lakensImprovingTransparencyFalsifiability2021] which could be automatically evaluated through integration testing [@vanlissaUsingEndpointsCheck2023].
 Furthermore, theories can be X-Interoperable with each other to enable nesting, or using one theory to clarify elements of another theory.
 For example, it should be possible to embed a theory about emotion regulation [e.g., @grossEmotionRegulationCurrent2015] within a theory of emotion regulation development [@morrisRoleFamilyContext2007].
-
-An important aspect of Interoperability lies in linking FAIR theories with existing open science methodologies---most notably, preregistration.
-As noted, preregistration alone has not resolved the replication crisis in the social sciences.
-This raises a fundamental question: What additional value does a FAIR theory provide, and how does it complement preregistration?
-
-One distinction is quantitative:
-FAIR theories operate at a higher level of abstraction.
-They articulate general principles and expectations that cut across studies, whereas preregistrations focus on specific applications, analytic strategies, and study designs.
-More fundamentally, however, there is a qualitative difference.
-A FAIR theory is designed to make predictions and be revised in light of empirical results; preregistration, by contrast, prescribes how a particular study will be conducted, regardless of what the outcomes turn out to be.
-
-This difference can be illustrated with a Bayesian analogy.
-A preregistration is akin to a statistical model---it formalizes assumptions about data generation but is in itself indifferent to the data.
-Combining a theory with a specific sampling strategy, study design, measurement, etc. allows one to make predictions even before observing data [@peikertWhyDoesPreregistration2023].
-However, after observing data, the theory might require revision.
-In this sense, a theory is first a prior, and then after conducting a specific investigation as prescribed by the preregistration, is refined to become a posterior.
-In short, a preregistration rooted in a FAIR theory not only supports transparency, but also strengthens the epistemic cycle of prediction, testing, and revision---moving us closer to a cumulative science.
 
 ## Reusability
 
@@ -1166,13 +1151,29 @@ and any advancements in the areas of measurement and ontology will serve to ampl
 
 ## Future Directions
 
-One issue that intersects with FAIR theory is the measurement and operationalization of psychological constructs.
-Aside from the aforementioned "theory crisis", there has been talk of a "measurement crisis":
-it is not always clear how theoretical constructs are operationalized, and many existing instruments have poor psychometric properties [@bringmannBackBasicsImportance2022].
-The "jingle-jangle" fallacy is common in psychology:
-the same term is often used for distinct constructs, and conversely, different terms are used to refer to the same construct.
-FAIR theory can help address the measurement crisis:
-since theories can reference other theories and resources, it is possible to extend a structural theory with a theory of measurement.
+<span id="fairtheoryprereg">One important future direction is embedding FAIR theories withing existing open science methodologies. 
+For example, consider how FAIR theory relates to preregistration.
+These practices are clearly distinct but complimentary.
+The purpose of FAIR theory is to communicate general principles and expectations about a given phenomenon,
+and to provide infrastructure for explicitly deriving hypotheses from specific theories and revising those theories in light of empirical results.
+The purpose of preregistration, by contrast, is to eliminate inductive bias from hypothesis tests and increase trust in their outcomes [@peikertWhyDoesPreregistration2023].
+These practices differ in their level of abstraction:
+FAIR theories cut across studies on a given phenomenon,
+whereas preregistrations are specific implementations of hypothesis tests,
+with a specific study design, analysis plan, and - optionally - a fully reproducible analysis pipeline. 
+These practices complement each other:
+authors can make the derivation chain from theory to hypothesis more explicit by citing a specific FAIR theory in their preregistration.
+Moreover, it is possible to preregister an inferential procedure that would require revising the theory after observing data,
+or even to have proponents and detractors of a theory review a registered report of such a test.
+In short, combining FAIR theory with preregistration and other existing open science practices has the potential to strengthen the epistemic cycle of prediction, testing, and revision, moving us closer to a cumulative science.</span>
+
+Another future direction is the intersection between the aforementioned "theory crisis" and the related "measurement crisis" pertaining to the lack of clarity, consistency, and validity in the operationalization of theoretical constructs [@bringmannBackBasicsImportance2022].
+Since FAIR theories can reference other theories and resources,
+it is possible to attach references to specific measurement instruments (or even theories of measurement) to constructs named in a theory.
+<span id="jinglejangle">FAIR theories can also help address "jingle- and jangle fallacies" in psychology,
+which are ambiguities that arise from using the same term for different constructs, or conversely, using different terms for the same construct [@songLiteratureReviewingAddressing2021].
+By explicitly referencing operational definitions in FAIR theories,
+such jingle-jangle fallacies would come to light and could ultimately be resolved.</span>
 
 <!-- FAIR theory incorporates theory into open science workflows, -->
 <!-- facilitates scholarly communication about theories, -->
