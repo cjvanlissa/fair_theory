@@ -218,7 +218,7 @@
 
 \authornote{
 
-We are particularly endebted to our Reviewer, Dr.~Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr.~Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. This version of the paper was generated from Git Commit \# 0df377d6. The first and senior author positions were fixed, and remaining author positions randomized using \texttt{set.seed(6999982);\ sample(c("Aaron",\ "Felix",\ "Noah",\ "Maximilian"))}.
+We are particularly endebted to our Reviewer, Dr.~Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr.~Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. This version of the paper was generated from Git Commit \# cfb33cc6. The first and senior author positions were fixed, and remaining author positions randomized using \texttt{set.seed(6999982);\ sample(c("Aaron",\ "Felix",\ "Noah",\ "Maximilian"))}.
 
 The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing - original draft, Writing -- review \& editing; Aaron Peikert: Conceptualization, Formal Analysis, Writing -- original draft, Writing -- review \& editing; Maximilian S. Ernst: Writing -- review \& editing, Investigation; Noah N.N. van Dongen: Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing.
 
@@ -718,6 +718,12 @@ A final suggestion is to create or adopt a ``Code of Conduct'' which prescribes 
 
 To concretize the FAIR principles,
 we propose an applied workflow for making theory FAIR.
+The workflow does not require the use of R,
+but for R-users, most steps have been automated in the \texttt{theorytools} package.
+We present a brief summary of the conceptual workflow here,
+to illustrate the general principles of FAIRifying theory which can also be implemented using other open science infrastructures.
+The R-package includes a living document with the \href{https://cjvanlissa.github.io/theorytools/articles/fair-theory.html}{latest version of the workflow in tutorial format},
+to guide users in making their theories FAIR.
 The guiding principle of our approach is to align and build upon existing successful open science infrastructures to the greatest possible extent.
 At the time of writing (2024),
 the integration of GitHub and Zenodo makes for a particularly user-friendly approach that meets \emph{all} FAIR principles.
@@ -726,11 +732,7 @@ a popular platform in psychology.
 Thus, it is possible to create a project page on the OSF to increase the visibility of a FAIR theory amongst users of that platform,
 while the integration of the OSF with Zenodo and GitHub removes the need for maintaining the same information on multiple platforms.
 Note that open science infrastructure is an area of active development, and as such,
-the approach proposed here might change as new tools or databases are developed or existing tools and database change over time.
-The following conceptual workflow does not require the use of R, but most steps can be automated in R using the \texttt{theorytools} package.
-The package also includes a living document with the \href{https://cjvanlissa.github.io/theorytools/articles/fair-theory.html}{latest version of the workflow}.
-We present a brief summary of the workflow at the time of writing here,
-to illustrate the general principles of FAIRifying theory which can also be implemented using other open science infrastructures.
+workflows might change as new tools or databases are developed or existing tools and database change over time.
 
 \subsection{1. Implementing the Theory}\label{implementing-the-theory}
 
@@ -750,19 +752,16 @@ The original theory consists of a series of natural language statements:
 
 If we compare this to the levels of theory formalization (Guest \& Martin, 2021),
 it is defined at either the ``theory'' or ``specification'' level.
-We can increase the level of formalization, and present an ``implementation'' in the human- and machine-readable DOT language (and thereby fulfill criterion I1 of \href{https://github.com/cjvanlissa/fair_theory/blob/main/fair_principles.csv}{Supplemental Table S1}).
-The implementation below describes the model as a directed graph (see also Figure \ref{fig:figecs}a).
-Note that the code has been organized so that the first half describes an ontology of the entities the theory postulates,
-and the second half describes their proposed interrelations.
-This follows the first two properties of good theory according to Meehl (Meehl, 1990).
-We can save this implementation of the empirical cycle to a text file, say \texttt{empirical\_cycle.dot}.
+This theory can be FAIRified in its present form by archiving a text document containing five natural language statements.
+However, it is also possible to increase the level of formalization,
+and present an ``implementation'' of the theory as a directed graph (note: the implementation printed here is simplified; see the \href{https://cjvanlissa.github.io/theorytools/articles/fair-theory.html}{tutorial} for technical details).
+This fulfills criterion I1 of \href{https://github.com/cjvanlissa/fair_theory/blob/main/fair_principles.csv}{Supplemental Table S1}).
+Given the cyclical nature of the conceptual model, such an implementation might look like this:
 
 \begin{verbatim}
-digraph {
-
-  observation;
   induction;
   deduction;
+  observation;
   test;
   evaluation;
   
@@ -771,116 +770,68 @@ digraph {
   deduction -> test;
   test -> evaluation;
   evaluation -> observation;
-  
-}
 \end{verbatim}
 
-\subsection{2. Creating a Project Folder}\label{creating-a-project-folder}
+Note that the first part of the implementation constitutes an ontology - it specifies the entities comprised in the theory.
+The second part of the implementation describes the flow of information from phase to phase.
+Figure \ref{fig:figecs}a) shows what this implementation looks like when plotted.
+Regardless of which implementation we prefer - we can save it to a text file.
+This text file is the ``information artifact'' containing our theory.
 
-Create a new folder and copy the theory file from the previous step into it.
+\subsection{2. Create a Theory Archive}\label{create-a-theory-archive}
+
 To help meet the Interoperability and Reusability criteria,
-add two more files:
-A README.md file with instructions for future users of your theory,
-and a LICENSE file with the legal conditions for reuse.
-For guidance on writing the README file, see \href{https://cjvanlissa.github.io/theorytools/articles/readme.html}{this vignette}.
-We recommend the \texttt{CC0} license, but other options are available, see \href{https://choosealicense.com/non-software/}{https://choosealicense.com}.
+it is important to bundle the theory file with additional files containing documentation.
+Firstly, add a README.md file with instructions for future users of your theory.
+The \texttt{theorytools} package contains a \href{https://cjvanlissa.github.io/theorytools/articles/readme.html}{vignette} with guidance on writing a README file for theory.
+Secondly, add a LICENSE file with the legal conditions for reuse.
+As explained previously, we recommend explicitly waiving copyright with the \texttt{CC0} license, but other options are available, see \href{https://choosealicense.com/non-software/}{https://choosealicense.com}.
+Place all files in a folder together - this folder will become the theory archive.
 
-\subsection{3. Version Control the Repository}\label{version-control-the-repository}
+\subsection{3. Version Control the Archive}\label{version-control-the-archive}
 
-To version control our project, we initiate a Git repository in the project folder.
-We subsequently create a remote repository to host a copy of this local Git repository on GitHub, which will in turn be archived.
-Note that the repository
-must be set to ``Public'' to take advantage of GitHub's Zenodo integration.
-Push the local files to the Git remote repository, and keep them synchronized going forward.
+To track all changes to our theory, the previously created folder can be version controlled with \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{Git}.
+To invite reuse and collaboration, it is further recommended to create a backup in the cloud on a service like \href{https://github.blog/developer-skills/github/beginners-guide-to-github-repositories-how-to-create-your-first-repo/}{GitHub}.
 
 \subsection{4. Archive the Theory on Zenodo}\label{archive-the-theory-on-zenodo}
 
-First, create a Zenodo account with your existing GitHub account.
-Then in Zenodo, go to the GitHub section under your account.
-Following the instructions on the page, activate Zenodo for your theory repository.
-Then, create a new release of the GitHub repository.
-Choose a tag and release title using our adapted semantic versioning, starting with version 1.0.0, if you intend to share your theory with the broader scientific community.
-After publishing the release,
-you should be able to see the archived version in your Zenodo account,
-along with a DOI.
+Zenodo is a FAIR compliant repository for archiving information artifacts with GitHub integration.
+Whereas GitHub facilitates collaboration - it is insufficient for archival purposes.
+Major versions of a theory, developed on GitHub, should be archived on Zenodo.
+This process can be fully automated.
 
 \subsection{5. Entering Meta-Data}\label{entering-meta-data}
 
-To document our archive as a FAIR theory and improve its Findability requires adding the relevant metadata on Zenodo.
-See here for \href{https://raw.githubusercontent.com/cjvanlissa/fair_theory/refs/heads/main/example_metadata.json}{an example of the metadata} associated with our FAIR empirical cycle, as archived in Zenodo.
-
-\begin{itemize}
-\tightlist
-\item
-  Set the \emph{resource type} to \texttt{Model}; this ensures proper archival in Zenodo
-\item
-  Verify that the \emph{title} is prefaced with \texttt{FAIR\ theory:}; this allows sentient readers to recognize the work as a FAIR theory
-\item
-  Add the \emph{keyword} \texttt{fairtheory}; this aids search engine indexation
-\item
-  Optionally, submit the theory to the \href{https://zenodo.org/communities/fairtheory}{``FAIR Theory Community''} to contribute to community building; communities on Zenodo are shared spaces to manage and curate research outputs.
-\item
-  List the DOIs/identifiers of \emph{related works}. Use the \texttt{Relation} field as appropriate. For example:
-
-  \begin{itemize}
-  \tightlist
-  \item
-    \texttt{Is\ documented\ by} can be used to reference a theory paper you wrote, in which you introduce this FAIR theory
-  \item
-    \texttt{Is\ derived\ from} could be used to reference a paper or book chapter that introduced an existing theory that was not previously made FAIR. We used \texttt{Is\ derived\ from} to reference De Groot and Spiekerman's empirical cycle.
-  \end{itemize}
-\item
-  Optionally, add \emph{References} to related works in plain text. For example, we cite De Groot and Spiekerman in this field.
-\end{itemize}
-
-\subsection{Automating these Steps}\label{automating-these-steps}
-
-R-users can use the \texttt{theorytools} package to partly automate the preceding steps, for example, using following code (see the package documentation for more information):
-
-\begin{verbatim}
-install.packages("theorytools")
-library(theorytools)
-# Use worcs to check if GitHub permissions are set:
-library(worcs)
-check_git()
-check_github()
-# Create the theory repository:
-fair_theory(path = "c:/theoryfolder/empirical_cycle",
-            title = "The Empirical Cycle",
-            theory_file = "empirical_cycle.dot",
-            remote_repo = "empirical_cycle",
-            add_license = "cc0")
-\end{verbatim}
-
-The first two lines install and load the \texttt{theorytools} package. Lines 4--6 use the \texttt{worcs} package to check whether git for version control is installed and a connection to github can be established to publish the theory. Line 8 calls the main entry function \texttt{fair\_theory} for a local repository in a specified local \texttt{path} with a given \texttt{title} and the aforementioned dot \texttt{theory\_file} containing the theory, uploading it to the user's remote github repository with name given in \texttt{remote\_repo} and a given license specified in \texttt{add\_license}.
+Providing relevant metadata improves the Findability of a FAIR theory archived on Zenodo.
+See here for \href{https://raw.githubusercontent.com/cjvanlissa/fair_theory/refs/heads/main/example_metadata.json}{an example of the metadata} associated with our FAIR empirical cycle.
+We recommend setting the \emph{resource type} to \texttt{Model}, adding the words \texttt{FAIR\ theory:} to the title so that sentient readers to recognize the work as a FAIR theory, and adding \texttt{fairtheory} as a keyword to aid search engine indexation. Optionally, submit the theory to the \href{https://zenodo.org/communities/fairtheory}{``FAIR Theory Community''} to contribute to community building; communities on Zenodo are shared spaces to manage and curate research outputs.
+As mentioned before, \href{https://cjvanlissa.github.io/theorytools/articles/fair-theory.html}{these five steps are partly automated for R-users}.
 
 \subsection{Changing a Theory}\label{changing-a-theory}
 
-Several authors have reinterpreted De Groot's empirical cycle.
 An important advantage of FAIR theory is that we can implement different versions of a theory, compare them, and document their cross-relationships.
 We can take work that has been done before - in this case, the repository created above, and create an independent copy that we can modify as we wish, while retaining cross-references to the original.
-For example, the DOT graph below implements Wagenmakers and colleagues' (2018) interpretation of the empirical cycle.
-First, notice that the phases of the cycle have been renamed.
-This change was not described in the paper.
-If we assume that the labels are meant to illustrate the phases,
+Elaborating on our running example, several authors have reinterpreted De Groot's empirical cycle.
+For example, Wagenmakers and colleagues' (2018) interpretation of the empirical cycle differs from De Groot's in several ways.
+First, the phases of the cycle were renamed, and this change was not described in the paper.
+Assuming that Wagenmakers' new labels are meant to illustrate the phases,
 not substantially change the ontology,
-then we can represent it by adding labels to the original DOT graph.
+we could incorporate this change by adding labels to the original ontology.
 These labels suggest a focus on empirical psychology that was not present in De Groot's version.
 Furthermore, the label ``knowledge accumulation'' invites the question of exactly \emph{how} knowledge accumulates upon evaluation of a prior experiment.
 As this lack of cumulative knowledge acquisition appears to be precisely where contemporary research practice falls short, this ambiguity invites further improvement of the theory.
 The authors explicitly mention a second change: \emph{``We added the Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification''} (p.~423).
-The DOT graph below shows our implementation of this version of the empirical cycle, by adding subgraphs.
+We could implement this change to the original implementation by grouping the respective phases of the cycle;
+a minor and tractable change.
 
 \begin{verbatim}
-digraph {
-
-  subgraph cluster_discovery {
+  {
     label="Discovery";
     induction [label="New hypothesis"];
     deduction [label="New prediction"];
   }
   observation  [label="Old knowledge and old data"];
-  subgraph cluster_justification {
+  {
     label="Justification";
     test [label="Test on new data"];
     evaluation;
@@ -891,8 +842,6 @@ digraph {
   deduction -> test  [label="Design new experiment"];
   test -> evaluation  [label="Statistical analysis"];
   evaluation -> observation  [label="Knowledge accumulation"];
-
-}
 \end{verbatim}
 
 The first author was inspired by De Groot as well,
@@ -912,7 +861,6 @@ Furthermore, if the testing procedure is not explicitly defined before seeing th
 These alterations result in the following implementation of the empirical cycle:
 
 \begin{verbatim}
-digraph {
 
   theory;
   prediction;
@@ -925,25 +873,14 @@ digraph {
   data -> results;
   test -> results [label = "apply to data"];
   results -> theory [label="interpretation and generalization"];
-
-}
 \end{verbatim}
 
-The FAIR theory workflow documented above offers several concrete ways to make changes to a FAIR theory object.
-If you start with an existing GitHub repository, and wish to make some changes to it,
-this is commonly done by \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository}{creating a ``branch''}.
-A branch allows you to make non-destructive changes and can continue to exist in parallel to the main repository.
-Thus, it is possible to have one main theory with several branches that each contain competing theories derived from it.
-Figure \ref{fig:figgithub-1} shows how our example \texttt{empirical\_cycle} repository contains branches with Wagenmakers' and Van Lissa's implementations.
-A branch can also be merged with the main branch, thus incorporating the changes it contains into the version of record.
-If you wish to develop a new version of someone else's FAIR theory,
-it is possible to \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo}{``fork their repository''}.
-This creates a copy of their repository onto your GitHub account.
-Both branches and forks can be compared and merged via ``pull requests'', which are essentially a request to incorporate the changes you have made.
-Figure \ref{fig:figgithub-2} shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
+The FAIR theory workflow offers concrete ways to make changes to a FAIR theory object and to compare different versions,
+as explained in \href{ADD\%20ME}{this vignette}.
+For example, Figure \ref{fig:figgithub-2} shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
 
 \begin{figure}
-\subfloat[Branches contain different versions of a theory\label{fig:figgithub-1}]{\includegraphics[width=0.5\linewidth]{git_branches} }\subfloat[These versions can be compared\label{fig:figgithub-2}]{\includegraphics[width=0.5\linewidth]{git_compare_short} }\caption{FAIR Theories on GitHub}\label{fig:figgithub}
+\subfloat[Different versions of a theory are archived as distinct branches\label{fig:figgithub-1}]{\includegraphics[width=0.5\linewidth]{git_branches} }\subfloat[These versions can be explicitly compared\label{fig:figgithub-2}]{\includegraphics[width=0.5\linewidth]{git_compare_short} }\caption{FAIR Theories on GitHub}\label{fig:figgithub}
 \end{figure}
 
 \subsection{Further Uses of FAIR Theory}\label{further-uses-of-fair-theory}
@@ -1097,7 +1034,7 @@ while a FAIR representation supplements that literature by explicitly outlining 
 Importantly, FAIR theory can evolve semi-independently from individual papers, offering a persistent and collaborative object that others can reuse, cite, and refine.
 Contributing to the development of a FAIR theory thus becomes a new way of contributing to the theoretical literature - much like writing a high-quality review article, but with the added benefit of interoperability, versioning, and reusability.''}}
 
-We envision a future where application of the FAIR principles makes theories more \emph{useful}, living up to Herbert Simon's ideal,
+We envision a future where application of the FAIR principles makes theories more \emph{useful}, living up to Kurt Lewin's ideal,
 enabling scholars to incorporate theory into their workflows in a tanglible way,
 providing explicit derivation chains for hypotheses,
 applying transparent rules to select the right control variables for causal inference,

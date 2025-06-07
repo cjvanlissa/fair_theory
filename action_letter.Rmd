@@ -293,6 +293,9 @@ We're not sure if further changes need to be made to address this.
 Finally, and this is the only concern about the paper as a publishable manuscript, the last third of the paper where the authors get into the technical aspects of how one would go about building a FAIR theory, is difficult to read. This is where the manuscript reads more like a software manual than a perspectives paper. It would seem out of place in this journal, and frankly it left me discouraged about the prospect of trying this on my own. In its place, I would recommend working an example for an actual theory, with as much of the specific detail as possible removed from the main text.
 ```
 
+To address this comment, we have removed as much of the specific detail as possible from the main text, and instead refer to the package vignettes (we have created an additional vignette to make this change possible, and extended several other vignettes).
+We also already have two worked examples for actual theories, which we now point out in the text (with links to the relevant vignettes).
+
 
 ## Reviewer: 3
 
