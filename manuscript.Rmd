@@ -1220,7 +1220,7 @@ while a FAIR representation supplements that literature by explicitly outlining 
 Importantly, FAIR theory can evolve semi-independently from individual papers, offering a persistent and collaborative object that others can reuse, cite, and refine. 
 Contributing to the development of a FAIR theory thus becomes a new way of contributing to the theoretical literature - much like writing a high-quality review article, but with the added benefit of interoperability, versioning, and reusability."*</span>
 
-We envision a future where application of the FAIR principles makes theories more *useful*, living up to Herbert Simon's ideal,
+We envision a future where application of the FAIR principles makes theories more *useful*, living up to Kurt Lewin's ideal,
 enabling scholars to incorporate theory into their workflows in a tanglible way,
 providing explicit derivation chains for hypotheses,
 applying transparent rules to select the right control variables for causal inference,
