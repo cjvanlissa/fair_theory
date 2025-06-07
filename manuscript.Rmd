@@ -701,10 +701,26 @@ But, as we argued, this is not the case.
 The examples of X-Interoperability offered in Table \@ref(tab:tabmeehl) illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-Interoperable within software used for analysis.
 For example, Interoperable theory could be used
 to select control variables for causal inference [@cinelliCrashCourseGood2022],
-or to preregister the inferential procedure that would lead to specific modifications of a theory after analyzing empirical data [@peikertReproducibleResearchTutorial2021],
 or to derive machine-readable hypotheses [@lakensImprovingTransparencyFalsifiability2021] which could be automatically evaluated through integration testing [@vanlissaUsingEndpointsCheck2023].
 Furthermore, theories can be X-Interoperable with each other to enable nesting, or using one theory to clarify elements of another theory.
 For example, it should be possible to embed a theory about emotion regulation [e.g., @grossEmotionRegulationCurrent2015] within a theory of emotion regulation development [@morrisRoleFamilyContext2007].
+
+An important aspect of Interoperability lies in linking FAIR theories with existing open science methodologies---most notably, preregistration.
+As noted, preregistration alone has not resolved the replication crisis in the social sciences.
+This raises a fundamental question: What additional value does a FAIR theory provide, and how does it complement preregistration?
+
+One distinction is quantitative:
+FAIR theories operate at a higher level of abstraction.
+They articulate general principles and expectations that cut across studies, whereas preregistrations focus on specific applications, analytic strategies, and study designs.
+More fundamentally, however, there is a qualitative difference.
+A FAIR theory is designed to make predictions and be revised in light of empirical results; preregistration, by contrast, prescribes how a particular study will be conducted, regardless of what the outcomes turn out to be.
+
+This difference can be illustrated with a Bayesian analogy.
+A preregistration is akin to a statistical model---it formalizes assumptions about data generation but is in itself indifferent to the data.
+Combining a theory with a specific sampling strategy, study design, measurement, etc. allows one to make predictions even before observing data [@peikertWhyDoesPreregistration2023].
+However, after observing data, the theory might require revision.
+In this sense, a theory is first a prior, and then after conducting a specific investigation as prescribed by the preregistration, is refined to become a posterior.
+In short, a preregistration rooted in a FAIR theory not only supports transparency, but also strengthens the epistemic cycle of prediction, testing, and revision---moving us closer to a cumulative science.
 
 ## Reusability
 
