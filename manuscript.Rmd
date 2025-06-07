@@ -61,7 +61,8 @@ affiliation:
   - id            : "7"
     institution   : "MSB Medical School Berlin Department of Psychology, Berlin, Germany"
 authornote: |
-  This is a preprint paper, generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`.
+  We are particularly endebted to our Reviewer, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments.
+  This version of the paper was generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`.
 
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
 keywords          : "fairtheory, meta science, theory formation, open science"
@@ -443,26 +444,32 @@ FAIR theory is thus consistent with, but does not require, formalization (also s
 
 ### Modular Publishing
 
-We propose FAIR theory as an instantiation of modular publishing [@kirczModularityNextForm1998].
-In most fields, the primary unit of scientific communication is the academic paper.
-A paper may depend on multiple resources - materials, data, code, and theory - but these are often merely described in the text.
-Modular publishing is the practice of making each of these resources available as independent citable *information artifacts*,
-with adequate metadata that is indexed in standardized repositories [@vandesompelRethinkingScholarlyCommunication2004].
-Data sharing is an example of a modular publishing practice that is widely adopted and increasingly required by funding agencies, journals, and universities.
-Scholars can archive information artifacts in repositories like [Zenodo](https://zenodo.org/),
+We envision FAIR theory as an instance of modular publishing [@kirczModularityNextForm1998].
+The primary unit of scientific communication has long been the academic paper.
+In the process of writing papers, scholars often produce many valuable resources, including instruments, materials, data, code, and theory.
+These resources are often merely described in papers (if at all), and not made available for reuse.
+Modular publishing is the practice of making each of these resources available as independent *information artifacts*,
+facilitating their reuse and making them citable [@vandesompelRethinkingScholarlyCommunication2004].
+<span id="datasharing">Data sharing is an example of modular publishing that is already widely adopted, becoming the de-facto standard in psychology [@tedersooDataSharingPractices2021].</span>
+
+Modular publishing can be achieved by archiving specific resources (including theory) in repositories like [Zenodo](https://zenodo.org/),
 which was developed by [CERN](https://home.cern/) under the European Union's [OpenAIRE](https://www.openaire.eu/) program [@zenodo].
 To maintain a persistent record of scholarly communication,
-Zenodo mints DOIs for information artifacts - as does, for example, the [Crossref](https://www.crossref.org/) association,
-which is used by many academic publishers.
-Finally, the DataCite Metadata Schema offers a standard way to document the nature of relationships between information artifacts [@datacitemetadataworkinggroupDataCiteMetadataSchema2024].
+Zenodo mints DOIs for information artifacts.
+<!-- - as does, for example, the [Crossref](https://www.crossref.org/) association, -->
+<!-- which is used by many academic publishers. -->
+The DataCite Metadata Schema offers a standard way to document information artifacts with relevant metadata which increases their findability and documents their relationships to other resources [@datacitemetadataworkinggroupDataCiteMetadataSchema2024].
 <!-- Platforms like the [Open Science Framework](https://osf.io/) connect these various research infrastructures to offer a more user-friendly front end for open science-related workflows. -->
-For example, a dataset collected for a specific paper would be archived in Zenodo with the metadata property `resourceType: dataset`,
-and cross-reference the published paper with `relationType: IsSupplementTo`.
-Similarly, a FAIR theory object can be connected to a specific paper which might serve as the theory's documentation and canonical reference by using `relationType: IsDescribedBy`, while the reverse relationship, documented in the canonical reference paper, is `relationType: Describes`. Other types are useful for making relationships between multiple theory objects explicit: If an existing theory is made FAIR without substantial alterations,
+For example, data can be archived in Zenodo with the metadata property `resourceType: dataset`.
+If the data were collected for a specific paper, that relationship can be cross-referenced with `relationType: IsSupplementTo`.
+Similarly, a FAIR theory can be connected to a specific paper by using `relationType: IsDescribedBy`, while the reverse relationship, documented in the canonical reference paper, is `relationType: Describes`.
+Other cross-references are useful for documenting relationships between multiple theory objects: If an existing theory is made FAIR without substantial alterations,
 the resulting FAIR theory metadata would cross-reference the existing theory as `relationType: IsDerivedFrom`.
 If an existing theory is updated, `relationType:IsNewVersionOf` could be used to reference previous versions.
 If a variation of an existing FAIR theory is created, cross-reference it with `relationType: IsVariantFormOf`.
-<!-- FS: I still think we should have a dedicated term for a digital FAIR theory object -->
+
+<span id="modularpublisingdetract">Modular publishing of resources, including theories, increases their reuse potential and makes them citable without detracting from the conventional academic paper as a unit of academic communication.
+</span>
 
 ### Version Control
 
@@ -955,7 +962,7 @@ but again specified the empirical cycle differently.
 First, in De Groot's formulation, each stage describes a process.
 This invites the question of what the concrete outcomes of these processes are.
 In other words: what actually changes when going through the cycle, except the scholar's mind?
-To address this point, the nodes in Van Lissa's specification refer to specific deliverables, whereas the edges connecting the nodes refer to processes acting upon those deliverables, see Figure \@ref(fig:figecs)c).
+To address this point, the nodes in Van Lissa's specification (2025) refer to specific deliverables, whereas the edges connecting the nodes refer to processes acting upon those deliverables, see Figure \@ref(fig:figecs)c).
 Second, the processes of induction and deduction are perhaps not as neatly confined to specific phases as De Groot proposed.
 <!-- In our representation, -->
 <!-- induction is not a separate phase but a mode of reasoning by which specific observations are generalized into theory. -->
@@ -1094,7 +1101,7 @@ One key factor is the *recognition and rewards* movement:
 practices for evaluating scientific output are evolving, with initiatives like the [*Declaration on Research Assessment* (DORA)](https://sfdora.org/read/) and [Coalition for Advancing Research Assessment](https://coara.eu/)
 promoting the use of more diverse and meaningful metrics beyond journal impact factors.
 Modular publishing capitalizes on these changing metrics,
-and publishing theories as citeable artifacts allows scholars to be credited for contributions to theory [@kirczModularityNextForm1998].
+and FAIR theory allows scholars to be credited for theoretical contributions [@kirczModularityNextForm1998].
 Journals that publish theoretical papers could require authors to additionally publish their theories in a FAIR format, cross-referencing the paper,
 to expedite its effective reuse and iterative improvement.
 A second factor is to lower barriers to adopting FAIR theory by building upon existing widely adopted open science infrastructures.
@@ -1155,14 +1162,14 @@ and any advancements in the areas of measurement and ontology will serve to ampl
 
 <span id="fairtheoryprereg">One important future direction is embedding FAIR theories withing existing open science methodologies. 
 For example, consider how FAIR theory relates to preregistration.
-These practices are clearly distinct but complimentary.
+These practices are distinct but complimentary.
 The purpose of FAIR theory is to communicate general principles and expectations about a given phenomenon,
 and to provide infrastructure for explicitly deriving hypotheses from specific theories and revising those theories in light of empirical results.
-The purpose of preregistration, by contrast, is to eliminate inductive bias from hypothesis tests and increase trust in their outcomes [@peikertWhyDoesPreregistration2023].
-These practices differ in their level of abstraction:
-FAIR theories cut across studies on a given phenomenon,
-whereas preregistrations are specific implementations of hypothesis tests,
-with a specific study design, analysis plan, and - optionally - a fully reproducible analysis pipeline. 
+The purpose of preregistration, by contrast, is to eliminate inductive bias from hypothesis tests and increase trust in the outcomes of a specific empirical study [@peikertWhyDoesPreregistration2023].
+FAIR theories are specified at a level of abstraction that transcends individual studies.
+FAIR theories can inform - and be informed by - both quantitative and qualitative research.
+Preregistrations, by contrast, are specific implementations of quantitative hypothesis tests,
+within the context of a specific study design, analysis plan, and - optionally - a fully reproducible analysis pipeline.
 These practices complement each other:
 authors can make the derivation chain from theory to hypothesis more explicit by citing a specific FAIR theory in their preregistration.
 Moreover, it is possible to preregister an inferential procedure that would require revising the theory after observing data,
@@ -1197,7 +1204,23 @@ By providing a mechanism for iterative improvement based on emerging evidence, F
 FAIR theory is a major step forward towards more transparent, collaborative, and efficient theory construction.
 It provides much-needed open science methods for the inductive phase of the empirical cycle,
 closing a critical gap in the scientific process.
-FAIR theory makes theory more tangible, enabling scholars to incorporate it in their day-to-day workflows in order to derive hypotheses, select control variables, and contribute new data-driven insights.
+
+<span id = "turkheimer">We invite the reader to ask the rhetorical question raised by our reviewer, prof. Turkheimer, who - reflecting on a long career as a practitioner of theory in psychology - considered "how adopting a FAIR framework would change, improve, or inhibit what I do".
+We paraphrase his answer here^[Edited for brevity.], because his lived experience complements our youthful "techno-enthusiasm".
+Prof. Turkheimer remarked that a FAIR framework would have been very helpful in maintaining meaningful boundaries between a theory and the predictions it makes,
+in tracking how empirical findings result in changes to empirical claims made by a theory,
+and in resolving theoretical disputes.
+*"FAIR theory provides a structured, machine- and human-readable framework that distills and formalizes the core components of a theory.
+Everything published about a theory can continue to exist in its original form,
+while a FAIR representation supplements that literature by explicitly outlining the theory’s assumptions, logical structure, and testable implications.
+Importantly, FAIR theory can evolve semi-independently from individual papers, offering a persistent and collaborative object that others can reuse, cite, and refine. 
+Contributing to the development of a FAIR theory thus becomes a new way of contributing to the theoretical literature - much like writing a high-quality review article, but with the added benefit of interoperability, versioning, and reusability."*</span>
+
+We envision a future where application of the FAIR principles makes theories more *useful*, living up to Herbert Simon's ideal,
+enabling scholars to incorporate theory into their workflows in a tanglible way,
+providing explicit derivation chains for hypotheses,
+applying transparent rules to select the right control variables for causal inference,
+and proposing specific changes to existing theories based on empirical results.
 This paves the way for more theory-driven scholarship
 and accelerates cumulative knowledge acquisition in psychology, the social sciences, and beyond.
 
