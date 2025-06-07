@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  man, noextraspace,floatsintext]{apa6}
+  man, noextraspace,floatsintext]{apa7}
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
 \ifPDFTeX
@@ -184,7 +184,7 @@
   }
 {}{\PatchFailed}
 \makeatother
-\keywords{fairtheory, meta science, theory formation, open science\newline\indent Word count: 9245}
+\keywords{fairtheory, meta science, theory formation, open science\newline\indent Word count: 9491}
 \usepackage{lineno}
 
 \linenumbers
@@ -218,9 +218,9 @@
 
 \authornote{
 
-This is a preprint paper, generated from Git Commit \# 7d4ab9cc. The first and senior author positions were fixed, and remaining author positions randomized using \texttt{set.seed(6999982);\ sample(c("Aaron",\ "Felix",\ "Noah",\ "Maximilian"))}.
+This is a preprint paper, generated from Git Commit \# 5d7ad1a4. The first and senior author positions were fixed, and remaining author positions randomized using \texttt{set.seed(6999982);\ sample(c("Aaron",\ "Felix",\ "Noah",\ "Maximilian"))}.
 
-The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Formal Analysis, Writing -- original draft, Writing -- review \& editing; Maximilian S. Ernst: Writing -- review \& editing, Investigation; Noah N.N. van Dongen: Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing.
+The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing -- original draft, Writing -- review \& editing; Aaron Peikert: Conceptualization, Formal Analysis, Writing -- original draft, Writing -- review \& editing; Maximilian S. Ernst: Writing -- review \& editing, Investigation; Noah N.N. van Dongen: Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing.
 
 Correspondence concerning this article should be addressed to Caspar J. Van Lissa, Professor Cobbenhagenlaan 125, 5037 DB Tilburg, The Netherlands. E-mail: \href{mailto:c.j.vanlissa@tilburguniversity.edu}{\nolinkurl{c.j.vanlissa@tilburguniversity.edu}}
 
@@ -229,7 +229,7 @@ Correspondence concerning this article should be addressed to Caspar J. Van Liss
 \affiliation{\vspace{0.5cm}\textsuperscript{1} Tilburg University department of Methodology \& Statistics, Tilburg, The Netherlands\\\textsuperscript{2} Center for Lifespan Psychology, Max Planck Institute for Human Development, Berlin, Germany\\\textsuperscript{3} Max Planck UCL Centre for Computational Psychiatry and Ageing Research, Berlin, Germany\\\textsuperscript{4} Max Planck School of Cognition, Leipzig, Germany\\\textsuperscript{5} University of Amsterdam, Amsterdam, The Netherlands\\\textsuperscript{6} Ludwig-Maximilians-Universität München, München, Germany\\\textsuperscript{7} MSB Medical School Berlin Department of Psychology, Berlin, Germany}
 
 \abstract{%
-Innovations in open science and meta-science have focused on rigorous \emph{theory testing}, yet methods for specifying, sharing, and iteratively improving theories remain underdeveloped. To address these limitations, we introduce \emph{FAIR theory}: A standard for specifying theories as Findable, Accessible, Interoperable, and Reusable information artifacts. FAIR theories are Findable in well-established archives, Accessible in terms of availability and their ability to be understood, Interoperable for specific purposes, such as selecting control variables, and Reusable so that they can be iteratively improved through collaborative efforts. This paper adapts the FAIR principles for theory, reflects on the FAIRness of contemporary psychological practices, introduces a workflow for FAIRifying theory, and discusses FAIR theories' potential impact in terms of reducing research waste, enabling meta-research on theories' structure and development, and incorporating theory into reproducible research workflows -- from hypothesis generation to simulation studies. FAIR theory constitutes framework for specifying and refining theories, bridging a critical gap in open scholarly practices and supporting the renewed interest in theory development in psychology and beyond. FAIR theory builds on existing open science principles and infrastructures to provide a structured, cumulative framework for theory development, potentially increasing efficiency and potentially accelerating the pace of cumulative knowledge acquisition.
+Innovations in open science and meta-science have focused on rigorous \emph{theory testing}, yet methods for specifying, sharing, and iteratively improving theories remain underdeveloped. To address these limitations, we introduce \emph{FAIR theory}: A standard for specifying theories as Findable, Accessible, Interoperable, and Reusable information artifacts. FAIR theories are Findable in well-established archives, Accessible in terms of availability and their ability to be understood, Interoperable for specific purposes, such as selecting control variables, and Reusable so that they can be iteratively improved through collaborative efforts. \phantomsection\label{abstractpackage}{This paper adapts the FAIR principles for theory, reflects on FAIR practices in contemporary psychology, introduces a workflow for FAIRifying theory, which is largely automated by the \texttt{theorytools} R-package}, and discusses FAIR theories' potential impact in terms of reducing research waste, enabling meta-research on theories' structure and development, and incorporating theory into reproducible research workflows -- from hypothesis generation to simulation studies. FAIR theory constitutes a protocol for archiving and communicating about theory, addressing a critical gap in open scholarly practices and supporting the renewed interest in theory development in psychology and beyond. FAIR theory builds on existing open science principles and infrastructures to provide a structured, cumulative framework for theory development, potentially increasing efficiency and potentially accelerating the pace of cumulative knowledge acquisition.
 }
 
 
@@ -237,7 +237,7 @@ Innovations in open science and meta-science have focused on rigorous \emph{theo
 \begin{document}
 \maketitle
 
-The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and Reusable (M. D. Wilkinson et al., 2016) for both humans and computers\footnote{\phantomsection\label{testone}{As the colloquial use of these terms differs in important ways from their definition according to the FAIR principles, we capitalize these terms when we refer to a specific FAIR principle.}}.
+The FAIR Guiding Principles (hereafter: FAIR principles) were established to improve the reusability of research data by making them more Findable, Accessible, Interoperable and Reusable (M. D. Wilkinson et al., 2016) for both humans and computers\footnote{\phantomsection\label{faircap}{As the colloquial use of these terms differs in important ways from their definition according to the FAIR principles, we capitalize these terms when we refer to a specific FAIR principle.}}.
 Since the FAIR principles' inception, scholars have demonstrated their relevance for making other information artifacts more open, such as research software (Lamprecht et al., 2019) and computational workflows (S. R. Wilkinson et al., 2024).
 This paper argues that the FAIR principles can similarly advance effective and transparent scholarly communication about theory.
 To this end, we introduce ``FAIR theory'':
@@ -253,21 +253,21 @@ The so-called ``replication crisis'' has prompted extensive scientific reforms (
 Concern that the abundance of non-replicable findings
 was caused by undisclosed flexibility in analyses led to widespread adoption of open science practices like preregistration and replication (Nosek et al., 2015).
 These various practices ensure transparent and repeated testing of hypotheses by committing to an analysis plan in advance.
-However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence (Scheel, Schijen, \& Lakens, 2021).
-Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
+However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence (Scheel, Schijen, et al., 2021).
 
+Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
 Psychological theories rarely provide hypotheses that are corroborated by evidence.
 Furthermore, theories are often so ambiguous that they can accommodate mutually inconsistent findings,
-as the theory's central claims evade falsification.
-A good example of this is found in ``self-determination theory'' (SDT), which emphasizes the role of intrinsic and extrinsic motivation in human behavior.
-Initially, intrinsic motivation was understood as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures (Deci, 1971).
-Over time, however, SDT expanded its definition to include motivations driven by the fulfillment of basic psychological needs---autonomy, competence, and relatedness---all still categorized as ``intrinsic'' (Ryan \& Deci, 2000).
-The difference between these definitions becomes clear when considering the act of changing an infant's dirty diaper.
-Under the original definition, one might hypothesize that caregivers are not intrinsically motivated to change diapers, as this is hardly a joyous experience.
-Under the expanded definition, one might hypothesize the opposite, as the act may fulfill the need for relatedness.
+rendering them immune to falsification.
+As an example, consider ``self-determination theory'' (SDT), which emphasizes the role of intrinsic and extrinsic motivation in human behavior.
+Intrinsic motivation was initially defined as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures (Deci, 1971).
+Over time, however, this definition expanded to include motivations driven by the fulfillment of basic psychological needs for autonomy, competence, and relatedness (Ryan \& Deci, 2000).
+The implications of these shifting definitions becomes clear when deriving hypotheses about the type of motivation involved in changing an infant's dirty diaper.
+Under the original definition, one would hypothesize that caregivers are not intrinsically motivated to change diapers, as this is hardly a joyous experience.
+Under the expanded definition, one would hypothesize the opposite, as the act fulfills the need for relatedness.
 The expanded definition thus enables SDT to absorb potentially falsifying evidence.
 
-Scholars have raised concerns about the state of theory in psychology for nearly 50 years (Meehl, 1978; Robinaugh, Haslbeck, Ryan, Fried, \& Waldorp, 2021).
+Scholars have raised concerns about the state of theory in psychology for nearly 50 years (Meehl, 1978; Robinaugh et al., 2021).
 One main concern is that theories lack \emph{formalization} (Szollosi \& Donkin, 2021).
 When theories are ambiguous and hence require either subjective interpretation or additional background knowledge,
 it becomes difficult do derive precise predictions,
@@ -300,13 +300,13 @@ In a progressive research program (Lakatos, 1971),
 this cycle is regularly completed to iteratively advance our understanding of the studied phenomena.
 There are, however, indications that contemporary psychology falls short of this ideal.
 Firstly, because hypothesis-testing research is over-represented in the literature:
-According to Kühberger, Fritz, and Scherndl (2014), 89.6\% of papers published in psychology report confirmatory hypothesis tests.
-Closer examination of deductive research reveals, however, that the link between theory and hypothesis is often tenuous or absent (Oberauer \& Lewandowsky, 2019; Scheel, Tiokhin, Isager, \& Lakens, 2021).
+According to Kühberger et al. (2014), 89.6\% of papers published in psychology report confirmatory hypothesis tests.
+Closer examination of deductive research reveals, however, that the link between theory and hypothesis is often tenuous or absent (Oberauer \& Lewandowsky, 2019; Scheel, Tiokhin, et al., 2021).
 Only 15\% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis (McPhetres et al., 2021).
 The remaining 85\% of deductive studies lacked an explicit connection between theory and hypothesis.
 Perhaps some of these ungrounded hypotheses are rooted in implicit theories privy only to the author,
-in which case it would be straightforward and important to make these explicit (Fried, 2020; Norouzi, Kleinberg, Vermunt, \& Van Lissa, 2024).
-Or, perhaps some hypotheses are reported as part of entrenched research practices (Gigerenzer, Krauss, \& Vitouch, 2004),
+in which case it would be straightforward and important to make these explicit (Fried, 2020; Norouzi et al., 2024).
+Or, perhaps some hypotheses are reported as part of entrenched research practices (Gigerenzer et al., 2004),
 but are not of substantive interest, such as null hypotheses that exist solely for the purpose of being rejected (Van Lissa et al., 2020).
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
 Collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings (van Rooij \& Baggio, 2021).
@@ -315,7 +315,7 @@ Theory thus has an uncomfortable and paradoxical role in contemporary psychology
 The majority of papers ostensibly test hypotheses,
 but these are rarely connected to, let alone derived from, theory.
 Moreover, test results do not routinely contribute to the improvement or rejection of theories.
-The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology ``lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest'' (Meehl, 1978).
+The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology ``lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest'' (Meehl, 1978, p. 1).
 The present paper seeks to make theory more tangible and practical by instantiating it as a digital ``object'' that scholars can access, reuse, and update in their daily workflows.
 
 \subsection{Making Theory FAIR}\label{making-theory-fair}
@@ -349,11 +349,11 @@ We recognize the syntactic view in Meehl's (1990) hierarchy of ever-more specifi
 statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
-and statements about their specific numerical values (cf. Frankenhuis, Panchanathan, \& Smaldino, 2023; Guest, 2024).
+and statements about their specific numerical values (Frankenhuis et al., 2023; Guest, 2024).
 The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematics.
 It shifts the focus from theories as collections of sentences to mathematical models.
 The term ``model'' is not uniquely defined within the literature;
-it has been described as a ``specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory'' (Fried, 2020).
+models have been described as ``specific instantiations of theories, narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory'' (Fried, 2020, p. 336).
 This implies that theories and models are not fundamentally distinct, but rather, that for each model, there is a more general theory that subsumes it (one person's model is another person's theory).
 The pragmatic view holds that there might not be one structure or definition of scientific theories, but instead, definitions differ across scientific domains.
 It also argues that nonformal aspects (e.g.~commonly used analogies) and practices (e.g.~experimental designs) can be an important part of scientific theories.
@@ -409,7 +409,7 @@ We propose FAIR theory as an instantiation of modular publishing (Kircz, 1998).
 In most fields, the primary unit of scientific communication is the academic paper.
 A paper may depend on multiple resources - materials, data, code, and theory - but these are often merely described in the text.
 Modular publishing is the practice of making each of these resources available as independent citable \emph{information artifacts},
-with adequate metadata that is indexed in standardized repositories (Van De Sompel, Payette, Erickson, Lagoze, \& Warner, 2004).
+with adequate metadata that is indexed in standardized repositories (Van De Sompel et al., 2004).
 Data sharing is an example of a modular publishing practice that is widely adopted and increasingly required by funding agencies, journals, and universities.
 Scholars can archive information artifacts in repositories like \href{https://zenodo.org/}{Zenodo},
 which was developed by \href{https://home.cern/}{CERN} under the European Union's \href{https://www.openaire.eu/}{OpenAIRE} program (European Organization For Nuclear Research \& OpenAIRE, 2013).
@@ -431,7 +431,7 @@ Version control systems, like Git, have long been used to iteratively improve co
 Git tracks line-by-line changes to text-based files,
 and maintains a complete history of those changes.
 It has long been argued that Git is particularly well-suited to academic work (Ram, 2013; Van Lissa et al., 2021).
-Git can be used, for example, to facilitate reproducible research, manage distributed collaboration, and improve preregistration (Peikert, Van Lissa, \& Brandmaier, 2021; Van Lissa et al., 2021).
+Git can be used, for example, to facilitate reproducible research, manage distributed collaboration, and improve preregistration (Peikert et al., 2021; Van Lissa et al., 2021).
 Git provides a useful framework for developing FAIR theory,
 because it enables explicitly comparing versions of a file (or: theory),
 incorporating changes by different authors,
@@ -491,8 +491,8 @@ Of the many services that provide DOIs for scientific information artifacts,
 Zenodo and the Open Science Framework are commonly used in psychology.
 Second, Findable theory is described with rich metadata (F2).
 This includes citation metadata (e.g., referencing a scientific paper that documents the theory, or a psychometric paper that operationalizes specific constructs).
-It might further include domain-specific metadata, such as a reference to a taxonomy of psychological constructs (Bosco, Uggerslev, \& Steel, 2017),
-ontology (Guyon, Kop, Juhel, \& Falissard, 2018),
+It might further include domain-specific metadata, such as a reference to a taxonomy of psychological constructs (Bosco et al., 2017),
+ontology (Guyon et al., 2018),
 or catalog of psychological phenomena.
 Metadata should also include identifiers for all the versions of the theory it describes (F3);
 Zenodo handles this by default by providing an overarching DOI for an information artifact which subsumes the DOIs of that artifact's versions.
@@ -520,7 +520,7 @@ Conversely, as organizations begin to recognize the value in tracking academic o
 
 There have been notable efforts to improve theories' Findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
-and posted many examples on their website \textless www.theorymaps.org\textgreater{} (Gray, 2017).
+and posted many examples on \href{https://www.theorymaps.org}{their website} (Gray, 2017).
 Similarly, \href{http://psychomodels.org/}{PsychoModels} seeks to inventorize theories and models in psychology (van Dongen \& Volz, 2025).
 Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability.
 Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
@@ -535,7 +535,7 @@ Transparent scholarly communication about theory requires that theories are Acce
 If theories are not Accessible, researchers cannot reuse and refine them.
 Thus, Accessibility can accelerate cumulative knowledge acquisition.
 Making theories Accessible also allows stakeholders (e.g., practitioners, policymakers, advocates) to inform themselves of the current scientific understanding of specific phenomena.
-While isolated empirical findings can appear fragmented and contradictory (Dumas-Mallet, Smith, Boraud, \& Gonon, 2017),
+While isolated empirical findings can appear fragmented and contradictory (Dumas-Mallet et al., 2017),
 theories offer a top-down, big-picture representation of the phenomena studied in a field.
 In other words, theories are an important instrument in science communication.
 
@@ -559,7 +559,7 @@ Open Access publishing increases the practical Accessibility of all academic out
 
 A second impediment to Accessibility is more indirect
 and pertains to a theory's intelligibility to those with practical Access.
-It has been proposed that good theories have the property of ``discursive survival {[}\ldots{]}, the ability to be understood'' (Guest, 2024).
+It has been proposed that good theories have the property of ``discursive survival {[}\ldots{]}, the ability to be understood'' (Guest, 2024, p. 1).
 At present, psychological theories are often ambiguous, rendering them difficult to understand (Frankenhuis et al., 2023).
 Successful communication requires shared background knowledge between sender and receiver (Vogt et al., 2024).
 Shared background knowledge can come from paradigms held by members of a scientific community (Kuhn, 2009),
@@ -590,11 +590,11 @@ A theory's Accessibility is increased by
 reducing dependencies on (implicit) background knowledge,
 explication of assumptions,
 formalization,
-and explicit cross-references to relevant resources such as papers, ontologies, other related theories, measurement instruments, experimental designs (J. Lange, Freyer, Musfeld, Schönbrodt, \& Leising, 2025).
+and explicit cross-references to relevant resources such as papers, ontologies, other related theories, measurement instruments, experimental designs (J. Lange et al., 2025).
 
 \subsection{Interoperability}\label{interoperability}
 
-Interoperability pertains to the property of information artifacts to ``integrate or work together {[}\ldots{]} with minimal effort'' (M. D. Wilkinson et al., 2016).
+Interoperability pertains to the property of information artifacts to ``integrate or work together {[}\ldots{]} with minimal effort'' (M. D. Wilkinson et al., 2016, p. 2).
 Firstly, theory and its associated metadata should use a formal, accessible, shared and broadly applicable language to facilitate (human- and) machine readability and reuse (I1).
 The common practice of instantiating theory as lengthy prose or schematic drawing falls short of this ideal.
 Instead, FAIR theory should, ad minimum,
@@ -609,7 +609,7 @@ Examples of the latter include pseudo-code,
 interpretable computer code,
 and Gray's theory maps (Gray, 2017).
 While a theory represented as a bitmap image is not very Interoperable,
-the same image represented in the DOT language ({``{DOT Language},''} 2024)
+the same image represented in the DOT language (\emph{{DOT Language}}, 2024)
 for representing graphs does meet this ideal (an example of such a DOT representation is given below).
 
 Secondly, theory (meta)data should use vocabularies that follow FAIR principles (I2).
@@ -618,14 +618,14 @@ in the context of theory, this highlights the importance of establishing standar
 Thirdly, theory (meta)data should include qualified references to other (meta)data, including previous versions of the theory (I3).
 The first part of this principle allows for nested theories;
 for example, a theory that specifies causal relationships between constructs could refer back to an ontological theory from which those constructs are derived.
-This can be achieved by cross-referencing the DOI of those nested theories ({``Contributing {Citations} and {References},''} 2024).
+This can be achieved by cross-referencing the DOI of those nested theories (\emph{Contributing {Citations} and {References}}, 2024).
 The second part of this principle allows for tracing the provenance of a theory; keeping track of its prior versions and other theories that inspired it.
 This is achieved by using Git for version control and Zenodo for archiving.
 Git tracks the internal provenance of a theory repository; Zenodo is used to cross-reference external relationships (e.g., papers that influenced the theory, previous theories that inspired it, models based upon the theory).
 
 Recent work points out that Interoperability is not an all-or-nothing property.
 The concept of X-Interoperability was introduced to answer the question: \emph{Interoperable for what?}
-X-Interoperability is defined as facilitating ``successful communication between machines and between humans and machines {[}, where{]} A and B are considered X-Interoperable if a common operation X exists that can be applied to both'' (Vogt et al., 2024).
+X-Interoperability is defined as facilitating ``successful communication between machines and between humans and machines {[}, where{]} A and B are considered X-Interoperable if a common operation X exists that can be applied to both'' (Vogt et al., 2024, p. 5).
 This revised definition makes it possible to outline a theory's affordances in terms of X-Interoperability.
 For example, a FAIR theory may be X-Interoperable for deriving testable hypotheses,
 or for the purpose of selecting relevant control variables,
@@ -658,14 +658,15 @@ Property & \multicolumn{1}{c}{X-Interoperability}\\
 
 With regard to the state of Interoperability in psychology,
 Kurt Lewin's (1943) adage ``there's nothing as practical as a good theory'' paints a hopeful picture of theories as useful tools in psychological researchers' day-to-day work.
-But, as we argued, this is not the case.
+But, as we argued, contemporary practice falls short of this ideal.
 The examples of X-Interoperability offered in Table \ref{tab:tabmeehl} illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-Interoperable within software used for analysis.
 For example, Interoperable theory could be used
-to select control variables for causal inference (Cinelli, Forney, \& Pearl, 2022),
-or to preregister the inferential procedure that would lead to specific modifications of a theory after analyzing empirical data (Peikert et al., 2021),
+to select control variables for causal inference (Cinelli et al., 2022),
+or to preregister a study with an explicit derivation chain from theory to hypothesis,
+as well as an inferential procedure that would suggest specific modifications to theory after analyzing empirical data (Peikert et al., 2021),
 or to derive machine-readable hypotheses (Lakens \& DeBruine, 2021) which could be automatically evaluated through integration testing (Van Lissa, 2023).
 Furthermore, theories can be X-Interoperable with each other to enable nesting, or using one theory to clarify elements of another theory.
-For example, it should be possible to embed a theory about emotion regulation (e.g., Gross, 2015) within a theory of emotion regulation development (Morris, Silk, Steinberg, Myers, \& Robinson, 2007).
+For example, it should be possible to embed a theory about emotion regulation (e.g., Gross, 2015) within a theory of emotion regulation development (Morris et al., 2007).
 
 \subsection{Reusability}\label{reusability}
 
@@ -689,7 +690,7 @@ These questions imply a norm against modifying theory without its author's conse
 Licensing theories for reuse unambiguously answers these questions,
 with the caveats that legislation may vary across contexts and jurisdictions, and that this paper does not constitute legal advice.
 Two considerations are important when determining what license is appropriate for theory.
-A first consideration is that copyright law protects authors' rights according to the idea-expression dichotomy (Bently, Davis, \& Ginsburg, 2010).
+A first consideration is that copyright law protects authors' rights according to the idea-expression dichotomy (Bently et al., 2010).
 It explicitly does not
 \emph{``extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery''}.
 Copyright thus applies to creative works expressing a theory (e.g., prose, visual illustrations),
@@ -947,8 +948,8 @@ At the time of writing, the package includes a
 vignette \href{https://cjvanlissa.github.io/theorytools/articles/augmented_dags.html}{introducing augmented Directed Acyclic Graphs (aDAGs)} as a format for theory specification that meets the requirements of good psychological theory.
 These aDAGs are X-interoperable for plotting (using \texttt{dagitty} and \texttt{tidySEM}),
 for automatically selecting control variables, and for simulating data (using \texttt{theorytools}).
-Another vignette describes how to take Self-Determination Theory (P. A. M. V. Lange, W.Kruglanski, ToryHiggins, Deci, \& Ryan, 2012), a theory originally represented as prose, and \href{https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html}{specify it as a FAIR aDAG}.
-Another vignette describes how to take the Dunning-Krüger effect and \href{https://cjvanlissa.github.io/theorytools/articles/dunning-kruger.html}{specify it as a FAIR mathematical formula} (Feld, Sauermann, \& de Grip, 2017).
+Another vignette describes how to take Self-Determination Theory (P. A. M. V. Lange et al., 2012), a theory originally represented as prose, and \href{https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html}{specify it as a FAIR aDAG}.
+Another vignette describes how to take the Dunning-Krüger effect and \href{https://cjvanlissa.github.io/theorytools/articles/dunning-kruger.html}{specify it as a FAIR mathematical formula} (Feld et al., 2017).
 Another vignette illustrates the use of FAIR theory for \href{https://cjvanlissa.github.io/theorytools/articles/causal-inference.html}{covariate selection and causal inference} (Pearl, 1995).
 More vignettes may be added over time, and users are encouraged to submit their own reproducible examples as package vignettes.
 
@@ -1009,7 +1010,7 @@ The advantage of modular publishing is that authors can be credited for theory d
 Given the current emphasis on empirical papers (McPhetres et al., 2021), theoretical papers can be hard to publish.
 FAIR theories, by contrast, can be readily disseminated as citable information artifacts, thus changing the incentive structure to favor theory development.
 
-Interdisciplinarity benefits from FAIR theory's Accessibility across different fields; thus, theoretical frameworks can be reused, adapted, or used for analogical modeling (Haslbeck, Ryan, Robinaugh, Waldorp, \& Borsboom, 2021).
+Interdisciplinarity benefits from FAIR theory's Accessibility across different fields; thus, theoretical frameworks can be reused, adapted, or used for analogical modeling (Haslbeck et al., 2021).
 Meta-research benefits from the fact that FAIR theory enables studying the structure, content, and development of theories over time.
 In terms of team science, FAIR theory facilitates collaboration by ensuring that all contributors have access to the same information and
 clarifying any remaining areas of contention or misunderstanding (Van Lissa et al., 2024).
@@ -1036,19 +1037,35 @@ we have shared several open educational materials on theory development in the `
 A limitation of scope is that FAIR theory does not directly resolve problems related to strategic ambiguity (Frankenhuis et al., 2023) and lack of theory formalization (Robinaugh et al., 2021).
 However, our work does establish a framework that allows for and promotes the formalization of theories.
 The example of the empirical cycle demonstrates how FAIR principles can guide theory formalization and foster cumulative progress.
-Another limitation of scope is that FAIR theory does not resolve other related issues in psychology, such as the measurement crisis (Bringmann, Elmer, \& Eronen, 2022) and lack of standardized ontologies for psychological constructs (Bosco et al., 2017).
+Another limitation of scope is that FAIR theory does not resolve other related issues in psychology, such as the measurement crisis (Bringmann et al., 2022) and lack of standardized ontologies for psychological constructs (Bosco et al., 2017).
 However, our work here provides a template for addressing such challenges,
 and any advancements in the areas of measurement and ontology will serve to amplify the value of FAIR theories, particularly when such resources are cross-referenced in the metadata (e.g., on Zenodo).
 
 \subsection{Future Directions}\label{future-directions}
 
-One issue that intersects with FAIR theory is the measurement and operationalization of psychological constructs.
-Aside from the aforementioned ``theory crisis'', there has been talk of a ``measurement crisis'':
-it is not always clear how theoretical constructs are operationalized, and many existing instruments have poor psychometric properties (Bringmann et al., 2022).
-The ``jingle-jangle'' fallacy is common in psychology:
-the same term is often used for distinct constructs, and conversely, different terms are used to refer to the same construct.
-FAIR theory can help address the measurement crisis:
-since theories can reference other theories and resources, it is possible to extend a structural theory with a theory of measurement.
+\phantomsection\label{fairtheoryprereg}{One important future direction is embedding FAIR theories withing existing open science methodologies.
+For example, consider how FAIR theory relates to preregistration.
+These practices are clearly distinct but complimentary.
+The purpose of FAIR theory is to communicate general principles and expectations about a given phenomenon,
+and to provide infrastructure for explicitly deriving hypotheses from specific theories and revising those theories in light of empirical results.
+The purpose of preregistration, by contrast, is to eliminate inductive bias from hypothesis tests and increase trust in their outcomes (Peikert et al., 2023).
+These practices differ in their level of abstraction:
+FAIR theories cut across studies on a given phenomenon,
+whereas preregistrations are specific implementations of hypothesis tests,
+with a specific study design, analysis plan, and - optionally - a fully reproducible analysis pipeline.
+These practices complement each other:
+authors can make the derivation chain from theory to hypothesis more explicit by citing a specific FAIR theory in their preregistration.
+Moreover, it is possible to preregister an inferential procedure that would require revising the theory after observing data,
+or even to have proponents and detractors of a theory review a registered report of such a test.
+In short, combining FAIR theory with preregistration and other existing open science practices has the potential to strengthen the epistemic cycle of prediction, testing, and revision, moving us closer to a cumulative science.}
+
+Another future direction is the intersection between the aforementioned ``theory crisis'' and the related ``measurement crisis'' pertaining to the lack of clarity, consistency, and validity in the operationalization of theoretical constructs (Bringmann et al., 2022).
+Since FAIR theories can reference other theories and resources,
+it is possible to attach references to specific measurement instruments (or even theories of measurement) to constructs named in a theory.
+\phantomsection\label{jinglejangle}{FAIR theories can also help address ``jingle- and jangle fallacies'' in psychology,
+which are ambiguities that arise from using the same term for different constructs, or conversely, using different terms for the same construct (\textbf{songLiteratureReviewingAddressing2021?}).
+By explicitly referencing operational definitions in FAIR theories,
+such jingle-jangle fallacies would come to light and could ultimately be resolved.}
 
 Another future direction for FAIR theory is as an instrument of science communication. Practitioners and the general public are rarely able to read and derive actionable insight from large quantities of empirical papers about a particular phenomenon.
 Theories are more accessible, because they encapsulate the bigger picture of contemporary scientific understanding.
@@ -1073,7 +1090,7 @@ and accelerates cumulative knowledge acquisition in psychology, the social scien
 \phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-aalbersbergMakingScienceTransparent2018}
-Aalbersberg, Ij. J., Appleyard, T., Brookhart, S., Carpenter, T., Clarke, M., Curry, S., \ldots{} Vazire, S. (2018). \emph{Making {Science Transparent By Default}; {Introducing} the {TOP Statement}}. \url{https://doi.org/10.31219/osf.io/sm78t}
+Aalbersberg, Ij. J., Appleyard, T., Brookhart, S., Carpenter, T., Clarke, M., Curry, S., Dahl, J., DeHaven, A. C., Eich, E., Franko, M., Freedman, L., Graf, C., Grant, S., Hanson, B., Joseph, H., Kiermer, V., Kramer, B., Kraut, A., Karn, R. K., \ldots{} Vazire, S. (2018). \emph{Making {Science Transparent By Default}; {Introducing} the {TOP Statement}}. \url{https://doi.org/10.31219/osf.io/sm78t}
 
 \bibitem[\citeproctext]{ref-bently2010copyright}
 Bently, L., Davis, J., \& Ginsburg, J. C. (2010). \emph{Copyright and {Piracy}: {An} interdisciplinary critique} (Vol. 13). Cambridge University Press.
@@ -1091,7 +1108,7 @@ Bringmann, L. F., Elmer, T., \& Eronen, M. I. (2022). Back to {Basics}: {The Imp
 Cinelli, C., Forney, A., \& Pearl, J. (2022). A {Crash Course} in {Good} and {Bad Controls}. \emph{Sociological Methods \& Research}, 00491241221099552. \url{https://doi.org/10.1177/00491241221099552}
 
 \bibitem[\citeproctext]{ref-ContributingCitationsReferences2024}
-Contributing {Citations} and {References}. (2024). Retrieved December 5, 2024, from \url{https://support.datacite.org/docs/data-citation}
+\emph{Contributing {Citations} and {References}}. (2024). DataCite Support. \url{https://support.datacite.org/docs/data-citation}
 
 \bibitem[\citeproctext]{ref-cramerMajorDepressionComplex2016}
 Cramer, A. O. J., Borkulo, C. D. van, Giltay, E. J., Maas, H. L. J. van der, Kendler, K. S., Scheffer, M., \& Borsboom, D. (2016). Major {Depression} as a {Complex Dynamic System}. \emph{PLOS ONE}, \emph{11}(12), e0167490. \url{https://doi.org/10.1371/journal.pone.0167490}
@@ -1106,13 +1123,13 @@ De Groot, A. D., \& Spiekerman, J. A. A. (1969). \emph{Methodology: {Foundations
 Deci, E. L. (1971). Effects of externally mediated rewards on intrinsic motivation. \emph{Journal of Personality and Social Psychology}, \emph{18}(1), 105--115. \url{https://doi.org/10.1037/h0030644}
 
 \bibitem[\citeproctext]{ref-DOTLanguage2024}
-{DOT Language}. (2024). Retrieved December 5, 2024, from \url{https://graphviz.org/doc/info/lang.html}
+\emph{{DOT Language}}. (2024). Graphviz. \url{https://graphviz.org/doc/info/lang.html}
 
 \bibitem[\citeproctext]{ref-dumas-malletPoorReplicationValidity2017}
 Dumas-Mallet, E., Smith, A., Boraud, T., \& Gonon, F. (2017). Poor replication validity of biomedical association studies reported by newspapers. \emph{PLOS ONE}, \emph{12}(2), e0172650. \url{https://doi.org/10.1371/journal.pone.0172650}
 
 \bibitem[\citeproctext]{ref-ehmkeContributorCovenantCode2014}
-Ehmke, C. (2014). Contributor {Covenant}: {A Code} of {Conduct} for {Open Source} and {Other Digital Commons Communities}. Retrieved April 3, 2024, from \url{https://www.contributor-covenant.org/}
+Ehmke, C. (2014). \emph{Contributor {Covenant}: {A Code} of {Conduct} for {Open Source} and {Other Digital Commons Communities}}. \url{https://www.contributor-covenant.org/}
 
 \bibitem[\citeproctext]{ref-zenodo}
 European Organization For Nuclear Research, \& OpenAIRE. (2013). \emph{Zenodo}. CERN. \url{https://doi.org/10.25495/7GXK-RD71}
@@ -1127,7 +1144,7 @@ Frankenhuis, W. E., Panchanathan, K., \& Smaldino, P. E. (2023). Strategic {Ambi
 Fried, E. I. (2020). Theories and {Models}: {What They Are}, {What They Are} for, and {What They Are About}. \emph{Psychological Inquiry}, \emph{31}(4), 336--344. \url{https://doi.org/10.1080/1047840X.2020.1854011}
 
 \bibitem[\citeproctext]{ref-gigerenzerNullRitualWhat2004}
-Gigerenzer, G., Krauss, S., \& Vitouch, O. (2004). The null ritual : {What} you always wanted to know about significance testing but were afraid to ask. In D. Kaplan (Ed.), \emph{The {Sage} handbook of quantitative methodology for the social sciences} (pp. 391--408). Thousand Oaks: Sage.
+Gigerenzer, G., Krauss, S., \& Vitouch, O. (2004). The null ritual : {What} you always wanted to know about significance testing but were afraid to ask. In D. Kaplan (Ed.), \emph{The {Sage} handbook of quantitative methodology for the social sciences} (pp. 391--408). Sage.
 
 \bibitem[\citeproctext]{ref-grayHowMapTheory2017}
 Gray, K. (2017). How to {Map Theory}: {Reliable Methods Are Fruitless Without Rigorous Theory}. \emph{Perspectives on Psychological Science}, \emph{12}(5), 731--741. \url{https://doi.org/10.1177/1745691617691949}
@@ -1157,25 +1174,25 @@ Katz, D. S., \& Chue Hong, N. P. (2024). Special issue on software citation, ind
 Kircz, J. G. (1998). Modularity: The next form of scientific information presentation? \emph{Journal of Documentation}, \emph{54}(2), 210--235. \url{https://doi.org/10.1108/EUM0000000007185}
 
 \bibitem[\citeproctext]{ref-kissnerIDENTIFICATIONLOGICALINCONSISTENCY2008}
-Kissner, J. (2008). {ON THE IDENTIFICATION OF A LOGICAL INCONSISTENCY IN THE GENERAL THEORY OF CRIME}. \emph{Journal of Crime and Justice}. Retrieved from \url{https://www.tandfonline.com/doi/abs/10.1080/0735648X.2008.9721251}
+Kissner, J. (2008). {ON THE IDENTIFICATION OF A LOGICAL INCONSISTENCY IN THE GENERAL THEORY OF CRIME}. \emph{Journal of Crime and Justice}. \url{https://www.tandfonline.com/doi/abs/10.1080/0735648X.2008.9721251}
 
 \bibitem[\citeproctext]{ref-kuhbergerPublicationBiasPsychology2014}
 Kühberger, A., Fritz, A., \& Scherndl, T. (2014). Publication {Bias} in {Psychology}: {A Diagnosis Based} on the {Correlation} between {Effect Size} and {Sample Size}. \emph{PLoS ONE}, \emph{9}(9), e105825. \url{https://doi.org/10.1371/journal.pone.0105825}
 
 \bibitem[\citeproctext]{ref-kuhnStructureScientificRevolutions2009}
-Kuhn, T. S. (2009). \emph{The structure of scientific revolutions} (3. ed., {[}Nachdr.{]}). Chicago: Univ. of Chicago Press.
+Kuhn, T. S. (2009). \emph{The structure of scientific revolutions} (3. ed., {[}Nachdr.{]}). Univ. of Chicago Press.
 
 \bibitem[\citeproctext]{ref-lakatosHistoryScienceIts1971}
-Lakatos, I. (1971). History of {Science} and its {Rational Reconstructions}. In R. C. Buck \& R. S. Cohen (Eds.), \emph{{PSA} 1970: {In Memory} of {Rudolf Carnap Proceedings} of the 1970 {Biennial Meeting Philosophy} of {Science Association}} (pp. 91--136). Dordrecht: Springer Netherlands. \url{https://doi.org/10.1007/978-94-010-3142-4_7}
+Lakatos, I. (1971). History of {Science} and its {Rational Reconstructions}. In R. C. Buck \& R. S. Cohen (Eds.), \emph{{PSA} 1970: {In Memory} of {Rudolf Carnap Proceedings} of the 1970 {Biennial Meeting Philosophy} of {Science Association}} (pp. 91--136). Springer Netherlands. \url{https://doi.org/10.1007/978-94-010-3142-4_7}
 
 \bibitem[\citeproctext]{ref-lakensImprovingTransparencyFalsifiability2021}
 Lakens, D., \& DeBruine, L. M. (2021). Improving {Transparency}, {Falsifiability}, and {Rigor} by {Making Hypothesis Tests Machine-Readable}. \emph{Advances in Methods and Practices in Psychological Science}, \emph{4}(2), 2515245920970949. \url{https://doi.org/10.1177/2515245920970949}
 
 \bibitem[\citeproctext]{ref-lamprechtFAIRPrinciplesResearch2019}
-Lamprecht, A.-L., Garcia, L., Kuzak, M., Martinez, C., Arcila, R., Martin Del Pico, E., \ldots{} Capella-Gutierrez, S. (2019). Towards {FAIR} principles for research software. \emph{Data Science}, 1--23. \url{https://doi.org/10.3233/DS-190026}
+Lamprecht, A.-L., Garcia, L., Kuzak, M., Martinez, C., Arcila, R., Martin Del Pico, E., Dominguez Del Angel, V., van de Sandt, S., Ison, J., Martinez, P. A., McQuilton, P., Valencia, A., Harrow, J., Psomopoulos, F., Gelpi, J. Ll., Chue Hong, N., Goble, C., \& Capella-Gutierrez, S. (2019). Towards {FAIR} principles for research software. \emph{Data Science}, 1--23. \url{https://doi.org/10.3233/DS-190026}
 
 \bibitem[\citeproctext]{ref-langeChecklistIncentivizingFacilitating2025a}
-Lange, J., Freyer, N., Musfeld, P., Schönbrodt, F., \& Leising, D. (2025, January 10). A checklist for incentivizing and facilitating good theory building. \url{https://doi.org/10.31219/osf.io/7qvfz}
+Lange, J., Freyer, N., Musfeld, P., Schönbrodt, F., \& Leising, D. (2025, January 10). \emph{A checklist for incentivizing and facilitating good theory building}. \url{https://doi.org/10.31219/osf.io/7qvfz}
 
 \bibitem[\citeproctext]{ref-langeSelfDeterminationTheory2012}
 Lange, P. A. M. V., W.Kruglanski, A., ToryHiggins, E., Deci, E. L., \& Ryan, R. M. (2012). Self-{Determination Theory}. In \emph{Handbook of {Theories} of {Social Psychology}: {Volume} 1} (pp. 416--437). SAGE Publications Ltd. \url{https://doi.org/10.4135/9781446249215}
@@ -1190,7 +1207,7 @@ Lewandowsky, S., \& Farrell, S. (2010). \emph{Computational modeling in cognitio
 Lewin, K. (1943). Psychology and the {Process} of {Group Living}. \emph{The Journal of Social Psychology}, \emph{17}(1), 113--131. \url{https://doi.org/10.1080/00224545.1943.9712269}
 
 \bibitem[\citeproctext]{ref-mcphetresDecadeTheoryReflected2021}
-McPhetres, J., Albayrak-Aydemir, N., Mendes, A. B., Chow, E. C., Gonzalez-Marquez, P., Loukras, E., \ldots{} Volodko, K. (2021). A decade of theory as reflected in {Psychological Science} (2009--2019). \emph{PLOS ONE}, \emph{16}(3), e0247986. \url{https://doi.org/10.1371/journal.pone.0247986}
+McPhetres, J., Albayrak-Aydemir, N., Mendes, A. B., Chow, E. C., Gonzalez-Marquez, P., Loukras, E., Maus, A., O'Mahony, A., Pomareda, C., Primbs, M. A., Sackman, S. L., Smithson, C. J. R., \& Volodko, K. (2021). A decade of theory as reflected in {Psychological Science} (2009--2019). \emph{PLOS ONE}, \emph{16}(3), e0247986. \url{https://doi.org/10.1371/journal.pone.0247986}
 
 \bibitem[\citeproctext]{ref-meehlTheoreticalRisksTabular1978}
 Meehl, P. E. (1978). Theoretical {Risks} and {Tabular Asterisks}: {Sir Karl}, {Sir Ronald}, and the {Slow Progress} of {Soft Psychology}. \emph{Journal of Consulting \& Clinical Psychology}, \emph{46}(4), 806--834.
@@ -1199,16 +1216,16 @@ Meehl, P. E. (1978). Theoretical {Risks} and {Tabular Asterisks}: {Sir Karl}, {S
 Meehl, P. E. (1990). Appraising and {Amending Theories}: {The Strategy} of {Lakatosian Defense} and {Two Principles} that {Warrant It}. \emph{Psychological Inquiry}, \emph{1}(2), 108--141. \url{https://doi.org/10.1207/s15327965pli0102_1}
 
 \bibitem[\citeproctext]{ref-mischelToothbrushProblem2008}
-Mischel, W. (2008). The {Toothbrush Problem}. \emph{APS Observer}, \emph{21}. Retrieved from \url{https://www.psychologicalscience.org/observer/the-toothbrush-problem}
+Mischel, W. (2008). The {Toothbrush Problem}. \emph{APS Observer}, \emph{21}. \url{https://www.psychologicalscience.org/observer/the-toothbrush-problem}
 
 \bibitem[\citeproctext]{ref-morrisRoleFamilyContext2007}
 Morris, A. S., Silk, J. S., Steinberg, L., Myers, S. S., \& Robinson, L. R. (2007). The role of the family context in the development of emotion regulation. \emph{Social Development}, \emph{16}(2), 361--388. \url{https://doi.org/10.1111/j.1467-9507.2007.00389.x}
 
 \bibitem[\citeproctext]{ref-norouziCapturingCausalClaims2024}
-Norouzi, R., Kleinberg, B., Vermunt, J., \& Van Lissa, C. J. (2024). \emph{Capturing {Causal Claims}: {A Fine Tuned Text Mining Model} for {Extracting Causal Sentences} from {Social Science Papers}}. Retrieved from \url{https://osf.io/kwtpm/download}
+Norouzi, R., Kleinberg, B., Vermunt, J., \& Van Lissa, C. J. (2024). \emph{Capturing {Causal Claims}: {A Fine Tuned Text Mining Model} for {Extracting Causal Sentences} from {Social Science Papers}}. \url{https://osf.io/kwtpm/download}
 
 \bibitem[\citeproctext]{ref-nosekPromotingOpenResearch2015a}
-Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., \ldots{} Yarkoni, T. (2015). Promoting an open research culture. \emph{Science}, \emph{348}(6242), 1422--1425. \url{https://doi.org/10.1126/science.aab2374}
+Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., Buck, S., Chambers, C. D., Chin, G., Christensen, G., Contestabile, M., Dafoe, A., Eich, E., Freese, J., Glennerster, R., Goroff, D., Green, D. P., Hesse, B., Humphreys, M., \ldots{} Yarkoni, T. (2015). Promoting an open research culture. \emph{Science}, \emph{348}(6242), 1422--1425. \url{https://doi.org/10.1126/science.aab2374}
 
 \bibitem[\citeproctext]{ref-oberauerAddressingTheoryCrisis2019}
 Oberauer, K., \& Lewandowsky, S. (2019). Addressing the theory crisis in psychology. \emph{Psychonomic Bulletin \& Review}, \emph{26}(5), 1596--1618. \url{https://doi.org/10.3758/s13423-019-01645-2}
@@ -1217,16 +1234,19 @@ Oberauer, K., \& Lewandowsky, S. (2019). Addressing the theory crisis in psychol
 Pearl, J. (1995). Causal {Diagrams} for {Empirical Research}. \emph{Biometrika}, \emph{82}(4), 669--688. \url{https://doi.org/10.2307/2337329}
 
 \bibitem[\citeproctext]{ref-peikertTransparencyOpenScience2023}
-Peikert, A. (2023). \emph{Towards {Transparency} and {Open Science}} (doctoralThesis, Humboldt-Universität zu Berlin). Humboldt-Universität zu Berlin. \url{https://doi.org/10.18452/27056}
+Peikert, A. (2023). \emph{Towards {Transparency} and {Open Science}} {[}doctoralThesis, Humboldt-Universität zu Berlin{]}. \url{https://doi.org/10.18452/27056}
+
+\bibitem[\citeproctext]{ref-peikertWhyDoesPreregistration2023}
+Peikert, A., Ernst, M. S., \& Brandmaier, A. M. (2023, February 17). \emph{Why does preregistration increase the persuasiveness of evidence? {A Bayesian} rationalization} {[}Preprint{]}. \url{https://doi.org/10.31234/osf.io/cs8wb}
 
 \bibitem[\citeproctext]{ref-peikertReproducibleResearchTutorial2021}
 Peikert, A., Van Lissa, C. J., \& Brandmaier, A. M. (2021). Reproducible {Research} in {R}: {A Tutorial} on {How} to {Do} the {Same Thing More Than Once}. \emph{Psych}, \emph{3}(4), 836--867. \url{https://doi.org/10.3390/psych3040053}
 
 \bibitem[\citeproctext]{ref-peirceCollectedPapersCharles1960}
-Peirce, C. (1960). \emph{Collected {Papers Of Charles Peirce}}. Retrieved from \url{http://archive.org/details/collected-papers-of-charles-peirce}
+Peirce, C. (1960). \emph{Collected {Papers Of Charles Peirce}}. \url{http://archive.org/details/collected-papers-of-charles-peirce}
 
 \bibitem[\citeproctext]{ref-popperLogicScientificDiscovery2002}
-Popper, K. R. (2002). \emph{The logic of scientific discovery}. Retrieved from \url{http://public.ebookcentral.proquest.com/choice/publicfullrecord.aspx?p=254228}
+Popper, K. R. (2002). \emph{The logic of scientific discovery}. \url{http://public.ebookcentral.proquest.com/choice/publicfullrecord.aspx?p=254228}
 
 \bibitem[\citeproctext]{ref-quineReasonsIndeterminacyTranslation1970}
 Quine, W. V. (1970). On the {Reasons} for {Indeterminacy} of {Translation}. \emph{The Journal of Philosophy}, \emph{67}(6), 178--183. \url{https://doi.org/10.2307/2023887}
@@ -1262,10 +1282,10 @@ Van De Sompel, H., Payette, S., Erickson, J., Lagoze, C., \& Warner, S. (2004). 
 Van Der Maas, H. L. J., Dolan, C. V., Grasman, R. P. P. P., Wicherts, J. M., Huizenga, H. M., \& Raijmakers, M. E. J. (2006). A dynamical model of general intelligence: {The} positive manifold of intelligence by mutualism. \emph{Psychological Review}, \emph{113}(4), 842--861. \url{https://doi.org/10.1037/0033-295X.113.4.842}
 
 \bibitem[\citeproctext]{ref-vandongenPsychoModelsMathematicalComputational2025}
-van Dongen, N. N. N., \& Volz, L. (2025). {PsychoModels}: {The} mathematical and computational model repository for psychological science. Retrieved March 5, 2025, from \url{https://www.psychomodels.org/}
+van Dongen, N. N. N., \& Volz, L. (2025). \emph{{PsychoModels}: {The} mathematical and computational model repository for psychological science.} \url{https://www.psychomodels.org/}
 
 \bibitem[\citeproctext]{ref-vanlissaUsingEndpointsCheck2023}
-Van Lissa, C. J. (2023). Using {Endpoints} to {Check Reproducibility} {[}Package Documentation{]}. Retrieved March 21, 2024, from \url{https://cjvanlissa.github.io/worcs/articles/endpoints.html}
+Van Lissa, C. J. (2023). \emph{Using {Endpoints} to {Check Reproducibility}} {[}Package Documentation{]}. worcs 0.1.15.2 package documentation. \url{https://cjvanlissa.github.io/worcs/articles/endpoints.html}
 
 \bibitem[\citeproctext]{ref-vanlissaWORCSWorkflowOpen2021}
 Van Lissa, C. J., Brandmaier, A. M., Brinkman, L., Lamprecht, A.-L., Peikert, A., Struiksma, M. E., \& Vreede, B. M. I. (2021). {WORCS}: {A} workflow for open reproducible code in science. \emph{Data Science}, \emph{4}(1), 29--49. \url{https://doi.org/10.3233/DS-210031}
@@ -1280,19 +1300,19 @@ Van Lissa, C. J., Keymolen, E., Hoek, S. van den, Klingner, A., Schurman, L., \&
 van Rooij, I., \& Baggio, G. (2021). Theory {Before} the {Test}: {How} to {Build High-Verisimilitude Explanatory Theories} in {Psychological Science}. \emph{Perspectives on Psychological Science}, \emph{16}(4), 682--697. \url{https://doi.org/10.1177/1745691620970604}
 
 \bibitem[\citeproctext]{ref-vogtFAIR20Extending2024}
-Vogt, L., Strömert, P., Matentzoglu, N., Karam, N., Konrad, M., Prinz, M., \& Baum, R. (2024, May 6). {FAIR} 2.0: {Extending} the {FAIR Guiding Principles} to {Address Semantic Interoperability}. Retrieved November 20, 2024, from \url{http://arxiv.org/abs/2405.03345}
+Vogt, L., Strömert, P., Matentzoglu, N., Karam, N., Konrad, M., Prinz, M., \& Baum, R. (2024, May 6). \emph{{FAIR} 2.0: {Extending} the {FAIR Guiding Principles} to {Address Semantic Interoperability}}. \url{http://arxiv.org/abs/2405.03345}
 
 \bibitem[\citeproctext]{ref-wagenmakersCreativityVerificationCyclePsychological2018}
 Wagenmakers, E.-J., Dutilh, G., \& Sarafoglou, A. (2018). The {Creativity-Verification Cycle} in {Psychological Science}: {New Methods} to {Combat Old Idols}. \emph{Perspectives on Psychological Science}, \emph{13}(4), 418--427. \url{https://doi.org/10.1177/1745691618771357}
 
 \bibitem[\citeproctext]{ref-wilkinsonFAIRGuidingPrinciples2016}
-Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., Baak, A., \ldots{} Mons, B. (2016). The {FAIR Guiding Principles} for scientific data management and stewardship. \emph{Scientific Data}, \emph{3}(1, 1), 1--9. \url{https://doi.org/10.1038/sdata.2016.18}
+Wilkinson, M. D., Dumontier, M., Aalbersberg, Ij. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J.-W., da Silva Santos, L. B., Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., \ldots{} Mons, B. (2016). The {FAIR Guiding Principles} for scientific data management and stewardship. \emph{Scientific Data}, \emph{3}(1, 1), 1--9. \url{https://doi.org/10.1038/sdata.2016.18}
 
 \bibitem[\citeproctext]{ref-wilkinson2024applying}
-Wilkinson, S. R., Aloqalaa, M., Belhajjame, K., Crusoe, M. R., Kinoshita, B. de P., Gadelha, L., et al.others. (2024). \emph{Applying the {FAIR} principles to computational workflows}. Retrieved from \url{https://arxiv.org/abs/2410.03490}
+Wilkinson, S. R., Aloqalaa, M., Belhajjame, K., Crusoe, M. R., Kinoshita, B. de P., Gadelha, L., Garijo, D., Gustafsson, O. J. R., Juty, N., Kanwal, S., et al. (2024). \emph{Applying the {FAIR} principles to computational workflows}. \url{https://arxiv.org/abs/2410.03490}
 
 \bibitem[\citeproctext]{ref-scientifictheories}
-Winther, R. G. (2021). The structure of scientific theories. In E. N. Zalta (Ed.), \emph{The {Stanford} encyclopedia of philosophy} (Spring 2021). Metaphysics Research Lab, Stanford University. Retrieved from \url{https://plato.stanford.edu/archives/spr2021/entries/structure-scientific-theories/}
+Winther, R. G. (2021). The structure of scientific theories. In E. N. Zalta (Ed.), \emph{The {Stanford} encyclopedia of philosophy} (Spring 2021). Metaphysics Research Lab, Stanford University. \url{https://plato.stanford.edu/archives/spr2021/entries/structure-scientific-theories/}
 
 \end{CSLReferences}
 

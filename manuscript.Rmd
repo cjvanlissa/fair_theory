@@ -76,6 +76,8 @@ tablelist         : no
 footnotelist      : no
 classoption       : "man, noextraspace"
 urlcolor          : blue
+csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
+documentclass     : "apa7"
 output            :
   papaja::apa6_pdf: default
   md_document: default
@@ -113,20 +115,20 @@ Concern that the abundance of non-replicable findings
 was caused by undisclosed flexibility in analyses led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
 These various practices ensure transparent and repeated testing of hypotheses by committing to an analysis plan in advance.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
-Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
 
+Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
 Psychological theories rarely provide hypotheses that are corroborated by evidence.
 Furthermore, theories are often so ambiguous that they can accommodate mutually inconsistent findings,
-as the theory's central claims evade falsification.
-A good example of this is found in “self-determination theory” (SDT), which emphasizes the role of intrinsic and extrinsic motivation in human behavior.
-Initially, intrinsic motivation was understood as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures [@deciEffectsExternallyMediated1971].
-Over time, however, SDT expanded its definition to include motivations driven by the fulfillment of basic psychological needs—autonomy, competence, and relatedness—all still categorized as "intrinsic" [@ryanSelfdeterminationTheoryFacilitation2000].
+rendering them immune to falsification.
+As an example, consider "self-determination theory" (SDT), which emphasizes the role of intrinsic and extrinsic motivation in human behavior.
+Intrinsic motivation was initially defined as engaging in an activity purely for the inherent satisfaction it provides, free from any external rewards or pressures [@deciEffectsExternallyMediated1971].
+Over time, however, this definition expanded to include motivations driven by the fulfillment of basic psychological needs for autonomy, competence, and relatedness [@ryanSelfdeterminationTheoryFacilitation2000].
 <!-- Consider, for instance, a research scientist working in a highly competitive laboratory.
 Under the original definition, their intrinsic motivation would be limited to the joy of discovery alone.
 Yet, under the expanded framework, factors that might initially appear extrinsic can be reconceptualized as intrinsic: securing grant funding enhances their autonomy by granting them the freedom to pursue innovative ideas; grappling with deadlines bolsters their sense of competence; and praise from their peers fulfills their need for relatedness. -->
-The difference between these definitions becomes clear when considering the act of changing an infant's dirty diaper.
-Under the original definition, one might hypothesize that caregivers are not intrinsically motivated to change diapers, as this is hardly a joyous experience.
-Under the expanded definition, one might hypothesize the opposite, as the act may fulfill the need for relatedness.
+The implications of these shifting definitions becomes clear when deriving hypotheses about the type of motivation involved in changing an infant's dirty diaper.
+Under the original definition, one would hypothesize that caregivers are not intrinsically motivated to change diapers, as this is hardly a joyous experience.
+Under the expanded definition, one would hypothesize the opposite, as the act fulfills the need for relatedness.
 The expanded definition thus enables SDT to absorb potentially falsifying evidence.
 
 Scholars have raised concerns about the state of theory in psychology for nearly 50 years [@robinaughInvisibleHandsFine2021; @meehlTheoreticalRisksTabular1978].
@@ -333,7 +335,7 @@ Theory thus has an uncomfortable and paradoxical role in contemporary psychology
 The majority of papers ostensibly test hypotheses,
 but these are rarely connected to, let alone derived from, theory.
 Moreover, test results do not routinely contribute to the improvement or rejection of theories.
-The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology "lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest" [@meehlTheoreticalRisksTabular1978].
+The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology "lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest" [@meehlTheoreticalRisksTabular1978, p. 1].
 The present paper seeks to make theory more tangible and practical by instantiating it as a digital "object" that scholars can access, reuse, and update in their daily workflows.
 
 ## Making Theory FAIR
@@ -381,11 +383,11 @@ We recognize the syntactic view in Meehl's [-@meehlAppraisingAmendingTheories199
 statements about the types of entities postulated (i.e., ontology),
 statements about causal connections between those entities,
 statements about the functional form of those connections,
-and statements about their specific numerical values [cf. @frankenhuisStrategicAmbiguitySocial2023; @guestWhatMakesGood2024].
+and statements about their specific numerical values [@frankenhuisStrategicAmbiguitySocial2023; @guestWhatMakesGood2024].
 The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematics.
 It shifts the focus from theories as collections of sentences to mathematical models.
 The term "model" is not uniquely defined within the literature;
-it has been described as a "specific instantiation of theory narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [@friedTheoriesModelsWhat2020].
+models have been described as "specific instantiations of theories, narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [@friedTheoriesModelsWhat2020, p. 336].
 This implies that theories and models are not fundamentally distinct, but rather, that for each model, there is a more general theory that subsumes it (one person's model is another person's theory).
 <!-- Paradigms at the broadest level encompass the larger narrative, frameworks gather and organize concepts and terms, but only theories have a degree of specificity that allows us to derive specific testable and falsifiable hypotheses or models with exact mathematical relations between concepts (cf. Partelow, 2023, Table 1, https://link.springer.com/article/10.1007/s13412-023-00833-w#). -->
 The pragmatic view holds that there might not be one structure or definition of scientific theories, but instead, definitions differ across scientific domains.
@@ -558,7 +560,7 @@ Conversely, as organizations begin to recognize the value in tracking academic o
 
 There have been notable efforts to improve theories' Findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
-and posted many examples on their website <www.theorymaps.org> [@grayHowMapTheory2017].
+and posted many examples on [their website](https://www.theorymaps.org) [@grayHowMapTheory2017].
 Similarly, [PsychoModels](http://psychomodels.org/) seeks to inventorize theories and models in psychology [@vandongenPsychoModelsMathematicalComputational2025].
 Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability.
 Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
@@ -600,7 +602,7 @@ Open Access publishing increases the practical Accessibility of all academic out
 
 A second impediment to Accessibility is more indirect
 and pertains to a theory's intelligibility to those with practical Access.
-It has been proposed that good theories have the property of "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024]. 
+It has been proposed that good theories have the property of "discursive survival [...], the ability to be understood" [@guestWhatMakesGood2024, p. 1]. 
 At present, psychological theories are often ambiguous, rendering them difficult to understand [@frankenhuisStrategicAmbiguitySocial2023].
 Successful communication requires shared background knowledge between sender and receiver [@vogtFAIR20Extending2024].
 Shared background knowledge can come from paradigms held by members of a scientific community [@kuhnStructureScientificRevolutions2009],
@@ -641,7 +643,7 @@ and explicit cross-references to relevant resources such as papers, ontologies, 
 
 ## Interoperability
 
-Interoperability pertains to the property of information artifacts to "integrate or work together [...] with minimal effort" [@wilkinsonFAIRGuidingPrinciples2016].
+Interoperability pertains to the property of information artifacts to "integrate or work together [...] with minimal effort" [@wilkinsonFAIRGuidingPrinciples2016, p. 2].
 Firstly, theory and its associated metadata should use a formal, accessible, shared and broadly applicable language to facilitate (human- and) machine readability and reuse (I1).
 The common practice of instantiating theory as lengthy prose or schematic drawing falls short of this ideal.
 Instead, FAIR theory should, ad minimum,
@@ -672,7 +674,7 @@ Git tracks the internal provenance of a theory repository; Zenodo is used to cro
 
 Recent work points out that Interoperability is not an all-or-nothing property.
 The concept of X-Interoperability was introduced to answer the question: *Interoperable for what?*
-X-Interoperability is defined as facilitating "successful communication between machines and between humans and machines [, where] A and B are considered X-Interoperable if a common operation X exists that can be applied to both" [@vogtFAIR20Extending2024].
+X-Interoperability is defined as facilitating "successful communication between machines and between humans and machines [, where] A and B are considered X-Interoperable if a common operation X exists that can be applied to both" [@vogtFAIR20Extending2024, p. 5].
 This revised definition makes it possible to outline a theory's affordances in terms of X-Interoperability.
 For example, a FAIR theory may be X-Interoperable for deriving testable hypotheses,
 or for the purpose of selecting relevant control variables,
@@ -720,7 +722,7 @@ and this paper takes one step towards establishing more fine-grained community s
 [This is an example of FAIR metadata](https://raw.githubusercontent.com/cjvanlissa/fair_theory/refs/heads/main/example_metadata.json) extracted from Zenodo.
 
 If we consider the current state of Reusability in psychological theory, there appears to be a norm against theory reuse:
-*"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008].
+*"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008, p. 1].
 As cumulative knowledge acquisition requires reusable theories that are continuously updated based on insights from new data, such a norm impedes scientific progress [@degrootMethodologyFoundationsInference1969].
 In FAIR theory workshops, we similarly notice a reluctance to reuse and adapt existing theories.
 Students ask questions such as "Who owns a theory?",
@@ -731,8 +733,8 @@ Licensing theories for reuse unambiguously answers these questions,
 with the caveats that legislation may vary across contexts and jurisdictions, and that this paper does not constitute legal advice.
 Two considerations are important when determining what license is appropriate for theory.
 A first consideration is that copyright law protects authors' rights according to the idea-expression dichotomy [@bently2010copyright].
-It explicitly does not
-*"extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery"*.
+Copyright does not
+*"extend to any idea, procedure, process, system, method of operation, concept, principle, or discovery"* (Section 102, Copyright Act).
 Copyright thus applies to creative works expressing a theory (e.g., prose, visual illustrations),
 but not to the underlying theoretical idea.
 It thus seems that theories expressed in prose or depicted visually - in other words, that fall short of the Accessibility criterion - are more likely to qualify for copyright protection than formal theories.
@@ -921,7 +923,7 @@ then we can represent it by adding labels to the original DOT graph.
 These labels suggest a focus on empirical psychology that was not present in De Groot's version.
 Furthermore, the label "knowledge accumulation" invites the question of exactly *how* knowledge accumulates upon evaluation of a prior experiment.
 As this lack of cumulative knowledge acquisition appears to be precisely where contemporary research practice falls short, this ambiguity invites further improvement of the theory.
-The authors explicitly mention a second change: *"We added the Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification"*.
+The authors explicitly mention a second change: *"We added the Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification"* (p. 423).
 The DOT graph below shows our implementation of this version of the empirical cycle, by adding subgraphs.
 
 ```

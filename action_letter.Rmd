@@ -63,11 +63,11 @@ I can definitely see the advantage to policies, procedures, and documentation, i
 
 We appreciate the Editor’s meta-scientific comparison of the emergence of conventions in human genetics to the (current wave of) more top-down nature of open science reforms in psychology, which by-and-large also originated in grass-roots initiatives.
 
-As methodologists, our focus in this paper was on "procedures" rather than policies or documentation. Our goal was to position FAIR theory as a communication protocol: a set of standards, grounded in philosophy of science and implemented in existing infrastructure, that facilitates theory specification, reuse, and collaborative refinement.
+As methodologists, our focus in this paper is on "procedures", rather than policies or documentation. Our goal is to position FAIR theory as a communication protocol: a set of standards, grounded in philosophy of science and implemented in existing infrastructure, that facilitates theory specification, reuse, and collaborative refinement.
 
-We agree with the Editor that there is no guarantee that *"these things are crucial to scientific advance in psychology"*. We have made an effort to clearly outline the "affordances" of FAIR theory (what does it make possible), but whether or not these affordances will result in actual scientific advancements remains to be seen.
+We agree with the Editor that there is no guarantee that *"these things are crucial to scientific advance in psychology"*. We have, however, provided reasoned arguments to support the "affordances" of FAIR theory: it *makes possible* particular scientific advancements, even if it does not guarantee them.
 
-Compare FAIR theory to preregistration: it, too, was introduced first as a good idea, and now - a decade later - empirical studies are being conducted to investigate its effects.
+Compare FAIR theory to preregistration: it, too, was introduced first as a good idea; now - a decade later - empirical studies are being conducted to investigate its effects.
 
 To address this comment, <font color="red">in the Revision:
 
@@ -139,6 +139,8 @@ In general, I’d move this section up, as the word “theory” has been used a
 Line 163: Following APA 7 standards, no “cf.” is added. In the case of three or more authors, it is shortened to “et al.”
 ```
 
+We removed the "cf.", although we couldn't find mention of it in the APA7 style guide. We updated the citation scheme to APA7, so three or more authors will be shortened to "et al.".
+
 ```{asis}
 Line 207: It could be helpful to add a very brief description of the phonological loop in case some readers are not familiar with it and its parameters.
 ```
@@ -148,10 +150,13 @@ Line 207: It could be helpful to add a very brief description of the phonologica
 Line 350: I think that this was supposed to be displayed as a link: <www.theorymaps.org>
 ```
 
+Thank you for pointing this out; we have fixed the formatting.
 
 ```{asis}
 Line 390: In the case of a direct quotation, a page number should be added if possible.
 ```
+
+We have added the page numbers to all direct quotations.
 
 ```{asis}
 This is a very nice section; I really enjoyed reading this more practical angle!
@@ -179,13 +184,16 @@ In my opinion, it is very important that the learning curve is mentioned; even t
 Line 852: I’d add a reference for the jingle-jangle fallacy.
 ```
 
-gonzalezExtrinsicConvergentValidity2021
+We have done as requested; this section now reads:
+
+`r get_revision("jinglejangle")`
+
 
 ```{asis}
 The affiliations could be changed to follow a common system.
 ```
 
-We tried to make this suggested change, although there is still some heterogeneity because our different institutions have different preferred / official ways to write the affiliation.
+We have tried to make this requested change, although there is some residual heterogeneity because our institutions have different preferred / mandated ways to write the affiliation.
 
 ```{asis}
 I do understand why the words Findable, Accessible, Interoperable, and Reusable are always written with a majuscule, but it did confuse me a bit during reading at times.
@@ -199,9 +207,12 @@ Since all of these words have a colloquial meaning in everyday language, as well
 The references should use sentence case following APA 7 (e.g., Back to Basics: The Importance of Conceptual Clarification in Psychological Science → Back to basics: The importance of conceptual clarification in psychological science).
 ```
 
+We've updated the reference style to APA7, but note that some journals have fixed the case of specific words in titles (e.g., "FAIR" is fixed to capital letters). These remain unchanged. We defer to the Editor to indicate whether we should change this, or whether it will be addressed in the typesetting process.
+
 ```{asis}
 I’ve mentioned these two already for specific examples, but I’d check them in the whole manuscript again: In the case of more than two authors, use of et al. and the mention of page numbers for direct quotations.
 ```
+
 
 ```{asis}
 Two of the links did not work for me: Line 490 (FAIR metadata example), Line 606 (example of metadata).
