@@ -263,23 +263,31 @@ To address this comment, we have included the following section in the revision:
 
 ```{asis}
 The second kind of theorizing I have done is more philosophical, along the lines of my "Three Laws" paper and related work. Here, I think applying the FAIR framework would be a little more problematic. At times, the current manuscript sounds as though it is trying to make scientific theory machine readable, an idea that has some good points that the authors make clear, but would also eliminate a lot of interesting papers that have been written by human beings from a subjective point of view. What would happen to Meehl's great Sir Karl Sir Ronald paper within FAIR? How much of the importance of that paper would remain if you took Meehl's voice out of it? Is all narrative philosophy "theorizing" that could be augmented or replaced by FAIR? See also: Meehl on "Cliometric metatheory".
-```
 
-Discuss relationship between FAIR and prose/author's voice.
-
-`r get_revision("modularpublisingdetract")`
-
-```{asis}
 These considerations lead me to some recommendations for strengthening the manuscript. The first is to clarify the relationship between FAIR theory and traditional paper-writing. Is the former meant to replace or enhance the latter? It seems to me that using FAIR to enhance the environment created by traditional theoretical papers is much the better option.  That is, everything that currently exists about the S-R hypothesis could continue to exist, and be supplemented by a FAIR framework outlining the theory and its implications. Development of the FAIR model could exist almost independently of the individual papers, analyses, reviews and meta-analyses (see below). Someone could contribute to the literature on a subject by developing a FAIR framework, much as a good review paper does.
 ```
 
-Yes, this is absolutely how we intended it. Clarify this.
+We agree, this is exactly how we envision the role of FAIR theory. We think this comment can be concisely addressed by emphasizing that modular publishing does not replace the traditional paper, but adds value to resources created in the process of its writing:
+
+`r get_revision("modularvalue")`
+
+And:
+
+`r get_revision("modularpublisingdetract")`
 
 ```{asis}
 Second, and speaking of Meehl, many of the ideas incorporated here have a relationship to construct validity.  Many of our "theories" of behavior take the form of hypothetical constructs, like intelligence or for that matter the S-R interaction. Much of what is described here seems like a formalization of Meehl's idea of a nomological net-- a network of theoretical connections among abstract entities and empirical observations.
 ```
 
-This is not exactly true; while that's definitely in line with *my* usage of FAIR theory, other uses are possible.
+We partly agree; we recognize two distinct lines of thought in this comment. 
+
+The first is that FAIR theory relates to construct validity. To address this point, we have rewritten the section on FAIR theory and the "measurement crisis":
+
+`r get_revision("measurementcrisis")`
+
+The second is that much of what we describe looks like Meehl's nomological nets. This is definitely true for the way that *we* are using FAIR theory (e.g., in the online examples), as we are inspired by Meehl,
+but it's not necessarily true of FAIR theory in general.
+We're not sure if further changes need to be made to address this.
 
 ```{asis}
 Finally, and this is the only concern about the paper as a publishable manuscript, the last third of the paper where the authors get into the technical aspects of how one would go about building a FAIR theory, is difficult to read. This is where the manuscript reads more like a software manual than a perspectives paper. It would seem out of place in this journal, and frankly it left me discouraged about the prospect of trying this on my own. In its place, I would recommend working an example for an actual theory, with as much of the specific detail as possible removed from the main text.

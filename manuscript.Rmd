@@ -61,9 +61,7 @@ affiliation:
   - id            : "7"
     institution   : "MSB Medical School Berlin Department of Psychology, Berlin, Germany"
 authornote: |
-  We are particularly endebted to our Reviewer, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments.
-  This version of the paper was generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`.
-
+  We are particularly endebted to our Reviewer, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. This version of the paper was generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`.
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
 keywords          : "fairtheory, meta science, theory formation, open science"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
@@ -113,7 +111,7 @@ We focus on applications in psychology, but the principles are relevant across t
 
 The so-called "replication crisis" has prompted extensive scientific reforms [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that the abundance of non-replicable findings 
-was caused by undisclosed flexibility in analyses led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015a].
+was caused by undisclosed flexibility in analyses led to widespread adoption of open science practices like preregistration and replication [@nosekPromotingOpenResearch2015].
 These various practices ensure transparent and repeated testing of hypotheses by committing to an analysis plan in advance.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence [@scheelExcessPositiveResults2021].
 
@@ -326,7 +324,7 @@ The remaining 85% of deductive studies lacked an explicit connection between the
 Perhaps some of these ungrounded hypotheses are rooted in implicit theories privy only to the author,
 in which case it would be straightforward and important to make these explicit [@friedTheoriesModelsWhat2020; @norouziCapturingCausalClaims2024].
 Or, perhaps some hypotheses are reported as part of entrenched research practices [@gigerenzerNullRitualWhat2004],
-but are not of substantive interest, such as null hypotheses that exist solely for the purpose of being rejected [@vanlissaTeacherCornerEvaluating2020].
+but are not of substantive interest, such as null hypotheses that exist solely for the purpose of being rejected [@vanlissaTeachersCornerEvaluating2020].
 Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
 <!-- NvD: I don't think that statement completely covers it. How about: "Testing ad-hoc hypotheses not grounded in theory might inform us of the psychological phenomena that we can consistently observe (e.g., cognitive biases, attentional blindess, comorbidity of depression and anxiety disorder, etc.). However, it does not advance our understanding of the processes and mechanisms that bring about these phenomena. -->
 <!-- CJ: I agree, but the point about phenomena detection is not directly relevant to this paper, so I prefer not to get into it here. -->
@@ -445,11 +443,11 @@ FAIR theory is thus consistent with, but does not require, formalization (also s
 ### Modular Publishing
 
 We envision FAIR theory as an instance of modular publishing [@kirczModularityNextForm1998].
-The primary unit of scientific communication has long been the academic paper.
+<span id = "modularvalue">The primary unit of scientific communication has long been the academic paper.
 In the process of writing papers, scholars often produce many valuable resources, including instruments, materials, data, code, and theory.
 These resources are often merely described in papers (if at all), and not made available for reuse.
 Modular publishing is the practice of making each of these resources available as independent *information artifacts*,
-facilitating their reuse and making them citable [@vandesompelRethinkingScholarlyCommunication2004].
+facilitating their reuse and making them citable [@vandesompelRethinkingScholarlyCommunication2004].</span>
 <span id="datasharing">Data sharing is an example of modular publishing that is already widely adopted, becoming the de-facto standard in psychology [@tedersooDataSharingPractices2021].</span>
 
 Modular publishing can be achieved by archiving specific resources (including theory) in repositories like [Zenodo](https://zenodo.org/),
@@ -467,8 +465,9 @@ Other cross-references are useful for documenting relationships between multiple
 the resulting FAIR theory metadata would cross-reference the existing theory as `relationType: IsDerivedFrom`.
 If an existing theory is updated, `relationType:IsNewVersionOf` could be used to reference previous versions.
 If a variation of an existing FAIR theory is created, cross-reference it with `relationType: IsVariantFormOf`.
-
-<span id="modularpublisingdetract">Modular publishing of resources, including theories, increases their reuse potential and makes them citable without detracting from the conventional academic paper as a unit of academic communication.
+<span id="modularpublisingdetract">Modular publishing of resources, including theories, increases their reuse potential and makes them citable without detracting from the conventional academic paper as a unit of academic communication which allows for argumentation,
+nuance,
+and the author's voice.
 </span>
 
 ### Version Control
@@ -1176,9 +1175,9 @@ Moreover, it is possible to preregister an inferential procedure that would requ
 or even to have proponents and detractors of a theory review a registered report of such a test.
 In short, combining FAIR theory with preregistration and other existing open science practices has the potential to strengthen the epistemic cycle of prediction, testing, and revision, moving us closer to a cumulative science.</span>
 
-Another future direction is the intersection between the aforementioned "theory crisis" and the related "measurement crisis" pertaining to the lack of clarity, consistency, and validity in the operationalization of theoretical constructs [@bringmannBackBasicsImportance2022].
+<span id="measurementcrisis">Another future direction is the intersection between the aforementioned "theory crisis" and the related "measurement crisis" pertaining to the lack of clarity, consistency, and validity in the operationalization of theoretical constructs [@bringmannBackBasicsImportance2022].
 Since FAIR theories can reference other theories and resources,
-it is possible to attach references to specific measurement instruments (or even theories of measurement) to constructs named in a theory.
+it is possible to attach references to specific measurement instruments (or even theories of measurement) to constructs named in a theory.</span>
 <span id="jinglejangle">FAIR theories can also help address "jingle- and jangle fallacies" in psychology,
 which are ambiguities that arise from using the same term for different constructs, or conversely, using different terms for the same construct [@songLiteratureReviewingAddressing2021].
 By explicitly referencing operational definitions in FAIR theories,
