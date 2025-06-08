@@ -108,17 +108,16 @@ We thank the Reviewer for pointing this out; we have included the reference to t
 
 `r get_revision("waste")`
 
-
-<!-- AB: -->
-3.	Regarding missing reference to "research waste" - yes, this should be picked up. By the way, the latest revision of the Declaration of Helsinki states that ethical science has to avoid "research waste". Pretty cool.
-
 ```{asis}
 Lines 48–50: I would have benefited from a few more words on the FAIR guiding principles (what they are, where/how they originated, and how they are used).
 ```
 
-```{asis}
-Line 73 onwards: The example of SDT nicely illustrates the authors’ point here!
-```
+As requested, we have added a few more words - but we also want to avoid redundancy, as the FAIR principles are fairly (pun intended) common sense, and well-documented in other publications which are all cited in the opening paragraph. In the body of the text, we explicitly engage with each of the FAIR (sub-) principles, so all information is already contained within the paper.
+
+To address the comment, we have rewritten the opening paragraph as follows:
+
+`r get_revision("whatsfair")`
+
 
 ```{asis}
 Line 101: In Figure 1a, it would be helpful to see the two phases (currently, those are not clear to me). Also, even though Figure 1c is addressed at a much later point in the manuscript, it would be helpful to briefly mention it here as well, so it doesn’t seem forgotten.
@@ -128,23 +127,31 @@ Line 101: In Figure 1a, it would be helpful to see the two phases (currently, th
 Line 102: The corresponding year should be added to “Wagenmakers and colleagues.”
 ```
 
+Done.
+
 
 ```{asis}
 Line 147: In the case of “Lamprecht and colleagues,” the year should also be added.
 ```
 
+Done.
+
 ```{asis}
 In general, I’d move this section up, as the word “theory” has been used a lot already at this point, and readers might benefit from an earlier explanation/definition (for example, directly after the section “The Need for FAIR Theory”).
 ```
 
-<!-- AB: -->
-4.	What is a theory? (Suggestion to move up the section) It seems to always come back to this that readers a confused because everyone has their own idea of what a theory is. We need to think of one introductory sentence very early on that basically sets the stage and tells people no matter what they think a theory is they very likely will find the FAIRification useful
+We have done as requested, and additionally, include a sentence in the first paragraph to pre-emptively address readers' concerns that FAIR theory may only be relevant for those who have adopted a specific paradigm:
+
+`r get_revision("alldefinitions")`
 
 ```{asis}
 Line 163: Following APA 7 standards, no “cf.” is added. In the case of three or more authors, it is shortened to “et al.”
 ```
 
-We removed the "cf.", although we couldn't find mention of it in the APA7 style guide. We updated the citation scheme to APA7, so three or more authors will be shortened to "et al.".
+We removed "cf." here, although we couldn't find mention of it in the APA7 style guide.
+We use "cf." to indicate when a specific reference *contradicts* a point; e.g. "all theories should be formal (Smaldino, 2017; cf. Oude-Maatman, 2024)": Oude-Maatman disagrees with this statement.
+We have also updated the citation scheme to APA7, so three or more authors will be shortened to "et al.".
+Note that some journals prescribe citation styles that (partly) conflict with APA7; we defer to the Editor on how to handle such cases.
 
 ```{asis}
 Line 207: It could be helpful to add a very brief description of the phonological loop in case some readers are not familiar with it and its parameters.
@@ -173,7 +180,7 @@ Done.
 Line 776 onwards: The proposed system of modular publishing seems to have been around for quite some time (since 1998 at least) but is not widely used, which could briefly be addressed as a limitation.
 ```
 
-We respectfully disagree; open data - one example of modular publishing - has increased dramatically in recent decades, up from ~7% of articles in 2000–2009 to ~50% of articles in 2010-2019.
+We respectfully disagree; open data - one example of modular publishing - has increased dramatically in recent decades, up from ~7% of articles in 2000–2009 to ~50% of psychological articles in 2010-2019, and more (~80%) in other disciplines.
 Given this, we don't see a reason to note this as a limitation, but we have added a reference that indicates that data sharing has become widely adopted in psychology:
 
 `r get_revision("datasharing")`
@@ -183,9 +190,17 @@ Line 800: To make the strengths understandable to all readers, I’d encourage t
 Overall, this is a very “strong” section indeed!
 ```
 
+We have rewritten this section slightly, including a brief explanation of the "open empirical cycle" and how the present work relates to it:
+
+`r get_revision("openec")`
+
 ```{asis}
 In my opinion, it is very important that the learning curve is mentioned; even though I am a big fan of the proposed framework in general, I do feel like it would take some practice and getting used to.
 ```
+
+We had mentioned the learning curve in the Limitations section, and have expanded this discussion to address the present comment:
+
+`r get_revision("learningcurve")`
 
 ```{asis}
 Line 852: I’d add a reference for the jingle-jangle fallacy.
@@ -220,6 +235,7 @@ We've updated the reference style to APA7, but note that some journals have fixe
 I’ve mentioned these two already for specific examples, but I’d check them in the whole manuscript again: In the case of more than two authors, use of et al. and the mention of page numbers for direct quotations.
 ```
 
+Done.
 
 ```{asis}
 Two of the links did not work for me: Line 490 (FAIR metadata example), Line 606 (example of metadata).
