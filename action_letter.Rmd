@@ -320,11 +320,19 @@ That said, I wonder if the paper could be improved with a more probing discussio
 Sorry for the rant! I really loved the paper and think it is fine as is. I would love to see a bit more of a discussion about issues like values, but I don't need to see that.
 ```
 
-While we are completely sympathetic with the Reviewer's considerations about the roles of norms and values,
-we are not sure that we are best positioned to engage with these issues, nor that the present paper would be the best place for such an argument.
-While incentives are briefly mentioned in the paper, our focus as methodologists is on the "affordances" of FAIR theory: what types of academic work does FAIR theory make possible, and what problems could it solve.
-We believe that meta-scientists and sociologists of science would be better positioned to engage with the topics of norms and values,
-and that such a topic would be better suited to an empirical enquiry (i.e., establishing what the most widely held norms and values are, and how these relate to endorsements of academic practices).
+We appreciate this thoughtful and provocative comment, which explores the broader sociological and cultural dimensions of scientific reform.
+We are sympathetic to the reviewer’s view that the challenges facing psychology are not solely technical or procedural, but likely also reflect deeper issues of norms and values.
+
+That said, we are not sure that we are best positioned to engage with these issues, nor that the present paper would be the best place for such an argument.
+As methodologists, our primary aim in this paper is to articulate what FAIR theory affords: a framework that supports better theory specification, sharing, and reuse.
+We believe this contribution is most effective when kept sharply focused on the practical infrastructure and its scientific use cases.
+
+We do not mean to suggest that infrastructure alone is sufficient, nor do we discount the importance of cultivating scientific values.
+However, we believe that meta-scientists and sociologists of science would be better positioned to engage with the topics of norms and values,
+and that these topics are better suited to empirical enquiry - i.e., establishing what the most widely held norms and values are, and how these relate to endorsements of academic practices.
+
+We are sympathetic to the Reviewer's meta-scientific considerations,
+and we hope that the Reviewer will agree that - while there is clearly a need for enquiry into norms and values - the present paper might not be the best avenue for it.
 
 \clearpage
 
