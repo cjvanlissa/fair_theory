@@ -470,9 +470,9 @@ Other cross-references are useful for documenting relationships between multiple
 the resulting FAIR theory metadata would cross-reference the existing theory as `relationType: IsDerivedFrom`.
 If an existing theory is updated, `relationType:IsNewVersionOf` could be used to reference previous versions.
 If a variation of an existing FAIR theory is created, cross-reference it with `relationType: IsVariantFormOf`.
-<span id="modularpublisingdetract">Modular publishing of resources, including theories, increases their reuse potential and makes them citable without detracting from the conventional academic paper as a unit of academic communication which allows for argumentation,
-nuance,
-and the author's voice.
+<span id="modularpublisingdetract">
+Modular publishing of resources, including theories, increases their reuse potential and makes them citable without detracting from the conventional academic paper as a unit of academic communication which allows for greater nuance and the author's voice.
+Theories published in traditional papers can be supplemented by FAIR versions that live independently, evolve collaboratively, and feed into reproducible workflows.
 </span>
 
 ### Version Control
@@ -766,17 +766,22 @@ A final suggestion is to create or adopt a "Code of Conduct" which prescribes be
 
 # Making a Theory FAIR
 
-To concretize the FAIR principles,
-we propose an applied workflow for making theory FAIR.
-This conceptual workflow is software-agnostic,
-but for R-users, most steps have been automated in the `theorytools` package.
-We briefly introduce the conceptual workflow here, in terms of general principles that can be implemented using other open science infrastructures.
-The R-package includes a living document with the [latest version of the workflow in tutorial format](https://cjvanlissa.github.io/theorytools/articles/fair-theory.html),
-using the specification and FAIRification of De Groot's "empirical cycle" as a guiding example.
-Two other vignettes apply these processes to theories of greater substantive interest: Decy and Ryan's [*Self-Determination Theory*](https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html) [@ryanSelfdeterminationTheoryFacilitation2000], and Morris' [*Tripartite Model*](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html) of parental socialization of emotions in children [@morrisRoleFamilyContext2007]. 
+We propose a practical, software-agnostic workflow for making theory FAIR.
+While these steps can be implemented using a variety of tools,
+R users can streamline the process using the `theorytools` package, which automates most steps.
+We will illustrate the workflow using De Groot's *empirical cycle*,
+a meta-theory of theory construction,
+as a running example for this tutorial.
+The resulting FAIR implementation of this theory is available at <https://doi.org/10.5281/zenodo.14552329>.
 
-Our approach builds upon existing successful open science infrastructures to the greatest possible extent.
-At the time of writing (2024),
+The R-package includes further examples for FAIR theory creation in tutorial form,
+including a [worked example for implementing this workflow](https://cjvanlissa.github.io/theorytools/articles/fair-theory.html).
+Two other vignettes apply the workflow to substantive theories:
+Decy and Ryan's [*Self-Determination Theory*](https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html) [@ryanSelfdeterminationTheoryFacilitation2000],
+and Morris' [*Tripartite Model*](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html) of parental socialization of children's emotions [@morrisRoleFamilyContext2007]. 
+
+Our workflow builds upon existing open science infrastructures to the greatest possible extent.
+At the time of writing (2025),
 the integration of GitHub and Zenodo makes for a particularly user-friendly approach that meets *all* FAIR principles.
 Zenodo and GitHub are both integrated with the Open Science Framework (OSF),
 a popular platform in psychology.
@@ -785,16 +790,11 @@ while the integration of the OSF with Zenodo and GitHub removes the need for mai
 Note that open science infrastructure is an area of active development, and as such,
 workflows might change as new tools or databases are developed or existing tools and database change over time.
 
-## 1. Implementing the Theory 
+## 1. Implement the Theory 
 
-We will use the *empirical cycle* as a running example for this tutorial.
-The empirical cycle, described on page 28 of @degrootMethodologyFoundationsInference1969,
-is a meta-theory of theory construction.
-The resulting FAIR implementation of this theory is available at <https://doi.org/10.5281/zenodo.14552329>.
-<!-- Note that, while De Groot does not explicitly refer to the empirical cycle as a "theory", he derives it from "a theory of thinking". -->
-<!-- We can thus consider it a meta-theory of theory construction. -->
-<!-- The first step in making a theory FAIR is constructing a specific *implementation* [@guestHowComputationalModeling2021]. -->
-The original theory consists of a series of natural language statements:
+Begin by expressing the theory as a structured information artifact.
+This can range from plain-text natural language statements to a more formal representation, such as a directed graph.
+For example, the empirical cycle was originally described on page 28 of @degrootMethodologyFoundationsInference1969 as a series of natural language statements:
 
 > *Phase 1:* 'Observation': collection and grouping of empirical materials; (tentative) formation of hypotheses.  
 *Phase 2:* 'Induction': formulation of hypotheses.  
@@ -802,12 +802,14 @@ The original theory consists of a series of natural language statements:
 *Phase 4:* 'Testing': of the hypotheses against new empirical materials, by way of checking whether or not the predictions are fulfilled.  
 *Phase 5:* 'Evaluation': of the outcome of the testing procedure with respect to the hypotheses or theories stated, as well as with a view to subsequent, continued or related, investigations.
 
-If we compare this to the levels of theory formalization [@guestHowComputationalModeling2021],
-it is defined at either the "theory" or "specification" level.
-This theory can be FAIRified in its present form by archiving a text document containing five natural language statements.
-However, it is also possible to increase the level of formalization,
-and present an "implementation" of the theory as a directed graph (note: the implementation printed here is simplified; see the [tutorial](https://cjvanlissa.github.io/theorytools/articles/fair-theory.html) for technical details).
-This fulfills criterion I1 of [Supplemental Table S1](https://github.com/cjvanlissa/fair_theory/blob/main/fair_principles.csv)).
+Implementing the theory as an information artifact can be as simple as isolating these statements from the paper,
+and saving them to a plain text file.
+
+However, we can also make an additional attempt to formalize the theory.
+According to the levels of theory formalization,
+the empirical cycle is presently defined at either the "theory" or "specification" level [@guestHowComputationalModeling2021].
+We can further formalize the theory to the "implementation" level by specifying it in the DOT language for describing directed graphs^[Presented here in a simplified form; see the [tutorial](https://cjvanlissa.github.io/theorytools/articles/fair-theory.html) for technical details].
+This fulfills criterion I1 of the FAIR principles: using a formal language for knowledge representation [see Supplemental Table S1](https://github.com/cjvanlissa/fair_theory/blob/main/fair_principles.csv)).
 Given the cyclical nature of the conceptual model, such an implementation might look like this:
 
 ```
@@ -827,38 +829,41 @@ Given the cyclical nature of the conceptual model, such an implementation might 
 Note that the first part of the implementation constitutes an ontology - it specifies the entities comprised in the theory.
 The second part of the implementation describes the flow of information from phase to phase.
 Figure \@ref(fig:figecs)a) shows what this implementation looks like when plotted.
-Regardless of which implementation we prefer - we can save it to a text file.
-This text file is the "information artifact" containing our theory.
+Regardless of which implementation we prefer,
+we can save it to a plain text file - this is the "information artifact" containing our theory.
 
 ## 2. Create a Theory Archive
 
-To help meet the Interoperability and Reusability criteria,
-it is important to bundle the theory file with additional files containing documentation.
+To meet the Interoperability and Reusability criteria,
+it is important to properly document the theory file.
 Firstly, add a README.md file with instructions for future users of your theory.
-The `theorytools` package contains a [vignette](https://cjvanlissa.github.io/theorytools/articles/readme.html) with guidance on writing a README file for theory.
+The `theorytools` package contains a [vignette](https://cjvanlissa.github.io/theorytools/articles/readme.html) on writing README files for theory.
 Secondly, add a LICENSE file with the legal conditions for reuse.
-As explained previously, we recommend explicitly waiving copyright with the `CC0` license, but other options are available, see [https://choosealicense.com](https://choosealicense.com/non-software/).
-Place all files in a folder together - this folder will become the theory archive.
+We recommend explicitly waiving copyright with the `CC0` license, but other options are available, see [https://choosealicense.com](https://choosealicense.com/non-software/).
+Place all files in a folder together - this folder becomes the theory archive.
 
 ## 3. Version Control the Archive
 
-To track all changes to our theory, the previously created folder can be version controlled.
+To track all changes to our theory, the theory archive can be version controlled.
 [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is well-suited for this purpose.
-To invite reuse and collaboration, it is further recommended to create a backup in the cloud on a service like [GitHub](https://github.blog/developer-skills/github/beginners-guide-to-github-repositories-how-to-create-your-first-repo/).
+Hosting a backup in the cloud on a platform like [GitHub](https://github.blog/developer-skills/github/beginners-guide-to-github-repositories-how-to-create-your-first-repo/) additionally makes the theory publicly accessible and facilitates community engagement.
 
 ## 4. Archive the Theory on Zenodo 
 
-Aside from tracking changes, it is also important to retain a permanent archive of major versions of a theory,
-so that they can be referenced by future research in perpetuity.
-Zenodo is a FAIR compliant repository for archiving information artifacts, with GitHub integration.
+Archiving major versions of a theory in a FAIR-compliant repository that issues a persistent identifier (DOI) improves their Findability and allows them to be referenced in perpetuity.
+Zenodo is a FAIR compliant repository with GitHub- and OSF integration.
 
 ## 5. Entering Meta-Data
 
-Once archived, documenting a FAIR theory with relevant metadata improves its Findability.
-We recommend using a standardized metadata schema, such as DataCite [@datacitemetadataworkinggroupDataCiteMetadataSchema2024].
-Within this schema, set the *resource type* to `Model`, add the words `FAIR theory:` to the title so that sentient readers to recognize the work as a FAIR theory, and add `fairtheory` as a keyword to aid search engine indexation. Optionally, submit the theory to the ["FAIR Theory Community"](https://zenodo.org/communities/fairtheory) to contribute to community building; communities on Zenodo are shared spaces to manage and curate research outputs.
-As mentioned before, [these five steps are partly automated for R-users](https://cjvanlissa.github.io/theorytools/articles/fair-theory.html).
+When archiving a FAIR theory, documenting it with relevant metadata improves its Findability.
+We recommend using a standardized metadata schema like DataCite [@datacitemetadataworkinggroupDataCiteMetadataSchema2024].
 See here for [an example of the metadata](https://raw.githubusercontent.com/cjvanlissa/fair_theory/refs/heads/main/example_metadata.json) associated with our FAIR empirical cycle.
+Within this schema,
+
+* Set the *resource type* to the category `Model`,
+* Add the words `FAIR theory:` to the title so that sentient readers will recognize the work as a FAIR theory (just as meta-analyses are encouraged to use the words `meta-analysis` in the title),
+* Add `fairtheory` to the keywords to aid search engine indexation.
+* Optionally, submit the theory to the ["FAIR Theory Community"](https://zenodo.org/communities/fairtheory) to contribute to community building; communities on Zenodo are shared spaces to manage and curate research outputs.
 
 ## Changing a Theory
 
