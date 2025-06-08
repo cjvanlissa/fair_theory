@@ -4,10 +4,9 @@ authors           : "Caspar van Lissa on behalf of co-authors"
 journal           : "Perspectives on Psychological Science"
 handling_editor   : "Vrieze"
 class             : "draft"
-output            : rmarkdown::html_document
+bibliography      : "fair_theory.bib"
+output            : revise::revise_letter_pdf
 ---
-
-<!-- revise::revise_letter_pdf -->
 
 Dear Dr `r rmarkdown::metadata$handling_editor`,
 
@@ -17,8 +16,9 @@ In the following itemised list we respond to each comment point by point.
 
 ```{r setup-chunk, include = FALSE}
 library(revise)
+rm(".revise_manuscripts")
 revise::read_manuscript("abstract.md")
-revise::read_manuscript("manuscript.Rmd")
+revise::read_manuscript("test.Rmd")
 ```
 
 
@@ -47,7 +47,7 @@ a) You have a balancing act to strike between providing technical tools (e.g., v
 This does not directly ask for a change, but summarize relevant changes here.
 
 <!-- AB: -->
-1.	I agree that striking the balance between the conceptual and technical details is the very challenge of this paper. I think we should go a route in the revision in which we try to explain technical details in even simpler language. For example, the github reference to our code could read like this: "Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #XXXXX." And maybe there is a way to move the more technical details to a section that can be skipped without compromising the conceptual/opinion aspects. 
+1.	I agree that striking the balance between the conceptual and technical details is the very challenge of this paper. I think we should go a route in the revision in which we try to explain technical details in even simpler language. For example, the github reference to our code could read like this: "Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #XXXXX." And maybe there is a way to move the more technical details to a section that can be skipped without compromising the conceptual/opinion aspects. @wilkinsonFAIRGuidingPrinciples2016
 
 ```{asis}
 b) My interpretation of this manuscript is that it is proposing policies, procedures, and documentation as an important path forward to improve psychology and related soft sciences. One reason I find such proposals interesting is because I don't see them in my other area of expertise, human genetics. No doubt strong conventions develop in genetics, but they seem to develop because scientists writ large working in those fields recognize that those conventions (e.g., publicly available genomic maps organized in a certain way; analytical workflows based on accepted genetic theories) will immediately benefit their own area of research by making new avenues of work feasible, or more efficient. The payoff is obvious. They are "no-brainers" that organically arise. Some conventions in psychology, like registration or even data sharing, do not seem to arise or take hold in quite the same way, and instead rely on top-down requirements by grant funding agencies, journals, etc. 
@@ -88,13 +88,15 @@ To address this comment, <font color="red">in the Revision:
 In this manuscript, the authors introduce a framework for FAIR theory specification while outlining what makes a theory FAIR, which is accompanied by practical guidance on how to implement this in one’s own work. In my opinion, the paper is relevant for the journal and presents research that is significant for the field of psychology but also adjacent fields that rely on theories similar in nature to ours. FAIR theory is a promising idea that could significantly advance psychological research, especially in terms of transparency and replicability.
 ```
 
-We thank the Reviewer for their thoughtful review and detailed comments. We have sought to address all comments, and feel that doing so has improved the quality of the manuscript.
+We thank the Reviewer for their thoughtful and encouraging review.
+We appreciate the Reviewer's recognition of the relevance and potential impact of FAIR theory—not only within psychology, but also in related disciplines.
+We have sought to address all comments, and feel that doing so has improved the quality of the manuscript.
 
 ```{asis}
 The abstract provides a (mostly) comprehensive overview of the paper that can be easily followed and understood. I personally felt that the introduction of the theorytools R-package was an important aspect of the paper and should thus briefly be mentioned in the abstract.
 ```
 
-Thank you for this suggestion; as proposed, we now briefly mention the R-package in the abstract:
+As suggested, we now briefly mention the R-package in the abstract:
 
 `r get_revision("abstractpackage")`
 
@@ -102,7 +104,10 @@ Thank you for this suggestion; as proposed, we now briefly mention the R-package
 In the abstract, the authors mention the discussion of “FAIR theories’ potential impact in terms of reducing research waste,” which I couldn’t really find at any point in the manuscript.
 ```
 
-nakagawaPoorHypothesesResearch2024
+We thank the Reviewer for pointing this out; we have included the reference to the paper making this argument in the following section:
+
+`r get_revision("waste")`
+
 
 <!-- AB: -->
 3.	Regarding missing reference to "research waste" - yes, this should be picked up. By the way, the latest revision of the Declaration of Helsinki states that ethical science has to avoid "research waste". Pretty cool.
@@ -133,7 +138,7 @@ In general, I’d move this section up, as the word “theory” has been used a
 ```
 
 <!-- AB: -->
-4.	What is a theory? (Suggestion to move up the section) It seems to always come back to this that readers a confused because everyone has their own idea of what a theory is. We need to think of one introductory sentence very early on that basically sets the stage and tells people no matter what they think a theory is they very likely will find the FAIRification useful 🙂
+4.	What is a theory? (Suggestion to move up the section) It seems to always come back to this that readers a confused because everyone has their own idea of what a theory is. We need to think of one introductory sentence very early on that basically sets the stage and tells people no matter what they think a theory is they very likely will find the FAIRification useful
 
 ```{asis}
 Line 163: Following APA 7 standards, no “cf.” is added. In the case of three or more authors, it is shortened to “et al.”
@@ -294,7 +299,12 @@ Finally, and this is the only concern about the paper as a publishable manuscrip
 ```
 
 To address this comment, we have removed as much of the specific detail as possible from the main text, and instead refer to the package vignettes (we have created an additional vignette to make this change possible, and extended several other vignettes).
-We also already have two worked examples for actual theories, which we now point out in the text (with links to the relevant vignettes).
+There are already two worked examples for actual theories in the package vignettes,
+which we now reference in the text.
+
+The resulting shortened section reads as follows:
+
+`r get_revision("tutorial")`
 
 
 ## Reviewer: 3
@@ -320,19 +330,24 @@ That said, I wonder if the paper could be improved with a more probing discussio
 Sorry for the rant! I really loved the paper and think it is fine as is. I would love to see a bit more of a discussion about issues like values, but I don't need to see that.
 ```
 
-We appreciate this thoughtful and provocative comment, which explores the broader sociological and cultural dimensions of scientific reform.
+We appreciate this thought-provoking comment, which explores the broader sociological and cultural dimensions of scientific reform.
 We are sympathetic to the reviewer’s view that the challenges facing psychology are not solely technical or procedural, but likely also reflect deeper issues of norms and values.
 
 That said, we are not sure that we are best positioned to engage with these issues, nor that the present paper would be the best place for such an argument.
-As methodologists, our primary aim in this paper is to articulate what FAIR theory affords: a framework that supports better theory specification, sharing, and reuse.
-We believe this contribution is most effective when kept sharply focused on the practical infrastructure and its scientific use cases.
+As methodologists, our primary aim in this paper is to articulate the affordances of FAIR theory:
+a framework that supports better theory specification, sharing, and reuse.
+We believe our contribution will be most effective if it remains sharply focused on the practical infrastructure and its scientific use cases.
 
 We do not mean to suggest that infrastructure alone is sufficient, nor do we discount the importance of cultivating scientific values.
 However, we believe that meta-scientists and sociologists of science would be better positioned to engage with the topics of norms and values,
 and that these topics are better suited to empirical enquiry - i.e., establishing what the most widely held norms and values are, and how these relate to endorsements of academic practices.
 
-We are sympathetic to the Reviewer's meta-scientific considerations,
+We share the Reviewer's interest in the meta-scientific perspective,
 and we hope that the Reviewer will agree that - while there is clearly a need for enquiry into norms and values - the present paper might not be the best avenue for it.
+
+We did make one minor change to address this comment, and "punched up" the section on Theory and Scientific Progress, with a reference to scientific norms as documented in ethical guidelines:
+
+`r get_revision("norms")`
 
 \clearpage
 

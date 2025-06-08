@@ -169,7 +169,6 @@ patterns observed in data are generalized to theoretical principles, Figure \@re
 In this model, theories are the vehicle of scientists' understanding of phenomena.
 Ideally, they are iteratively updated based on deductive testing and inductive theory construction.
 
-
 ```{r include = FALSE}
 library(DiagrammeR)
 library(DiagrammeRsvg)
@@ -314,33 +313,32 @@ knitr::include_graphics("empirical_cycle.pdf")
 
 In a progressive research program [@lakatosHistoryScienceIts1971],
 this cycle is regularly completed to iteratively advance our understanding of the studied phenomena.
-<!-- NvD: This is not exactly what Lakatos said. Also, I don't think many psychologists are familiar with his work. We do not need to reference his perspective. -->
-<!-- by successively increasing the empirical content of a theory. -->
-<!-- In psychology, this is typically achieved by either generalizing to a larger set of people, contexts, situations, or environments. <!--AB would you agree?-->
-<!-- CJ: I am not sure if I agree; I think increasing the empirical content rather implies more and more precision, which loses generality but gains specificity. Not sure how to resolve.
-This needs more work! -->
-<!-- NvD: SOmething like? "In the envisioned ideal, the empirical cycle is a virtuous spiral where theories become increasingly more precise and/or universal (i.e., Popper's empirical content), offering hypotheses that can be more easily falsified / severely tested, data become more informative / less ambiguous about the patterns in nature, which in turn inform even more precise and/or universal theories. -->
 There are, however, indications that contemporary psychology falls short of this ideal.
-Firstly, because hypothesis-testing research is over-represented in the literature: 
-According to @kuhbergerPublicationBiasPsychology2014, 89.6% of papers published in psychology report confirmatory hypothesis tests.
-Closer examination of deductive research reveals, however, that the link between theory and hypothesis is often tenuous or absent [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
-Only 15% of deductive studies referenced any theory, and theory was often not cited in relation to the hypothesis [@mcphetresDecadeTheoryReflected2021].
-The remaining 85% of deductive studies lacked an explicit connection between theory and hypothesis.
-Perhaps some of these ungrounded hypotheses are rooted in implicit theories privy only to the author,
-in which case it would be straightforward and important to make these explicit [@friedTheoriesModelsWhat2020; @norouziCapturingCausalClaims2024].
-Or, perhaps some hypotheses are reported as part of entrenched research practices [@gigerenzerNullRitualWhat2004],
-but are not of substantive interest, such as null hypotheses that exist solely for the purpose of being rejected [@vanlissaTeachersCornerEvaluating2020].
-Testing ad-hoc hypotheses not grounded in theory does not advance our principled understanding of psychological phenomena.
-<!-- NvD: I don't think that statement completely covers it. How about: "Testing ad-hoc hypotheses not grounded in theory might inform us of the psychological phenomena that we can consistently observe (e.g., cognitive biases, attentional blindess, comorbidity of depression and anxiety disorder, etc.). However, it does not advance our understanding of the processes and mechanisms that bring about these phenomena. -->
-<!-- CJ: I agree, but the point about phenomena detection is not directly relevant to this paper, so I prefer not to get into it here. -->
-Collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings [@vanrooijTheoryTestHow2021].
-
+Meehl observed that theories in psychology "lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest" [@meehlTheoreticalRisksTabular1978, p. 1].
+Recent empirical findings confirm this view.
+Firstly, because hypothesis-testing research is vastly over-represented in the literature, amounting to 89.6% of published papers [@kuhbergerPublicationBiasPsychology2014].
+Closer examination of such studies reveals, however, that the link between theory and hypothesis is often tenuous or absent [@scheelWhyHypothesisTesters2021; @oberauerAddressingTheoryCrisis2019].
+Only 15% of hypothesis-testing studies referenced any theory,
+and rarely in direct relation to the hypothesis [@mcphetresDecadeTheoryReflected2021].
 Theory thus has an uncomfortable and paradoxical role in contemporary psychology:
 The majority of papers ostensibly test hypotheses,
-but these are rarely connected to, let alone derived from, theory.
-Moreover, test results do not routinely contribute to the improvement or rejection of theories.
-The paradoxical role of theory in psychology is perhaps best described by Meehl's observation that theories in psychology "lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest" [@meehlTheoreticalRisksTabular1978, p. 1].
-The present paper seeks to make theory more tangible and practical by instantiating it as a digital "object" that scholars can access, reuse, and update in their daily workflows.
+but these are rarely connected to theory.
+
+Perhaps some ungrounded hypotheses are rooted in implicit theories privy only to the author,
+in which case it would be important to make these explicit [@friedTheoriesModelsWhat2020; @norouziCapturingCausalClaims2024].
+Or, perhaps some hypotheses are not of substantive interest, but merely reported as part of entrenched research practices [@gigerenzerNullRitualWhat2004],
+such as straw-man null hypotheses that exist solely for the purpose of being rejected [@vanlissaTeachersCornerEvaluating2020].
+<span id = "waste">Testing ad-hoc hypotheses not grounded in theory, or grounded in misinterpreted- or multi-interpretable theory,
+does not advance our principled understanding of psychological phenomena,
+and consequently contributes to research waste [@nakagawaPoorHypothesesResearch2024].</span>
+<span id = "norms">Collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings [@vanrooijTheoryTestHow2021]; inefficient at best, and more likely, futile.
+As the Declaration of Helsinki prescribes that ethical (medical) research with human participants must "avoid research waste",
+our field should take seriously its ethical responsibility to develop procedures to reduce it.</span>
+The present paper does so by introducing procedures to improve transparent and unambiguous communication about theory; 
+instantiating theory as a digital "object" that scholars can access, reuse, and update in their daily workflows.
+
+
+
 
 ## Making Theory FAIR
 
@@ -766,7 +764,7 @@ A final suggestion is to create or adopt a "Code of Conduct" which prescribes be
 
 # Making a Theory FAIR
 
-We propose a practical, software-agnostic workflow for making theory FAIR.
+<span id="tutorial">We propose a practical, software-agnostic workflow for making theory FAIR.
 While these steps can be implemented using a variety of tools,
 R users can streamline the process using the `theorytools` package, which automates most steps.
 We will illustrate the workflow using De Groot's *empirical cycle*,
@@ -864,6 +862,7 @@ Within this schema,
 * Add the words `FAIR theory:` to the title so that sentient readers will recognize the work as a FAIR theory (just as meta-analyses are encouraged to use the words `meta-analysis` in the title),
 * Add `fairtheory` to the keywords to aid search engine indexation.
 * Optionally, submit the theory to the ["FAIR Theory Community"](https://zenodo.org/communities/fairtheory) to contribute to community building; communities on Zenodo are shared spaces to manage and curate research outputs.
+</span>
 
 ## Changing a Theory
 
