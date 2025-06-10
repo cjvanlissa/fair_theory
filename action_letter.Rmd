@@ -33,7 +33,7 @@ The reviewer(s) have recommended publication, but also suggest some revisions to
 [x] Tables and Figures should be uploaded separately and not positioned in the text (although it is fine to indicate where they should be inserted).
 [] Figures should be uploaded in their native format (the program they were created in) at 300 dpi. Acceptable figure file formats include MS Office files (DOC, PPT, XLS), Adobe Illustrator (AI), JPG, EPS, and PDF.
 [x] References should be done with hanging indents using APA style. 
-[] If you want to add the doi that is good.  But do not put in the search criteria for retrieving a document that has been published in a book or journal. WHAT??
+[] If you want to add the doi that is good.  But do not put in the search criteria for retrieving a document that has been published in a book or journal. 
 ```
 
 Upload tables separately: tab_meehl.csv
@@ -66,6 +66,7 @@ We appreciate the Editor’s meta-scientific comparison of the emergence of conv
 As methodologists, our focus in this paper is on "procedures", rather than policies or documentation. Our goal is to position FAIR theory as a communication protocol: a set of standards, grounded in philosophy of science and implemented in existing infrastructure, that facilitates theory specification, reuse, and collaborative refinement.
 
 We agree with the Editor that there is no guarantee that *"these things are crucial to scientific advance in psychology"*. We have, however, provided reasoned arguments to support the "affordances" of FAIR theory: it *makes possible* particular scientific advancements, even if it does not guarantee them.
+It is our hope that FAIR theory will be accepted by the community for the same reasons FAIR principles are increasingly adopted for various other digital objects, first and foremost, research data but lately also administrative data, workflows, or code.
 
 Compare FAIR theory to preregistration: it, too, was introduced first as a good idea; now - a decade later - empirical studies are being conducted to investigate its effects.
 
