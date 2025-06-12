@@ -309,7 +309,14 @@ The first is that FAIR theory relates to construct validity. To address this poi
 `r get_revision("measurementcrisis")`
 
 The second is that much of what we describe looks like Meehl's nomological nets. This is definitely true for the way that *we* are using FAIR theory (e.g., in the online examples), as we are inspired by Meehl,
-but it's not necessarily true of FAIR theory in general.
+but it's not necessarily true of FAIR theory in general. 
+We agree that several psychological theories can be specified as a nomological network of abstract entities and empirical predictions/observations.
+However, not all theories have been specified to such a level or need to be specified in such a way. 
+As such, FAIR Theory accommodates nomological nets and construct validation endeavours, but is not identical to them. 
+It is interesting to note that Cronbach and Meehl (1955) did talk about (proto)FAIR requirements:
+"Whether or not an interpretation of a test’s properties or relations involves questions of construct validity is to be decided by examining the entire body of evidence offered, together with what is asserted about the test in the context of this evidence." (p.4)
+"Hence, the investigator who proposes to establish a test as a measure of a construct must specify his network or theory sufficiently clearly that others can accept or reject it." (p.13)
+"A consumer of the test who rejects the author’s theory cannot accept the author’s validation. He must validate the test for himself, if he wishes to show that it represents the construct as he defines it."
 We're not sure if further changes need to be made to address this.
 
 ```{asis}
