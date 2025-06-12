@@ -263,9 +263,9 @@ To be clear, it cuts both ways. It has turned out over the years that the S-R in
 
 Dear prof. Turkheimer,
 
-on behalf of all co-authors, I would like to express our sincere appreciation for your thoughtful comments. This is my (Caspar's) favorite review to date, and I especially value your perspective as a seasoned scholar/theoretician. All authors unanimously agreed that it would be a pity to deprive our readers of an opportunity to view FAIR theory through the lens of your lived experience - but we were not sure how to incorporate it. One author proposed to invite you as a co-author, others were concerned that this might constitute a conflict of interest.
+on behalf of all co-authors, I would like to express our sincere appreciation for your thoughtful comments. This is my (Caspar's) favorite review to date, and I especially value your perspective as a seasoned scholar/theoretician. All authors unanimously agreed that it would be a pity to deprive our readers of an opportunity to view FAIR theory through the lens of your lived experience - but we were not sure how to incorporate it. We invite your, and the Editor's, advice on how to best go about it.
 
-We took the initiative to draft a paragraph that summarizes your comments on FAIR theory from the review, and mention your contribution in the Acknowledgements. We would be equally happy to credit your contribution with a co-authorship, depending on your - and the Editor's - preferences.
+As a starting point, we drafted a paragraph that summarizes your comments on FAIR theory from the review, and mentioned your contribution in the Acknowledgements. We are open to incorporating your thoughts and crediting your contribution in other ways as well, depending on what seems appropriate to you and the Editor.
 
 Our draft paragraph now reads:
 
@@ -316,9 +316,12 @@ We're not sure if further changes need to be made to address this.
 Finally, and this is the only concern about the paper as a publishable manuscript, the last third of the paper where the authors get into the technical aspects of how one would go about building a FAIR theory, is difficult to read. This is where the manuscript reads more like a software manual than a perspectives paper. It would seem out of place in this journal, and frankly it left me discouraged about the prospect of trying this on my own. In its place, I would recommend working an example for an actual theory, with as much of the specific detail as possible removed from the main text.
 ```
 
-To address this comment, we have removed as much of the specific detail as possible from the main text, and instead refer to the package vignettes (we have created an additional vignette to make this change possible, and extended several other vignettes).
-There are already two worked examples for actual theories in the package vignettes,
-which we now reference in the text.
+To address this comment, we have removed as much of the specific detail as possible from the main text, relegating it to the package vignettes instead.
+To make this possible, we have substantially expanded the existing package vignettes and created one additional vignette.
+
+There are now three worked examples for actual theories in the package vignettes:
+[For Self-Determination Theory](https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html), the [Dunning-Kruger Effect](https://cjvanlissa.github.io/theorytools/articles/dunning-kruger.html), and [Morris' Tripartite Model](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html),
+which we reference in the text.
 
 The resulting shortened section reads as follows:
 

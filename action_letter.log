@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.2)  8 JUN 2025 11:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.9)  10 JUN 2025 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -911,7 +911,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 
 [2]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 323.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 325.
 (c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -924,69 +924,71 @@ Package microtype Info: Loading generic protrusion settings for font family
 [3]
 
 [4]
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 490.
-
 
 [5]
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 526.
+
 
 [6]
-Package mdframed Info: Not enough space on this page on input line 550.
-
 
 [7]
-Package mdframed Info: Not enough space on this page on input line 550.
-
 
 [8]
+Package mdframed Info: Not enough space on this page on input line 590.
+
 
 [9]
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 673.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 744.
-
 
 [10]
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 715.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 744.
+(mdframed)              on input line 784.
 
 
 [11]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 784.
+
 
 [12]
 
 [13]
+
+[14]
+
+[15
+
+]
 
 Package caption Warning: Unused \captionsetup[table] on input line 26.
 See the caption package documentation for explanation.
 
 
 
-[14
-
-] (./action_letter.aux)
+[16] (./action_letter.aux)
  ***********
 LaTeX2e <2025-06-01>
 L3 programming layer <2025-05-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 28154 strings out of 469872
- 522453 string characters out of 5482557
- 954727 words of memory out of 5000000
- 55597 multiletter control sequences out of 15000+600000
- 686451 words of font info for 311 fonts, out of 8000000 for 9000
+ 28172 strings out of 469872
+ 522751 string characters out of 5482557
+ 955048 words of memory out of 5000000
+ 55603 multiletter control sequences out of 15000+600000
+ 687161 words of font info for 319 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,9n,117p,2226b,606s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,9n,117p,2226b,604s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrb1000.600pk><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on action_letter.pdf (14 pages, 118083 bytes).
+Output written on action_letter.pdf (16 pages, 125804 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  53261 words of extra memory for PDF output out of 61914 (max. 10000000)
 

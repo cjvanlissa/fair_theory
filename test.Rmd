@@ -774,9 +774,11 @@ workflows might change as new tools or databases are developed or existing tools
 
 ## 1. Implement the Theory 
 
-Begin by expressing the theory as a structured digital object.
-This can range from plain-text natural language statements to a more formal representation, such as a directed graph.
-For example, the empirical cycle was originally described on page 28 of @degrootMethodologyFoundationsInference1969 as a series of natural language statements:
+Begin by creating an empty folder to hold all files associated with the theory - this folder will become the theory archive.
+The first file to create is the theory itself.
+This could be a plain-text file containing natural language statements,
+or a more formal representation, such as a directed graph.
+For example, the empirical cycle was originally described as a series of natural language statements [@degrootMethodologyFoundationsInference1969, p. 28]:
 
 > *Phase 1:* 'Observation': collection and grouping of empirical materials; (tentative) formation of hypotheses.  
 *Phase 2:* 'Induction': formulation of hypotheses.  
@@ -787,11 +789,10 @@ For example, the empirical cycle was originally described on page 28 of @degroot
 Implementing the theory as a digital object can be as simple as isolating these statements from the paper,
 and saving them to a plain text file.
 
-However, we can also make an additional attempt to formalize the theory.
-According to the levels of theory formalization,
+Optionally, we can formalize the theory further.
+According to a taxonomy of different levels of theory formalization,
 the empirical cycle is presently defined at either the "theory" or "specification" level [@guestHowComputationalModeling2021].
-We can further formalize the theory to the "implementation" level by specifying it in the DOT language for describing directed graphs^[Presented here in a simplified form; see the [tutorial](https://cjvanlissa.github.io/theorytools/articles/fair-theory.html) for technical details].
-This fulfills criterion I1 of the FAIR principles: using a formal language for knowledge representation [see Supplemental Table S1](https://github.com/cjvanlissa/fair_theory/blob/main/fair_principles.csv)).
+To fulfill criterion I1 of the FAIR principles: using a formal language for knowledge representation [see Supplemental Table S1](https://github.com/cjvanlissa/fair_theory/blob/main/fair_principles.csv)),we can further formalize it to the "implementation" level by specifying it in the DOT language for describing directed graphs^[Presented here in a simplified form; see the [tutorial](https://cjvanlissa.github.io/theorytools/articles/fair-theory.html) for technical details].
 Given the cyclical nature of the conceptual model, such an implementation might look like this:
 
 ```
@@ -814,7 +815,7 @@ Figure \@ref(fig:figecs)a) shows what this implementation looks like when plotte
 Regardless of which implementation we prefer,
 we can save it to a plain text file - this is the "digital object" containing our theory.
 
-## 2. Create a Theory Archive
+## 2. Document the Theory
 
 To meet the Interoperability and Reusability criteria,
 it is important to properly document the theory file.
@@ -822,9 +823,8 @@ Firstly, add a README.md file with instructions for future users of your theory.
 The `theorytools` package contains a [vignette](https://cjvanlissa.github.io/theorytools/articles/readme.html) on writing README files for theory.
 Secondly, add a LICENSE file with the legal conditions for reuse.
 We recommend explicitly waiving copyright with the `CC0` license, but other options are available, see [https://choosealicense.com](https://choosealicense.com/non-software/).
-Place all files in a folder together - this folder becomes the theory archive.
 
-## 3. Version Control the Archive
+## 3. Version Control the Theory Archive
 
 To track all changes to our theory, the theory archive can be version controlled.
 [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is well-suited for this purpose.
