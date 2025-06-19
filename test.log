@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.9)  19 JUN 2025 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.9)  19 JUN 2025 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -981,7 +981,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <ec_visio.pdf, id=57, 686.565pt x 234.8775pt>
 File: ec_visio.pdf Graphic file (type pdf)
 <use ec_visio.pdf>
-Package pdftex.def Info: ec_visio.pdf  used on input line 322.
+Package pdftex.def Info: ec_visio.pdf  used on input line 327.
 (pdftex.def)             Requested size: 469.74944pt x 160.70375pt.
 
 
@@ -1020,31 +1020,6 @@ Package pdftex.def Info: ec_visio.pdf  used on input line 322.
 [23]
 
 [24]
-Overfull \hbox (11.89522pt too wide) in paragraph at lines 785--785
-[]  \T1/lmtt/m/n/12 deduction   [label="derivation of specific consequences from the hypotheses,[] 
- []
-
-
-Overfull \hbox (18.07022pt too wide) in paragraph at lines 785--785
-[]  \T1/lmtt/m/n/12 test        [label="of the hypotheses against new empirical materials, by way[] 
- []
-
-
-Overfull \hbox (30.42023pt too wide) in paragraph at lines 785--785
-[]                      \T1/lmtt/m/n/12 of checking whether or not the predictions are fulfilled"];[] 
- []
-
-
-Overfull \hbox (5.72021pt too wide) in paragraph at lines 785--785
-[]  \T1/lmtt/m/n/12 evaluation  [label="of the outcome of the testing procedure with respect to[] 
- []
-
-
-Overfull \hbox (18.07022pt too wide) in paragraph at lines 785--785
-[]                      \T1/lmtt/m/n/12 the hypotheses or theories stated, as well as with a view[] 
- []
-
-
 
 [25]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 823.
@@ -1057,24 +1032,24 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 [27]
 
 [28]
-<git_branches.png, id=255, 371.88937pt x 274.02374pt>
+
+[29]
+<git_branches.png, id=262, 371.88937pt x 274.02374pt>
 File: git_branches.png Graphic file (type png)
 <use git_branches.png>
-Package pdftex.def Info: git_branches.png  used on input line 907.
+Package pdftex.def Info: git_branches.png  used on input line 908.
 (pdftex.def)             Requested size: 234.8817pt x 173.07071pt.
-<git_compare_short.png, id=256, 371.88937pt x 274.02374pt>
+<git_compare_short.png, id=263, 371.88937pt x 274.02374pt>
 File: git_compare_short.png Graphic file (type png)
 <use git_compare_short.png>
-Package pdftex.def Info: git_compare_short.png  used on input line 907.
+Package pdftex.def Info: git_compare_short.png  used on input line 908.
 (pdftex.def)             Requested size: 234.8817pt x 173.07071pt.
 
-Overfull \hbox (7.8416pt too wide) in paragraph at lines 907--907
+Overfull \hbox (7.8416pt too wide) in paragraph at lines 908--908
 [][][][] 
  []
 
 
-
-[29]
 
 [30 <./git_branches.png> <./git_compare_short.png (PNG copy)>]
 
@@ -1115,16 +1090,13 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 30231 strings out of 469872
- 566790 string characters out of 5482557
- 1014792 words of memory out of 5000000
- 57628 multiletter control sequences out of 15000+600000
- 716450 words of font info for 186 fonts, out of 8000000 for 9000
+ 30234 strings out of 469872
+ 566828 string characters out of 5482557
+ 1013828 words of memory out of 5000000
+ 57629 multiletter control sequences out of 15000+600000
+ 716579 words of font info for 187 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 108i,11n,127p,1650b,756s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
-
+ 108i,11n,127p,1644b,756s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
@@ -1135,10 +1107,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 <c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on test.pdf (46 pages, 463898 bytes).
+Output written on test.pdf (46 pages, 462481 bytes).
 PDF statistics:
- 699 PDF objects out of 1000 (max. 8388607)
- 618 compressed objects within 7 object streams
+ 693 PDF objects out of 1000 (max. 8388607)
+ 612 compressed objects within 7 object streams
  185 named destinations out of 1000 (max. 500000)
  47364 words of extra memory for PDF output out of 51595 (max. 10000000)
 

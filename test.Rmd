@@ -109,11 +109,11 @@ they have become a widely adopted standard for archival of academic output,
 representing an estimated tens of billions of dollars in reuse value [@vogtFAIR20Extending2024].
 Scholars have demonstrated their relevance for making other digital objects more open, including research software [@lamprechtFAIRPrinciplesResearch2019] and computational workflows [@wilkinson2024applying; @vanlissaWORCSWorkflowOpen2021].</span>
 The present paper argues that the FAIR principles can similarly advance effective and transparent scholarly communication about theory.
-To this end, we introduce "FAIR theory":
+We introduce "FAIR theory":
 a digital instantiation of scientific theory, published as a self-contained and citable digital object distinct from - but potentially associated with - the scientific paper.
 <span id="alldefinitions">Definitions of theory abound and hotly debated,
-but as many of them are compatible with the FAIR principles,
-this paper is not limited to a specific definition.</span>
+but as many are compatible with the FAIR principles,
+this paper is not limited to one particular definition.</span>
 FAIR theory can potentially improve the transparency and efficiency of scholarly communication, reduce research waste, and accelerate cumulative knowledge acquisition.
 We focus on applications in psychology, but the principles are relevant across the social sciences and beyond.
 
@@ -177,11 +177,17 @@ It also argues that nonformal aspects (e.g. commonly used analogies) and practic
 
 According to the *empirical cycle* [@degrootMethodologyFoundationsInference1969],
 a meta-theoretical model of cumulative knowledge acquisition,
-research ideally follows a cyclical process with two phases, see Figure \@ref(fig:figecs)a.
-In one half of the cycle, labeled the "Context of Justification" by Wagenmakers and colleagues, hypotheses derived from theory are tested on data [-@wagenmakersCreativityVerificationCyclePsychological2018]. In the other half of the cycle (the "Context of Discovery"),
-patterns observed in data are generalized to theoretical principles, Figure \@ref(fig:figecs)b.
+research ideally follows a cyclical process (Figure \@ref(fig:figecs)a).
+Naturalistic observations or patterns identified in data give rise to preliminary hypotheses via induction.
+Then, deduction is used to derive testable predictions from these hypotheses.
+Finally, the outcomes of tests are evaluated with regard to their implications for theory.
+Wagenmakers and colleagues divided this cycle into two phases [-@wagenmakersCreativityVerificationCyclePsychological2018, Figure \@ref(fig:figecs)b].
+In one half of the cycle, which they labeled the "Context of Justification",
+hypotheses derived from theory are tested on data.
+In the other half of the cycle (the "Context of Discovery"),
+patterns observed in data are generalized to theoretical principles.
+<!-- Hier iets over mijn interpretatie -->
 In this model, theories are the vehicle of scientists' understanding of phenomena.
-Ideally, they are iteratively updated based on deductive testing and inductive theory construction.
 
 ```{r include = FALSE}
 library(DiagrammeR)
@@ -326,7 +332,7 @@ knitr::include_graphics("empirical_cycle.pdf")
 ```
 
 In a progressive research program [@lakatosHistoryScienceIts1971],
-this cycle is regularly completed to iteratively advance our understanding of the studied phenomena.
+this cycle is regularly completed to iteratively advance our understanding of the studied phenomena via deductive testing and inductive theory construction.
 There are, however, indications that contemporary psychology falls short of this ideal.
 Meehl observed that theories in psychology "lack the cumulative character of scientific knowledge. They tend neither to be refuted nor corroborated, but instead merely fade away as people lose interest" [@meehlTheoreticalRisksTabular1978, p. 1].
 Recent empirical findings confirm this view.
@@ -498,7 +504,7 @@ We propose adaptating semantic versioning for theories by assigning a version nu
 
 Making theories Findable would allow researchers to easily identify relevant theories
 and ground their hypotheses in established theoretical foundations.
-It further increases the impact and reuse potential of theories across disciplines,
+It could increase the impact and reuse potential of theories across disciplines,
 either through direct application (where one discipline stumbles upon a problem that is already well-understood in another discipline),
 or through analogical modeling.
 In analogical modeling, the structure of a theory from one discipline is applied to a phenomenon in another field.
@@ -664,7 +670,7 @@ For example, a FAIR theory may be X-Interoperable for deriving testable hypothes
 or for the purpose of selecting relevant control variables,
 or for the purpose of indicating the conditions necessary for observing a particular phenomenon.
 If we consider Meehl's nine properties of strong theories (properties 3-8 are grouped because they all refer to functional form),
-we see how each of these properties incurs certain affordances in terms of X-Interoperability (Table \@ref(tab:tabmeehl)).
+we see how each of these properties makes a specific type of interoperability possible (Table \@ref(tab:tabmeehl)).
 
 ```{r tabmeehl}
 tab_meehl <- data.frame(
@@ -863,15 +869,12 @@ The FAIR implementation of De Groot's empirical cycle that resulted from the lea
 
 An important advantage of FAIR theory is that we can implement different versions of a theory, compare them, and document their cross-relationships.
 We can take work that has been done before - in this case, the repository created above, and create an independent copy that we can modify as we wish, while retaining cross-references to the original.
-Elaborating on our running example, several authors have reinterpreted De Groot's empirical cycle.
-For example, Wagenmakers and colleagues' [-@wagenmakersCreativityVerificationCyclePsychological2018] interpretation of the empirical cycle differs from De Groot's in several ways.
-First, the phases of the cycle were renamed, and this change was not described in the paper.
-Assuming that Wagenmakers' new labels are meant to illustrate the phases,
-not substantially change the ontology,
-we could incorporate this change by adding labels to the original ontology.
+Elaborating on our running example, we can implement Wagenmakers and colleagues' take on the empirical cycle [-@wagenmakersCreativityVerificationCyclePsychological2018, Figure \@ref(fig:figecs)b).
+Their interpretation differs from De Groot's in several ways:
+First, they refer to the phases by different names, and this change was not described in the paper.
+Assuming that these new names are merely intended to be illustrative and not ontologically distinct,
+we can incorporate this change by adding labels to the original ontology.
 These labels suggest a focus on empirical psychology that was not present in De Groot's version.
-Furthermore, the label "knowledge accumulation" invites the question of exactly *how* knowledge accumulates upon evaluation of a prior experiment.
-As this lack of cumulative knowledge acquisition appears to be precisely where contemporary research practice falls short, this ambiguity invites further improvement of the theory.
 The authors explicitly mention a second change: *"We added the Whewell-Peirce-Reichenbach distinction between the context of discovery and the context of justification"* (p. 423).
 We could implement this change to the original implementation by grouping the respective phases of the cycle;
 a minor and tractable change.
@@ -897,41 +900,44 @@ a minor and tractable change.
 
 ```
 
-The first author was inspired by De Groot as well,
-but again specified the empirical cycle differently.
+In implementing these different versions,
+the first author realized that their work is guided by yet another different interpretation of the empirical cycle.
 First, in De Groot's formulation, each stage describes a process.
 This invites the question of what the concrete outcomes of these processes are.
-In other words: what actually changes when going through the cycle, except the scholar's mind?
-To address this point, the nodes in Van Lissa's specification (2025) refer to specific deliverables, whereas the edges connecting the nodes refer to processes acting upon those deliverables, see Figure \@ref(fig:figecs)c).
-Second, the processes of induction and deduction are perhaps not as neatly confined to specific phases as De Groot proposed.
-Theory testing, as takes place in the "context of justification", can be said to involve mostly deductive reasoning.
-Theory development and amendment, as takes place in the "context of discovery", involves primarily inductive reasoning^[Here, "induction" is defined forming general theories based on specific observations. Others have used the term "abduction" to describe "inference to the best explanation" [@peirceCollectedPapersCharles1960]. For present purposes, the terms are interchangeable.].
-However, deriving hypotheses from theory is not purely deductive
+For example, note the label "knowledge accumulation" in Wagenmakers' version.
+This label invites the question of exactly *how* knowledge accumulates upon evaluation of a prior experiment.
+What actually changes when going through the cycle, except the scholar's mind?
+To address this point, the nodes in Van Lissa's specification (2025) refer to specific deliverables, and the edges connecting the nodes describe processes acting upon those deliverables (Figure \@ref(fig:figecs)c).
+In this specification, `theory` can be understood as FAIR theory.
+
+A second distinction is that the processes of induction and deduction are perhaps not as neatly confined to specific phases as De Groot proposed.
+Theory testing, as takes place in the "context of justification", can be said to involve *mostly* deductive reasoning.
+Theory development and amendment, as takes place in the "context of discovery", involves mostly inductive reasoning^[Here, "induction" is defined forming general theories based on specific observations. Others have used the term "abduction" to describe "inference to the best explanation" [@peirceCollectedPapersCharles1960]. For present purposes, the terms are interchangeable.].
+However, deriving hypotheses from theory is not *entirely* deductive
 as auxiliary assumptions must often be made to account for remaining ambiguities in theory, which involves induction.
-A rudimentary example is assuming equal variances across groups when testing a mean difference between groups, because groups often have equal variances.
-Similarly, if we consider the claim that observation is theory-laden, then it too involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
-Furthermore, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [@peikertTransparencyOpenScience2023].
+A rudimentary example is assuming equal variances across groups when testing a mean difference between groups, because groups often have equal variances (induction from prior knowledge), or because a Levene's test on the dataset at hand is non-significant (induction from a specific observation to the population).
+Similarly, if we accept that observation is theory-laden, then it too involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
+Similarly, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [@peikertTransparencyOpenScience2023].
 These alterations result in the following implementation of the empirical cycle:
 
 ```
+theory;
+prediction;
+data;
+test;
+results;
 
-  theory;
-  prediction;
-  data;
-  test;
-  results;
-  
-  theory -> prediction [label="deduction"];
-  prediction -> test [label = "implement inferential procedure"];
-  data -> results;
-  test -> results [label = "apply to data"];
-  results -> theory [label="interpretation and generalization"];
 
+theory -> prediction [label="deduction"];
+prediction -> test [label = "implement inferential procedure"];
+data -> results;
+test -> results [label = "apply to data"];
+results -> theory [label="interpretation and generalization"];
 ```
 
 The FAIR theory workflow offers concrete ways to make changes to a FAIR theory object and to compare different versions,
 as explained in [this vignette](ADD ME).
-For example, Figure \@ref(fig:figgithub-2) shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
+Figure \@ref(fig:figgithub-2) shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
      
 ```{r figgithub, out.width = "50%", fig.show='hold', fig.cap='FAIR Theories on GitHub', fig.subcap=c('Different versions of a theory are archived as distinct branches', 'These versions can be explicitly compared'), fig.ncol = 2}
 #par(mfrow=c(1,2))
@@ -1081,20 +1087,18 @@ which are ambiguities that arise from using the same term for different construc
 By explicitly referencing operational definitions in FAIR theories,
 such jingle-jangle fallacies would come to light and could ultimately be resolved.</span>
 
-<!-- FAIR theory incorporates theory into open science workflows, -->
-<!-- facilitates scholarly communication about theories, -->
-<!-- making it easier to share theories with less opportunity for ambiguity and misunderstanding. -->
-<!-- FAIR Theories are easier to find; they facilitate sharing, reusing, and updating open theories. -->
-<!-- More efficient and transparent communication about theory democratizes and accelerates cumulative knowledge acquisition, -->
-<!-- removes barriers to knowledge exchange with the global scholarly community, -->
-<!-- opens theory development to diverse perspectives, and enables (distributed and adversarial) collaboration. -->
-
 Another future direction for FAIR theory is as an instrument of science communication. Practitioners and the general public are rarely able to read and derive actionable insight from large quantities of empirical papers about a particular phenomenon.
 Theories are more accessible, because they encapsulate the bigger picture of contemporary scientific understanding.
 For example, while few people read empirical studies on attachment,
 attachment theory plays a prominent role in popular scientific books about parenting and romantic relationships.
 Theory bridges the gap between academic research and practitioners by summarizing actionable insights, relieving practitioners from the need to sift through extensive empirical literature.
 By providing a mechanism for iterative improvement based on emerging evidence, FAIR theory also supports effective evidence-based decision making.
+
+<span id="evaluateimpact">Finally, while this paper has discussed the potential impact of FAIR theory in addressing contemporary challenges in psychology,
+future research is needed to evaluate whether this potential is realized.
+Registered reports were first introduced to psychology about a decade ago [@nosekRegisteredReportsMethod2014],
+and are now becoming commonplace, as are studies evaluating their adoption and impact on scientific practices and research results [@scheelExcessPositiveResults2021].
+We envision a similar trajectory for FAIR theory.</span>
 
 ## Conclusion
 
