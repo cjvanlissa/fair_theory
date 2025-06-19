@@ -62,7 +62,7 @@ affiliation:
     institution   : "MSB Medical School Berlin Department of Psychology, Berlin, Germany"
 
 authornote: |
-  We are particularly endebted to our Reviewer, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. This version of the paper was generated from Git Commit # `r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`.
+  We are particularly endebted to our Reviewer, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #`r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized using `set.seed(6999982); sample(c("Aaron", "Felix", "Noah", "Maximilian"))`.
 
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
 
@@ -712,7 +712,7 @@ which is achieved through version control with Git and archival on Zenodo.
 Finally, the (meta)data which meets domain-relevant community standards (R1.3).
 The Datacite metadata schema offers an initial template in this regard,
 and this paper takes one step towards establishing more fine-grained community standards for FAIR theory.
-[This is an example of FAIR metadata](https://raw.githubusercontent.com/cjvanlissa/fair_theory/refs/heads/main/example_metadata.json) extracted from Zenodo.
+[This is an example of FAIR metadata](https://github.com/cjvanlissa/fair_theory/blob/3b4894da576cb76d19e911a05dd513d5172058ec/example_metadata.json) extracted from Zenodo.
 
 If we consider the current state of Reusability in psychological theory, there appears to be a norm against theory reuse:
 *"[Theories are] like toothbrushes — no self-respecting person wants to use anyone else's"* [@mischelToothbrushProblem2008, p. 1].
@@ -839,7 +839,7 @@ Zenodo is a FAIR compliant repository with GitHub- and OSF integration.
 
 When archiving a FAIR theory, documenting it with relevant metadata improves its Findability.
 We recommend using a standardized metadata schema like DataCite [@datacitemetadataworkinggroupDataCiteMetadataSchema2024].
-See here for [an example of the metadata](https://raw.githubusercontent.com/cjvanlissa/fair_theory/refs/heads/main/example_metadata.json) associated with our FAIR empirical cycle.
+See here for [an example of the metadata](https://github.com/cjvanlissa/fair_theory/blob/3b4894da576cb76d19e911a05dd513d5172058ec/example_metadata.json) associated with our FAIR empirical cycle.
 Within this schema,
 
 * Set the *resource type* to the category `Model`,

@@ -12,7 +12,7 @@ Dear Dr `r rmarkdown::metadata$handling_editor`,
 
 Thank you for considering our manuscript for publication at _`r rmarkdown::metadata$journal`_.
 We appreciate the feedback that you and the reviewers have provided.
-In the following itemised list we respond to each comment point by point.
+In this action letter, we respond to each comment point by point.
 
 ```{r setup-chunk, include = FALSE}
 library(revise)
@@ -36,6 +36,7 @@ The reviewer(s) have recommended publication, but also suggest some revisions to
 [] If you want to add the doi that is good.  But do not put in the search criteria for retrieving a document that has been published in a book or journal. WHAT??
 ```
 
+We have 
 Upload tables separately: tab_meehl.csv
 Upload figures separately: ec_visio.pdf, git_branches.png, git_compare_short.png
 
@@ -44,10 +45,11 @@ Upload figures separately: ec_visio.pdf, git_branches.png, git_compare_short.png
 a) You have a balancing act to strike between providing technical tools (e.g., version control workflows) that can assist scientists in implementing your proposals on the one hand, against a readership and a scientific discipline that likely largely cannot effectively implement such tools. I will give a simple example. The very first thing I read after the title page was "This is a preprint paper, generated from Git Commit # 7b710ba5." I wager that most readers of Perspectives do not know what a git commit is, at least not in any meaningful way. This is a minor example, but illustrates the larger point. Reviewer 2 (Turkheimer) makes this point in his review.
 ```
 
-This does not directly ask for a change, but summarize relevant changes here.
+We understand that striking the balance between the conceptual and technical details is the very challenge of this paper. In the revision we have tried to explain technical details in even simpler language.
+The most important change we have made, as requested by Reviewer #2, is to move the tutorial parts of the paper into package vignettes.
+We still leave a conceptual overview of the tutorial in simpler language because we do want readers of the paper to come away with some idea of what making a theory FAIR entails, and because these general principles are not tied to the R-pacakge and our specific implementation (they could be implemented using other infrastructures).
 
-<!-- AB: -->
-1.	I agree that striking the balance between the conceptual and technical details is the very challenge of this paper. I think we should go a route in the revision in which we try to explain technical details in even simpler language. For example, the github reference to our code could read like this: "Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #XXXXX." And maybe there is a way to move the more technical details to a section that can be skipped without compromising the conceptual/opinion aspects. @wilkinsonFAIRGuidingPrinciples2016
+With regard to your specific example of technical language that might elude the readership, the GitHub reference in the author note now reads: "Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #XXXXX." 
 
 ```{asis}
 b) My interpretation of this manuscript is that it is proposing policies, procedures, and documentation as an important path forward to improve psychology and related soft sciences. One reason I find such proposals interesting is because I don't see them in my other area of expertise, human genetics. No doubt strong conventions develop in genetics, but they seem to develop because scientists writ large working in those fields recognize that those conventions (e.g., publicly available genomic maps organized in a certain way; analytical workflows based on accepted genetic theories) will immediately benefit their own area of research by making new avenues of work feasible, or more efficient. The payoff is obvious. They are "no-brainers" that organically arise. Some conventions in psychology, like registration or even data sharing, do not seem to arise or take hold in quite the same way, and instead rely on top-down requirements by grant funding agencies, journals, etc. 
@@ -63,11 +65,12 @@ I can definitely see the advantage to policies, procedures, and documentation, i
 
 We appreciate the Editor’s meta-scientific comparison of the emergence of conventions in human genetics to the (current wave of) more top-down nature of open science reforms in psychology, which by-and-large also originated in grass-roots initiatives.
 
-As methodologists, our focus in this paper is on "procedures", rather than policies or documentation. Our goal is to position FAIR theory as a communication protocol: a set of standards, grounded in philosophy of science and implemented in existing infrastructure, that facilitates theory specification, reuse, and collaborative refinement.
+To clarify our perspective: As methodologists, our focus is on "procedures", rather than policies or documentation. Our goal in this paper is to position FAIR theory as a set of standards, grounded in philosophy of science and implemented in existing infrastructure, that facilitates theory specification, reuse, and collaborative refinement.
 
 We agree with the Editor that there is no guarantee that *"these things are crucial to scientific advance in psychology"*. We have, however, provided reasoned arguments to support the "affordances" of FAIR theory: it *makes possible* particular scientific advancements, even if it does not guarantee them.
 
-Compare FAIR theory to preregistration: it, too, was introduced first as a good idea; now - a decade later - empirical studies are being conducted to investigate its effects.
+Compare FAIR theory to preregistration: it, too, was introduced first as a good idea.
+Only now - a decade later - are empirical studies are being conducted to investigate its effects.on scientific practices.
 
 To address this comment, <font color="red">in the Revision:
 
@@ -123,6 +126,8 @@ To address the comment, we have rewritten the opening paragraph as follows:
 Line 101: In Figure 1a, it would be helpful to see the two phases (currently, those are not clear to me). Also, even though Figure 1c is addressed at a much later point in the manuscript, it would be helpful to briefly mention it here as well, so it doesn’t seem forgotten.
 ```
 
+**DO THIS**
+
 ```{asis}
 Line 102: The corresponding year should be added to “Wagenmakers and colleagues.”
 ```
@@ -157,6 +162,7 @@ Note that some journals prescribe citation styles that (partly) conflict with AP
 Line 207: It could be helpful to add a very brief description of the phonological loop in case some readers are not familiar with it and its parameters.
 ```
 
+**DO THIS, ANDREAS?**
 
 ```{asis}
 Line 350: I think that this was supposed to be displayed as a link: <www.theorymaps.org>
@@ -180,7 +186,7 @@ Done.
 Line 776 onwards: The proposed system of modular publishing seems to have been around for quite some time (since 1998 at least) but is not widely used, which could briefly be addressed as a limitation.
 ```
 
-We respectfully disagree; open data - one example of modular publishing - has increased dramatically in recent decades, up from ~7% of articles in 2000–2009 to ~50% of psychological articles in 2010-2019, and more (~80%) in other disciplines.
+We respectfully disagree; open data - one example of modular publishing - has increased dramatically in recent decades, in psychology the percentage of articles that share data has increased from ~7% in 2000–2009 to ~50% in 2010-2019. In other disciplines, the increase has been even larger (up to ~80%).
 Given this, we don't see a reason to note this as a limitation, but we have added a reference that indicates that data sharing has become widely adopted in psychology:
 
 `r get_revision("datasharing")`
@@ -241,7 +247,7 @@ Done.
 Two of the links did not work for me: Line 490 (FAIR metadata example), Line 606 (example of metadata).
 ```
 
-<font color = "red"> TO DO </font>
+We apologize for the oversight, and have fixed these hyperlinks.
 
 ## Reviewer: 2
 
@@ -263,7 +269,7 @@ To be clear, it cuts both ways. It has turned out over the years that the S-R in
 
 Dear prof. Turkheimer,
 
-on behalf of all co-authors, I would like to express our sincere appreciation for your thoughtful comments. This is my (Caspar's) favorite review to date, and I especially value your perspective as a seasoned scholar/theoretician. All authors unanimously agreed that it would be a pity to deprive our readers of an opportunity to view FAIR theory through the lens of your lived experience - but we were not sure how to incorporate it. We invite your, and the Editor's, advice on how to best go about it.
+on behalf of all co-authors, let me express our sincere appreciation for your thoughtful comments. This is my (Caspar's) favorite review to date, and I especially value your perspective as a seasoned scholar/theoretician. We have attempted to address your comments in the Revision, as described below. In addition, all authors agreed that it would be a pity to deprive our readers of an opportunity to view FAIR theory through the lens of your lived experience - but we were not entirely sure how to incorporate it. We invite your, and the Editor's, advice on how to best go about it.
 
 As a starting point, we drafted a paragraph that summarizes your comments on FAIR theory from the review, and mentioned your contribution in the Acknowledgements. We are open to incorporating your thoughts and crediting your contribution in other ways as well, depending on what seems appropriate to you and the Editor.
 
@@ -279,7 +285,7 @@ The Acknowledgement now reads:
 (This sounds like pre-registration. I don't think there is a bright line between FAIR theorizing and preregistering.)
 ```
 
-We think that this comment signals a need to better explain the important distinctions between these two practices.
+We respectfully disagree that FAIR theory is like preregistration, and we think that this comment signals a need to better explain the important distinctions between these two practices.
 To address this comment, we have included the following section in the revision:
 
 `r get_revision("fairtheoryprereg")`
@@ -327,8 +333,10 @@ To address this comment, we have removed as much of the specific detail as possi
 To make this possible, we have substantially expanded the existing package vignettes and created one additional vignette.
 
 There are now three worked examples for actual theories in the package vignettes:
-[For Self-Determination Theory](https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html), the [Dunning-Kruger Effect](https://cjvanlissa.github.io/theorytools/articles/dunning-kruger.html), and [Morris' Tripartite Model](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html),
-which we reference in the text.
+
+* [Self-Determination Theory](https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html)
+* The [Dunning-Kruger Effect](https://cjvanlissa.github.io/theorytools/articles/dunning-kruger.html)
+* [Morris' Tripartite Model](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html)
 
 The resulting shortened section reads as follows:
 
@@ -364,7 +372,7 @@ We are sympathetic to the reviewer’s view that the challenges facing psycholog
 That said, we are not sure that we are best positioned to engage with these issues, nor that the present paper would be the best place for such an argument.
 As methodologists, our primary aim in this paper is to articulate the affordances of FAIR theory:
 a framework that supports better theory specification, sharing, and reuse.
-We believe our contribution will be most effective if it remains sharply focused on the practical infrastructure and its scientific use cases.
+We believe we can make this contribution most effectively if we remain sharply focused on the practical infrastructure and its scientific use cases.
 
 We do not mean to suggest that infrastructure alone is sufficient, nor do we discount the importance of cultivating scientific values.
 However, we believe that meta-scientists and sociologists of science would be better positioned to engage with the topics of norms and values,
