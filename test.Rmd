@@ -363,8 +363,6 @@ FAIR theories are *Findable* via a DOI or by searching the repository they are a
 *Accessible* in a machine- and human-readable filetype;
 *Interoperable* for specific purposes, for example, within the data analysis environment;
 and *Reusable* in the practical and legal sense, so that they may be iteratively improved by the author or by others.
-<!-- AB I think some initial word on what is covered is needed here; otherwise readers may wonder what we mean to cover--> 
-<!-- CJ: Since this is in the next paragraph, I think it's redundant. Will merge there -->
 Following the original proposal of Lamprecht and colleagues [-@lamprechtFAIRPrinciplesResearch2019],
 we adapt the FAIR principles for theory, see [Supplemental Table S1](https://github.com/cjvanlissa/fair_theory/blob/main/fair_principles.csv).
 We reflect on the necessary (minor) changes,
