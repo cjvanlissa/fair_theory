@@ -956,11 +956,9 @@ the `theorytools` package contains several vignettes that showcase specific appl
 At the time of writing, the package includes a
 vignette [introducing augmented Directed Acyclic Graphs (aDAGs)](https://cjvanlissa.github.io/theorytools/articles/augmented_dags.html) as a format for theory specification that meets the requirements of good psychological theory.
 These aDAGs are X-interoperable for plotting (using `dagitty` and `tidySEM`),
-for automatically selecting control variables, and for simulating data (using `theorytools`).
-Another vignette describes how to take Self-Determination Theory [@deciSelfDeterminationTheory2012], a theory originally represented as prose, and [specify it as a FAIR aDAG](https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html).
-Another vignette describes how to take the Dunning-Krüger effect and [specify it as a FAIR mathematical formula](https://cjvanlissa.github.io/theorytools/articles/dunning-kruger.html) [@feldEstimatingRelationshipSkill2017].
-Another vignette illustrates the use of FAIR theory for [covariate selection and causal inference](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html) [@pearlCausalDiagramsEmpirical1995].
-More vignettes may be added over time, and users are encouraged to submit their own reproducible examples as package vignettes.
+for automatically selecting control variables, and for simulating data (using `theorytools`),
+as described in [this vignette](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html) [@pearlCausalDiagramsEmpirical1995].
+Other vignettes may be added over time, and users are encouraged to submit their own reproducible examples as package vignettes.
 
 # Discussion
 
@@ -977,8 +975,8 @@ and creating a FAIR resource for theory construction tools and documentation tha
 
 Making theory FAIR allows researchers to more easily find a relevant framework;
 access and understand it; interact with it in a practical sense, for example, by deriving predictions from it, or using it to select control variables; and reuse it, contributing changes to existing theories or splitting of in a new direction.
-Whereas the idea of theory can be quite nebulous to empirical psychologists,
-FAIR theory makes theoretical work practical and tangible, incorporating theory into scholars' workflows.
+Whereas "theory" can be a nebulous concept to empirical psychologists,
+FAIR theory makes it practical and tangible, incorporating theory into scholarly workflows.
 Having a concrete object to iterate upon facilitates the systematic improvement and iterative refinement of psychological theories, thus substantially increasing the efficiency of research.
 While FAIR theory does not directly reduce vagueness,
 it provides a framework within which scholars can iteratively increase precision and formalization.
@@ -1015,15 +1013,15 @@ As we identified, however, most existing open science methods focus on rigor in 
 but few provide guidance on how to derive hypotheses from theory (phase 1), or how to relate empirical findings back to theory (phase 5), leaving a gap in the cycle.
 By instantiating theory as a FAIR digital object,
 we provide much-needed open science infrastructure for transparently deriving hypotheses and modifying theory,
-thus contributing to closing the "open empirical cycle".</span>.
+thus contributing to closing the "open empirical cycle".</span>
 
-Our approach aligns closely with contemporary developments in open science,
+Our approach aligns closely with recent developments in open science,
 such as modular publishing, interdisciplinarity, meta-research, and team science.
 The advantage of modular publishing is that authors can be credited for theory development.
 Given the current emphasis on empirical papers [@mcphetresDecadeTheoryReflected2021], theoretical papers can be hard to publish.
 FAIR theories, by contrast, can be readily disseminated as citable digital objects, thus changing the incentive structure to favor theory development.
-
-Interdisciplinarity benefits from FAIR theory's Accessibility across different fields; thus, theoretical frameworks can be reused, adapted, or used for analogical modeling [@haslbeckModelingPsychopathologyData2021].
+FAIR theory's Accessibility can advance interdisciplinarity,
+for example because theoretical frameworks can be reused, adapted, or used for analogical modeling across different fields [@haslbeckModelingPsychopathologyData2021].
 Meta-research benefits from the fact that FAIR theory enables studying the structure, content, and development of theories over time.
 In terms of team science, FAIR theory facilitates collaboration by ensuring that all contributors have access to the same information and
 clarifying any remaining areas of contention or misunderstanding [@vanlissaVisionTeamScience2024]. 
@@ -1034,13 +1032,13 @@ and adversarial collaboration, where others strive to falsify a theory or identi
 ## Limitations
 
 One important limitation of the present work is that,
-while we build on well-established information architecture like Zenodo,
-it is unlikely that the proposed metadata standard is definitive.
+while we build on well-established infrastructures like Zenodo,
+it is unlikely that the proposed workflow is definitive.
 Community adoption can reveal areas of further improvement.
 Furthermore, at the time of writing, dedicated indexing systems for FAIR theory are non-existent.
 Using the Zenodo search function and submitting theories to the "FAIR Theory Community" on Zenodo can help overcome this limitation in the short term.
 
-<span id="learningcurve">Another limitation is the learning curve associated with tools like Git and Zenodo.
+<span id="learningcurve">Another limitation is the learning curve associated with tools and infrastructures like Git and Zenodo.
 The `theorytools` R-package mitigates this limitation for R-users by automating key steps in the process.
 Moreover, the initial investment in time can be offset by long-term productivity gains and increased impact of FAIR theory.
 One final way to address the learning curve is via specialization and collaboration, or team science [@vanlissaVisionTeamScience2024]:
@@ -1048,7 +1046,7 @@ as scientific workflows increase in sophistication, it is increasingly difficult
 In relation to FAIR theory, we see unique opportunities for intergenerational collaboration and knowledge exchange,
 as theoreticians tend to be seasoned experts, whereas open science literacy is more commonly found among early career scholars.</span>
 
-One potential barrier to adopting FAIR theory is cultural resistance to sharing and modifying theories, also known as the "toothbrush problem".
+One potential barrier to adopting FAIR theory is cultural resistance to sharing and modifying theories (the "toothbrush problem").
 Education might help address this limitation; with this in mind,
 we have shared several open educational materials on theory development in the "FAIR Theory Community" on Zenodo, and we encourage others to reuse these and share their materials.
 
@@ -1078,8 +1076,8 @@ or even to have proponents and detractors of a theory review a registered report
 In short, combining FAIR theory with preregistration and other existing open science practices has the potential to strengthen the epistemic cycle of prediction, testing, and revision, moving us closer to a cumulative science.</span>
 
 <span id="measurementcrisis">Another future direction is the intersection between the aforementioned "theory crisis" and the related "measurement crisis" pertaining to the lack of clarity, consistency, and validity in the operationalization of theoretical constructs [@bringmannBackBasicsImportance2022].
-Since FAIR theories can reference other theories and resources,
-it is possible to attach references to specific measurement instruments (or even theories of measurement) to constructs named in a theory.</span>
+FAIR theories could reference specific measurement instruments, or even theories of measurement,
+when operationalizing constructs named in a theory.</span>
 <span id="jinglejangle">FAIR theories can also help address "jingle- and jangle fallacies" in psychology,
 which are ambiguities that arise from using the same term for different constructs, or conversely, using different terms for the same construct [@songLiteratureReviewingAddressing2021].
 By explicitly referencing operational definitions in FAIR theories,
@@ -1102,26 +1100,26 @@ By providing a mechanism for iterative improvement based on emerging evidence, F
 
 ## Conclusion
 
-FAIR theory is a major step forward towards more transparent, collaborative, and efficient theory construction.
-It provides much-needed open science methods for the inductive phase of the empirical cycle,
-closing a critical gap in the scientific process.
-
-<span id = "turkheimer">We invite the reader to ask the rhetorical question raised by our reviewer, prof. Turkheimer, who - reflecting on a long career as a practitioner of theory in psychology - considered "how adopting a FAIR framework would change, improve, or inhibit what I do".
-We paraphrase his answer here^[Edited for brevity.], because his lived experience complements our youthful "techno-enthusiasm".
+<span id = "turkheimer">We invite the reader to ask the rhetorical question raised by one of our reviewers, prof. Turkheimer, who - reflecting on a career as a practitioner of theory in psychology - considered "how adopting a FAIR framework would change, improve, or inhibit what I do".
+<!-- We paraphrase his answer here^[Edited for brevity.], because his lived experience complements our youthful "techno-enthusiasm". -->
 Prof. Turkheimer remarked that a FAIR framework would have been very helpful in maintaining meaningful boundaries between a theory and the predictions it makes,
 in tracking how empirical findings result in changes to empirical claims made by a theory,
 and in resolving theoretical disputes.
-*"FAIR theory provides a structured, machine- and human-readable framework that distills and formalizes the core components of a theory.
+"FAIR theory provides a structured, machine- and human-readable framework that distills and formalizes the core components of a theory.
 Everything published about a theory can continue to exist in its original form,
 while a FAIR representation supplements that literature by explicitly outlining the theory’s assumptions, logical structure, and testable implications.
 Importantly, FAIR theory can evolve semi-independently from individual papers, offering a persistent and collaborative object that others can reuse, cite, and refine. 
-Contributing to the development of a FAIR theory thus becomes a new way of contributing to the theoretical literature - much like writing a high-quality review article, but with the added benefit of interoperability, versioning, and reusability."*</span>
+Contributing to the development of a FAIR theory thus becomes a new way of contributing to the theoretical literature - much like writing a high-quality review article, but with the added benefit of interoperability, versioning, and reusability."</span>
 
-We envision a future where application of the FAIR principles makes theories more *useful*, living up to Kurt Lewin's ideal,
+We envision a future where application of the FAIR principles makes theories more *useful*,
+living up to Kurt Lewin's ideal,
 enabling scholars to incorporate theory into their workflows in a tanglible way,
 providing explicit derivation chains for hypotheses,
 applying transparent rules to select the right control variables for causal inference,
 and proposing specific changes to existing theories based on empirical results.
+FAIR theory is a major step forward towards more transparent, collaborative, and efficient theory construction.
+It provides much-needed open science methods for the inductive phase of the empirical cycle,
+closing a critical gap in the scientific process.
 This paves the way for more theory-driven scholarship
 and accelerates cumulative knowledge acquisition in psychology, the social sciences, and beyond.
 
