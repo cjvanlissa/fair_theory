@@ -33,12 +33,12 @@ The reviewer(s) have recommended publication, but also suggest some revisions to
 [x] Tables and Figures should be uploaded separately and not positioned in the text (although it is fine to indicate where they should be inserted).
 [] Figures should be uploaded in their native format (the program they were created in) at 300 dpi. Acceptable figure file formats include MS Office files (DOC, PPT, XLS), Adobe Illustrator (AI), JPG, EPS, and PDF.
 [x] References should be done with hanging indents using APA style. 
-[] If you want to add the doi that is good.  But do not put in the search criteria for retrieving a document that has been published in a book or journal. WHAT??
+[] If you want to add the doi that is good.  But do not put in the search criteria for retrieving a document that has been published in a book or journal. 
 ```
 
-We have 
-Upload tables separately: tab_meehl.csv
-Upload figures separately: ec_visio.pdf, git_branches.png, git_compare_short.png
+In response to your request, we have: 
+- uploaded tables separately: tab_meehl.csv
+- uploaded figures separately: ec_visio.pdf, git_branches.png, git_compare_short.png
 
 
 ```{asis}
@@ -47,7 +47,7 @@ a) You have a balancing act to strike between providing technical tools (e.g., v
 
 We understand that striking the balance between the conceptual and technical details is the very challenge of this paper. In the revision we have tried to explain technical details in even simpler language.
 The most important change we have made, as requested by Reviewer #2, is to move the tutorial parts of the paper into package vignettes.
-We still leave a conceptual overview of the tutorial in simpler language because we do want readers of the paper to come away with some idea of what making a theory FAIR entails, and because these general principles are not tied to the R-pacakge and our specific implementation (they could be implemented using other infrastructures).
+We still leave a conceptual overview of the tutorial in simpler language because we do want readers of the paper to come away with some idea of what making a theory FAIR entails. Note that these general principles are neither tied to the specific R-pacakge not to our specific implementation. Importantly, they could be implemented using an entirely different infrastructure.
 
 With regard to your specific example of technical language that might elude the readership, the GitHub reference in the author note now reads: "Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #XXXXX." 
 
@@ -57,13 +57,13 @@ b) My interpretation of this manuscript is that it is proposing policies, proced
 I can definitely see the advantage to policies, procedures, and documentation, if the goal is to identify fraudulent work, because it creates a paper trail to audit. I am more skeptical that these things are crucial to scientific advance in psychology, and there are no empirical results in this paper to the contrary. I believe this echoes Reviewer 3's suggestion to take seriously in your discussion, and I would suggest elsewhere in the paper, the limitations of policies, procedures, and documentation, versus other aspects of the scientific enterprise including culture, norms, and perhaps even the tractability of the subject matter, as in my human genetics example. 
 ```
 
-We appreciate the Editor’s meta-scientific comparison of the emergence of conventions in human genetics to the (current wave of) more top-down nature of open science reforms in psychology, which by-and-large also originated in grass-roots initiatives.
+We appreciate the Editor’s meta-scientific comparison of the emergence of conventions in human genetics to the (current wave of) more top-down nature of Open Science reforms in Psychology, which by-and-large also originated in grass-roots initiatives.
 
 To clarify our perspective: As methodologists, our focus is on "procedures", rather than policies or documentation. Our goal in this paper is to position FAIR theory as a set of standards, grounded in philosophy of science and implemented in existing infrastructure, that facilitates theory specification, reuse, and collaborative refinement.
 
 We agree with the Editor that there is no guarantee that *"these things are crucial to scientific advance in psychology"*. We have, however, provided reasoned arguments to support the *potential impact* of FAIR theory: it makes particular scientific advancements possible. It is up to the scholarly community whether this potential impact will be realized.
 
-To address this comment, in the Revision, we repeatedly refer to the *potential* impact of FAIR theory, thus making it clear that we do not assume that this impact will be automatic nor guaranteed. Furthermore, we acknowledge in the Limitations section that empirical evidence for these potential benefits remains to be evaluated:
+To address this comment, in the revision, we repeatedly refer to the *potential* impact of FAIR theory, thus making it clear that we do not assume that this impact will be automatic or guaranteed. Furthermore, we acknowledge in the Limitations section that empirical evidence for these potential benefits remains to be evaluated:
 
 `r get_revision("evaluateimpact")`
 
@@ -76,14 +76,14 @@ In this manuscript, the authors introduce a framework for FAIR theory specificat
 ```
 
 We thank the Reviewer for their thoughtful and encouraging review.
-We appreciate the Reviewer's recognition of the relevance and potential impact of FAIR theory—not only within psychology, but also in related disciplines.
+We appreciate the Reviewer's recognition of the relevance and potential impact of FAIR theory --- not only within psychology, but also in related disciplines.
 We have sought to address all comments, and feel that doing so has improved the quality of the manuscript.
 
 ```{asis}
 The abstract provides a (mostly) comprehensive overview of the paper that can be easily followed and understood. I personally felt that the introduction of the theorytools R-package was an important aspect of the paper and should thus briefly be mentioned in the abstract.
 ```
 
-As suggested, we now briefly mention the R-package in the abstract:
+As suggested, we now briefly mention the R package in the abstract:
 
 `r get_revision("abstractpackage")`
 
@@ -129,7 +129,7 @@ Done.
 In general, I’d move this section up, as the word “theory” has been used a lot already at this point, and readers might benefit from an earlier explanation/definition (for example, directly after the section “The Need for FAIR Theory”).
 ```
 
-We have done as requested, and additionally, include a sentence in the first paragraph to pre-emptively address readers' concerns that FAIR theory may only be relevant for those who have adopted a specific paradigm:
+We have done as requested, and additionally, include a sentence in the first paragraph to pre-emptively address readers' concerns that FAIR theory may only be relevant for those who have adopted a specific philosophical paradigm:
 
 `r get_revision("alldefinitions")`
 
