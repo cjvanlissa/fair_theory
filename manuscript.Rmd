@@ -112,7 +112,7 @@ compliant with the FAIR principles.
 accelerate cumulative knowledge acquisition.
 We focus on applications in psychology, but the principles are relevant across the social sciences and beyond.
 
-## The Need for FAIR theory
+## The Need for FAIR Theory
 
 The so-called "replication crisis" has prompted extensive scientific reforms [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that the abundance of non-replicable findings 
