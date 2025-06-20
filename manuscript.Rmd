@@ -1083,7 +1083,7 @@ These limitations impede cumulative knowledge production in our field,
 leading to an accumulation of "one-shot" empirical findings, without commensurate advancement in our principled understanding of psychological phenomena.
 We argued that applying the FAIR principles to theory offers a structured solution to these shortcomings.
 We demonstrated how to create, version-control, and archive theories as digital information artifacts.
-We introduced the `theorytools` R-package to partly automate these processes, reducing the barrier of entry for researchers,
+We introduced the `theorytools` R package to partly automate these processes, reducing the barrier of entry for researchers,
 and creating a FAIR resource for theory construction tools and documentation that can be updated as best practices continue to develop.
 
 Making theory FAIR allows researchers to more easily find a relevant framework;
@@ -1110,7 +1110,7 @@ Journals that publish theoretical papers could require authors to additionally p
 to expedite its effective reuse and iterative improvement.
 A second factor is to lower barriers to adopting FAIR theory by building upon existing widely adopted open science infrastructures.
 For this reason, we advocate the use of Git for version control, Zenodo for archiving, and DataCite for standardized metadata.
-Barriers to entry can also be lowered by simplifying workflows, which is the goal of the `theorytools` R-package.
+Barriers to entry can also be lowered by simplifying workflows, which is the goal of the `theorytools` R package.
 Fourth, the availability of Open Educational Materials (OEM) about theory development contributes to doctoral socialization.
 These materials allow teachers to incorporate theory development into their curriculum without investing substantial time on course development,
 thus educating the next generation to make use of and contribute to FAIR theory.
@@ -1149,7 +1149,7 @@ Furthermore, at the time of writing, dedicated indexing systems for FAIR theory 
 Using the Zenodo search function and submitting theories to the "FAIR Theory Community" on Zenodo can help overcome this limitation in the short term.
 
 Another limitation is the learning curve associated with tools like Git and Zenodo.
-The `theorytools` R-package mitigates this limitation for R-users by automating key steps in the process.
+The `theorytools` R package mitigates this limitation for R-users by automating key steps in the process.
 Moreover, the initial investment in time can be offset by long-term productivity gains and increased impact of FAIR theory.
 One barrier to adopting FAIR theory is cultural resistance to sharing and modifying theories, also known as the "toothbrush problem".
 Education might help address this limitation; with this in mind,
