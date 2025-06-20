@@ -57,7 +57,7 @@ b) My interpretation of this manuscript is that it is proposing policies, proced
 I can definitely see the advantage to policies, procedures, and documentation, if the goal is to identify fraudulent work, because it creates a paper trail to audit. I am more skeptical that these things are crucial to scientific advance in psychology, and there are no empirical results in this paper to the contrary. I believe this echoes Reviewer 3's suggestion to take seriously in your discussion, and I would suggest elsewhere in the paper, the limitations of policies, procedures, and documentation, versus other aspects of the scientific enterprise including culture, norms, and perhaps even the tractability of the subject matter, as in my human genetics example. 
 ```
 
-We appreciate the Editor’s meta-scientific comparison of the emergence of conventions in human genetics to the (current wave of) more top-down nature of Open Science reforms in Psychology, which by-and-large also originated in grass-roots initiatives.
+We appreciate the Editor’s meta-scientific comparison of the emergence of conventions in human genetics to the (current wave of) more top-down nature of Open Science reforms in psychology, which by-and-large also originated in grass-roots initiatives.
 
 To clarify our perspective: As methodologists, our focus is on "procedures", rather than policies or documentation. Our goal in this paper is to position FAIR theory as a set of standards, grounded in philosophy of science and implemented in existing infrastructure, that facilitates theory specification, reuse, and collaborative refinement.
 
@@ -172,8 +172,8 @@ Done.
 Line 776 onwards: The proposed system of modular publishing seems to have been around for quite some time (since 1998 at least) but is not widely used, which could briefly be addressed as a limitation.
 ```
 
-We respectfully disagree; Open Data - one example of modular publishing - has increased dramatically in recent decades. In Psychology the percentage of articles that share data openly has increased from ~7% in 2000–2009 to ~50% in 2010-2019. In other disciplines, the increase has been even larger (up to ~80%).
-Given this, we don't see a reason to note this as a limitation, but we have added a reference that indicates that data sharing has become widely adopted in Psychology:
+We respectfully disagree; Open Data - one example of modular publishing - has increased dramatically in recent decades. In psychology, the percentage of articles that share data openly has increased from ~7% in 2000–2009 to ~50% in 2010-2019. In other disciplines, the increase has been even larger (up to ~80%).
+Given this, we don't see a reason to note this as a limitation, but we have added a reference that indicates that data sharing has become widely adopted in psychology:
 
 `r get_revision("datasharing")`
 
