@@ -146,7 +146,9 @@ Note that some journals prescribe citation styles that (partly) conflict with AP
 Line 207: It could be helpful to add a very brief description of the phonological loop in case some readers are not familiar with it and its parameters.
 ```
 
-**DO THIS, ANDREAS?**
+We added a brief description and a reference as suggested:
+
+`r get_revision("phonoloop")`
 
 ```{asis}
 Line 350: I think that this was supposed to be displayed as a link: <www.theorymaps.org>
