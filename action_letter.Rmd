@@ -172,8 +172,8 @@ Done.
 Line 776 onwards: The proposed system of modular publishing seems to have been around for quite some time (since 1998 at least) but is not widely used, which could briefly be addressed as a limitation.
 ```
 
-We respectfully disagree; open data - one example of modular publishing - has increased dramatically in recent decades, in psychology the percentage of articles that share data has increased from ~7% in 2000–2009 to ~50% in 2010-2019. In other disciplines, the increase has been even larger (up to ~80%).
-Given this, we don't see a reason to note this as a limitation, but we have added a reference that indicates that data sharing has become widely adopted in psychology:
+We respectfully disagree; Open Data - one example of modular publishing - has increased dramatically in recent decades. In Psychology the percentage of articles that share data openly has increased from ~7% in 2000–2009 to ~50% in 2010-2019. In other disciplines, the increase has been even larger (up to ~80%).
+Given this, we don't see a reason to note this as a limitation, but we have added a reference that indicates that data sharing has become widely adopted in Psychology:
 
 `r get_revision("datasharing")`
 
@@ -265,7 +265,7 @@ Our draft paragraph now reads:
 
 The Acknowledgement now reads:
 
-> We are particularly endebted to our Reviewer, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion.
+> We are particularly indebted to one of our reviewers, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion.
 
 ```{asis}
 (This sounds like pre-registration. I don't think there is a bright line between FAIR theorizing and preregistering.)
