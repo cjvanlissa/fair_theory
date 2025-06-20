@@ -12,8 +12,7 @@ reflects on current FAIR practices in relation to psychological theory,
 and discusses FAIR theories’ potential impact in terms of reducing research waste,
 enabling meta-research on theories' structure and development,
 and incorporating theory into reproducible research workflows – from hypothesis generation to simulation studies.
-[We present a conceptual workflow for FAIRifying theory in this paper,
-which builds on existing open science principles and infrastructures.
+[We present a conceptual workflow for FAIRifying theory in this paper that builds on existing open science principles and infrastructures.
 More detailed tutorials, worked examples, and convenience functions to automate this workflow are available in the `theorytools` R-package.]{#abstractpackage}
 FAIR theory constitutes a structured protocol for archiving, communicating about, and iteratively improving theory,
 addressing a critical gap in open scholarly practices and 
