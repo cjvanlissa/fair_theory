@@ -62,7 +62,7 @@ affiliation:
     institution   : "MSB Medical School Berlin Department of Psychology, Berlin, Germany"
 
 authornote: |
-  We are particularly endebted to our Reviewer, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #`r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized.
+  We are particularly indebted to one of our Reviewers, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #`r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized.
 
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
 
@@ -117,7 +117,7 @@ this paper is not limited to one particular definition.</span>
 FAIR theory can potentially improve the transparency and efficiency of scholarly communication, reduce research waste, and accelerate cumulative knowledge acquisition.
 We focus on applications in psychology, but the principles are relevant across the social sciences and beyond.
 
-## The Need for FAIR theory
+## The Need for FAIR Theory
 
 The so-called "replication crisis" has prompted extensive scientific reforms [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that the abundance of non-replicable findings 
@@ -421,7 +421,7 @@ Such a theory may encompass a particular transmission _model_ for disease spread
 
 Concerns about the state of psychological theory have motivated increasing calls for greater theory "formalization" [@smaldinoModelsAreStupid2017; cf. @oudemaatmanPsychologysTheoryCrisis2021].
 Formalization increases theories' falsifiability [@popperLogicScientificDiscovery2002] because it expresses ideas as specific statements, clearly demarcating what should (not) be observed if the theory were true.
-For example, Baddeley's verbal description of the phonological loop in his theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate, recall success, or rehearsal sequence, which were left undefined in the original theory [@lewandowsky2010computational].
+<span id="phonoloop">Take for example the phonological loop in Baddeley's working memory model [@baddeleyWorkingMemory1992]. The idea behind it is that verbal information is kept in memory via a rehearsal loop with limited capacity. The verbal description of the phonological loop in Baddeley's theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate of information, recall success, or rehearsal sequence, which were left undefined in the original theory [@lewandowsky2010computational].</span>
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
 Compared to theories expressed in natural language,
