@@ -110,7 +110,13 @@ To address the comment, we have rewritten the opening paragraph as follows:
 Line 101: In Figure 1a, it would be helpful to see the two phases (currently, those are not clear to me). Also, even though Figure 1c is addressed at a much later point in the manuscript, it would be helpful to briefly mention it here as well, so it doesn’t seem forgotten.
 ```
 
-**DO THIS**
+We have rewritten this section so that it is clear that the two phases were not part of the original empirical cycle, but introduced by Wagenmakers (1b).
+
+We have also made the two phases visually more distinct by adding a different background to each in 1b.
+
+Finally, we now briefly introduce 1c as well:
+
+`r get_revision("introduce1c")`
 
 ```{asis}
 Line 102: The corresponding year should be added to “Wagenmakers and colleagues.”

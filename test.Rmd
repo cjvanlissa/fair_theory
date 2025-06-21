@@ -176,18 +176,30 @@ It also argues that nonformal aspects (e.g. commonly used analogies) and practic
 ## Theory and Scientific Progress
 
 According to the *empirical cycle* [@degrootMethodologyFoundationsInference1969],
-a meta-theoretical model of cumulative knowledge acquisition,
+a meta-theory of cumulative knowledge acquisition,
 research ideally follows a cyclical process (Figure \@ref(fig:figecs)a).
 Naturalistic observations or patterns identified in data give rise to preliminary hypotheses via induction.
 Then, deduction is used to derive testable predictions from these hypotheses.
 Finally, the outcomes of tests are evaluated with regard to their implications for theory.
 Wagenmakers and colleagues divided this cycle into two phases [-@wagenmakersCreativityVerificationCyclePsychological2018, Figure \@ref(fig:figecs)b].
-In one half of the cycle, which they labeled the "Context of Justification",
-hypotheses derived from theory are tested on data.
-In the other half of the cycle (the "Context of Discovery"),
-patterns observed in data are generalized to theoretical principles.
-<!-- Hier iets over mijn interpretatie -->
-In this model, theories are the vehicle of scientists' understanding of phenomena.
+One phase is the "Context of Justification",
+in which hypotheses derived from theory are tested on data.
+The other phase is the "Context of Discovery",
+in which patterns observed in data are generalized to theoretical principles.
+<span id="introduce1c">In these interpretations of the empirical cycle, each stage describes a process.
+This invites the question what the concrete outcomes of these processes are.
+How does knowledge accumulate when iterating through the cycle; what actually changes, other than the scholar's mind?
+To address these questions, the lead author specified a revised version of the empirical cycle (see "Changing a Theory")
+in which the nodes refer to specific deliverables,
+and the edges describe processes acting upon those deliverables (Figure \@ref(fig:figecs)c).
+In this specification, `theory` refers to FAIR theory,
+`hypothesis` to machine-readable hypotheses [@lakensImprovingTransparencyFalsifiability2021],
+`test` refers to a preregistered inferential procedure [Preregistration-As-Code, @peikertReproducibleResearchTutorial2021],
+data refers to FAIR data,
+and results refer to (preprint) papers, ideally supplemented with a comprehensive reproducible research archive [@vanlissaWORCSWorkflowOpen2021].
+In this model, theories are the vehicle of scientists' understanding of phenomena;
+they are what changes when iterating through the cycle.</span>
+
 
 ```{r include = FALSE}
 library(DiagrammeR)
@@ -275,7 +287,7 @@ knitr::include_graphics("ec_lissa.pdf")
 ```
 
 ```{r figecs, eval = TRUE, fig.cap='Three implementations of the "empirical cycle" [@degrootMethodologyFoundationsInference1969].'}
-# rsvg::rsvg_pdf("empirical_cycle2.svg", "ec_visio.pdf")
+# rsvg::rsvg_pdf("empirical_cycle3.svg", "ec_visio.pdf")
 knitr::include_graphics("ec_visio.pdf")
 ```
 
@@ -900,39 +912,39 @@ a minor and tractable change.
 
 ```
 
-In implementing these different versions,
-the first author realized that their work is guided by yet another different interpretation of the empirical cycle.
-First, in De Groot's formulation, each stage describes a process.
-This invites the question of what the concrete outcomes of these processes are.
-For example, note the label "knowledge accumulation" in Wagenmakers' version.
-This label invites the question of exactly *how* knowledge accumulates upon evaluation of a prior experiment.
-What actually changes when going through the cycle, except the scholar's mind?
-To address this point, the nodes in Van Lissa's specification (2025) refer to specific deliverables, and the edges connecting the nodes describe processes acting upon those deliverables (Figure \@ref(fig:figecs)c).
-In this specification, `theory` can be understood as FAIR theory.
+The present work is guided by an interpretation of the empirical cycle in which nodes refer to specific FAIR digital objects (FAIR theory, machine-readable hypotheses, FAIR data, et cetera),
+and edges connecting the nodes refer to processes acting on (X-operating with) those digital objects (Figure \@ref(fig:figecs)c).
+This implementation addresses an important ambiguity of prior versions of the empirical cycle.
+De Groot describes how the phase of evaluation involves "formation of new [theories]";
+evaluating results from one iteration of the cycle thus become observations (Phase 1) that initiate a new iteration.
+De Groot stops short of detailing the process of theory construction or revision,
+and in Wagenmakers' version, the term "knowledge accumulation" also remains unspecified.
+Thus in both prior versions, it is unclear *how* knowledge accumulates in the evaluation phase.
+In Van Lissa's specification (2025), `theory` is understood as FAIR theory,
+which has clear procedures for making changes and connecting these changes to empirical evidence.
 
-A second distinction is that the processes of induction and deduction are perhaps not as neatly confined to specific phases as De Groot proposed.
+A second departure from De Groot is that the processes of induction and deduction are intentionally abandoned as distinct phases.
 Theory testing, as takes place in the "context of justification", can be said to involve *mostly* deductive reasoning.
 Theory development and amendment, as takes place in the "context of discovery", involves mostly inductive reasoning^[Here, "induction" is defined forming general theories based on specific observations. Others have used the term "abduction" to describe "inference to the best explanation" [@peirceCollectedPapersCharles1960]. For present purposes, the terms are interchangeable.].
 However, deriving hypotheses from theory is not *entirely* deductive
-as auxiliary assumptions must often be made to account for remaining ambiguities in theory, which involves induction.
-A rudimentary example is assuming equal variances across groups when testing a mean difference between groups, because groups often have equal variances (induction from prior knowledge), or because a Levene's test on the dataset at hand is non-significant (induction from a specific observation to the population).
-Similarly, if we accept that observation is theory-laden, then it too involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
-Similarly, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well [@peikertTransparencyOpenScience2023].
+as auxiliary assumptions must often be made to account for remaining ambiguities in theory, which involves induction [@peikertTransparencyOpenScience2023].
+A common example is assuming equal variances across groups when testing a hypothesis about a mean difference between groups.
+One might justify this assumption because groups often have equal variances (induction from prior knowledge), or because a Levene's test on the dataset at hand is non-significant (induction from a specific observation to the population).
+Additionally, if we accept that observation is theory-laden, then it too involves induction [@brewerTheoryLadennessObservationTheoryLadenness2001].
 These alterations result in the following implementation of the empirical cycle:
 
 ```
-theory;
-prediction;
-data;
-test;
-results;
+theory [label="fair theory"];
+prediction [label="preregistration"];
+data [label="fair data"];
+test [label="reproducible analysis pipeline"];
+results [label="preprint, reproducible research archive"];
 
-
-theory -> prediction [label="deduction"];
-prediction -> test [label = "implement inferential procedure"];
-data -> results;
-test -> results [label = "apply to data"];
-results -> theory [label="interpretation and generalization"];
+theory -> prediction [label="derive hypothesis, refer to specific fair theory"];
+prediction -> test [label = "implement inferential procedure as code"];
+data -> results [label="apply preregistered analysis to data to obtain results"];
+test -> results [label = "write preprint, create research archive"];
+results -> theory [label="interpret findings and modify fair theory"];
 ```
 
 The FAIR theory workflow offers concrete ways to make changes to a FAIR theory object and to compare different versions,
