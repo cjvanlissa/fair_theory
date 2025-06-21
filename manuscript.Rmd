@@ -112,7 +112,7 @@ compliant with the FAIR principles.
 accelerate cumulative knowledge acquisition.
 We focus on applications in psychology, but the principles are relevant across the social sciences and beyond.
 
-## The Need for FAIR theory
+## The Need for FAIR Theory
 
 The so-called "replication crisis" has prompted extensive scientific reforms [@lavelleWhenCrisisBecomes2021; @scheelWhyMostPsychological2022].
 Concern that the abundance of non-replicable findings 
@@ -422,7 +422,7 @@ The theory may encompass a particular transmission _model_ for disease spread in
 Concerns about the state of theory in the psychological literature revolve around two issues: theory formalization and theory (re-)use. 
 <!-- NvD: Maybe we should add "specification" as part of "formalization" or "formalisation" as a part of "specification", because not everybody that is advocating better theories thinks that we should focus on formalization.  -->
 More rigorous formalization increases theories' falsifiability [@popperLogicScientificDiscovery2002] because it expresses ideas as specific statements, clearly demarcating what should (not) be observed if the theory were true.
-For example, Baddeley's verbal description of the phonological loop in his theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate, recall success, or rehearsal sequence, which were left undefined in the original theory [@lewandowsky2010computational].
+<span id="phonoloop">Take for example the phonological loop in Baddeley's working memory model [@baddeley1992]. The idea behind it is that verbal information is kept in memory via a rehearsal loop with limited capacity. The verbal description of the phonological loop in Baddeley's theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate of information, recall success, or rehearsal sequence, which were left undefined in the original theory [@lewandowsky2010computational].</span>
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
 Compared to theories expressed in natural language,
@@ -1083,7 +1083,7 @@ These limitations impede cumulative knowledge production in our field,
 leading to an accumulation of "one-shot" empirical findings, without commensurate advancement in our principled understanding of psychological phenomena.
 We argued that applying the FAIR principles to theory offers a structured solution to these shortcomings.
 We demonstrated how to create, version-control, and archive theories as digital information artifacts.
-We introduced the `theorytools` R-package to partly automate these processes, reducing the barrier of entry for researchers,
+We introduced the `theorytools` R package to partly automate these processes, reducing the barrier of entry for researchers,
 and creating a FAIR resource for theory construction tools and documentation that can be updated as best practices continue to develop.
 
 Making theory FAIR allows researchers to more easily find a relevant framework;
@@ -1110,7 +1110,7 @@ Journals that publish theoretical papers could require authors to additionally p
 to expedite its effective reuse and iterative improvement.
 A second factor is to lower barriers to adopting FAIR theory by building upon existing widely adopted open science infrastructures.
 For this reason, we advocate the use of Git for version control, Zenodo for archiving, and DataCite for standardized metadata.
-Barriers to entry can also be lowered by simplifying workflows, which is the goal of the `theorytools` R-package.
+Barriers to entry can also be lowered by simplifying workflows, which is the goal of the `theorytools` R package.
 Fourth, the availability of Open Educational Materials (OEM) about theory development contributes to doctoral socialization.
 These materials allow teachers to incorporate theory development into their curriculum without investing substantial time on course development,
 thus educating the next generation to make use of and contribute to FAIR theory.
@@ -1149,7 +1149,7 @@ Furthermore, at the time of writing, dedicated indexing systems for FAIR theory 
 Using the Zenodo search function and submitting theories to the "FAIR Theory Community" on Zenodo can help overcome this limitation in the short term.
 
 Another limitation is the learning curve associated with tools like Git and Zenodo.
-The `theorytools` R-package mitigates this limitation for R-users by automating key steps in the process.
+The `theorytools` R package mitigates this limitation for R-users by automating key steps in the process.
 Moreover, the initial investment in time can be offset by long-term productivity gains and increased impact of FAIR theory.
 One barrier to adopting FAIR theory is cultural resistance to sharing and modifying theories, also known as the "toothbrush problem".
 Education might help address this limitation; with this in mind,
