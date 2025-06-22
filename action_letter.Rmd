@@ -25,23 +25,6 @@ revise::read_manuscript("test.Rmd")
 ## Editor's Comments
 
 ```{asis}
-Thank you for submitting Manuscript ID PPS-25-140 entitled "To be FAIR: Theory Specification Needs an Update" to Perspectives on Psychological Science. It now has been reviewed.  The comments of the reviewer(s) are included at the bottom of this letter.
-
-The reviewer(s) have recommended publication, but also suggest some revisions to your manuscript. I have some further comments, which I hope also will be helpful to you in making a revision. Therefore, I invite you to respond to the reviewer(s)' and my comments and to revise your manuscript.
-
-[x] Headings should not be numbered.
-[x] Tables and Figures should be uploaded separately and not positioned in the text (although it is fine to indicate where they should be inserted).
-[] Figures should be uploaded in their native format (the program they were created in) at 300 dpi. Acceptable figure file formats include MS Office files (DOC, PPT, XLS), Adobe Illustrator (AI), JPG, EPS, and PDF.
-[x] References should be done with hanging indents using APA style. 
-[] If you want to add the doi that is good.  But do not put in the search criteria for retrieving a document that has been published in a book or journal. 
-```
-
-In response to your request, we have: 
-- uploaded tables separately: tab_meehl.csv
-- uploaded figures separately: ec_visio.pdf, git_branches.png, git_compare_short.png
-
-
-```{asis}
 a) You have a balancing act to strike between providing technical tools (e.g., version control workflows) that can assist scientists in implementing your proposals on the one hand, against a readership and a scientific discipline that likely largely cannot effectively implement such tools. I will give a simple example. The very first thing I read after the title page was "This is a preprint paper, generated from Git Commit # 7b710ba5." I wager that most readers of Perspectives do not know what a git commit is, at least not in any meaningful way. This is a minor example, but illustrates the larger point. Reviewer 2 (Turkheimer) makes this point in his review.
 ```
 

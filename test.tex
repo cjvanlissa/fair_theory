@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
-  man, noextraspace,floatsintext]{apa7}
+  man, noextraspace]{apa7}
 \usepackage{amsmath,amssymb}
 \usepackage{iftex}
 \ifPDFTeX
@@ -184,7 +184,13 @@
   }
 {}{\PatchFailed}
 \makeatother
-\keywords{fairtheory, meta science, theory formation, open science\newline\indent Word count: 9794}
+\keywords{fairtheory, meta science, theory formation, open science\newline\indent Word count: 9829}
+\DeclareDelayedFloatFlavor{ThreePartTable}{table}
+\DeclareDelayedFloatFlavor{lltable}{table}
+\DeclareDelayedFloatFlavor*{longtable}{table}
+\makeatletter
+\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
+\makeatother
 \usepackage{lineno}
 
 \linenumbers
@@ -218,7 +224,7 @@
 
 \authornote{
 
-We are particularly endebted to our Reviewer, Dr.~Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr.~Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id \#a5acd015. The first and senior author positions were fixed, and remaining author positions randomized.
+We are particularly indebted to one of our Reviewers, Dr.~Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr.~Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id \#6d863571. The first and senior author positions were fixed, and remaining author positions randomized.
 
 The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing - original draft, Writing -- review \& editing; Aaron Peikert: Conceptualization, Formal Analysis, Writing -- original draft, Writing -- review \& editing; Maximilian S. Ernst: Writing -- review \& editing, Investigation; Noah N.N. van Dongen: Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing.
 
@@ -252,7 +258,7 @@ this paper is not limited to one particular definition.}
 FAIR theory can potentially improve the transparency and efficiency of scholarly communication, reduce research waste, and accelerate cumulative knowledge acquisition.
 We focus on applications in psychology, but the principles are relevant across the social sciences and beyond.
 
-\subsection{The Need for FAIR theory}\label{the-need-for-fair-theory}
+\subsection{The Need for FAIR Theory}\label{the-need-for-fair-theory}
 
 The so-called ``replication crisis'' has prompted extensive scientific reforms (Lavelle, 2021; Scheel, 2022).
 Concern that the abundance of non-replicable findings
@@ -294,11 +300,11 @@ we do not limited ourselves to any one particular definition - although, at time
 Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic (Winther, 2021).
 The syntactic view describes theories as ``sets of sentences in a given logical domain language'' (Winther, 2021, ch.~2),
 acknowledging that each domain (a scientific field, such as psychology or physics) has its own theoretical vocabulary.
-We recognize the syntactic view in Meehl's (1990) hierarchy of ever-more specific ``statements'' a theory might contain (Table \ref{tab:tabmeehl}):
-statements about the types of entities postulated (i.e., ontology),
-statements about causal connections between those entities,
-statements about the functional form of those connections,
-and statements about their specific numerical values (Frankenhuis et al., 2023; Guest, 2024).
+We recognize the syntactic view in Meehl's (1990, p. 114) hierarchy of ever-more specific ``statements'' a theory might contain:
+statements about the types of entities postulated (i.e., ontology, level I),
+statements about causal connections between those entities (level II),
+statements about the functional form of those connections (levels III-VIII),
+and statements about their specific numerical values (level IX).
 The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematics.
 It shifts the focus from theories as collections of sentences to mathematical models.
 The term ``model'' is not uniquely defined within the literature;
@@ -310,17 +316,29 @@ It also argues that nonformal aspects (e.g.~commonly used analogies) and practic
 \subsection{Theory and Scientific Progress}\label{theory-and-scientific-progress}
 
 According to the \emph{empirical cycle} (De Groot \& Spiekerman, 1969),
-a meta-theoretical model of cumulative knowledge acquisition,
+a meta-theory of cumulative knowledge acquisition,
 research ideally follows a cyclical process (Figure \ref{fig:figecs}a).
 Naturalistic observations or patterns identified in data give rise to preliminary hypotheses via induction.
 Then, deduction is used to derive testable predictions from these hypotheses.
 Finally, the outcomes of tests are evaluated with regard to their implications for theory.
 Wagenmakers and colleagues divided this cycle into two phases (2018, Figure \ref{fig:figecs}b).
-In one half of the cycle, which they labeled the ``Context of Justification'',
-hypotheses derived from theory are tested on data.
-In the other half of the cycle (the ``Context of Discovery''),
-patterns observed in data are generalized to theoretical principles.
-In this model, theories are the vehicle of scientists' understanding of phenomena.
+One phase is the ``Context of Justification'',
+in which hypotheses derived from theory are tested on data.
+The other phase is the ``Context of Discovery'',
+in which patterns observed in data are generalized to theoretical principles.
+\phantomsection\label{introduce1c}{In these interpretations of the empirical cycle, each stage describes a process.
+This invites the question what the concrete outcomes of these processes are.
+How does knowledge accumulate when iterating through the cycle; what actually changes, other than the scholar's mind?
+To address these questions, the lead author specified a revised version of the empirical cycle (see ``Changing a Theory'')
+in which the nodes refer to specific deliverables,
+and the edges describe processes acting upon those deliverables (Figure \ref{fig:figecs}c).
+In this specification, \texttt{theory} refers to FAIR theory,
+\texttt{hypothesis} to machine-readable hypotheses (Lakens \& DeBruine, 2021),
+\texttt{test} refers to a preregistered inferential procedure (Preregistration-As-Code, Peikert et al., 2021),
+data refers to FAIR data,
+and results refer to (preprint) papers, ideally supplemented with a comprehensive reproducible research archive (Van Lissa et al., 2021).
+In this model, theories are the vehicle of scientists' understanding of phenomena;
+they are what changes when iterating through the cycle.}
 
 \begin{figure}
 \centering
@@ -400,7 +418,7 @@ Such a theory may encompass a particular transmission \emph{model} for disease s
 
 Concerns about the state of psychological theory have motivated increasing calls for greater theory ``formalization'' (Smaldino, 2017; cf. Oude Maatman, 2021).
 Formalization increases theories' falsifiability (Popper, 2002) because it expresses ideas as specific statements, clearly demarcating what should (not) be observed if the theory were true.
-For example, Baddeley's verbal description of the phonological loop in his theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate, recall success, or rehearsal sequence, which were left undefined in the original theory (Lewandowsky \& Farrell, 2010).
+\phantomsection\label{phonoloop}{Take for example the phonological loop in Baddeley's working memory model (Baddeley, 1992). The idea behind it is that verbal information is kept in memory via a rehearsal loop with limited capacity. The verbal description of the phonological loop in Baddeley's theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate of information, recall success, or rehearsal sequence, which were left undefined in the original theory (Lewandowsky \& Farrell, 2010).}
 Without committing to specific implementations a-priori,
 the theory becomes hard to test.
 Compared to theories expressed in natural language,
@@ -535,7 +553,7 @@ Conversely, as organizations (e.g., Google Scholar, Web of Science, Pure, ORCID)
 There have been notable efforts to improve theories' Findability through post-hoc curation.
 For example, Gray and colleagues introduced a format for representing theories,
 and posted many examples on \href{https://www.theorymaps.org}{their website} (Gray, 2017).
-Similarly, \href{http://psychomodels.org/}{PsychoModels} seeks to inventorize theories and models in psychology (van Dongen \& Volz, 2025).
+Similarly, \href{http://psychomodels.org/}{PsychoModels} seeks to inventorize theories and models in psychology (N. N. N. van Dongen \& Volz, 2025).
 Post-hoc curation is a notable effort but does not address the root cause of the lack of Findability.
 Ideally, Findability would be addressed ante-hoc, through documentation with rich metadata and modular publishing.
 Both approaches can be complementary, however.
@@ -642,36 +660,18 @@ This revised definition makes it possible to outline a theory's affordances in t
 For example, a FAIR theory may be X-Interoperable for deriving testable hypotheses,
 or for the purpose of selecting relevant control variables,
 or for the purpose of indicating the conditions necessary for observing a particular phenomenon.
-If we consider Meehl's nine properties of strong theories (properties 3-8 are grouped because they all refer to functional form),
-we see how each of these properties makes a specific type of interoperability possible (Table \ref{tab:tabmeehl}).
-
-\begin{table}[tbp]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:tabmeehl}}
-
-\begin{tabular}{ll}
-\toprule
-Property & \multicolumn{1}{c}{X-Interoperability}\\
-\midrule
-1) Ontology & Variable selection\\
-2) Causal connections & Model specification, covariate selection, causal inference\\
-3-8) Functional Form & Deriving specific hypotheses\\
-9) Numerical Value & Simulating data\\
-\bottomrule
-\end{tabular}
-
-\end{threeparttable}
-\end{center}
-
-\end{table}
+If we consider Meehl's nine properties of strong theories (1990, p. 114),
+we see how each of these properties makes a specific type of interoperability possible.
+Level I, specifying an ontology, enables X-interoperability for selecting relevant variables;
+level II, causal connections, enable model specification, covariate selection, and causal inference;
+levels III-VIII all refer to functional form, which allows for deviring specific hypotheses about unknown model parameter values.
+If level IX is also specified, and parameters are assigned specific numerical values, the theory is completely specified; it is a digital twin of the system it seeks to describe, and can be used to evaluate hypothetical scenarios and generate synthetic data via simulation.
 
 With regard to the state of Interoperability in psychology,
 Kurt Lewin's (1943) adage ``there's nothing as practical as a good theory'' paints a hopeful picture of theories as useful tools in psychological researchers' day-to-day work.
 But, as we argued, contemporary practice falls short of this ideal.
-The examples of X-Interoperability offered in Table \ref{tab:tabmeehl} illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-Interoperable within software used for analysis.
+Much can be gained by integrating theory directly into analysis workflows,
+and by making theory X-Interoperable within software used for analysis.
 For example, Interoperable theory could be used
 to select control variables for causal inference (Cinelli et al., 2022),
 or to preregister a study with an explicit derivation chain from theory to hypothesis,
@@ -846,66 +846,65 @@ We could implement this change to the original implementation by grouping the re
 a minor and tractable change.
 
 \begin{verbatim}
-  {
-    label="Discovery";
-    induction [label="New hypothesis"];
-    deduction [label="New prediction"];
-  }
-  observation  [label="Old knowledge and old data"];
-  {
-    label="Justification";
-    test [label="Test on new data"];
-    evaluation;
-  }
+{
+  label="Discovery";
+  induction [label="New hypothesis"];
+  deduction [label="New prediction"];
+}
+observation  [label="Old knowledge and old data"];
+{
+  label="Justification";
+  test [label="Test on new data"];
+  evaluation;
+}
 
-  observation -> induction [label="Speculate & explore"];
-  induction -> deduction  [label="Deduce"];
-  deduction -> test  [label="Design new experiment"];
-  test -> evaluation  [label="Statistical analysis"];
-  evaluation -> observation  [label="Knowledge accumulation"];
+observation -> induction [label="Speculate & explore"];
+induction -> deduction  [label="Deduce"];
+deduction -> test  [label="Design new experiment"];
+test -> evaluation  [label="Statistical analysis"];
+evaluation -> observation  [label="Knowledge accumulation"];
 \end{verbatim}
 
-In implementing these different versions,
-the first author realized that their work is guided by yet another different interpretation of the empirical cycle.
-First, in De Groot's formulation, each stage describes a process.
-This invites the question of what the concrete outcomes of these processes are.
-For example, note the label ``knowledge accumulation'' in Wagenmakers' version.
-This label invites the question of exactly \emph{how} knowledge accumulates upon evaluation of a prior experiment.
-What actually changes when going through the cycle, except the scholar's mind?
-To address this point, the nodes in Van Lissa's specification (2025) refer to specific deliverables, and the edges connecting the nodes describe processes acting upon those deliverables (Figure \ref{fig:figecs}c).
-In this specification, \texttt{theory} can be understood as FAIR theory.
+The present work is guided by an interpretation of the empirical cycle in which nodes refer to specific FAIR digital objects (FAIR theory, machine-readable hypotheses, FAIR data, et cetera),
+and edges connecting the nodes refer to processes acting on (X-operating with) those digital objects (Figure \ref{fig:figecs}c).
+This implementation addresses an important ambiguity of prior versions of the empirical cycle.
+De Groot describes how the phase of evaluation involves ``formation of new {[}theories{]}'';
+evaluating results from one iteration of the cycle thus become observations (Phase 1) that initiate a new iteration.
+De Groot stops short of detailing the process of theory construction or revision,
+and in Wagenmakers' version, the term ``knowledge accumulation'' also remains unspecified.
+Thus in both prior versions, it is unclear \emph{how} knowledge accumulates in the evaluation phase.
+In Van Lissa's specification (2025), \texttt{theory} is understood as FAIR theory,
+which has clear procedures for making changes and connecting these changes to empirical evidence.
 
-A second distinction is that the processes of induction and deduction are perhaps not as neatly confined to specific phases as De Groot proposed.
+A second departure from De Groot is that the processes of induction and deduction are intentionally abandoned as distinct phases.
 Theory testing, as takes place in the ``context of justification'', can be said to involve \emph{mostly} deductive reasoning.
 Theory development and amendment, as takes place in the ``context of discovery'', involves mostly inductive reasoning\footnote{Here, ``induction'' is defined forming general theories based on specific observations. Others have used the term ``abduction'' to describe ``inference to the best explanation'' (Peirce, 1960). For present purposes, the terms are interchangeable.}.
 However, deriving hypotheses from theory is not \emph{entirely} deductive
-as auxiliary assumptions must often be made to account for remaining ambiguities in theory, which involves induction.
-A rudimentary example is assuming equal variances across groups when testing a mean difference between groups, because groups often have equal variances (induction from prior knowledge), or because a Levene's test on the dataset at hand is non-significant (induction from a specific observation to the population).
-Similarly, if we accept that observation is theory-laden, then it too involves induction (Brewer \& Lambert, 2001).
-Similarly, if the testing procedure is not explicitly defined before seeing the data, it incurs some inductive bias as well (Peikert, 2023).
+as auxiliary assumptions must often be made to account for remaining ambiguities in theory, which involves induction (Peikert, 2023).
+A common example is assuming equal variances across groups when testing a hypothesis about a mean difference between groups.
+One might justify this assumption because groups often have equal variances (induction from prior knowledge), or because a Levene's test on the dataset at hand is non-significant (induction from a specific observation to the population).
+Additionally, if we accept that observation is theory-laden, then it too involves induction (Brewer \& Lambert, 2001).
 These alterations result in the following implementation of the empirical cycle:
 
 \begin{verbatim}
-theory;
-prediction;
-data;
-test;
-results;
+theory [label="fair theory"];
+prediction [label="preregistration"];
+data [label="fair data"];
+test [label="reproducible analysis pipeline"];
+results [label="preprint, reproducible research archive"];
 
-
-theory -> prediction [label="deduction"];
-prediction -> test [label = "implement inferential procedure"];
-data -> results;
-test -> results [label = "apply to data"];
-results -> theory [label="interpretation and generalization"];
+theory -> prediction [label="derive hypothesis, refer to specific fair theory"];
+prediction -> test [label = "implement inferential procedure as code"];
+data -> results [label="apply preregistered analysis to data to obtain results"];
+test -> results [label = "write preprint, create research archive"];
+results -> theory [label="interpret findings and modify fair theory"];
 \end{verbatim}
 
-The FAIR theory workflow offers concrete ways to make changes to a FAIR theory object and to compare different versions,
-as explained in \href{ADD\%20ME}{this vignette}.
-Figure \ref{fig:figgithub-2} shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
+The FAIR theory workflow offers concrete ways to make changes to a FAIR theory object and to compare different versions, \href{https://cjvanlissa.github.io/theorytools/articles/updating_theory.html}{as explained here}.
+Figure \ref{fig:figgithub-2} shows a comparison of two versions of a theory.
 
 \begin{figure}
-\subfloat[Different versions of a theory are archived as distinct branches\label{fig:figgithub-1}]{\includegraphics[width=0.5\linewidth]{git_branches} }\subfloat[These versions can be explicitly compared\label{fig:figgithub-2}]{\includegraphics[width=0.5\linewidth]{git_compare_short} }\caption{FAIR Theories on GitHub}\label{fig:figgithub}
+\subfloat[Different versions of a theory archived as distinct branches\label{fig:figgithub-1}]{\includegraphics[width=0.5\linewidth]{git_branches} }\subfloat[These versions can be explicitly compared\label{fig:figgithub-2}]{\includegraphics[width=0.5\linewidth]{git_compare_short} }\caption{FAIR Theories on GitHub}\label{fig:figgithub}
 \end{figure}
 
 \subsection{Further Uses of FAIR Theory}\label{further-uses-of-fair-theory}
@@ -956,7 +955,7 @@ to expedite its effective reuse and iterative improvement.
 A second factor is to lower barriers to adopting FAIR theory by building upon existing widely adopted open science infrastructures.
 For this reason, we advocate the use of Git for version control, Zenodo for archiving, and DataCite for standardized metadata.
 Barriers to entry can also be lowered by simplifying workflows, which is the goal of the \texttt{theorytools} R-package.
-Fourth, the availability of Open Educational Materials (OEM) about theory development contributes to doctoral socialization.
+Fourth, the availability of Open Educational Materials (OEM) about theory development contributes to doctoral socialization (Schönbrodt, 2025; N. van Dongen, 2025).
 These materials allow teachers to incorporate theory development into their curriculum without investing substantial time on course development,
 thus educating the next generation to make use of and contribute to FAIR theory.
 Finally, community building plays an important role;
@@ -1012,8 +1011,14 @@ A limitation of scope is that FAIR theory does not directly resolve problems rel
 However, our work does establish a framework that allows for and promotes the formalization of theories.
 The example of the empirical cycle demonstrates how FAIR principles can guide theory formalization and foster cumulative progress.
 Another limitation of scope is that FAIR theory does not resolve other related issues in psychology, such as the measurement crisis (Bringmann et al., 2022) and lack of standardized ontologies for psychological constructs (Bosco et al., 2017).
-However, our work here provides a template for addressing such challenges,
-and any advancements in the areas of measurement and ontology will serve to amplify the value of FAIR theories, particularly when such resources are cross-referenced in the metadata (e.g., on Zenodo).
+\phantomsection\label{nomological}{In their seminal paper on construct validity and the use of nomological nets, Cronbach and Meehl (Cronbach \& Meehl, 1955) discuss crucial insights that are compatible with a FAIR theory approach.
+They describe the interdependence between construct validity and the validity of theories that include that construct,
+proposing that the entire body of empirical evidence should be evaluated in relation to both (p.~4),
+and emphasizing that doing so requires theory specifying a ``theory sufficiently clearly that others can accept or reject it'' (p.13).
+Our work here provides provides an infrastructure for realizing this vision.
+For example, if FAIR theories reference standardized ontologies and operationalizations for theoretical constructs,
+and if hypotheses machine-readable and inferential procedures are implemented using reproducible code,
+then it would become possible to evaluate the entire body of empirical evidence (FAIR data) against these machine-readable tests in an ongoing manner - similar to a continuously cumulating meta-analysis.}
 
 \subsection{Future Directions}\label{future-directions}
 
@@ -1050,7 +1055,7 @@ By providing a mechanism for iterative improvement based on emerging evidence, F
 
 \phantomsection\label{evaluateimpact}{Finally, while this paper has discussed the potential impact of FAIR theory in addressing contemporary challenges in psychology,
 future research is needed to evaluate whether this potential is realized.
-Registered reports were first introduced to psychology about a decade ago (\textbf{nosekRegisteredReportsMethod2014?}),
+Registered reports were first introduced to psychology about a decade ago (Nosek \& Lakens, 2014),
 and are now becoming commonplace, as are studies evaluating their adoption and impact on scientific practices and research results (Scheel, Schijen, et al., 2021).
 We envision a similar trajectory for FAIR theory.}
 
@@ -1087,6 +1092,9 @@ and accelerates cumulative knowledge acquisition in psychology, the social scien
 \bibitem[\citeproctext]{ref-aalbersbergMakingScienceTransparent2018}
 Aalbersberg, Ij. J., Appleyard, T., Brookhart, S., Carpenter, T., Clarke, M., Curry, S., Dahl, J., DeHaven, A. C., Eich, E., Franko, M., Freedman, L., Graf, C., Grant, S., Hanson, B., Joseph, H., Kiermer, V., Kramer, B., Kraut, A., Karn, R. K., \ldots{} Vazire, S. (2018). \emph{Making {Science Transparent By Default}; {Introducing} the {TOP Statement}}. \url{https://doi.org/10.31219/osf.io/sm78t}
 
+\bibitem[\citeproctext]{ref-baddeleyWorkingMemory1992}
+Baddeley, A. (1992). Working {Memory}. \emph{Science}, \emph{255}(5044), 556--559. \url{https://doi.org/10.1126/science.1736359}
+
 \bibitem[\citeproctext]{ref-bently2010copyright}
 Bently, L., Davis, J., \& Ginsburg, J. C. (2010). \emph{Copyright and {Piracy}: {An} interdisciplinary critique} (Vol. 13). Cambridge University Press.
 
@@ -1104,6 +1112,9 @@ Cinelli, C., Forney, A., \& Pearl, J. (2022). A {Crash Course} in {Good} and {Ba
 
 \bibitem[\citeproctext]{ref-cramerMajorDepressionComplex2016}
 Cramer, A. O. J., Borkulo, C. D. van, Giltay, E. J., Maas, H. L. J. van der, Kendler, K. S., Scheffer, M., \& Borsboom, D. (2016). Major {Depression} as a {Complex Dynamic System}. \emph{PLOS ONE}, \emph{11}(12), e0167490. \url{https://doi.org/10.1371/journal.pone.0167490}
+
+\bibitem[\citeproctext]{ref-cronbachConstructValidityPsychological1955}
+Cronbach, L. J., \& Meehl, P. E. (1955). Construct validity in psychological tests. \emph{Psychological Bulletin}, \emph{52}, 281--302. \url{https://doi.org/10.1037/h0040957}
 
 \bibitem[\citeproctext]{ref-dataciteContributingCitationsReferences2024}
 DataCite. (2024). \emph{Contributing {Citations} and {References}}. DataCite Support. \url{https://support.datacite.org/docs/data-citation}
@@ -1225,6 +1236,9 @@ Norouzi, R., Kleinberg, B., Vermunt, J., \& Van Lissa, C. J. (2024). \emph{Captu
 \bibitem[\citeproctext]{ref-nosekPromotingOpenResearch2015}
 Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., Buck, S., Chambers, C. D., Chin, G., Christensen, G., Contestabile, M., Dafoe, A., Eich, E., Freese, J., Glennerster, R., Goroff, D., Green, D. P., Hesse, B., Humphreys, M., \ldots{} Yarkoni, T. (2015). Promoting an open research culture. \emph{Science}, \emph{348}(6242), 1422--1425. \url{https://doi.org/10.1126/science.aab2374}
 
+\bibitem[\citeproctext]{ref-nosekRegisteredReportsMethod2014}
+Nosek, B. A., \& Lakens, D. (2014). Registered reports : A method to increase the credibility of published results. \emph{Social Psychology}, \emph{45}(3), 137--141. \url{https://doi.org/10.1027/1864-9335/a000192}
+
 \bibitem[\citeproctext]{ref-oberauerAddressingTheoryCrisis2019}
 Oberauer, K., \& Lewandowsky, S. (2019). Addressing the theory crisis in psychology. \emph{Psychonomic Bulletin \& Review}, \emph{26}(5), 1596--1618. \url{https://doi.org/10.3758/s13423-019-01645-2}
 
@@ -1270,6 +1284,9 @@ Scheel, A. M., Schijen, M. R. M. J., \& Lakens, D. (2021). An {Excess} of {Posit
 \bibitem[\citeproctext]{ref-scheelWhyHypothesisTesters2021}
 Scheel, A. M., Tiokhin, L., Isager, P. M., \& Lakens, D. (2021). Why {Hypothesis Testers Should Spend Less Time Testing Hypotheses}. \emph{Perspectives on Psychological Science}, \emph{16}(4), 744--755. \url{https://doi.org/10.1177/1745691620966795}
 
+\bibitem[\citeproctext]{ref-schonbrodtNicebreadFOMOPsyFormal2025}
+Schönbrodt, F. (2025). \emph{Nicebread/{FOMO-Psy}: {Formal Modeling} in {Psychology} (course material winter term 2024/2025)}. Zenodo. \url{https://doi.org/10.5281/zenodo.15703575}
+
 \bibitem[\citeproctext]{ref-smaldinoModelsAreStupid2017}
 Smaldino, P. E. (2017). Models {Are Stupid}, and {We Need More} of {Them}. In R. R. Vallacher, S. J. Read, \& A. Nowak (Eds.), \emph{Computational {Social Psychology}} (1st ed., pp. 311--331). Routledge. \url{https://doi.org/10.4324/9781315173726-14}
 
@@ -1290,6 +1307,9 @@ Van De Sompel, H., Payette, S., Erickson, J., Lagoze, C., \& Warner, S. (2004). 
 
 \bibitem[\citeproctext]{ref-vandermaasDynamicalModelGeneral2006}
 Van Der Maas, H. L. J., Dolan, C. V., Grasman, R. P. P. P., Wicherts, J. M., Huizenga, H. M., \& Raijmakers, M. E. J. (2006). A dynamical model of general intelligence: {The} positive manifold of intelligence by mutualism. \emph{Psychological Review}, \emph{113}(4), 842--861. \url{https://doi.org/10.1037/0033-295X.113.4.842}
+
+\bibitem[\citeproctext]{ref-vandongenCourseMaterialFundamentals2025}
+van Dongen, N. (2025). \emph{Course material - {Fundamentals}}. \url{https://doi.org/10.17605/OSF.IO/ABXUT}
 
 \bibitem[\citeproctext]{ref-vandongenPsychoModelsMathematicalComputational2025}
 van Dongen, N. N. N., \& Volz, L. (2025). \emph{{PsychoModels}: {The} mathematical and computational model repository for psychological science.} \url{https://www.psychomodels.org/}

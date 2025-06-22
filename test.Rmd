@@ -70,7 +70,7 @@ keywords          : "fairtheory, meta science, theory formation, open science"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
 bibliography      : "fair_theory.bib"
 
-floatsintext      : yes
+floatsintext      : false
 linenumbers       : yes
 draft             : no
 mask              : no
@@ -159,11 +159,11 @@ we do not limited ourselves to any one particular definition - although, at time
 Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic [@scientifictheories].
 The syntactic view describes theories as "sets of sentences in a given logical domain language" [@scientifictheories, ch. 2],
 acknowledging that each domain (a scientific field, such as psychology or physics) has its own theoretical vocabulary.
-We recognize the syntactic view in Meehl's [-@meehlAppraisingAmendingTheories1990] hierarchy of ever-more specific "statements" a theory might contain (Table \@ref(tab:tabmeehl)):
-statements about the types of entities postulated (i.e., ontology),
-statements about causal connections between those entities,
-statements about the functional form of those connections,
-and statements about their specific numerical values [@frankenhuisStrategicAmbiguitySocial2023; @guestWhatMakesGood2024].
+We recognize the syntactic view in Meehl's [-@meehlAppraisingAmendingTheories1990, p. 114] hierarchy of ever-more specific "statements" a theory might contain:
+statements about the types of entities postulated (i.e., ontology, level I),
+statements about causal connections between those entities (level II),
+statements about the functional form of those connections (levels III-VIII),
+and statements about their specific numerical values (level IX).
 The semantic view challenges the necessity of distinct domain languages for different scientific fields, and instead advocates for formalizing theories using mathematics.
 It shifts the focus from theories as collections of sentences to mathematical models.
 The term "model" is not uniquely defined within the literature;
@@ -681,29 +681,18 @@ This revised definition makes it possible to outline a theory's affordances in t
 For example, a FAIR theory may be X-Interoperable for deriving testable hypotheses,
 or for the purpose of selecting relevant control variables,
 or for the purpose of indicating the conditions necessary for observing a particular phenomenon.
-If we consider Meehl's nine properties of strong theories (properties 3-8 are grouped because they all refer to functional form),
-we see how each of these properties makes a specific type of interoperability possible (Table \@ref(tab:tabmeehl)).
-
-```{r tabmeehl}
-tab_meehl <- data.frame(
-  "Property" = c("1) Ontology", "2) Causal connections", "3-8) Functional Form", "9) Numerical Value"),
-  "X-Interoperability" = c("Variable selection", "Model specification, covariate selection, causal inference", "Deriving specific hypotheses", "Simulating data"), check.names = FALSE
-)
-write.csv(tab_meehl, "tab_meehl.csv")
-papaja::apa_table(tab_meehl)
-```
-
-
-<!-- Do we want to say something about this?
-Interoperability of psychological theory may be limited when theories are instantiated in natural language without consideration of ontological complexities. -->
-<!-- or as visualizations without a straightforward interpretation -->
-<!-- What can go wrong? A well-formed sentence may be logically inconsistent (e.g., the theory that conceptualized father involvement simultaneously as mediator and moderator); a picture may seem sensible but there's no straightforward way to translate it to hypotheses, etc. -->
-<!-- which are not machine-readable and l -->
+If we consider Meehl's nine properties of strong theories [-@meehlAppraisingAmendingTheories1990, p. 114],
+we see how each of these properties makes a specific type of interoperability possible.
+Level I, specifying an ontology, enables X-interoperability for selecting relevant variables;
+level II, causal connections, enable model specification, covariate selection, and causal inference;
+levels III-VIII all refer to functional form, which allows for deviring specific hypotheses about unknown model parameter values.
+If level IX is also specified, and parameters are assigned specific numerical values, the theory is completely specified; it is a digital twin of the system it seeks to describe, and can be used to evaluate hypothetical scenarios and generate synthetic data via simulation.
 
 With regard to the state of Interoperability in psychology, 
 Kurt Lewin's [-@lewinPsychologyProcessGroup1943] adage "there's nothing as practical as a good theory" paints a hopeful picture of theories as useful tools in psychological researchers' day-to-day work.
 But, as we argued, contemporary practice falls short of this ideal.
-The examples of X-Interoperability offered in Table \@ref(tab:tabmeehl) illustrate that much can be gained by integrating theory directly into analysis workflows, and by making theory X-Interoperable within software used for analysis.
+Much can be gained by integrating theory directly into analysis workflows,
+and by making theory X-Interoperable within software used for analysis.
 For example, Interoperable theory could be used
 to select control variables for causal inference [@cinelliCrashCourseGood2022],
 or to preregister a study with an explicit derivation chain from theory to hypothesis,
