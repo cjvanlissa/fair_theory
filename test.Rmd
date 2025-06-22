@@ -892,24 +892,23 @@ We could implement this change to the original implementation by grouping the re
 a minor and tractable change.
 
 ```
-  {
-    label="Discovery";
-    induction [label="New hypothesis"];
-    deduction [label="New prediction"];
-  }
-  observation  [label="Old knowledge and old data"];
-  {
-    label="Justification";
-    test [label="Test on new data"];
-    evaluation;
-  }
+{
+  label="Discovery";
+  induction [label="New hypothesis"];
+  deduction [label="New prediction"];
+}
+observation  [label="Old knowledge and old data"];
+{
+  label="Justification";
+  test [label="Test on new data"];
+  evaluation;
+}
 
-  observation -> induction [label="Speculate & explore"];
-  induction -> deduction  [label="Deduce"];
-  deduction -> test  [label="Design new experiment"];
-  test -> evaluation  [label="Statistical analysis"];
-  evaluation -> observation  [label="Knowledge accumulation"];
-
+observation -> induction [label="Speculate & explore"];
+induction -> deduction  [label="Deduce"];
+deduction -> test  [label="Design new experiment"];
+test -> evaluation  [label="Statistical analysis"];
+evaluation -> observation  [label="Knowledge accumulation"];
 ```
 
 The present work is guided by an interpretation of the empirical cycle in which nodes refer to specific FAIR digital objects (FAIR theory, machine-readable hypotheses, FAIR data, et cetera),
@@ -947,11 +946,10 @@ test -> results [label = "write preprint, create research archive"];
 results -> theory [label="interpret findings and modify fair theory"];
 ```
 
-The FAIR theory workflow offers concrete ways to make changes to a FAIR theory object and to compare different versions,
-as explained in [this vignette](ADD ME).
-Figure \@ref(fig:figgithub-2) shows a comparison of the original empirical cycle by De Groot, and the lead author's implementation.
+The FAIR theory workflow offers concrete ways to make changes to a FAIR theory object and to compare different versions, [as explained here](https://cjvanlissa.github.io/theorytools/articles/updating_theory.html).
+Figure \@ref(fig:figgithub-2) shows a comparison of two versions of a theory.
      
-```{r figgithub, out.width = "50%", fig.show='hold', fig.cap='FAIR Theories on GitHub', fig.subcap=c('Different versions of a theory are archived as distinct branches', 'These versions can be explicitly compared'), fig.ncol = 2}
+```{r figgithub, out.width = "50%", fig.show='hold', fig.cap='FAIR Theories on GitHub', fig.subcap=c('Different versions of a theory archived as distinct branches', 'These versions can be explicitly compared'), fig.ncol = 2}
 #par(mfrow=c(1,2))
 knitr::include_graphics("git_branches.png")
 knitr::include_graphics("git_compare_short.png")
@@ -1014,7 +1012,7 @@ to expedite its effective reuse and iterative improvement.
 A second factor is to lower barriers to adopting FAIR theory by building upon existing widely adopted open science infrastructures.
 For this reason, we advocate the use of Git for version control, Zenodo for archiving, and DataCite for standardized metadata.
 Barriers to entry can also be lowered by simplifying workflows, which is the goal of the `theorytools` R-package.
-Fourth, the availability of Open Educational Materials (OEM) about theory development contributes to doctoral socialization.
+Fourth, the availability of Open Educational Materials (OEM) about theory development contributes to doctoral socialization [@schonbrodtNicebreadFOMOPsyFormal2025; @vandongenCourseMaterialFundamentals2025].
 These materials allow teachers to incorporate theory development into their curriculum without investing substantial time on course development,
 thus educating the next generation to make use of and contribute to FAIR theory.
 Finally, community building plays an important role;
@@ -1070,8 +1068,14 @@ A limitation of scope is that FAIR theory does not directly resolve problems rel
 However, our work does establish a framework that allows for and promotes the formalization of theories. 
 The example of the empirical cycle demonstrates how FAIR principles can guide theory formalization and foster cumulative progress.
 Another limitation of scope is that FAIR theory does not resolve other related issues in psychology, such as the measurement crisis [@bringmannBackBasicsImportance2022] and lack of standardized ontologies for psychological constructs [@boscoMetaBUSVehicleFacilitating2017].
-However, our work here provides a template for addressing such challenges, <!-- NvD: I am not sure if we are offering a template to address these challenges. If we do, we should make this explicit. -->
-and any advancements in the areas of measurement and ontology will serve to amplify the value of FAIR theories, particularly when such resources are cross-referenced in the metadata (e.g., on Zenodo).
+<span id="nomological">In their seminal paper on construct validity and the use of nomological nets, Cronbach and Meehl [@cronbachConstructValidityPsychological1955] discuss crucial insights that are compatible with a FAIR theory approach.
+They describe the interdependence between construct validity and the validity of theories that include that construct,
+proposing that the entire body of empirical evidence should be evaluated in relation to both (p. 4),
+and emphasizing that doing so requires theory specifying a "theory sufficiently clearly that others can accept or reject it" (p.13).
+Our work here provides provides an infrastructure for realizing this vision.
+For example, if FAIR theories reference standardized ontologies and operationalizations for theoretical constructs,
+and if hypotheses machine-readable and inferential procedures are implemented using reproducible code,
+then it would become possible to evaluate the entire body of empirical evidence (FAIR data) against these machine-readable tests in an ongoing manner - similar to a continuously cumulating meta-analysis.</span>
 
 ## Future Directions
 

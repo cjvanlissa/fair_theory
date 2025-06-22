@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.9)  10 JUN 2025 09:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.9)  22 JUN 2025 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -905,13 +905,15 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 [1
 
 {c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 297.
-(c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
+Overfull \hbox (21.4986pt too wide) in paragraph at lines 289--294
+\T1/ptm/m/n/10 (-20) tered re-ports were first in-tro-duced to psy-chol-ogy about a decade ago (\T1/ptm/b/n/10 (-20) nosekRegisteredReportsMethod2014?\T1/ptm/m/n/10 (-20) ),
+ []
+
+
 
 [2]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 325.
+Package mdframed Info: Not enough space on this page on input line 294.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 319.
 (c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
@@ -924,35 +926,39 @@ Package microtype Info: Loading generic protrusion settings for font family
 [3]
 
 [4]
+Overfull \hbox (38.21844pt too wide) in paragraph at lines 436--437
+[]\T1/ptm/m/n/10 (-20) Take for ex-am-ple the phono-log-i-cal loop in Bad-de-ley's work-ing mem-ory model (\T1/ptm/b/n/10 (-20) baddeleyWorkingMemory1992?\T1/ptm/m/n/10 (-20) ).
+ []
+
+
 
 [5]
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 526.
-
 
 [6]
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family ptm in TS1 encoding.
+            Default family used instead on input line 553.
+
 
 [7]
 
 [8]
-Package mdframed Info: Not enough space on this page on input line 590.
-
 
 [9]
+Package mdframed Info: Not enough space on this page on input line 670.
+
 
 [10]
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 715.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 784.
+Package mdframed Info: Not enough space on this page on input line 670.
 
 
 [11]
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 784.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 729.
+(c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 777.
 
 
 [12]
@@ -961,7 +967,11 @@ Package mdframed Info: Box was splittet wrong
 
 [14]
 
-[15
+[15]
+
+[16]
+
+[17
 
 ]
 
@@ -970,25 +980,25 @@ See the caption package documentation for explanation.
 
 
 
-[16] (./action_letter.aux)
+[18] (./action_letter.aux)
  ***********
 LaTeX2e <2025-06-01>
 L3 programming layer <2025-05-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 28172 strings out of 469872
- 522751 string characters out of 5482557
- 955048 words of memory out of 5000000
- 55603 multiletter control sequences out of 15000+600000
- 687161 words of font info for 319 fonts, out of 8000000 for 9000
+ 28173 strings out of 469872
+ 522961 string characters out of 5482557
+ 952562 words of memory out of 5000000
+ 55610 multiletter control sequences out of 15000+600000
+ 686616 words of font info for 315 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,9n,117p,2226b,604s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,9n,117p,2226b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrb1000.600pk><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/Users/vanlissa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on action_letter.pdf (16 pages, 125804 bytes).
+Output written on action_letter.pdf (18 pages, 133920 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  53261 words of extra memory for PDF output out of 61914 (max. 10000000)
 
