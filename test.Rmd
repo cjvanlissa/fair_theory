@@ -62,7 +62,7 @@ affiliation:
     institution   : "MSB Medical School Berlin Department of Psychology, Berlin, Germany"
 
 authornote: |
-  We are particularly indebted to one of our Reviewers, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #`r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized.
+  We are particularly indebted to one of our Reviewers, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our GitHub repository identified by the snapshot with the unique commit ID #`r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized.
 
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
 
@@ -111,7 +111,7 @@ Scholars have demonstrated their relevance for making other digital objects more
 The present paper argues that the FAIR principles can similarly advance effective and transparent scholarly communication about theory.
 We introduce "FAIR theory":
 a digital instantiation of scientific theory, published as a self-contained and citable digital object distinct from - but potentially associated with - the scientific paper.
-<span id="alldefinitions">Definitions of theory abound and hotly debated,
+<span id="alldefinitions">Definitions of theory abound and are hotly debated,
 but as many are compatible with the FAIR principles,
 this paper is not limited to one particular definition.</span>
 FAIR theory can potentially improve the transparency and efficiency of scholarly communication, reduce research waste, and accelerate cumulative knowledge acquisition.
@@ -155,7 +155,7 @@ We introduce *FAIR theory* as a methodology that can facilitate transparent scho
 ## What is Theory?
 
 Given that a pluriformity of definitions are consistent with FAIR theory principles,
-we do not limited ourselves to any one particular definition - although, at times, our writing inevitably reveals a particular vantage point.
+we do not limit ourselves to any one particular definition - although, at times, our writing inevitably reveals a particular vantage point.
 Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic [@scientifictheories].
 The syntactic view describes theories as "sets of sentences in a given logical domain language" [@scientifictheories, ch. 2],
 acknowledging that each domain (a scientific field, such as psychology or physics) has its own theoretical vocabulary.
@@ -360,7 +360,7 @@ Perhaps some ungrounded hypotheses are rooted in implicit theories privy only to
 in which case it would be useful to make these explicit [@friedTheoriesModelsWhat2020; @norouziCapturingCausalClaims2024].
 Or, perhaps some hypotheses are not of substantive interest, but merely reported as part of entrenched cultural practices [@gigerenzerNullRitualWhat2004],
 such as straw-man null hypotheses that exist solely for the purpose of being rejected [@vanlissaTeachersCornerEvaluating2020].
-<span id = "waste">Testing ad-hoc hypotheses not grounded in theory, or grounded in misinterpreted- or multi-interpretable theory,
+<span id = "waste">Testing ad-hoc hypotheses not grounded in theory, or grounded in misinterpreted or multi-interpretable theory,
 cannot advance our principled understanding of psychological phenomena,
 and consequently contributes to research waste [@nakagawaPoorHypothesesResearch2024].
 <span id = "norms">Collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings [@vanrooijTheoryTestHow2021]; inefficient at best, and more likely, futile.
@@ -754,7 +754,7 @@ This package includes a [worked example for implementing this workflow](https://
 can be kept up-to-date with changing infrastructures.
 The package further includes tutorial examples for FAIR theory creation based on existing substantive theories, including
 an example of how to formalize and FAIRify Decy and Ryan's [*Self-Determination Theory*](https://cjvanlissa.github.io/theorytools/articles/formalizing_sdt.html) [@ryanSelfdeterminationTheoryFacilitation2000],
-how to FAIRify and Morris' [*Tripartite Model*](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html) of parental socialization of children's emotions [@morrisRoleFamilyContext2007] and use it for causal inference,
+how to FAIRify Morris' [*Tripartite Model*](https://cjvanlissa.github.io/theorytools/articles/causal-inference.html) of parental socialization of children's emotions [@morrisRoleFamilyContext2007] and use it for causal inference,
 and an example of how to [FAIRify a mathematical model based on the Dunning-Kruger effect](https://cjvanlissa.github.io/theorytools/articles/dunning-kruger.html) [@feldEstimatingRelationshipSkill2017]. 
 
 To prevent the emergence of an open science "cottage industry",
