@@ -30,7 +30,7 @@ a) You have a balancing act to strike between providing technical tools (e.g., v
 
 We understand that striking the balance between the conceptual and technical details is the very challenge of this paper. In the revision we have tried to explain technical details in even simpler language.
 The most important change we have made, as requested by Reviewer #2, is to move the tutorial parts of the paper into package vignettes.
-We still leave a conceptual overview of the tutorial in simpler language because we do want readers of the paper to come away with some idea of what making a theory FAIR entails. Note that these general principles are neither tied to the specific R-pacakge not to our specific implementation. Importantly, they could be implemented using an entirely different infrastructure.
+We still leave a conceptual overview of the tutorial in simpler language because we do want readers of the paper to come away with some idea of what making a theory FAIR entails. Note that these general principles are neither tied to the specific R package nor to our specific implementation. Importantly, they could be implemented using an entirely different infrastructure.
 
 With regard to your specific example of technical language that might elude the readership, the GitHub reference in the author note now reads: "Our manuscript is reproducible given the code provided in our Github repository identified by the snapshot with the unique commit id #XXXXX." 
 
@@ -93,7 +93,9 @@ To address the comment, we have rewritten the opening paragraph as follows:
 Line 101: In Figure 1a, it would be helpful to see the two phases (currently, those are not clear to me). Also, even though Figure 1c is addressed at a much later point in the manuscript, it would be helpful to briefly mention it here as well, so it doesn’t seem forgotten.
 ```
 
-We have rewritten this section so that it is clear that the two phases were not part of the original empirical cycle, but introduced by Wagenmakers (1b).
+We have rewritten this section so that it is clear that the two phases were not part of the original empirical cycle, but introduced by Wagenmakers (1b):
+
+`r get_revision("figure1b")`
 
 We have also made the two phases visually more distinct by adding a different background to each in 1b.
 
@@ -289,7 +291,8 @@ The first is that FAIR theory relates to construct validity. To address this poi
 
 `r get_revision("measurementcrisis")`
 
-The second is that much of what we describe looks like Meehl's nomological nets. This is definitely true for the way that *we* are using FAIR theory (e.g., in the online examples), as we are inspired by Meehl,
+The second is that our work is reminiscent of Meehl's nomological nets.
+This is definitely true for the way that *we* are using FAIR theory (e.g., in the online examples), as we are inspired by Meehl,
 but it's not necessarily true of FAIR theory in general. 
 We agree that several psychological theories can be specified as a nomological network of abstract entities and empirical predictions/observations.
 However, not all theories have been specified in such a way or to such a level. 

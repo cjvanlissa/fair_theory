@@ -70,7 +70,7 @@ keywords          : "fairtheory, meta science, theory formation, open science"
 wordcount         : "`r tryCatch(wordcountaddin::word_count(here::here('manuscript.Rmd')))`"
 bibliography      : "fair_theory.bib"
 
-floatsintext      : false
+floatsintext      : true
 linenumbers       : yes
 draft             : no
 mask              : no
@@ -181,11 +181,11 @@ research ideally follows a cyclical process (Figure \@ref(fig:figecs)a).
 Naturalistic observations or patterns identified in data give rise to preliminary hypotheses via induction.
 Then, deduction is used to derive testable predictions from these hypotheses.
 Finally, the outcomes of tests are evaluated with regard to their implications for theory.
-Wagenmakers and colleagues divided this cycle into two phases [-@wagenmakersCreativityVerificationCyclePsychological2018, Figure \@ref(fig:figecs)b].
+<span id="figure1b">Wagenmakers and colleagues divided this cycle into two phases [-@wagenmakersCreativityVerificationCyclePsychological2018, Figure \@ref(fig:figecs)b].
 One phase is the "Context of Justification",
 in which hypotheses derived from theory are tested on data.
 The other phase is the "Context of Discovery",
-in which patterns observed in data are generalized to theoretical principles.
+in which patterns observed in data are generalized to theoretical principles.</span>
 <span id="introduce1c">In these interpretations of the empirical cycle, each stage describes a process.
 This invites the question what the concrete outcomes of these processes are.
 How does knowledge accumulate when iterating through the cycle; what actually changes, other than the scholar's mind?
