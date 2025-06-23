@@ -170,7 +170,7 @@ The term "model" is not uniquely defined within the literature;
 models have been described as "specific instantiations of theories, narrower in scope and often more concrete, commonly applied to a particular aspect of a given theory" [@friedTheoriesModelsWhat2020, p. 336].
 This implies that theories and models are not fundamentally distinct, but rather, that for each model, there is a more general theory that subsumes it (one person's model is another person's theory).
 The pragmatic view holds that there might not be one structure or definition of scientific theories, but instead, definitions differ across scientific domains.
-It also argues that nonformal aspects (e.g. commonly used analogies) and practices (e.g. experimental designs) can be an important part of scientific theories.
+It also argues that non-formal aspects (e.g. commonly used analogies) and practices (e.g. experimental designs) can be an important part of scientific theories.
 
 
 ## Theory and Scientific Progress
@@ -435,14 +435,14 @@ FAIR theory imposes no restrictions on the manner in which theories are derived 
 rather, it pertains to rigorous and transparent archival and communication about theories, with the aim of enhancing their reusability.
 FAIR theory does not require formalization, and formal theories are not automatically FAIR.
 The FAIR principles
-apply to theories representated in natural language,
+apply to theories represented in natural language,
 as well as formal theories represented using mathematical notation, algorithmic pseudo code, or a set of logical clauses.
 Thus, for example, "grounded theory", derived from qualitative research,
 can be represented as a FAIR theory if it is represented as plain-text propositions and archived in a FAIR repository with appropriate metadata.
 Conversely, a formal theory is not FAIR if it is confined to a journal article without any key words to identify it as a theory paper (lacking Findability), represented merely as a bitmap image (limiting Accessibility and Interoperability), or behind a paywall (limiting Reusability).
 FAIR theory is thus consistent with, but does not require, formalization (also see the section on *Accessibility* below).
 This principle is illustrated in our [vignette on FAIRifying De Groot's empirical cycle](https://cjvanlissa.github.io/theorytools/articles/fair-theory.html):
-it is equally possible to FAIRify the theory in its original formulation by archiving a text document with five plain-langues propositions,
+it is equally possible to FAIRify the theory in its original formulation by archiving a text document with five plain-language propositions,
 or to formalize the theory and represent it as a human- and machine-readable diagram before FAIRifying it.
 
 ### Modular Publishing
@@ -508,7 +508,7 @@ Whereas version control tracks changes,
 semantic versioning communicates what those changes mean to users of the theory,
 guides the social process of theory development, and signals how much a theory has been changed.
 
-We propose adaptating semantic versioning for theories by assigning a version number in the format `MAJOR.MINOR.PATCH` (e.g., 0.1.0), where the `MAJOR` number is incremented when backwards incompatible changes are made. For example, if the theory now contains empirical statements that are at odds with a previous version of the theory. The `MINOR` number should be incremented when the set of empirical statements are expanded in a backward compatible manner (i.e., the previous version is subsumed within the new version). The `PATCH` number should be incremented when making backward compatible bug fixes, cosmetic changes, fix spelling errors, or add clarifications.
+We propose adapting semantic versioning for theories by assigning a version number in the format `MAJOR.MINOR.PATCH` (e.g., 0.1.0), where the `MAJOR` number is incremented when backwards incompatible changes are made. For example, if the theory now contains empirical statements that are at odds with a previous version of the theory. The `MINOR` number should be incremented when the set of empirical statements are expanded in a backward compatible manner (i.e., the previous version is subsumed within the new version). The `PATCH` number should be incremented when making backward compatible bug fixes, cosmetic changes, fix spelling errors, or add clarifications.
 
 # The FAIR Principles
 
@@ -685,7 +685,7 @@ If we consider Meehl's nine properties of strong theories [-@meehlAppraisingAmen
 we see how each of these properties makes a specific type of interoperability possible.
 Level I, specifying an ontology, enables X-interoperability for selecting relevant variables;
 level II, causal connections, enable model specification, covariate selection, and causal inference;
-levels III-VIII all refer to functional form, which allows for deviring specific hypotheses about unknown model parameter values.
+levels III-VIII all refer to functional form, which allows for deriving specific hypotheses about unknown model parameter values.
 If level IX is also specified, and parameters are assigned specific numerical values, the theory is completely specified; it is a digital twin of the system it seeks to describe, and can be used to evaluate hypothetical scenarios and generate synthetic data via simulation.
 
 With regard to the state of Interoperability in psychology, 
@@ -734,7 +734,7 @@ It thus seems that theories expressed in prose or depicted visually - in other w
 A second consideration is that academic research is covered under "fair use" exemptions to copyright.
 <!-- so copyright would pose few restrictions to Reusability in scholarly communication. -->
 Given these two considerations - that copyright does not protect ideas in their purest form and that academic use offers exemptions to copyright - it may be counterproductive and possibly misleading to adopt a license that assumes copyright protection to theories.
-For psychological theories without commercial aspects, we suggest using a licence that explicitly waives copyright and encourages Reusability,
+For psychological theories without commercial aspects, we suggest using a license that explicitly waives copyright and encourages Reusability,
 such as CC0 (no rights reserved).
 
 Aside from legal conditions for reuse, there are also social considerations.
@@ -1120,7 +1120,7 @@ Contributing to the development of a FAIR theory thus becomes a new way of contr
 
 We envision a future where application of the FAIR principles makes theories more *useful*,
 living up to Kurt Lewin's ideal,
-enabling scholars to incorporate theory into their workflows in a tanglible way,
+enabling scholars to incorporate theory into their workflows in a tangible way,
 providing explicit derivation chains for hypotheses,
 applying transparent rules to select the right control variables for causal inference,
 and proposing specific changes to existing theories based on empirical results.
