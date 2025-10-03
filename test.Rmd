@@ -62,7 +62,7 @@ affiliation:
     institution   : "MSB Medical School Berlin Department of Psychology, Berlin, Germany"
 
 authornote: |
-  We are particularly indebted to one of our Reviewers, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our GitHub repository identified by the snapshot with the unique commit ID #`r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized.
+  We are particularly indebted to one of our Reviewers, Dr. Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Conclusion. We also thank the Editor, Dr. Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our GitHub repository identified by the snapshot with the unique commit ID #`r substr(gert::git_commit_id(),1,8)`. The first and senior author positions were fixed, and remaining author positions randomized.
 
 abstract: "`r tryCatch(trimws(readr::read_file(here::here('abstract.md'))))`"
 
@@ -1071,13 +1071,14 @@ then it would become possible to evaluate the entire body of empirical evidence 
 <span id="fairtheoryprereg">One important future direction is embedding FAIR theories withing existing open science methodologies. 
 For example, consider how FAIR theory relates to preregistration.
 These practices are distinct but complimentary.
-The purpose of FAIR theory is to communicate general principles and expectations about a given phenomenon,
+FAIR theory allows scholars to communicate general principles and expectations about a given phenomenon,
 and to provide infrastructure for explicitly deriving hypotheses from specific theories and revising those theories in light of empirical results.
-The purpose of preregistration, by contrast, is to eliminate inductive bias from hypothesis tests and increase trust in the outcomes of a specific empirical study [@peikertWhyDoesPreregistration2023].
+Preregistration, by contrast, allows scholars to eliminate inductive bias from hypothesis tests and increase trust in the outcomes of a specific empirical study [@peikertWhyDoesPreregistration2023].
 FAIR theories are specified at a level of abstraction that transcends individual studies.
 FAIR theories can inform - and be informed by - both quantitative and qualitative research.
-Preregistrations, by contrast, are specific implementations of quantitative hypothesis tests,
-within the context of a specific study design, analysis plan, and - optionally - a fully reproducible analysis pipeline.
+Preregistrations, by contrast, are typically specific implementations of quantitative hypothesis tests,
+within the context of a specific study design, analysis plan, and - optionally - a fully reproducible analysis pipeline (although they are also used for other purposes, including for qualitative and exploratory research).
+<!-- ^[Note that preregistration is also used for other purposes, including for qualitative or exploratory studies. While many researchers find preregistration useful in these contexts, it is hotly debated whether ]. lakensBenefitsPreregistrationRegistered2024-->
 These practices complement each other:
 authors can make the derivation chain from theory to hypothesis more explicit by citing a specific FAIR theory in their preregistration.
 Moreover, it is possible to preregister an inferential procedure that would require revising the theory after observing data,
@@ -1107,16 +1108,21 @@ We envision a similar trajectory for FAIR theory.</span>
 
 ## Conclusion
 
-<span id = "turkheimer">We invite the reader to ask the rhetorical question raised by one of our reviewers, prof. Turkheimer, who - reflecting on a career as a practitioner of theory in psychology - considered "how adopting a FAIR framework would change, improve, or inhibit what I do".
-<!-- We paraphrase his answer here^[Edited for brevity.], because his lived experience complements our youthful "techno-enthusiasm". -->
-Prof. Turkheimer remarked that a FAIR framework would have been very helpful in maintaining meaningful boundaries between a theory and the predictions it makes,
-in tracking how empirical findings result in changes to empirical claims made by a theory,
+<span id = "turkheimer">How would adopting a FAIR framework for theory construction, improvement, and reuse affect scholarly workflows?
+FAIR theory can be used to derive and justify hypotheses,
+thus addressing the problem that most hypotheses in psychology are currently atheoretical [@mcphetresDecadeTheoryReflected2021].
+FAIRly archiving theories also clarifies what is the version of record and makes changes traceable.
+This can be useful in preventing dependency on the author (DOA),
+distinguishing a theory from the predictions it makes,
+tracking how empirical findings are used to motivate changes to the theory,
 and in resolving theoretical disputes.
-"FAIR theory provides a structured, machine- and human-readable framework that distills and formalizes the core components of a theory.
-Everything published about a theory can continue to exist in its original form,
-while a FAIR representation supplements that literature by explicitly outlining the theory’s assumptions, logical structure, and testable implications.
-Importantly, FAIR theory can evolve semi-independently from individual papers, offering a persistent and collaborative object that others can reuse, cite, and refine. 
-Contributing to the development of a FAIR theory thus becomes a new way of contributing to the theoretical literature - much like writing a high-quality review article, but with the added benefit of interoperability, versioning, and reusability."</span>
+While we have argued that FAIR theory performs some functions more effectively than traditional theory papers,
+it does not necessarily replace them altogether.
+The important question is what the unique contribution of a theory paper will be if FAIR theories become commonplace. 
+The Taskforce Theoretical Psychology developed a template for theory papers that addresses this question [@vanlissaProceedingsTaskforceTheoretical2025].
+Importantly, FAIR theory can evolve beyond an original print publication,
+offering a persistent and collaborative object that others can reuse, cite, and refine - thus allowing scholars to more efficiently complete the empirical cycle.
+Developing FAIR theory could be a new type of scholarly output, and should be recognized and rewarded as such according to the [Coalition or Advancing Research Assessment](https://coara.org/wp-content/uploads/2022/09/2022_07_19_rra_agreement_final.pdf).</span>
 
 We envision a future where application of the FAIR principles makes theories more *useful*,
 living up to Kurt Lewin's ideal,
