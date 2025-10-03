@@ -39,15 +39,17 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
@@ -119,6 +121,9 @@
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage[english]{selnolig} % disable illegal ligatures
+\fi
 % Manuscript styling
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
@@ -191,9 +196,6 @@
 \usepackage{csquotes}
 \usepackage{longtable, setspace, subfig}
 \raggedbottom
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -218,7 +220,7 @@
 
 \authornote{
 
-We are particularly indebted to one of our Reviewers, Dr.~Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr.~Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our GitHub repository identified by the snapshot with the unique commit ID \#2c040b4b. The first and senior author positions were fixed, and remaining author positions randomized.
+We are particularly indebted to one of our Reviewers, Dr.~Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr.~Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our GitHub repository identified by the snapshot with the unique commit ID \#e78e2b6f. The first and senior author positions were fixed, and remaining author positions randomized.
 
 The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing - original draft, Writing -- review \& editing; Aaron Peikert: Conceptualization, Formal Analysis, Writing -- original draft, Writing -- review \& editing; Maximilian S. Ernst: Writing -- review \& editing, Investigation; Noah N.N. van Dongen: Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing.
 
@@ -336,7 +338,7 @@ they are what changes when iterating through the cycle.}
 
 \begin{figure}
 \centering
-\includegraphics{ec_visio.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{ec_visio.pdf}}
 \caption{\label{fig:figecs}Three implementations of the ``empirical cycle'' (De Groot \& Spiekerman, 1969).}
 \end{figure}
 
@@ -829,7 +831,7 @@ The FAIR implementation of De Groot's empirical cycle that resulted from the lea
 
 An important advantage of FAIR theory is that we can implement different versions of a theory, compare them, and document their cross-relationships.
 We can take work that has been done before - in this case, the repository created above, and create an independent copy that we can modify as we wish, while retaining cross-references to the original.
-Elaborating on our running example, we can implement Wagenmakers and colleagues' take on the empirical cycle {[}-Wagenmakers et al. (2018), Figure \ref{fig:figecs}b).
+Elaborating on our running example, we can implement Wagenmakers and colleagues' take on the empirical cycle {[}(2018), Figure \ref{fig:figecs}b).
 Their interpretation differs from De Groot's in several ways:
 First, they refer to the phases by different names, and this change was not described in the paper.
 Assuming that these new names are merely intended to be illustrative and not ontologically distinct,
