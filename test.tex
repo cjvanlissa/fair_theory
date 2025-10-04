@@ -220,7 +220,7 @@
 
 \authornote{
 
-We are particularly indebted to one of our Reviewers, Dr.~Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Discussion. We also thank the Editor, Dr.~Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our GitHub repository identified by the snapshot with the unique commit ID \#e78e2b6f. The first and senior author positions were fixed, and remaining author positions randomized.
+We are particularly indebted to one of our Reviewers, Dr.~Eric Turkheimer, whose thoughtful reflections on FAIR theory were incorporated into the Conclusion. We also thank the Editor, Dr.~Scott Vrieze, and two anonymous Reviewers for their detailed and invaluable comments. Our manuscript is reproducible given the code provided in our GitHub repository identified by the snapshot with the unique commit ID \#6165ba4d. The first and senior author positions were fixed, and remaining author positions randomized.
 
 The authors made the following contributions. Caspar J. Van Lissa: Conceptualization, Formal Analysis, Funding acquisition, Methodology, Project administration, Software, Supervision, Writing - original draft, Writing -- review \& editing; Aaron Peikert: Conceptualization, Formal Analysis, Writing -- original draft, Writing -- review \& editing; Maximilian S. Ernst: Writing -- review \& editing, Investigation; Noah N.N. van Dongen: Writing -- review \& editing; Felix D. Schönbrodt: Conceptualization, Writing -- review \& editing; Andreas M. Brandmaier: Formal Analysis, Writing -- original draft, Writing -- review \& editing.
 
@@ -244,7 +244,7 @@ by making them Findable, Accessible, Interoperable and Reusable (M. D. Wilkinson
 Since the FAIR principles' inception,
 they have become a widely adopted standard for archival of academic output,
 representing an estimated tens of billions of dollars in reuse value (Vogt et al., 2024).
-Scholars have demonstrated their relevance for making other digital objects more open, including research software (Lamprecht et al., 2019) and computational workflows (Van Lissa et al., 2021; S. R. Wilkinson et al., 2024).}
+Scholars have demonstrated their relevance for making other digital objects more open, including research software (Lamprecht et al., 2019) and computational workflows (C. J. Van Lissa et al., 2021; S. R. Wilkinson et al., 2024).}
 The present paper argues that the FAIR principles can similarly advance effective and transparent scholarly communication about theory.
 We introduce ``FAIR theory'':
 a digital instantiation of scientific theory, published as a self-contained and citable digital object distinct from - but potentially associated with - the scientific paper.
@@ -262,7 +262,7 @@ was caused by undisclosed flexibility in analyses led to widespread adoption of 
 These various practices ensure transparent and repeated testing of hypotheses by committing to an analysis plan in advance.
 However, recent reviews show that most preregistered hypothesis tests are not supported by empirical evidence (Scheel, Schijen, et al., 2021).
 
-Thus, increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
+Increased rigor in testing has revealed that the root cause of the replication crisis is more fundamental:
 Psychological theories rarely provide hypotheses that are corroborated by evidence.
 Furthermore, theories are often so ambiguous that they can accommodate mutually inconsistent findings,
 rendering them immune to falsification.
@@ -292,7 +292,7 @@ We introduce \emph{FAIR theory} as a methodology that can facilitate transparent
 \subsection{What is Theory?}\label{what-is-theory}
 
 Given that a pluriformity of definitions are consistent with FAIR theory principles,
-we do not limit ourselves to any one particular definition - although, at times, our writing inevitably reveals a particular vantage point.
+we do not limit ourselves to any one particular definition - although our writing inevitably reveals a particular vantage point.
 Perspectives on scientific theory have been categorized as syntactic, semantic, and pragmatic (Winther, 2021).
 The syntactic view describes theories as ``sets of sentences in a given logical domain language'' (Winther, 2021, ch.~2),
 acknowledging that each domain (a scientific field, such as psychology or physics) has its own theoretical vocabulary.
@@ -315,7 +315,7 @@ According to the \emph{empirical cycle} (De Groot \& Spiekerman, 1969),
 a meta-theory of cumulative knowledge acquisition,
 research ideally follows a cyclical process (Figure \ref{fig:figecs}a).
 Naturalistic observations or patterns identified in data give rise to preliminary hypotheses via induction.
-Then, deduction is used to derive testable predictions from these hypotheses.
+Then, deduction is used to derive predictions from these hypotheses, which are tested empirically using data.
 Finally, the outcomes of tests are evaluated with regard to their implications for theory.
 \phantomsection\label{figure1b}{Wagenmakers and colleagues divided this cycle into two phases (2018, Figure \ref{fig:figecs}b).
 One phase is the ``Context of Justification'',
@@ -332,7 +332,7 @@ In this specification, \texttt{theory} refers to FAIR theory,
 \texttt{hypothesis} to machine-readable hypotheses (Lakens \& DeBruine, 2021),
 \texttt{test} refers to a preregistered inferential procedure (Preregistration-As-Code, Peikert et al., 2021),
 data refers to FAIR data,
-and results refer to (preprint) papers, ideally supplemented with a comprehensive reproducible research archive (Van Lissa et al., 2021).
+and results refer to (preprint) papers, ideally supplemented with a comprehensive reproducible research archive (C. J. Van Lissa et al., 2021).
 In this model, theories are the vehicle of scientists' understanding of phenomena;
 they are what changes when iterating through the cycle.}
 
@@ -358,22 +358,23 @@ but these are rarely connected to theory.
 Perhaps some ungrounded hypotheses are rooted in implicit theories privy only to the author,
 in which case it would be useful to make these explicit (Fried, 2020; Norouzi et al., 2024).
 Or, perhaps some hypotheses are not of substantive interest, but merely reported as part of entrenched cultural practices (Gigerenzer et al., 2004),
-such as straw-man null hypotheses that exist solely for the purpose of being rejected (Van Lissa et al., 2020).
+such as straw-man null hypotheses that exist solely for the purpose of being rejected (C. J. Van Lissa et al., 2020).
 \phantomsection\label{waste}{Testing ad-hoc hypotheses not grounded in theory, or grounded in misinterpreted or multi-interpretable theory,
 cannot advance our principled understanding of psychological phenomena,
 and consequently contributes to research waste (Nakagawa et al., 2024).
 \phantomsection\label{norms}{Collecting significance statements about ad-hoc hypotheses is much like trying to write novels by collecting sentences from randomly generated letter strings (van Rooij \& Baggio, 2021); inefficient at best, and more likely, futile.
 As the Declaration of Helsinki prescribes that ethical (medical) research with human participants must ``avoid research waste'',
 our field should take seriously its ethical responsibility to develop procedures to reduce it.}}
-The present paper does so by introducing procedures to improve transparent and unambiguous communication about theory;
+The present paper does so by introducing procedures to improve transparent, unambiguous, and efficient communication about theory;
 instantiating theory as a digital ``object'' that scholars can access, reuse, and update in their daily workflows.
 
-\subsection{Making Theory FAIR}\label{making-theory-fair}
+\section{Making Theory FAIR}\label{making-theory-fair}
 
 Merely publishing theory in a journal article does not make it open;
 to be open, theory should adhere to established open science standards for specification and archival.
 We propose to implement theories as digital objects,
-and archive these with appropriate metadata in a FAIR-compliant repository (e.g., Zenodo).
+and archive these with appropriate metadata in a FAIR-compliant repository like Zenodo,
+which was developed by \href{https://home.cern/}{CERN} under the European Union's \href{https://www.openaire.eu/}{OpenAIRE} program (European Organization For Nuclear Research \& OpenAIRE, 2013).
 Metadata are ``data about the data''.
 They provide information about the nature and content of a digital object and are stored in the repository where the version of record of the FAIR theory is deposited.
 FAIR theories are \emph{Findable} via a DOI or by searching the repository they are archived in;
@@ -386,120 +387,6 @@ We reflect on the necessary (minor) changes,
 as well as on the current state and future of FAIR theory in psychology.
 The resulting principles provide guidance for instantiating theory as a FAIR digital object,
 and we provide worked examples to encourage their adoption.
-
-\subsubsection{What to Archive?}\label{what-to-archive}
-
-It is best left to the scholarly community to decide which parts of theory, models, or other aspects should be archived as FAIR theory.
-As the practice of FAIRification becomes more embedded,
-we expect that it will become increasingly clear what kind of information is useful.
-As a particular FAIR theory evolves, details may be added, and the nature of the information tracked might even change.
-For example, following Meehl, we could envision a theory that starts out with establishing, through observation, an ontology of constructs relevant for a given phenomenon.
-After initial exploratory research, the theory might be further specified by making assumptions about how these constructs are causally connected.
-Over time, more precise \emph{statistical/mathematical models} could be derived by further assuming a specific functional form for relationships (e.g., linear effects) and error families for the distribution of measured variables (e.g., normal distributions).
-This allows for the specification of statistical models, which make just enough assumptions to allow the estimation of the remaining unknown parameters (e.g., regression slopes) from data.
-Going even further, a \emph{generative/computational model} could be specified,
-which is completely parameterized (e.g., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
-Also, aspects of scientific practice might be added over time - either to the theory itself, or as references recorded in the theory metadata.
-Examples include experimental designs (e.g., longitudinal designs observing change over time), measurement instruments (e.g., different questionnaires used to assess the same construct), or information about participant recruitment- and retention strategies.
-
-Theories can include or reference other theories.
-For example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors
-such as adherence to infection prevention protocols (e.g., social distancing),
-pandemic-related behavior (e.g., panic buying),
-and pandemic-related distress
-(Taylor, 2022).
-Such a theory may encompass a particular transmission \emph{model} for disease spread including precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
-
-\subsubsection{The Role of Theory Formalization}\label{the-role-of-theory-formalization}
-
-Concerns about the state of psychological theory have motivated increasing calls for greater theory ``formalization'' (Smaldino, 2017; cf. Oude Maatman, 2021).
-Formalization increases theories' falsifiability (Popper, 2002) because it expresses ideas as specific statements, clearly demarcating what should (not) be observed if the theory were true.
-\phantomsection\label{phonoloop}{Take for example the phonological loop in Baddeley's working memory model (Baddeley, 1992). The idea behind it is that verbal information is kept in memory via a rehearsal loop with limited capacity. The verbal description of the phonological loop in Baddeley's theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate of information, recall success, or rehearsal sequence, which were left undefined in the original theory (Lewandowsky \& Farrell, 2010).}
-Without committing to specific implementations a-priori,
-the theory becomes hard to test.
-Compared to theories expressed in natural language,
-formal theories facilitate inconsistency checking and evaluation of a theory's (lack of) vagueness.
-Committing to specific implementations of the different components, their causal connections, and the functional forms of these relationships makes the theory more precise.
-More precise theories are easier to falsify,
-which necessitates specific revisions and advances our principled understanding of the phenomena they describe.
-
-Crucially for the present paper, formalization is orthogonal to FAIRification.
-FAIR theory imposes no restrictions on the manner in which theories are derived and implemented;
-rather, it pertains to rigorous and transparent archival and communication about theories, with the aim of enhancing their reusability.
-FAIR theory does not require formalization, and formal theories are not automatically FAIR.
-The FAIR principles
-apply to theories represented in natural language,
-as well as formal theories represented using mathematical notation, algorithmic pseudo code, or a set of logical clauses.
-Thus, for example, ``grounded theory'', derived from qualitative research,
-can be represented as a FAIR theory if it is represented as plain-text propositions and archived in a FAIR repository with appropriate metadata.
-Conversely, a formal theory is not FAIR if it is confined to a journal article without any key words to identify it as a theory paper (lacking Findability), represented merely as a bitmap image (limiting Accessibility and Interoperability), or behind a paywall (limiting Reusability).
-FAIR theory is thus consistent with, but does not require, formalization (also see the section on \emph{Accessibility} below).
-This principle is illustrated in our \href{https://cjvanlissa.github.io/theorytools/articles/fair-theory.html}{vignette on FAIRifying De Groot's empirical cycle}:
-it is equally possible to FAIRify the theory in its original formulation by archiving a text document with five plain-language propositions,
-or to formalize the theory and represent it as a human- and machine-readable diagram before FAIRifying it.
-
-\subsubsection{Modular Publishing}\label{modular-publishing}
-
-\phantomsection\label{modularvalue}{The primary unit of scientific communication has long been the academic paper.
-Yet scholars often produce many other valuable resources in the process of writing papers,
-including instruments, materials, data, code, and theory.
-These resources are often merely described in papers and not made available for reuse.
-Modular publishing is the practice of making each of these resources available as independent \emph{digital objects},
-facilitating their reuse and making them citable (Van De Sompel et al., 2004).
-We envision FAIR theory as an instance of modular publishing (Kircz, 1998).
-}
-\phantomsection\label{datasharing}{At the time of writing, some modular publishing practices are already widely adopted;
-data sharing, for example, has become the de-facto standard in psychology in the past decade (Tedersoo et al., 2021).}
-
-Modular publishing can be achieved by archiving specific resources (including theory) in repositories like \href{https://zenodo.org/}{Zenodo},
-which was developed by \href{https://home.cern/}{CERN} under the European Union's \href{https://www.openaire.eu/}{OpenAIRE} program (European Organization For Nuclear Research \& OpenAIRE, 2013).
-To maintain a persistent record of scholarly communication,
-Zenodo mints DOIs for digital objects.
-The DataCite Metadata Schema offers a standard way to document digital objects with relevant metadata which increases their findability and documents their relationships to other resources (DataCite Metadata Working Group, 2024).
-For example, data can be archived in Zenodo with the metadata property \texttt{resourceType:\ dataset}.
-If the data were collected for a specific paper, that relationship can be cross-referenced with \texttt{relationType:\ IsSupplementTo}.
-Similarly, a FAIR theory can be connected to a specific paper by using \texttt{relationType:\ IsDescribedBy}, while the reverse relationship, documented in the canonical reference paper, is \texttt{relationType:\ Describes}.
-Other cross-references are useful for documenting relationships between multiple theory objects: If an existing theory is made FAIR without substantial alterations,
-the resulting FAIR theory metadata would cross-reference the existing theory as \texttt{relationType:\ IsDerivedFrom}.
-If an existing theory is updated, \texttt{relationType:IsNewVersionOf} could be used to reference previous versions.
-If a variation of an existing FAIR theory is created, cross-reference it with \texttt{relationType:\ IsVariantFormOf}.
-\phantomsection\label{modularpublisingdetract}{
-Modular publishing of resources, including theories, increases their reuse potential and makes them citable without detracting from the conventional academic paper as a unit of academic communication which allows for greater nuance and the author's voice.
-Theories published in traditional papers can be supplemented by FAIR versions that live independently, evolve collaboratively, and feed into reproducible workflows.
-}
-
-\subsubsection{Version Control}\label{version-control}
-
-The field of computer science provides inspiration for well-established processes for iteratively improving digital objects.
-Version control systems, like Git, are used to iteratively improve computer code, while managing parallel contributions from collaborators and allowing for experimentation and diverging development without losing information.
-Git tracks line-by-line changes to text-based files,
-and maintains a complete annotated history of those changes.
-It has previously been argued that Git is particularly well-suited to academic work (Ram, 2013; Van Lissa et al., 2021).
-For example, Git can facilitate reproducible research, manage distributed collaboration, and improve preregistrations (Peikert et al., 2021; Van Lissa et al., 2021).
-Git provides a useful framework for developing FAIR theory,
-because it enables explicitly comparing versions of a file (or: theory),
-documenting why changes were made,
-incorporating changes by different authors,
-and branching off into different directions (e.g., competing hypotheses) while retaining an explicit link to the common ancestor.
-This makes it possible for meta-scientists to study the provenance of a theory and determine how well different versions of a theory explain empirical evidence (Van Lissa, 2023).
-Note that, while cloud archives associated with Git (e.g., GitHub) facilitate collaborative theory development,
-they are not suitable for archiving the version of record due to a lack of FAIR-compliance.
-Thus, theory development may take place on GitHub, but versions of record should be archived on a platform like like Zenodo, with appropriate metadata.
-
-\subsubsection{Semantic Versioning}\label{semantic-versioning}
-
-Aside from technical solutions, version control is a social process as well.
-On the one hand, regular updates can improve theories - but on the other hand, it risks breaking compatibility between theories and hypotheses derived from them, or compatibility between one theory and others that depend upon it.
-For example, if we construct a theory to explain a specific phenomenon, and we cross-reference an existing theory comprising an ontology for our field - that dependency is broken if the ontology is later updated and our phenomenon of interest is removed.
-In computer science, these challenges are navigated by assigning version numbers.
-Specifically, \emph{semantic versioning} comprises a simple set of rules for assigning version numbers to digital objects.
-Whereas version control tracks changes,
-semantic versioning communicates what those changes mean to users of the theory,
-guides the social process of theory development, and signals how much a theory has been changed.
-
-We propose adapting semantic versioning for theories by assigning a version number in the format \texttt{MAJOR.MINOR.PATCH} (e.g., 0.1.0), where the \texttt{MAJOR} number is incremented when backwards incompatible changes are made. For example, if the theory now contains empirical statements that are at odds with a previous version of the theory. The \texttt{MINOR} number should be incremented when the set of empirical statements are expanded in a backward compatible manner (i.e., the previous version is subsumed within the new version). The \texttt{PATCH} number should be incremented when making backward compatible bug fixes, cosmetic changes, fix spelling errors, or add clarifications.
-
-\section{The FAIR Principles}\label{the-fair-principles}
 
 \subsection{Findability}\label{findability}
 
@@ -519,31 +406,39 @@ The four Findability criteria are applicable to theory with only minor adjustmen
 First, this requires assigning a globally unique and persistent identifier, such as a DOI, to each theory (F1).
 Of the many services that provide DOIs for archived objects,
 Zenodo and the Open Science Framework are commonly used in psychology.
+
 Second, Findable theory is described with rich metadata (F2).
-This includes citation metadata (e.g., referencing a scientific paper that documents the theory, or a psychometric paper that operationalizes specific constructs).
-It might further include domain-specific metadata, such as a reference to a taxonomy of psychological constructs (Bosco et al., 2017),
+Using standardized metadata further improves the Findability of digital objects.
+The DataCite Metadata Schema provides a controlled vocabulary for research output (DataCite Metadata Working Group, 2024).
+For example, data are typically archived with the metadata property \texttt{resourceType:\ dataset}.
+The \texttt{resource\_type:\ model} would be more appropriate for archiving FAIR theory.
+If data were collected for a specific paper, that relationship can be cross-referenced with \texttt{relationType:\ IsSupplementTo}.
+Similarly, a FAIR theory can be connected to a theory paper using \texttt{relationType:\ IsDescribedBy},
+while the reverse relationship, documented in the theory paper, is \texttt{relationType:\ Describes}.
+Other cross-references are useful for documenting relationships between multiple theory objects: If an existing theory is made FAIR without substantial alterations,
+the resulting FAIR theory metadata would cross-reference the existing theory as \texttt{relationType:\ IsDerivedFrom}.
+If an existing theory is updated, \texttt{relationType:IsNewVersionOf} could be used to reference previous versions.
+If a variation of an existing FAIR theory is created, cross-reference it with \texttt{relationType:\ IsVariantFormOf}.
+Other relevant metadata might be a reference to a taxonomy of psychological constructs (Bosco et al., 2017),
 ontology (Guyon et al., 2018),
 or catalog of psychological phenomena.
 Metadata should also include identifiers for all the versions of the theory it describes (F3);
 Zenodo handles this by default by providing an overarching DOI for a digital object which subsumes the DOIs of its subversions.
 
 Finally, metadata should be registered or indexed in a searchable registry (F4).
+We propose using the keyword \texttt{"fairtheory"} for all resources that constitute or reference (a specific) FAIR theory,
+so that they can easily be found.
 It is important to note that, while many archives are technically searchable (e.g., GitHub, FigShare, the Open Science Framework, institutional repositories),
 only few are specifically designed for FAIR-compliant archival.
 Zenodo stands out in this respect.
-Using standardized metadata further improves the Findability of theories archived within FAIR repositories.
-The DataCite Metadata Schema provides a controlled vocabulary for research output, and the \texttt{resource\_type:\ model} matches the description of FAIR theory (DataCite Metadata Working Group, 2024).
-Furthermore, we suggest using the keyword \texttt{"fairtheory"} for all resources that constitute or reference (a specific) FAIR theory.
 
-Findability is substantially amplified if intended users of a resource know where to search for it.
+Findability of a resource is substantially amplified if its intended users know where to search for it.
 This is a known problem in relation to research data and software (Katz \& Chue Hong, 2024).
 Regrettably, most academic search engines only index traditional print publications, not other digital objects.
-Since the status quo is to publish theories in papers,
-the FAIR requirements are met if scholars continue to do so,
-and additionally publish theories as separate digital objects.
-The \texttt{"fairtheory"} keyword can also be used to signal the presence of theory within a paper.
+Thus, one reason to continue publishing theory papers alongside FAIR theories is to meet the Findability criterion by publishing a theory paper in print, using the DataCite MetaData schema to connect both resources.
+The \texttt{"fairtheory"} keyword can also be used in print publications to signal their association with a FAIR theory.
 In the longer term, it may not be necessary to write a paper for each theory.
-If Zenodo becomes more recognized as a centralized repository for digital objects, researchers may begin to search there more regularly.
+If Zenodo gains recognition as a centralized repository for digital objects, researchers may begin to search there more regularly.
 Conversely, as organizations (e.g., Google Scholar, Web of Science, Pure, ORCID) begin to recognize other forms of academic output beyond papers, they may begin to index digital objects stored in Zenodo.
 
 There have been notable efforts to improve theories' Findability through post-hoc curation.
@@ -555,40 +450,41 @@ Ideally, Findability would be addressed ante-hoc, through documentation with ric
 Both approaches can be complementary, however.
 For example, post-hoc curation could make use of existing FAIR-compliant archival infrastructure like Zenodo.
 The data engineering adage ``Lots of Copies Keeps Stuff Safe'' (LOCKSS) implies that it is fine to archive theories in multiple places,
-although it is advisable to make use of automatic integration (as exists between GitHub, Zenodo, and OSF) to avoid the need to maintain information in multiple places, which increases the risk of inconsistencies arising.
+although it is advisable to make use of automatic integration (as exists between the \href{http://github.com/}{GitHub}, \href{https://zenodo.org}{Zenodo}, and \href{https://osf.io}{Open Science Foundation (OSF)} platforms)
+to avoid the need to maintain information in multiple places, which increases the risk of inconsistencies arising.
 
 \subsection{Accessibility}\label{accessibility}
 
-Transparent scholarly communication about theory requires that theories are Accessible to all researchers and other stakeholders.
-If theories are not Accessible, researchers cannot reuse and refine them.
-Thus, Accessibility can accelerate cumulative knowledge acquisition.
-Making theories Accessible also allows stakeholders (e.g., practitioners, policymakers, advocates) to inform themselves of the current scientific understanding of specific phenomena.
+Accessibility in scholarly communication about theory implies that researchers and other stakeholders (e.g., practitioners, policymakers, advocates) can inform themselves of the current scientific understanding of specific phenomena.
+If theories are not Accessible, researchers cannot reuse and refine them, which impedes cumulative knowledge acquisition.
+Similarly, stakeholders cannot use inaccessible theories to make evidence-based decisions,
+which curtails the societal impact of scholarly knowledge.
+Accessible theories are also an important instrument in science communication:
 While isolated empirical findings can appear fragmented and contradictory (Dumas-Mallet et al., 2017),
 theories offer a top-down, big-picture representation of the phenomena studied in a field.
-In other words, theories are an important instrument in science communication.
 
 The Accessibility principles
 apply to theory with minor changes.
 Firstly, theory and its associated metadata should be Accessible by their identifier using a standardized communications protocol (A1).
-This can be achieved, for example, by hosting theory in a version-controlled remote repository (such as Git), and archiving that repository on Zenodo for long-term storage.
-The resulting resource will then have an identifier (DOI) which allows the theory to be accessed using a standardized communications protocol (download via \texttt{https} or \texttt{git}).
-Secondly (A2), theory metadata should be Accessible, even when the theory is no longer available,
-which is also achieved via long-term storage (e.g., on Zenodo).
-Git remote repositories allow for access control,
-and Zenodo allows for access control of individual files/resources.
-In general, it makes sense to retain outdated theories, in order to be able to track the genesis of theories over time, yet, we require the availability of meta data as a minimum requirement.
+This can be achieved, for example, by hosting theory in a version-controlled remote repository from which it can be downloaded via an API.
+Such platforms include \href{https://github.com}{GitHub}, which is well-suited for collaborative theory development, and \href{https://zenodo.org}{Zenodo}, which is better suited for long-term storage of the version of record.
+The resulting resource will have an identifier (DOI) which allows it to be accessed using a standardized communications protocol (download via \texttt{https} or \texttt{git}).
+Secondly (A2), theory metadata should be Accessible even when the theory is no longer available.
+In general, it makes sense to retain outdated theories,
+in order to be able to track their genesis over time.
+The A2 criteria implies that - even when theories are removed or lost for whatever reason - they should be archived on a platform where the theory's metadata is indelible.
+Archival infrastructure like Zenodo meets this need.
 
 At present, there are several impediments to theories' Accessibility.
 First, when theories are published in paywalled journal articles,
-they might not be practically Accessible to all,
-even if they are in principle Accessible to paying readers.
+they are in principle Accessible to paying readers,
+but not practically Accessible to all.
 Open Access publishing increases the practical Accessibility of all academic output, including theory.
-A second impediment is more indirect
-and pertains to a theory's intelligibility to those with practical Access.
+A second, more indirect impediment to theories' Accessibility is their intelligibility.
 It has been proposed that good theories have the property of ``discursive survival {[}\ldots{]}, the ability to be understood'' (Guest, 2024, p. 1).
 At present, psychological theories are often ambiguous, rendering them difficult to understand (Frankenhuis et al., 2023).
 Successful communication requires shared background knowledge between sender and receiver (Vogt et al., 2024).
-This can come from shared paradigms (Kuhn, 2009),
+This knowledge can come from shared paradigms (Kuhn, 2009),
 from education, and from the available methods and instrumentation - or it can be problematically absent.
 Accessibility is improved by explicitly referring to sources of assumed background knowledge, and by reducing unnecessary ambiguity.
 At the same time, it is important to acknowledge that it is impossible to remove \emph{all} ambiguity when communicating an idea.
@@ -621,22 +517,19 @@ and explicit cross-references to relevant resources such as papers, ontologies, 
 \subsection{Interoperability}\label{interoperability}
 
 Interoperability pertains to the property of digital objects to ``integrate or work together {[}\ldots{]} with minimal effort'' (M. D. Wilkinson et al., 2016, p. 2).
-Firstly, theory and its associated metadata should use a formal, accessible, shared and broadly applicable language to facilitate (human- and) machine readability and reuse (I1).
+To be Interoperable, theories and associated metadata should use a formal, accessible, shared and broadly applicable language to facilitate (human- and) machine readability and reuse (I1).
 The common practice of instantiating theory as lengthy prose or schematic drawing falls short of this ideal.
 Instead, FAIR theory should, ad minimum,
-be instantiated in a human- and machine-readable datatype,
-as should all digital objects created while performing scholarly work (Van Lissa et al., 2021).
-Depending on the level of formalization of the theory,
+be specified using a human- and machine-readable datatype,
+as are other digital objects resulting from scholarly work (e.g., data, analysis code, software; Van Lissa et al., 2021).
+Depending on the theory's level of formalization,
 different formats may be appropriate,
 such as verbal statements in plain text,
 mathematical formulae,
-and statements expressed in some formal language.
+or statements expressed in some formal language.
 Examples of the latter include pseudo-code,
 interpretable computer code,
 and Gray's theory maps (Gray, 2017).
-While a theory represented as a bitmap image is not very Interoperable,
-the same image represented in the DOT language (\emph{{DOT Language}}, 2024)
-for representing graphs does meet this ideal.
 
 Secondly, theory (meta)data should use vocabularies that follow FAIR principles (I2).
 Aside from the aforementioned Datacite metadata schema (DataCite Metadata Working Group, 2024),
@@ -653,33 +546,39 @@ Recent work points out that Interoperability is not an all-or-nothing property.
 The concept of X-Interoperability was introduced to answer the question: \emph{Interoperable for what?}
 X-Interoperability is defined as facilitating ``successful communication between machines and between humans and machines {[}, where{]} A and B are considered X-Interoperable if a common operation X exists that can be applied to both'' (Vogt et al., 2024, p. 5).
 This revised definition makes it possible to outline a theory's affordances in terms of X-Interoperability.
-For example, a FAIR theory may be X-Interoperable for deriving testable hypotheses,
-or for the purpose of selecting relevant control variables,
-or for the purpose of indicating the conditions necessary for observing a particular phenomenon.
-If we consider Meehl's nine properties of strong theories (1990, p. 114),
-we see how each of these properties makes a specific type of interoperability possible.
-Level I, specifying an ontology, enables X-interoperability for selecting relevant variables;
-level II, causal connections, enable model specification, covariate selection, and causal inference;
-levels III-VIII all refer to functional form, which allows for deriving specific hypotheses about unknown model parameter values.
-If level IX is also specified, and parameters are assigned specific numerical values, the theory is completely specified; it is a digital twin of the system it seeks to describe, and can be used to evaluate hypothetical scenarios and generate synthetic data via simulation.
+For a practical example, consider the empirical cycles in Figure \ref{fig:figecs}.
+If these are instantiated as an image (bitmap or raster graphic),
+then they are only X-Interoperable for reproduction in print - and even then, they cannot be resized or edited without loss of quality.
+If the same theories are instantiated in the DOT graph description language (\emph{{DOT Language}}, 2024), then they can be displayed, resized, and edited before being printed without loss of quality.
+Graphs in the DOT language can additionally be edited at the conceptual level, which is a convenient property for theories that are expected to be updated over time, and they can be loaded into statistical programming software like R, and converted to causal graphs, or into a rudimentary generative model for simulation studies.
+Thus, the way a theory is instantiated affects its X-Interoperability.
+
+X-Interoperability is also affected by the type of information encoded in a theory.
+If we consider Meehl's nine levels of strong theories (1990, p. 114),
+we see how each of these levels enables pecific types of Interoperability.
+Level I, specifying an ontology, enables X-Interoperability for selecting relevant variables;
+level II, causal connections, enable deriving testable predictions about associations, covariate selection, and causal inference;
+levels III-VIII refer to functional form,
+which allows for deriving specific hypotheses about unknown model parameter values and specifying statistical models to estimate them.
+If level IX is also specified, and parameters are assigned specific numerical values, the theory is completely specified; it is a digital twin of the system it seeks to describe, and can be used to evaluate hypothetical scenarios and construct generative models to produce synthetic data via simulation.
 
 With regard to the state of Interoperability in psychology,
-Kurt Lewin's (1943) adage ``there's nothing as practical as a good theory'' paints a hopeful picture of theories as useful tools in psychological researchers' day-to-day work.
+Kurt Lewin's (1943) adage ``there's nothing as practical as a good theory'' paints a hopeful picture of theories as useful tools in psychological researchers' daily workflows.
 But, as we argued, contemporary practice falls short of this ideal.
 Much can be gained by integrating theory directly into analysis workflows,
-and by making theory X-Interoperable within software used for analysis.
-For example, Interoperable theory could be used
+and by making theory X-Interoperable within analysis software.
+For example, Interoperable theory can be used
 to select control variables for causal inference (Cinelli et al., 2022),
 or to preregister a study with an explicit derivation chain from theory to hypothesis,
 as well as an inferential procedure that would suggest specific modifications to theory after analyzing empirical data (Peikert et al., 2021),
-or to derive machine-readable hypotheses (Lakens \& DeBruine, 2021) which could be automatically evaluated through integration testing (Van Lissa, 2023).
+or to derive machine-readable hypotheses (Lakens \& DeBruine, 2021) which could be automatically evaluated through integration testing (C. J. Van Lissa, 2023).
 Furthermore, theories can be X-Interoperable with each other to enable nesting, or using one theory to clarify elements of another theory.
 For example, it should be possible to embed a theory about emotion regulation (e.g., Gross, 2015) within a theory of emotion regulation development (Morris et al., 2007).
 
 \subsection{Reusability}\label{reusability}
 
 If we take cumulative knowledge acquisition to be a goal of scientific research, then Reusability is the ultimate purpose of making theory FAIR.
-Applied to FAIR theory, reusability requires that each theory and its associated metadata are richly described with a plurality of accurate and relevant attributes (R1) with a clear and Accessible license for reuse (R1.1).
+Applied to FAIR theory, Reusability requires that each theory and its associated metadata are richly described with a plurality of accurate and relevant attributes (R1) with a clear and Accessible license for reuse (R1.1).
 It should further have detailed provenance (R1.2),
 which is achieved through version control with Git and archival on Zenodo.
 Finally, the (meta)data which meets domain-relevant community standards (R1.3).
@@ -714,7 +613,117 @@ For example, while a CC0 license does not legally mandate attribution,
 the norms of good scientific practice mandate that scholars comprehensively cite theory and related works (Aalbersberg et al., 2018).
 Particularly when FAIRifying an existing theory, failing to credit its author amounts to scientific malpractice.
 Another instrument for guiding the social process of (diffuse) collaboration is to include a ``README'' file in the theory repository, which informs users about the ways in which they can reuse and contribute to a FAIR theory.
-A final suggestion is to create or adopt a ``Code of Conduct'' which prescribes behavioral norms for contributors and users of a theory (Ehmke, 2014).
+A final suggestion is to create or adopt a ``Code of Conduct'' which prescribes behavioral norms for contributors and users of a theory, for example, the \href{https://berlincodeofconduct.org/en}{Berlin Code of Conduct}.
+
+\section{Relevant Considerations}\label{relevant-considerations}
+
+\subsection{What to Archive?}\label{what-to-archive}
+
+As FAIR theory becomes more commonplace,
+we expect that it will become increasingly clear what kind of information is useful,
+and how theory and models should be archived.
+As a particular FAIR theory develops, details may be added, and the nature of the information tracked might even change.
+For example, following Meehl, we could envision a theory that starts out with establishing an ontology of relevant constructs through observation of a given phenomenon.
+After initial exploratory research, the theory might be further specified by making assumptions about how these constructs are causally connected.
+Over time, more precise \emph{statistical/mathematical models} could be derived by further assuming a specific functional form for relationships (e.g., linear effects) and error families for the distribution of measured variables (e.g., normal distributions).
+This allows for the specification of statistical models, which make just enough assumptions to allow the estimation of the remaining unknown parameters (e.g., regression slopes) from data.
+Going even further, a \emph{generative/computational model} could be specified,
+which is completely parametrized (e.g., specific values of regression slopes are also assumed) such that an interpreter (e.g., the R programming language) can use the model to generate new data.
+Also, aspects of scientific practice might be added over time - either to the theory itself, or as references recorded in the theory metadata.
+Examples include experimental designs (e.g., longitudinal designs observing change over time), measurement instruments (e.g., different questionnaires used to assess the same construct), or information about participant recruitment- and retention strategies.
+
+Theories can include or reference other theories (nesting).
+For example, consider a comprehensive theory of disease spread and pandemics which covers various psychological factors
+such as adherence to infection prevention protocols (e.g., social distancing),
+pandemic-related behavior (e.g., panic buying),
+and pandemic-related distress
+(Taylor, 2022).
+This theory of disease spread may encompass another FAIR theory which specifies a mathematical model of disease transmission, with precise parameters for the process of infection (e.g., social distance, average duration of encounters, ventilation) and incubation times.
+Metadata can be used to properly cross-reference the relationship between the larger theory of disease spread and the transmission model it subsumes.
+
+\subsection{The Role of Theory Formalization}\label{the-role-of-theory-formalization}
+
+Concerns about the state of psychological theory have motivated increasing calls for greater theory ``formalization'' (Smaldino, 2017; cf. Oude Maatman, 2021).
+Formalization increases theories' falsifiability (Popper, 2002) because it expresses ideas as specific statements, clearly demarcating what should (not) be observed if the theory were true.
+\phantomsection\label{phonoloop}{Take for example the phonological loop in Baddeley's working memory model (Baddeley, 1992). The idea behind it is that verbal information is kept in memory via a rehearsal loop with limited capacity. The verbal description of the phonological loop in Baddeley's theory of working memory stands out for clarity and comprehensibility, yet it allows for at least 144 different implementations depending on the specification of various parameters such as decay rate of information, recall success, or rehearsal sequence, which were left undefined in the original theory (Lewandowsky \& Farrell, 2010).}
+Without committing to specific implementations a-priori,
+the theory becomes hard to test.
+Compared to theories expressed in natural language,
+formal theories facilitate inconsistency checking and evaluation of a theory's (lack of) vagueness.
+
+Committing to specific implementations makes a theory more precise, and precise theories are easier to falsify.
+If a theory is static, as is the case for print publication,
+falsifying evidence may cause it to become irrelevant.
+There is thus a perverse incentive to propose theories that are hard to refute, because these will persist in the scientific record unchallenged.
+FAIR theory offers an alternative approach, where theory can be falsified without losing relevance, because it can be continuously updated.
+Researchers can commit to very precise implementations,
+allowing for tests that would necessitate specific revisions in the face of falsifying evidence,
+thereby advancing our principled understanding of phenomena.
+
+Crucially for the present paper,
+FAIR theory imposes no restrictions on the manner in which theories are derived and implemented;
+rather, it pertains to rigorous and transparent archival and communication about theories, with the aim of enhancing their reusability.
+FAIR theory does not require formalization, and formal theories are not automatically FAIR.
+In other words: formalization is orthogonal to FAIRification.
+The FAIR principles
+apply equally to theories represented in natural language,
+and formal theories represented using mathematical notation, algorithmic pseudo code, or a set of logical clauses.
+Thus, for example, ``grounded theory'', derived from qualitative research,
+can be represented as a FAIR theory using plain-text propositions.
+Conversely, a formal theory is not FAIR if it is confined to a journal article without any key words to identify it as a theory paper (lacking Findability), represented merely as a bitmap image (limiting Accessibility and Interoperability), or subject to copyright (limiting Reusability).
+FAIR theory is thus consistent with, but does not require, formalization (also see the section on \emph{Accessibility} below).
+This principle is illustrated in our \href{https://cjvanlissa.github.io/theorytools/articles/fair-theory.html}{vignette on FAIRifying De Groot's empirical cycle}:
+it is equally possible to FAIRify the theory in its original formulation by archiving a text document with five plain-language propositions,
+or to formalize the theory and represent it as a human- and machine-readable diagram before FAIRifying it.
+
+\subsection{Modular Publishing}\label{modular-publishing}
+
+\phantomsection\label{modularvalue}{The primary unit of scientific communication has long been the academic paper.
+Yet scholars often produce many other valuable resources in the process of writing papers,
+including instruments, materials, data, code, and theory.
+These resources are often merely described in papers and not made available for reuse.
+Modular publishing is the practice of making each of these resources available as independent \emph{digital objects},
+facilitating their reuse and making them citable (Van De Sompel et al., 2004).
+\phantomsection\label{datasharing}{At the time of writing, some modular publishing practices are already widely adopted;
+data sharing, for example, has become the de-facto standard in psychology in the past decade (Tedersoo et al., 2021).}
+We envision FAIR theory as another instance of modular publishing (Kircz, 1998).
+}
+
+Modular publishing can be achieved by archiving specific resources (including theory) in FAIR-compliant repositories like \href{https://zenodo.org/}{Zenodo}.
+Modular publishing increases resources' reuse potential and makes them citable.
+This does not detract from the conventional academic paper as a unit of academic communication with more room for nuance and the author's voice.
+Theories published in traditional papers can be supplemented by FAIR versions that live independently, evolve collaboratively, and feed into reproducible workflows.
+
+\subsection{Version Control}\label{version-control}
+
+The field of computer science provides inspiration for well-established processes for iteratively improving digital objects.
+Version control systems, like Git, are used to iteratively improve computer code, while managing parallel contributions from collaborators and allowing for experimentation and diverging development without losing information.
+Git tracks line-by-line changes to text-based files,
+and maintains a complete annotated history of those changes.
+It has previously been argued that Git is particularly well-suited to academic work (Ram, 2013; C. J. Van Lissa et al., 2021).
+For example, Git can facilitate reproducible research, manage distributed collaboration, and improve preregistrations (Peikert et al., 2021; C. J. Van Lissa et al., 2021).
+Git provides a useful framework for developing FAIR theory,
+because it enables explicitly comparing versions of a file (or: theory),
+documenting why changes were made,
+incorporating changes by different authors,
+and branching off into different directions (e.g., competing hypotheses) while retaining an explicit link to the common ancestor.
+This makes it possible for meta-scientists to study the provenance of a theory and determine how well different versions of a theory explain empirical evidence (C. J. Van Lissa, 2023).
+Note that, while cloud archives associated with Git (e.g., GitHub) facilitate collaborative theory development,
+they are not suitable for archiving the version of record due to a lack of FAIR-compliance.
+Thus, theory development may take place on GitHub, but versions of record should be archived on a platform like like Zenodo, with appropriate metadata.
+
+\subsection{Semantic Versioning}\label{semantic-versioning}
+
+Aside from technical solutions, version control is a social process as well.
+On the one hand, regular updates can improve theories - but on the other hand, it risks breaking compatibility between theories and hypotheses derived from them, or compatibility between one theory and others that depend upon it.
+For example, if we construct a theory to explain a specific phenomenon, and we cross-reference an existing theory comprising an ontology for our field - that dependency is broken if the ontology is later updated and our phenomenon of interest is removed.
+In computer science, these challenges are navigated by assigning version numbers.
+Specifically, \emph{semantic versioning} comprises a simple set of rules for assigning version numbers to digital objects.
+Whereas version control tracks changes,
+semantic versioning communicates what those changes mean to users of the theory,
+guides the social process of theory development, and signals how much a theory has been changed.
+
+We propose adapting semantic versioning for theories by assigning a version number in the format \texttt{MAJOR.MINOR.PATCH} (e.g., 0.1.0), where the \texttt{MAJOR} number is incremented when backwards incompatible changes are made. For example, if the theory now contains empirical statements that are at odds with a previous version of the theory. The \texttt{MINOR} number should be incremented when the set of empirical statements are expanded in a backward compatible manner (i.e., the previous version is subsumed within the new version). The \texttt{PATCH} number should be incremented when making backward compatible bug fixes, cosmetic changes, fix spelling errors, or add clarifications.
 
 \section{FAIR Theory Workflow}\label{fair-theory-workflow}
 
@@ -977,7 +986,7 @@ FAIR theory's Accessibility can advance interdisciplinarity,
 for example because theoretical frameworks can be reused, adapted, or used for analogical modeling across different fields (Haslbeck et al., 2021).
 Meta-research benefits from the fact that FAIR theory enables studying the structure, content, and development of theories over time.
 In terms of team science, FAIR theory facilitates collaboration by ensuring that all contributors have access to the same information and
-clarifying any remaining areas of contention or misunderstanding (Van Lissa et al., 2024).
+clarifying any remaining areas of contention or misunderstanding (C. J. Van Lissa et al., 2024).
 Version control provides a framework to resolve parallel developments from multiple collaborators in a non-destructive manner.
 This facilitates collaboration across geographical boundaries,
 and adversarial collaboration, where others strive to falsify a theory or identify its inconsistencies, and democratizes collaboration with as-of-yet unknown collaborators via platforms like GitHub, where researchers outside one's network can identify issues or suggest improvements to theories.
@@ -994,7 +1003,7 @@ Using the Zenodo search function and submitting theories to the ``FAIR Theory Co
 \phantomsection\label{learningcurve}{Another limitation is the learning curve associated with tools and infrastructures like Git and Zenodo.
 The \texttt{theorytools} R-package mitigates this limitation for R-users by automating key steps in the process.
 Moreover, the initial investment in time can be offset by long-term productivity gains and increased impact of FAIR theory.
-One final way to address the learning curve is via specialization and collaboration, or team science (Van Lissa et al., 2024):
+One final way to address the learning curve is via specialization and collaboration, or team science (C. J. Van Lissa et al., 2024):
 as scientific workflows increase in sophistication, it is increasingly difficult for any one scholar to master all skills involved.
 In relation to FAIR theory, we see unique opportunities for intergenerational collaboration and knowledge exchange,
 as theoreticians tend to be seasoned experts, whereas open science literacy is more commonly found among early career scholars.}
@@ -1021,13 +1030,13 @@ then it would become possible to evaluate the entire body of empirical evidence 
 \phantomsection\label{fairtheoryprereg}{One important future direction is embedding FAIR theories withing existing open science methodologies.
 For example, consider how FAIR theory relates to preregistration.
 These practices are distinct but complimentary.
-The purpose of FAIR theory is to communicate general principles and expectations about a given phenomenon,
+FAIR theory allows scholars to communicate general principles and expectations about a given phenomenon,
 and to provide infrastructure for explicitly deriving hypotheses from specific theories and revising those theories in light of empirical results.
-The purpose of preregistration, by contrast, is to eliminate inductive bias from hypothesis tests and increase trust in the outcomes of a specific empirical study (Peikert et al., 2023).
+Preregistration, by contrast, allows scholars to eliminate inductive bias from hypothesis tests and increase trust in the outcomes of a specific empirical study (Peikert et al., 2023).
 FAIR theories are specified at a level of abstraction that transcends individual studies.
 FAIR theories can inform - and be informed by - both quantitative and qualitative research.
-Preregistrations, by contrast, are specific implementations of quantitative hypothesis tests,
-within the context of a specific study design, analysis plan, and - optionally - a fully reproducible analysis pipeline.
+Preregistrations, by contrast, are typically specific implementations of quantitative hypothesis tests,
+within the context of a specific study design, analysis plan, and - optionally - a fully reproducible analysis pipeline (although they are also used for other purposes, including for qualitative and exploratory research).
 These practices complement each other:
 authors can make the derivation chain from theory to hypothesis more explicit by citing a specific FAIR theory in their preregistration.
 Moreover, it is possible to preregister an inferential procedure that would require revising the theory after observing data,
@@ -1057,15 +1066,21 @@ We envision a similar trajectory for FAIR theory.}
 
 \subsection{Conclusion}\label{conclusion}
 
-\phantomsection\label{turkheimer}{We invite the reader to ask the rhetorical question raised by one of our reviewers, prof. Turkheimer, who - reflecting on a career as a practitioner of theory in psychology - considered ``how adopting a FAIR framework would change, improve, or inhibit what I do''.
-Prof.~Turkheimer remarked that a FAIR framework would have been very helpful in maintaining meaningful boundaries between a theory and the predictions it makes,
-in tracking how empirical findings result in changes to empirical claims made by a theory,
+\phantomsection\label{turkheimer}{How would adopting a FAIR framework for theory construction, improvement, and reuse affect scholarly workflows?
+FAIR theory can be used to derive and justify hypotheses,
+thus addressing the problem that most hypotheses in psychology are currently atheoretical (McPhetres et al., 2021).
+FAIRly archiving theories also clarifies what is the version of record and makes changes traceable.
+This can be useful in preventing dependency on the author (DOA),
+distinguishing a theory from the predictions it makes,
+tracking how empirical findings are used to motivate changes to the theory,
 and in resolving theoretical disputes.
-``FAIR theory provides a structured, machine- and human-readable framework that distills and formalizes the core components of a theory.
-Everything published about a theory can continue to exist in its original form,
-while a FAIR representation supplements that literature by explicitly outlining the theory's assumptions, logical structure, and testable implications.
-Importantly, FAIR theory can evolve semi-independently from individual papers, offering a persistent and collaborative object that others can reuse, cite, and refine.
-Contributing to the development of a FAIR theory thus becomes a new way of contributing to the theoretical literature - much like writing a high-quality review article, but with the added benefit of interoperability, versioning, and reusability.''}
+While we have argued that FAIR theory performs some functions more effectively than traditional theory papers,
+it does not necessarily replace them altogether.
+The important question is what the unique contribution of a theory paper will be if FAIR theories become commonplace.
+The Taskforce Theoretical Psychology developed a template for theory papers that addresses this question (C. Van Lissa et al., 2025).
+Importantly, FAIR theory can evolve beyond an original print publication,
+offering a persistent and collaborative object that others can reuse, cite, and refine - thus allowing scholars to more efficiently complete the empirical cycle.
+Developing FAIR theory could be a new type of scholarly output, and should be recognized and rewarded as such according to the \href{https://coara.org/wp-content/uploads/2022/09/2022_07_19_rra_agreement_final.pdf}{Coalition or Advancing Research Assessment}.}
 
 We envision a future where application of the FAIR principles makes theories more \emph{useful},
 living up to Kurt Lewin's ideal,
@@ -1132,9 +1147,6 @@ Deci, E. L., \& Ryan, R. M. (2012). Self-{Determination Theory}. In P. A. M. V. 
 
 \bibitem[\citeproctext]{ref-dumas-malletPoorReplicationValidity2017}
 Dumas-Mallet, E., Smith, A., Boraud, T., \& Gonon, F. (2017). Poor replication validity of biomedical association studies reported by newspapers. \emph{PLOS ONE}, \emph{12}(2), e0172650. \url{https://doi.org/10.1371/journal.pone.0172650}
-
-\bibitem[\citeproctext]{ref-ehmkeContributorCovenantCode2014}
-Ehmke, C. (2014). \emph{Contributor {Covenant}: {A Code} of {Conduct} for {Open Source} and {Other Digital Commons Communities}}. \url{https://www.contributor-covenant.org/}
 
 \bibitem[\citeproctext]{ref-zenodo}
 European Organization For Nuclear Research, \& OpenAIRE. (2013). \emph{Zenodo}. CERN. \url{https://doi.org/10.25495/7GXK-RD71}
@@ -1321,6 +1333,9 @@ Van Lissa, C. J., Gu, X., Mulder, J., Rosseel, Y., Zundert, C. V., \& Hoijtink, 
 
 \bibitem[\citeproctext]{ref-vanlissaVisionTeamScience2024}
 Van Lissa, C. J., Keymolen, E., Hoek, S. van den, Klingner, A., Schurman, L., \& Hunnik, M. van. (2024). \emph{Towards a {Vision} for {Team Science} at {Tilburg University}}. \url{https://doi.org/10.31234/osf.io/jsbuv}
+
+\bibitem[\citeproctext]{ref-vanlissaProceedingsTaskforceTheoretical2025}
+Van Lissa, C., van Dongen, N., Bringmann, L., Borsboom, D., Scheel, A., Haslbeck, J., Volz, L., Waaijers, M., Eronen, M., \& Helmich, M. (2025). \emph{Proceedings of the {Taskforce Theoretical Psychology}}. \url{https://doi.org/10.17605/OSF.IO/D3JMW}
 
 \bibitem[\citeproctext]{ref-vanrooijTheoryTestHow2021}
 van Rooij, I., \& Baggio, G. (2021). Theory {Before} the {Test}: {How} to {Build High-Verisimilitude Explanatory Theories} in {Psychological Science}. \emph{Perspectives on Psychological Science}, \emph{16}(4), 682--697. \url{https://doi.org/10.1177/1745691620970604}
