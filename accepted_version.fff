@@ -1,0 +1,7 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{ec_visio.pdf}}
+\caption{\label{fig:figecs}Three implementations of the ``empirical cycle'' (De Groot \& Spiekerman, 1969).}
+\end{figure*}

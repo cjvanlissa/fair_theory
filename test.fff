@@ -1,0 +1,14 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{ec_visio.pdf}
+\caption{\label{fig:figecs}Three implementations of the ``empirical cycle'' (De Groot \& Spiekerman, 1969).}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\subfloat[Different versions of a theory archived as distinct branches\label{fig:figgithub-1}]{\includegraphics[width=0.5\linewidth]{git_branches} }\subfloat[These versions can be explicitly compared\label{fig:figgithub-2}]{\includegraphics[width=0.5\linewidth]{git_compare_short} }\caption{FAIR Theories on GitHub}\label{fig:figgithub}
+\end{figure*}
